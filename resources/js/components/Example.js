@@ -1,15 +1,15 @@
 import React , { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
-import CarouselMain from './Carousel'
-import NavbarMain from './Navbar'
+import Navbarindex from './Navbar'
+import Index from './Index'
 
 class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <NavbarMain />
-                <CarouselMain />
+                <Navbarindex />
+                <Index />
             </BrowserRouter>
         )
     }
