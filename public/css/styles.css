@@ -154,6 +154,7 @@ body {
 .titulouno {
     text-align: center;
     color: white;
+    background-color: black;
     font-family: "Comic Sans Ms", cursive, sans-serif;
     font-size: 60px;
 }

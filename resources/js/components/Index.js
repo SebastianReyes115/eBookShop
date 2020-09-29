@@ -1,60 +1,40 @@
 import React , { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Carousel } from 'react-bootstrap'
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
+import { Button } from 'react-bootstrap'
+import Navbarindex from './Navbar'
+import Footer from './Footer'
+import CarouselMain from "./Carousel";
+import Deals from './Ofertas'
 
-export default class Index extends Component {
+class App extends Component {
     render() {
         return (
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-9 col-md-20 col-lg-50 mx-auto">
-                        <div class="card card-signin my-10">
-                            <div class="card-body">
-                                <Carousel>
-                                    <Carousel.Item>
-                                        <img
-                                        className="d-block w-100"
-                                        src="./././img/el perro.jpg"
-                                        alt="First slide"
-                                        />
-                                        <Carousel.Caption>
-                                        <h3>First slide label</h3>
-                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                        </Carousel.Caption>
-                                    </Carousel.Item>
-                                    <Carousel.Item>
-                                        <img
-                                        className="d-block w-100"
-                                        src="holder.js/800x400?text=Second slide&bg=282c34"
-                                        alt="Third slide"
-                                        />
+            <BrowserRouter>
+                
+                <Navbarindex />
+                
+                <br/>
+                
+                <Button variant="outline-info" size="lg" disabled block className="titulouno">
+                    New Books
+                </Button>{' '}
 
-                                        <Carousel.Caption>
-                                        <h3>Second slide label</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </Carousel.Caption>
-                                    </Carousel.Item>
-                                    <Carousel.Item>
-                                        <img
-                                        className="d-block w-100"
-                                        src="holder.js/800x400?text=Third slide&bg=20232a"
-                                        alt="Third slide"
-                                        />
-                                        <Carousel.Caption>
-                                        <h3>Third slide label</h3>
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                        </Carousel.Caption>
-                                    </Carousel.Item>
-                                </Carousel>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <br/>
+                
+                <CarouselMain />
+                
+                <br/>
+
+                <Deals />
+                
+                <br/>
+                
+                <Footer />
+
+            </BrowserRouter>
         )
     }
 }
 
-if (document.getElementById('index')) {
-    ReactDOM.render(<Index />, document.getElementById('index'));
-}
+ReactDOM.render(<App />, document.getElementById('app'))
