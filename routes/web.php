@@ -17,4 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 */
-Route::view('/{path?}','app');
+Route::view('/','app');
+Route::get('/libro', function(){
+    return view('libro');
+});

@@ -85500,7 +85500,9 @@ var Deals = /*#__PURE__*/function (_Component) {
         size: "lg",
         block: true,
         variant: "info"
-      }, "Tokio Blues"), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
+      }, "Tokio Blues"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+        href: "/libro"
+      }, "Tokio")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
         xs: 6,
         md: 3
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Button"], {
@@ -85521,7 +85523,9 @@ var Deals = /*#__PURE__*/function (_Component) {
         size: "lg",
         block: true,
         variant: "info"
-      }, "La Teoria del Todo"), " "))));
+      }, "La Teoria del Todo"), " "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Route"], {
+        path: "/libro"
+      })));
     }
   }]);
 
