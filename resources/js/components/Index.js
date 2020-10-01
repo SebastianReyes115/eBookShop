@@ -6,30 +6,31 @@ import Navbarindex from './Navbar'
 import Footer from './Footer'
 import CarouselMain from "./Carousel";
 import Deals from './Ofertas'
+import Libros from "./Libros";
 
 class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                
+
                 <Navbarindex />
-                
+
                 <br/>
-                
+
                 <Button variant="outline-info" size="lg" disabled block className="titulouno">
                     New Books
                 </Button>{' '}
 
                 <br/>
-                
+
                 <CarouselMain />
-                
+
                 <br/>
 
-                <Deals />
-                
+                <Libros/>
+
                 <br/>
-                
+
                 <Footer />
 
             </BrowserRouter>
