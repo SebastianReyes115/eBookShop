@@ -161,3 +161,10 @@ body {
 .textoNegro{
     color: black;
 }
+
+.title_destacados{
+    margin-left: 120px;
+}
+.carouselEdit{
+    padding: 20px;
+}

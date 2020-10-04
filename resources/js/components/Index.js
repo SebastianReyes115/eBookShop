@@ -12,27 +12,15 @@ class App extends Component {
     render() {
         return (
             <BrowserRouter>
-
                 <Navbarindex />
-
                 <br/>
-
-                <Button variant="outline-info" size="lg" disabled block className="titulouno">
-                    New Books
-                </Button>{' '}
-
-                <br/>
-
                 <CarouselMain />
-
                 <br/>
-
+                <h2 className="title_destacados">Libros Destacados</h2>
+                <br/>
                 <Libros/>
-
                 <br/>
-
                 <Footer />
-
             </BrowserRouter>
         )
     }

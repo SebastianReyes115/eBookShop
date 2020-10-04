@@ -1,10 +1,13 @@
 import React , { Component } from 'react'
 import ReactDOM from 'react-dom'
-import Carousel from 'react-bootstrap/Carousel'
+import { Carousel, Container, CardDeck, Card} from 'react-bootstrap'
 
 export default class CarouselMain extends Component {
     render() {
         return (
+            <Container>
+            <CardDeck>
+                <Card>
             <Carousel>
                 <Carousel.Item>
                     <img
@@ -47,6 +50,9 @@ export default class CarouselMain extends Component {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+            </Card>
+                </CardDeck>
+            </Container>
         )
     }
 }
