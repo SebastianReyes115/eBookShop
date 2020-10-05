@@ -1,10 +1,13 @@
 import React , { Component } from 'react'
 import ReactDOM from 'react-dom'
-import Carousel from 'react-bootstrap/Carousel'
+import { Carousel, Container, CardDeck, Card} from 'react-bootstrap'
 
 export default class CarouselMain extends Component {
     render() {
         return (
+            <Container>
+            <CardDeck>
+                <Card>
             <Carousel>
                 <Carousel.Item>
                     <img
@@ -13,8 +16,10 @@ export default class CarouselMain extends Component {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                       <a>
+                           <h3 className="textoNegro">Preordena aquí</h3>
+                       </a>
+
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -25,23 +30,29 @@ export default class CarouselMain extends Component {
                     />
 
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3>
+
+                        </h3>
+
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="./././img/carousel1.png"
+                        src="./././img/carousel11.png"
                         alt="Third slide"
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <a>
+                        <h3>Más Información</h3>
+                    </a>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+            </Card>
+                </CardDeck>
+            </Container>
         )
     }
 }

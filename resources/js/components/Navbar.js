@@ -9,13 +9,15 @@ export default class Navbarindex extends Component {
                 <Navbar bg="dark" sticky="top" variant="dark">
                     <Navbar.Brand href="#home">e-Book Shop</Navbar.Brand>
                         <Nav className="mr-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
-                            <Nav.Link href="#features">Products</Nav.Link>
-                            <Nav.Link href="#pricing">About</Nav.Link>
+                            <Nav.Link href="#home">Inicio</Nav.Link>
+                            <Nav.Link href="#features">Productos</Nav.Link>
+                            <Nav.Link href="#pricing">Informacion</Nav.Link>
                         </Nav>
                         <Form inline>
-                            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                            <Button variant="outline-info">Search</Button>
+                            <Nav.Link href="#home">Identifícate</Nav.Link>
+                            <Nav.Link href="#home">Carrito</Nav.Link>
+                            <FormControl type="text" placeholder="Buscar" className="mr-sm-2" />
+                            <Button variant="outline-info">Buscar</Button>
                         </Form>
                 </Navbar>
             </>
