@@ -8,7 +8,7 @@ export default class Navbarindex extends Component {
         return (
             <BrowserRouter>
                 <Navbar bg="dark" sticky="top" variant="dark">
-                    <Navbar.Brand href="#home">e-Book Shop</Navbar.Brand>
+                    <Navbar.Brand href="/">e-Book Shop</Navbar.Brand>
                         <Nav className="mr-auto">
                             <Nav.Link href="/">Inicio</Nav.Link>
                             <Nav.Link href="#features">Productos</Nav.Link>
