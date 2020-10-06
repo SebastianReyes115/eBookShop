@@ -17,4 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 */
-Route::view('/{path?}','app');
+Route::view('/','app');
+Route::get('/libro', function(){
+    return view('libro');
+});
+
+Route::get('/registro', function(){
+    return view('registro');
+});
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

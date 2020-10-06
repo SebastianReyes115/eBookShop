@@ -1,3 +1,8 @@
+!!!!!!!!!
+USAR php artisan serve
+porque con el servidor de xampp no muestra las vistas
+!!!!!!!!!
+
 composer install \n
 creear el archivo .env \n
 php artisan key:generate \n

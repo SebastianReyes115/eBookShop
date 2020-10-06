@@ -33,6 +33,7 @@ export default class Deals extends Component {
                             <Button size="lg" block variant="info">
                                 Tokio Blues
                             </Button>{" "}
+                            <a href="/libro">Tokio</a>
                         </Col>
                         <Col xs={6} md={3}>
                             <Button size="lg" block variant="info">
@@ -51,6 +52,10 @@ export default class Deals extends Component {
                         </Col>
                     </Row>
                 </Container>
+                <Switch>
+                    <Route path="./libro">
+                    </Route>
+                </Switch>
             </BrowserRouter>
         )
     }

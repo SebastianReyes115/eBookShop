@@ -1,0 +1,1 @@
+traer de la base de datos el libro seleccionado
