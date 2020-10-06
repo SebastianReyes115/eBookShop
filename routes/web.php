@@ -25,3 +25,6 @@ Route::get('/libro', function(){
 Route::get('/registro', function(){
     return view('registro');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

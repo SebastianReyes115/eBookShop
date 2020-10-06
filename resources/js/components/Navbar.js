@@ -15,7 +15,7 @@ export default class Navbarindex extends Component {
                             <Nav.Link href="#pricing">Informacion</Nav.Link>
                         </Nav>
                         <Form inline>
-                            <Nav.Link href="/registro">Identifícate</Nav.Link>
+                            <Nav.Link href="/register">Identifícate</Nav.Link>
                             <Nav.Link href="#home">Carrito</Nav.Link>
                             <FormControl type="text" placeholder="Buscar" className="mr-sm-2" />
                             <Button variant="outline-info">Buscar</Button>
