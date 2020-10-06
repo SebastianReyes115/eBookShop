@@ -53,8 +53,7 @@ export default class Deals extends Component {
                     </Row>
                 </Container>
                 <Switch>
-                    <Route path="/libro">
-
+                    <Route path="./libro">
                     </Route>
                 </Switch>
             </BrowserRouter>

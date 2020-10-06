@@ -20,3 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/libro', function(){
     return view('libro');
 });
+
+Route::get('/registro', function(){
+    return view('registro');
+});

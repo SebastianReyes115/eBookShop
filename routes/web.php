@@ -21,3 +21,7 @@ Route::view('/','app');
 Route::get('/libro', function(){
     return view('libro');
 });
+
+Route::get('/registro', function(){
+    return view('registro');
+});

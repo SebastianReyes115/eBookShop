@@ -1,1 +1,1 @@
-<p>hola</p>
+traer de la base de datos el libro seleccionado
