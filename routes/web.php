@@ -28,3 +28,8 @@ Route::get('/registro', function(){
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//RUTA DEL PANDEL DE ADMINISTRADOR
+Route::get('/admin', function(){
+    return view('admin');
+});
