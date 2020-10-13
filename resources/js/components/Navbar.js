@@ -12,7 +12,7 @@ export default class Navbarindex extends Component {
                         <Nav className="mr-auto">
                             <Nav.Link href="/">Inicio</Nav.Link>
                             <Nav.Link href="#features">Productos</Nav.Link>
-                            <Nav.Link href="#pricing">Informacion</Nav.Link>
+                            <Nav.Link href="/about">Contactanos</Nav.Link>
                         </Nav>
                         <Form inline>
                             <Nav.Link href="/register">Identifícate</Nav.Link>
