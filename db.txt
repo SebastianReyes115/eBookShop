@@ -1,0 +1,180 @@
+DROP SCHEMA IF EXISTS `ebookshop` ;
+CREATE SCHEMA IF NOT EXISTS `ebookshop`;
+
+CREATE TABLE IF NOT EXISTS `ebookshop`.`Autor` (
+  `id_autor` INT NOT NULL,
+  `NombreAutor` VARCHAR(100) NULL,
+  `Nacionalidad` VARCHAR(30) NULL,
+  PRIMARY KEY (`id_autor`));
+  
+CREATE TABLE IF NOT EXISTS `ebookshop`.`Editorial` (
+  `id_editorial` INT NOT NULL,
+  `Editorial` VARCHAR(50) NULL,
+  PRIMARY KEY (`id_editorial`));
+  
+CREATE TABLE IF NOT EXISTS `ebookshop`.`Genero` (
+  `id_genero` INT NOT NULL,
+  `Genero` VARCHAR(30) NULL,
+  PRIMARY KEY (`id_genero`));
+
+CREATE TABLE IF NOT EXISTS `ebookshop`.`Usuarios` (
+  `id_usuario` INT NOT NULL,
+  `Nombres` VARCHAR(50) NULL,
+  `Apellidos` VARCHAR(50) NULL,
+  `correo` VARCHAR(50) NULL,
+  PRIMARY KEY (`id_usuario`));
+  
+CREATE TABLE IF NOT EXISTS `ebookshop`.`MetodoPago` (
+  `id_metodo` INT NOT NULL,
+  `nombreMetodo` VARCHAR(100) NULL,
+  PRIMARY KEY (`id_metodo`));
+
+CREATE TABLE IF NOT EXISTS `ebookshop`.`Libros` (
+  `id_libro` INT NOT NULL,
+  `Titulo` VARCHAR(100) NULL,
+  `id_Autor` INT NULL,
+  `id_Genero` INT NULL,
+  `id_Editorial` INT NULL,
+  `NoPaginas` INT NULL,
+  `Precio` DECIMAL(19,4) NULL,
+  `isbn` INT NULL,
+  `Idioma` VARCHAR(30) NULL,
+  `Edicion` INT NULL,
+  `Año` VARCHAR(30) NULL,
+  `ImagenLibro` LONGBLOB NULL,
+  PRIMARY KEY (`id_libro`),
+  CONSTRAINT `FK__Libros__id_Autor__6B24EA82`
+    FOREIGN KEY (`id_Autor`)
+    REFERENCES `ebookshop`.`Autor` (`id_autor`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FK__Libros__id_Gener__6C190EBB`
+    FOREIGN KEY (`id_Genero`)
+    REFERENCES `ebookshop`.`Genero` (`id_genero`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FK__Libros__id_Edito__6D0D32F4`
+    FOREIGN KEY (`id_Editorial`)
+    REFERENCES `ebookshop`.`Editorial` (`id_editorial`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+CREATE TABLE IF NOT EXISTS `ebookshop`.`Libros_Stock` (
+  `id_libro` INT NOT NULL,
+  `isbn` INT NULL,
+  `titulo` VARCHAR(100) NULL,
+  `UnidadesEnStock` INT NULL,
+  PRIMARY KEY (`id_libro`),
+  CONSTRAINT `FK__Libros_St__id_li__160F4887`
+    FOREIGN KEY (`id_libro`)
+    REFERENCES `ebookshop`.`Libros` (`id_libro`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+CREATE TABLE IF NOT EXISTS `ebookshop`.`venta` (
+  `id_venta` INT NOT NULL,
+  `id_usuario` INT NULL,
+  `id_libro` INT NULL,
+  `id_metodo` INT NULL,
+  PRIMARY KEY (`id_venta`),
+  CONSTRAINT `FK__venta__id_libro__18EBB532`
+    FOREIGN KEY (`id_libro`)
+    REFERENCES `ebookshop`.`Libros` (`id_libro`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FK__venta__id_metodo__19DFD96B`
+    FOREIGN KEY (`id_metodo`)
+    REFERENCES `ebookshop`.`MetodoPago` (`id_metodo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FK__venta__id_usuari__1AD3FDA4`
+    FOREIGN KEY (`id_usuario`)
+    REFERENCES `ebookshop`.`Usuarios` (`id_usuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+  
+CREATE TABLE IF NOT EXISTS `ebookshop`.`isbn_libro` (
+  `isbn` INT NULL,
+  `id_libro` INT NULL,
+  CONSTRAINT `FK__isbn_libro__isbn__02FC7413`
+    FOREIGN KEY (`isbn`)
+    REFERENCES `ebookshop`.`Libros` (`id_libro`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FK__isbn_libr__id_li__03F0984C`
+    FOREIGN KEY (`id_libro`)
+    REFERENCES `ebookshop`.`Libros` (`id_libro`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+    
+CREATE TABLE IF NOT EXISTS `ebookshop`.`genero_libro` (
+  `id_genero` INT NULL,
+  `id_libro` INT NULL,
+  CONSTRAINT `FK__genero_li__id_ge__74AE54BC`
+    FOREIGN KEY (`id_genero`)
+    REFERENCES `ebookshop`.`Genero` (`id_genero`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FK__genero_li__id_li__75A278F5`
+    FOREIGN KEY (`id_libro`)
+    REFERENCES `ebookshop`.`Libros` (`id_libro`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+    
+CREATE TABLE IF NOT EXISTS `ebookshop`.`editorial_libro` (
+  `id_editorial` INT NULL,
+  `id_libro` INT NULL,
+  CONSTRAINT `FK__editorial__id_ed__7B5B524B`
+    FOREIGN KEY (`id_editorial`)
+    REFERENCES `ebookshop`.`Editorial` (`id_editorial`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FK__editorial__id_li__7C4F7684`
+    FOREIGN KEY (`id_libro`)
+    REFERENCES `ebookshop`.`Libros` (`id_libro`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+    
+CREATE TABLE IF NOT EXISTS `ebookshop`.`WishList` (
+  `id_libro` INT NULL,
+  `id_usuario` INT NULL,
+  `titulo` VARCHAR(100) NULL,
+  CONSTRAINT `FK__WishList__id_usu__1BC821DD`
+    FOREIGN KEY (`id_usuario`)
+    REFERENCES `ebookshop`.`Usuarios` (`id_usuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FK__WishList__id_lib__7E37BEF6`
+    FOREIGN KEY (`id_libro`)
+    REFERENCES `ebookshop`.`Libros` (`id_libro`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+    
+CREATE TABLE IF NOT EXISTS `ebookshop`.`carrito` (
+  `id_libro` INT NULL,
+  `id_usuario` INT NULL,
+  `cantidad` INT NULL,
+  CONSTRAINT `FK__carrito__id_libr__01142BA1`
+    FOREIGN KEY (`id_libro`)
+    REFERENCES `ebookshop`.`Libros` (`id_libro`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FK__carrito__id_usua__02084FDA`
+    FOREIGN KEY (`id_usuario`)
+    REFERENCES `ebookshop`.`Usuarios` (`id_usuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+  
+CREATE TABLE IF NOT EXISTS `ebookshop`.`autor_libro` (
+  `id_autor` INT NULL,
+  `id_libro` INT NULL,
+  CONSTRAINT `FK__autor_lib__id_au__797309D9`
+    FOREIGN KEY (`id_autor`)
+    REFERENCES `ebookshop`.`Autor` (`id_autor`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FK__autor_lib__id_li__7A672E12`
+    FOREIGN KEY (`id_libro`)
+    REFERENCES `ebookshop`.`Libros` (`id_libro`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
