@@ -1,0 +1,5 @@
+1. Corrección a la base de datos
+2. Login al inicio del panel de admin
+3. Vista de estadisticas
+4. Altas bajas cambios y consultas de productos
+5. Conexion a la base de datos
