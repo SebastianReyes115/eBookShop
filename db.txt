@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`Usuarios` (
   `Nombres` VARCHAR(50) NULL,
   `Apellidos` VARCHAR(50) NULL,
   `correo` VARCHAR(50) NULL,
+  `contraseña` VARCHAR(50) NULL,
   PRIMARY KEY (`id_usuario`));
   
 CREATE TABLE IF NOT EXISTS `ebookshop`.`MetodoPago` (
