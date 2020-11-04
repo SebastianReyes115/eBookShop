@@ -1,0 +1,10 @@
+.bodyColor{
+    background-image: url('back_login.jpg');
+}
+
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px; 
+    margin-top: 150px;
+}

@@ -22,7 +22,11 @@ if($filas)
     <?php
     include("index.php");
     ?>
-    <h1>ERROR USUARIO INCORRECTO</h1>
+    echo'<script type="text/javascript">
+    alert("Usuario no valido");
+    window.location.href="index.php";
+    </script>';
+
     <?php
 }
 mysqli_free_result($resultado);
