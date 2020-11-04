@@ -1,3 +1,5 @@
+Ejecutar desde la carpeta de htdocs de nuestro servidor para que funcione el login
+
 Proyecto de venta de libros electrónicos
 
 Negocios Electrónicos I
