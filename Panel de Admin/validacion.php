@@ -16,7 +16,7 @@ $filas=mysqli_num_rows($resultado);
 
 if($filas)
 {
-    header("location:Admin/index3.php");
+    header("location:Admin/index.php");
 }else{
     ?>
     <?php
