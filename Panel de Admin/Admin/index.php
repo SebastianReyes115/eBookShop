@@ -66,7 +66,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="pages/productos.html" class="nav-link">
+            <a href="pages/Estadistica.html" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
                 <p>Estadísticas</p>
             </a>
@@ -80,7 +80,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="pages/productos.html" class="nav-link">
+            <a href="pages/mailbox/mailbox.html" class="nav-link">
               <i class="nav-icon fas fa-envelope"></i>
                 <p>Inbox</p>
             </a>
