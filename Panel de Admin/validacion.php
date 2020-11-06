@@ -10,14 +10,43 @@ $_SESSION['usuario']=$usuario;
 include('db.php');
 
 $consulta="SELECT*FROM usuarios WHERE correo='$usuario' AND contraseña='$contraseña'";
+
+
 $resultado=mysqli_query($conexion,$consulta);
 
-$filas=mysqli_num_rows($resultado);
-
-if($filas)
+//Super Usuario
+if($usuario == 'sebas@gmail.com' && $contraseña == '1234567890')
 {
-    header("location:Admin/index.php");
-}else{
+    $filas=mysqli_num_rows($resultado);
+    
+    if($filas)
+    {
+        header("location:Admin/index.php");
+    }
+}
+
+//Usuario menor
+else if($usuario == 'noe@gmail.com')
+{
+    $filas=mysqli_num_rows($resultado);
+    
+    if($filas)
+    {
+        header("location:Admin/indexEstadisticas.php");
+    }
+}
+
+//Atencion al cliente
+else if($usuario == 'noe@gmail.com')
+{
+    $filas=mysqli_num_rows($resultado);
+    
+    if($filas)
+    {
+        header("location:Admin/indexAtencionCliente.php");
+    }
+}
+else{
     ?>
     <?php
     include("index.php");

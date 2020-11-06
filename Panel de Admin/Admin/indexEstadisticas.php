@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin</title>
+  <title>Estadísticas</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -30,7 +30,7 @@
           <img src="images/admin.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Super Administrador</a>
+          <a href="#" class="d-block">Estadísticas</a>
         </div>
       </div>
 
@@ -60,29 +60,8 @@
 
           <li class="nav-item">
             <a href="pages/productos.html" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
-                <p>Productos</p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="pages/productos.html" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
-                <p>Estadísticas</p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="pages/productos.html" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-                <p>Base de Datos</p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="pages/productos.html" class="nav-link">
-              <i class="nav-icon fas fa-envelope"></i>
-                <p>Inbox</p>
+                <p>Estádisticas</p>
             </a>
           </li>
 
