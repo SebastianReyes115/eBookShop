@@ -124,7 +124,7 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper"  style="background-color: #3c4752">
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -141,34 +141,37 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-    
+
     <!-- Main content -->
-    
+
     <!-- /.content-wrapper -->
-    
+
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
       <!-- Control sidebar content goes here -->
     </aside>
     <!-- /.control-sidebar -->
-    
-    <!-- Main Footer -->
+
+    <div class="container">
+      <img src="images/Principal_Administrador.png" alt="">
+    </div>
   </div>
   <!-- ./wrapper -->
+
         <footer class="main-footer">
           <strong>Copyright &copy; 2020 Team 6.</strong>
           All rights reserved.
         </footer>
-  
+
   <!-- REQUIRED SCRIPTS -->
-  
+
   <!-- jQuery -->
   <script src="plugins/jquery/jquery.min.js"></script>
   <!-- Bootstrap -->
   <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE -->
   <script src="dist/js/adminlte.js"></script>
-  
+
   <!-- OPTIONAL SCRIPTS -->
   <script src="plugins/chart.js/Chart.min.js"></script>
 <!-- AdminLTE for demo purposes -->
