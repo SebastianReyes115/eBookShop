@@ -124,9 +124,9 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper"  style="background-color: #3c4752">
+  <div class="content-wrapper" style="background-color: #3c4752; ">
     <!-- Content Header (Page header) -->
-    <div class="content-header">
+    <div class="content-header"style="background-color: #ffffff; ">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
@@ -140,29 +140,19 @@
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-    <!-- /.content-header -->
-
-    <!-- Main content -->
-
-    <!-- /.content-wrapper -->
-
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-      <!-- Control sidebar content goes here -->
-      
-    </aside>
-    <!-- /.control-sidebar -->
-
-    <div class="container">
-      <img src="images/Principal_Administrador.png" alt="">
+    
+  
+    <div>
+      <img src="images/Principal_Administrador.png" alt="" style="display:block; margin:auto;">
     </div>
+
   </div>
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2020 Team 6.</strong>
+    All rights reserved.
+  </footer>
   <!-- ./wrapper -->
 
-        <footer class="main-footer">
-          <strong>Copyright &copy; 2020 Team 6.</strong>
-          All rights reserved.
-        </footer>
 
   <!-- REQUIRED SCRIPTS -->
 
