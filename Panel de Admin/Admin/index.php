@@ -101,8 +101,8 @@
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-    
-  
+
+
     <div>
       <img src="images/Principal_Administrador.png" alt="" style="display:block; margin:auto;">
     </div>
