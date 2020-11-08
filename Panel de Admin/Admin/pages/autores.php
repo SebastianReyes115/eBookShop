@@ -156,11 +156,21 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); margin-left: 200px;">
     <small id="sna" class="form-text text-muted">Ingresa el nombre del autor</small>
   </div>
   <div class="form-group">
+    <label for="ApellidoAutor">Apellidos Autor</label>
+    <input type="text" class="form-control" name="Apellido" aria-describedby="emailHelp">
+    <small id="sn" class="form-text text-muted">Ingresa los apellidos del autor</small>
+  </div>
+  <div class="form-group">
     <label for="Nacionalidad">Nacionalidad</label>
     <input type="text" class="form-control" name="Nacionalidad" aria-describedby="emailHelp">
     <small id="sn" class="form-text text-muted">Ingresa la nacionalidad del autor</small>
   </div>
-  <input type="submit" name="b1" style="margin-left:235px;" class="btn btn-primary" value="Guardar">
+  <div class="form-group">
+    <label for="Edad">Edad</label>
+    <input type="number" class="form-control" name="edad" aria-describedby="emailHelp">
+    <small id="sn" class="form-text text-muted">Ingresa la edad del autor</small>
+  </div>
+  <input type="submit" name="b1" onClick="cargar()" style="margin-left:235px;" class="btn btn-primary" value="Guardar">
 </form>
         </div>
         <br><br>
@@ -168,7 +178,9 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); margin-left: 200px;">
             <tr>
                 <td>Id</td>
                 <td>NombreAutor</td>
+                <td>Apellidos</td>
                 <td>Nacionalidad</td>
+                <td>Edad</td>
             </tr>
         <?php 
 $con=mysqli_connect("localhost","Hector","Pagina1234","ebookshop");
@@ -181,8 +193,9 @@ while($fila=$ejecuta->fetch_assoc())
     <td><?php echo $fila['id_autor'] ?> </td>
     
     <td><?php echo $fila['NombreAutor'] ?> </td>
-    
+    <td><?php echo $fila['ApellidosAutor'] ?> </td>
     <td><?php echo $fila['Nacionalidad'] ?> </td>
+    <td><?php echo $fila['Edad'] ?> </td>
     <td> <div class="container">
     <?php echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal_' . $fila['id_autor'] . '" id=' . $fila['id_autor'] . '" >Editar</button>' ?>
              <!--<?php /*echo *///'<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal" id=' . $row['id'] . '" >Editar</button>' ?>-->
@@ -206,8 +219,16 @@ while($fila=$ejecuta->fetch_assoc())
                                                 <td><label for="Nombre">Nombre:</label></td>
                                                 <td><input type="text" name="nom" id="nombre" value='<?php echo  $fila['NombreAutor'] ;?>'></td>
                                             </tr>
+                                            <tr>
+                                                <td><label for="Nombre">Apellidos:</label></td>
+                                                <td><input type="text" name="apsa" id="nombre" value='<?php echo  $fila['ApellidosAutor'] ;?>'></td>
+                                            </tr>
                                                 <td><label for="Direccion">Nacionalidad:</label></td>
                                                 <td><input type="text" name="naci" id="direccion" value='<?php echo $fila['Nacionalidad'];?>'/></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="Nombre">Edad:</label></td>
+                                                <td><input type="text" name="edadautor" id="nombre" value='<?php echo  $fila['Edad'] ;?>'></td>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -251,11 +272,11 @@ if(isset($_POST["actualiza"])){ //Actualizar Actor
     $con=mysqli_connect("localhost","Hector","Pagina1234","ebookshop");
 $idupdate=$_POST['ida'];
 $n=$_POST['nom'];
+$appp=$_POST['apsa'];
+$e=$_POST['edadautor'];
 $na=$_POST['naci'];
-$ActualizarDespuesDe=3;
-$updat="UPDATE autor SET NombreAutor='$n',Nacionalidad='$na' WHERE id_autor='$idupdate'";
+$updat="UPDATE autor SET NombreAutor='$n',ApellidosAutor='$appp',Nacionalidad='$na',Edad='$e' WHERE id_autor='$idupdate'";
 if(mysqli_query($con,$updat)){
-    echo "correcto";
     unset($_POST);
     echo "<div class='alert alert-primary' role='alert'>
         Actualizado
@@ -280,13 +301,17 @@ $id=$contador+1;
 if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
     $nombre = $_POST['Nombre'];
     $nacio= $_POST['Nacionalidad'];
-    $sql1="INSERT INTO autor (id_autor, NombreAutor, Nacionalidad) VALUES ($id,'$nombre','$nacio')";
+    $apa=$_POST['Apellido'];
+    $age=$_POST['edad'];
+        $sql1="INSERT INTO autor (id_autor,NombreAutor,ApellidosAutor,Nacionalidad,Edad) VALUES ($id,'$nombre','$apa','$nacio','$age')";
     if(mysqli_query($con,$sql1)){
         echo "<div class='alert alert-success' role='alert'>
         Agregado Correctamente
       </div>";
         $nombre="";
         $nacio="";
+        $apa="";
+        $age="";
         unset($_POST);
         $con->close();
     }
@@ -295,6 +320,11 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
     }
 }
 ?>
+<script>
+    function cargar(){
+        window.location.href="autores.php";
+    }
+</script>
     </section>
     <!-- /.content -->
   </div>
