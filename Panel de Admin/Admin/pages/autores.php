@@ -154,7 +154,7 @@
     <input type="number" class="form-control" name="edad" aria-describedby="emailHelp">
     <small id="sn" class="form-text text-muted">Ingresa la edad del autor</small>
   </div>
-  <input type="submit" name="b1" onClick="cargar()" style="margin-left:300px;" class="btn btn-primary" value="Guardar">
+  <input type="submit" name="b1" onClick="cargar()" class="btn btn-primary btn-lg btn-block" value="Guardar">
 </form>
         </div>
         <br><br>
