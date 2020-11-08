@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="refresh"/>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Autores</title>
 
@@ -133,9 +132,7 @@
 
     <!-- Main content -->
     <section class="content">
-        <div style="width:50%; -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); margin-left: 200px;">
+        <div id="form1" class="shadow-lg p-3 mb-5 bg-white rounded" style="width:50%; margin-left:250px;">
         <form method="post">
   <div class="form-group">
     <label for="NombreAutor">Nombre</label>
@@ -157,7 +154,7 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); margin-left: 200px;">
     <input type="number" class="form-control" name="edad" aria-describedby="emailHelp">
     <small id="sn" class="form-text text-muted">Ingresa la edad del autor</small>
   </div>
-  <input type="submit" name="b1" onClick="cargar()" style="margin-left:235px;" class="btn btn-primary" value="Guardar">
+  <input type="submit" name="b1" onClick="cargar()" style="margin-left:300px;" class="btn btn-primary" value="Guardar">
 </form>
         </div>
         <br><br>
