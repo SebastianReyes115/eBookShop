@@ -3,13 +3,16 @@ CREATE SCHEMA IF NOT EXISTS `ebookshop`;
 
 CREATE TABLE IF NOT EXISTS `ebookshop`.`Autor` (
   `id_autor` INT NOT NULL,
-  `NombreAutor` VARCHAR(100) NULL,
+  `NombreAutor` VARCHAR(50) NULL,
+  `ApellidosAutor` VARCHAR(50) NULL,
   `Nacionalidad` VARCHAR(30) NULL,
+  `Edad` int null,
   PRIMARY KEY (`id_autor`));
   
 CREATE TABLE IF NOT EXISTS `ebookshop`.`Editorial` (
   `id_editorial` INT NOT NULL,
   `Editorial` VARCHAR(50) NULL,
+  `Pais` varchar(30) null,
   PRIMARY KEY (`id_editorial`));
   
 CREATE TABLE IF NOT EXISTS `ebookshop`.`Genero` (
@@ -19,10 +22,12 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`Genero` (
 
 CREATE TABLE IF NOT EXISTS `ebookshop`.`Usuarios` (
   `id_usuario` INT NOT NULL,
-  `Nombres` VARCHAR(50) NULL,
-  `Apellidos` VARCHAR(50) NULL,
+  `Nombre` VARCHAR(50) NULL,
+  `Apellido` VARCHAR(50) NULL,
   `correo` VARCHAR(50) NULL,
   `contraseña` VARCHAR(50) NULL,
+  `Rol` varchar(20) null,
+  `FechaDeRegistro` datetime,
   PRIMARY KEY (`id_usuario`));
   
 CREATE TABLE IF NOT EXISTS `ebookshop`.`MetodoPago` (
@@ -65,6 +70,7 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`Libros_Stock` (
   `isbn` INT NULL,
   `titulo` VARCHAR(100) NULL,
   `UnidadesEnStock` INT NULL,
+  `FechaDeEntrada` datetime,
   PRIMARY KEY (`id_libro`),
   CONSTRAINT `FK__Libros_St__id_li__160F4887`
     FOREIGN KEY (`id_libro`)
@@ -72,11 +78,12 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`Libros_Stock` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
-CREATE TABLE IF NOT EXISTS `ebookshop`.`venta` (
+CREATE TABLE IF NOT EXISTS `ebookshop`.`Venta` (
   `id_venta` INT NOT NULL,
   `id_usuario` INT NULL,
   `id_libro` INT NULL,
   `id_metodo` INT NULL,
+  `FechaVenta` datetime,
   PRIMARY KEY (`id_venta`),
   CONSTRAINT `FK__venta__id_libro__18EBB532`
     FOREIGN KEY (`id_libro`)
@@ -140,6 +147,7 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`WishList` (
   `id_libro` INT NULL,
   `id_usuario` INT NULL,
   `titulo` VARCHAR(100) NULL,
+  `FechaWishList` datetime,
   CONSTRAINT `FK__WishList__id_usu__1BC821DD`
     FOREIGN KEY (`id_usuario`)
     REFERENCES `ebookshop`.`Usuarios` (`id_usuario`)
@@ -155,6 +163,7 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`carrito` (
   `id_libro` INT NULL,
   `id_usuario` INT NULL,
   `cantidad` INT NULL,
+  `FechaCarrito` datetime,
   CONSTRAINT `FK__carrito__id_libr__01142BA1`
     FOREIGN KEY (`id_libro`)
     REFERENCES `ebookshop`.`Libros` (`id_libro`)
@@ -179,3 +188,62 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`autor_libro` (
     REFERENCES `ebookshop`.`Libros` (`id_libro`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
+
+
+    CREATE TABLE IF NOT EXISTS `ebookshop`.`Cliente` (
+  `id_cliente` INT NOT NULL,
+  `NombreCliente` VARCHAR(50) NULL,
+  `ApellidosCliente` VARCHAR(50) NULL,
+  `Pais` varchar(30) null,
+  `Ciudad` varchar(30) null,
+  `correo` VARCHAR(30) NULL,
+  `contraseña` int null,
+  PRIMARY KEY (`id_cliente`));
+
+      CREATE TABLE IF NOT EXISTS `ebookshop`.`MasVendidos` (
+  `id_libro` INT NOT NULL,
+  `titulo` VARCHAR(50) NULL,
+  `FechaDeVenta` datetime,
+  `CantidadVendidos` int,
+  PRIMARY KEY (`id_libro`));
+
+        CREATE TABLE IF NOT EXISTS `ebookshop`.`MasVisitados` (
+  `id_libro` INT NOT NULL,
+  `titulo` VARCHAR(50) NULL,
+  `FechaDeVisita` datetime,
+  `CantidadDeVisitas` int,
+  PRIMARY KEY (`id_libro`));
+
+
+        CREATE TABLE IF NOT EXISTS `ebookshop`.`Ofertas` (
+  `id_libro` INT NOT NULL,
+  `titulo` VARCHAR(50) NULL,
+  `FechaInicio` datetime,
+  `FechaFinal` datetime,
+  `PrecioViejo` decimal,
+  `PrecioNuevo` decimal,
+  PRIMARY KEY (`id_libro`));
+
+        CREATE TABLE IF NOT EXISTS `ebookshop`.`HistoriaRegistro` (
+  `id_registro` INT NOT NULL,
+  `id_usuario` int NULL,
+  `TipoCambio` varchar(30),
+  `TablaSeleccionada` varchar(30),
+  `FechaDelCambio` datetime,
+  `PrecioNuevo` decimal,
+  PRIMARY KEY (`id_registro`));
+
+        CREATE TABLE IF NOT EXISTS `ebookshop`.`Recomendaciones` (
+  `id_libro` INT NOT NULL,
+  `titulo` varchar(40),
+  `FechaDeRecomendacion` datetime,
+  PRIMARY KEY (`id_libro`));
+
+
+          CREATE TABLE IF NOT EXISTS `ebookshop`.`VisitasPagina` (
+  `id_visita` INT NOT NULL,
+  `id_cliente` int NULL,
+  `FechaDeVisita` varchar(30), 
+  PRIMARY KEY (`id_visita`));
+
+
