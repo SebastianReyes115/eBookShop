@@ -200,12 +200,14 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`autor_libro` (
   `contraseña` int null,
   PRIMARY KEY (`id_cliente`));
 
+
       CREATE TABLE IF NOT EXISTS `ebookshop`.`MasVendidos` (
   `id_libro` INT NOT NULL,
   `titulo` VARCHAR(50) NULL,
   `FechaDeVenta` datetime,
   `CantidadVendidos` int,
   PRIMARY KEY (`id_libro`));
+
 
         CREATE TABLE IF NOT EXISTS `ebookshop`.`MasVisitados` (
   `id_libro` INT NOT NULL,
@@ -240,10 +242,20 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`autor_libro` (
   PRIMARY KEY (`id_libro`));
 
 
-          CREATE TABLE IF NOT EXISTS `ebookshop`.`VisitasPagina` (
+  CREATE TABLE IF NOT EXISTS `ebookshop`.`VisitasPagina` (
   `id_visita` INT NOT NULL,
   `id_cliente` int NULL,
   `FechaDeVisita` varchar(30), 
   PRIMARY KEY (`id_visita`));
 
 
+
+
+ALTER TABLE masvendidos
+ADD FOREIGN KEY (id_libro) REFERENCES Libros(id_libro);
+ALTER TABLE masvisitados
+ADD FOREIGN KEY (id_libro) REFERENCES Libros(id_libro);
+ALTER TABLE Recomendaciones
+ADD FOREIGN KEY (id_libro) REFERENCES Libros(id_libro);
+ALTER TABLE Ofertas
+ADD FOREIGN KEY (id_libro) REFERENCES Libros(id_libro);
