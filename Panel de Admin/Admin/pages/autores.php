@@ -170,7 +170,7 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); margin-left: 200px;">
     <input type="number" class="form-control" name="edad" aria-describedby="emailHelp">
     <small id="sn" class="form-text text-muted">Ingresa la edad del autor</small>
   </div>
-  <input type="submit" name="b1" onClick="cargar()" style="margin-left:235px;" class="btn btn-primary" value="Guardar">
+  <input type="submit" name="b1" style="margin-left:235px;" class="btn btn-primary" value="Guardar">
 </form>
         </div>
         <br><br>
@@ -228,7 +228,7 @@ while($fila=$ejecuta->fetch_assoc())
                                             </tr>
                                             <tr>
                                                 <td><label for="Nombre">Edad:</label></td>
-                                                <td><input type="text" name="edadautor" id="nombre" value='<?php echo  $fila['Edad'] ;?>'></td>
+                                                <td><input type="number" name="edadautor" id="nombre" value='<?php echo  $fila['Edad'] ;?>'></td>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -263,8 +263,10 @@ if(isset($_POST['eliminar'])){ //Eliminar Autor
     if(mysqli_query($con,$sql2)){
     echo "";
     echo "<div class='alert alert-warning' role='alert'>
-        Elimindo
+        Eliminado
       </div>";
+      $page = $_SERVER['PHP_SELF'];
+      echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
     $con->close();
     }
 }
@@ -281,6 +283,8 @@ if(mysqli_query($con,$updat)){
     echo "<div class='alert alert-primary' role='alert'>
         Actualizado
       </div>";
+      $page = $_SERVER['PHP_SELF'];
+      echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
     $con->close();
 }
 else{
@@ -291,31 +295,31 @@ else{
 </table>
 <?php
 $contador=0;
-$con=mysqli_connect("localhost","Hector","Pagina1234","ebookshop");
-$sql="SELECT NombreAutor FROM autor";
-$ejecuta=mysqli_query($con,$sql);
-foreach($ejecuta as $nose){
-$contador++;
-}
-$id=$contador+1;
-if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
+if(isset($_POST["b1"])) { //Agregar Autor
+    $con=mysqli_connect("localhost","Hector","Pagina1234","ebookshop");
+    $id=4;
     $nombre = $_POST['Nombre'];
     $nacio= $_POST['Nacionalidad'];
     $apa=$_POST['Apellido'];
     $age=$_POST['edad'];
         $sql1="INSERT INTO autor (id_autor,NombreAutor,ApellidosAutor,Nacionalidad,Edad) VALUES ($id,'$nombre','$apa','$nacio','$age')";
-    if(mysqli_query($con,$sql1)){
+      if(mysqli_query($con,$sql1)){
         echo "<div class='alert alert-success' role='alert'>
         Agregado Correctamente
       </div>";
-        $nombre="";
+      $page = $_SERVER['PHP_SELF'];
+      echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
+      $nombre="";
         $nacio="";
         $apa="";
         $age="";
-        unset($_POST);
-        $con->close();
-    }
-    else{
+        unset($nombre);
+        unset($nacio);
+        unset($apa);
+        unset($age);
+         $con->close();    
+      }
+      else{
         echo "Error: " . $sql . "<br>" . mysqli_error($con);
     }
 }
