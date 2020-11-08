@@ -11,6 +11,8 @@ include('db.php');
 
 $consulta="SELECT*FROM usuarios WHERE correo='$usuario' AND contraseña='$contraseña'";
 
+$rol="SELECT*FROM usuarios WHERE Rol='super admin'";
+
 
 $resultado=mysqli_query($conexion,$consulta);
 
@@ -26,7 +28,7 @@ if($usuario == 'sebas@gmail.com' && $contraseña == '1234567890')
 }
 
 //Usuario menor
-else if($usuario == 'noe@gmail.com')
+else if($usuario == 'hector@gmail.com' && $contraseña == '1234567890')
 {
     $filas=mysqli_num_rows($resultado);
     
@@ -37,7 +39,7 @@ else if($usuario == 'noe@gmail.com')
 }
 
 //Atencion al cliente
-else if($usuario == 'noe@gmail.com')
+else if($usuario == 'luis@gmail.com' && $contraseña == '1234567890')
 {
     $filas=mysqli_num_rows($resultado);
     

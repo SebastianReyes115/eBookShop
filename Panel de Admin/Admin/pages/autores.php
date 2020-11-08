@@ -183,7 +183,7 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); margin-left: 200px;">
                 <td>Edad</td>
             </tr>
         <?php 
-$con=mysqli_connect("localhost","Hector","Pagina1234","ebookshop");
+$con=mysqli_connect("localhost","root","","ebookshop");
 $obtener="SELECT * FROM autor";
 $ejecuta=mysqli_query($con,$obtener);
 while($fila=$ejecuta->fetch_assoc())
@@ -258,7 +258,7 @@ while($fila=$ejecuta->fetch_assoc())
 }
 if(isset($_POST['eliminar'])){ //Eliminar Autor
     $ideli=$_POST['eliminar'];
-    $con=mysqli_connect("localhost","Hector","Pagina1234","ebookshop");
+    $con=mysqli_connect("localhost","root","","ebookshop");
     $sql2="DELETE FROM autor WHERE id_autor='$ideli'";
     if(mysqli_query($con,$sql2)){
     echo "";
@@ -269,7 +269,7 @@ if(isset($_POST['eliminar'])){ //Eliminar Autor
     }
 }
 if(isset($_POST["actualiza"])){ //Actualizar Actor
-    $con=mysqli_connect("localhost","Hector","Pagina1234","ebookshop");
+  $con=mysqli_connect("localhost","root","","ebookshop");
 $idupdate=$_POST['ida'];
 $n=$_POST['nom'];
 $appp=$_POST['apsa'];
@@ -291,7 +291,7 @@ else{
 </table>
 <?php
 $contador=0;
-$con=mysqli_connect("localhost","Hector","Pagina1234","ebookshop");
+$con=mysqli_connect("localhost","root","","ebookshop");
 $sql="SELECT NombreAutor FROM autor";
 $ejecuta=mysqli_query($con,$sql);
 foreach($ejecuta as $nose){
