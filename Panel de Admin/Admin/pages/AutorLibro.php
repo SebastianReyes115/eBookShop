@@ -36,7 +36,7 @@
       <!-- SidebarSearch Form -->
       <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Buscar" aria-label="Search">
           <div class="input-group-append">
             <button class="btn btn-sidebar">
               <i class="fas fa-search fa-fw"></i>
@@ -186,6 +186,12 @@ $con->close();
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
+  <footer class="main-footer">
+      <div class="float-right d-none d-sm-block">
+        <b>Version</b> 3.1.0-pre
+      </div>
+      <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    </footer>
 </div>
 <!-- ./wrapper -->
 

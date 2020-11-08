@@ -308,6 +308,7 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) {
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
   </aside>
+  
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
