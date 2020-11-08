@@ -48,6 +48,7 @@
       </div>
 
       <!-- Sidebar Menu -->
+
       <<nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-header">Administrar Base de Datos</li>
@@ -170,7 +171,7 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); margin-left: 200px;">
                 <td>Nacionalidad</td>
                 <td>Edad</td>
             </tr>
-        <?php 
+        <?php
 $con=mysqli_connect("localhost","root","","ebookshop");
 $obtener="SELECT * FROM autor";
 $ejecuta=mysqli_query($con,$obtener);
@@ -179,7 +180,7 @@ while($fila=$ejecuta->fetch_assoc())
 ?>
 <tr>
     <td><?php echo $fila['id_autor'] ?> </td>
-    
+
     <td><?php echo $fila['NombreAutor'] ?> </td>
     <td><?php echo $fila['ApellidosAutor'] ?> </td>
     <td><?php echo $fila['Nacionalidad'] ?> </td>
@@ -225,12 +226,12 @@ while($fila=$ejecuta->fetch_assoc())
                                             </tr>
                                         </table>
                                     </form>
-                                </fieldset>   
+                                </fieldset>
                             </div>
                             <div class="modal-footer">
                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             </div>
-                    </div>   
+                    </div>
                 </div>
             </div>
         </div>
@@ -239,10 +240,10 @@ while($fila=$ejecuta->fetch_assoc())
         <form method="post" id="form_eliminar_<?php  echo $fila['id_autor']?>">
         <input type="hidden" name="eliminar" value="<?php echo $fila['id_autor'];?>" />
     <input type="submit" value="Eliminar" class="btn btn-danger"/>
-        </form> 
+        </form>
 </td>
 </tr>
-<?php 
+<?php
 }
 if(isset($_POST['eliminar'])){ //Eliminar Autor
     $ideli=$_POST['eliminar'];
