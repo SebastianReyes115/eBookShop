@@ -52,12 +52,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-header">Administrar</li>
 
-          <li class="nav-item">
-            <a href="calendar.html" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>Calendario</p>
-            </a>
-          </li>
+          
           <li class="nav-item">
             <a href="pages/AutorLibro.html" class="nav-link">
             <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-chevron-contract" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -83,38 +78,12 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="productos.html" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
-                <p>Productos</p>
-            </a>
-          </li>
-          <li class="nav-item">
             <a href="pages/productos.html" class="nav-link">
               <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
 </svg>
 
                 <p>Autores</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="Estadistica.html" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
-                <p>Estadísticas</p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="productos.html" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-                <p>Base de Datos</p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="mailbox/mailbox.html" class="nav-link">
-              <i class="nav-icon fas fa-envelope"></i>
-                <p>Inbox</p>
             </a>
           </li>
 
