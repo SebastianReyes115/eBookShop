@@ -59,7 +59,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="pages/mailboxA" class="nav-link">
+            <a href="pages/mailbox/mailboxA.html" class="nav-link">
             <i class="nav-icon fas fa-envelope"></i>
                 <p>Inbox</p>
             </a>

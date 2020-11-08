@@ -9,9 +9,9 @@ $_SESSION['usuario']=$usuario;
 
 include('db.php');
 
-$consulta="SELECT*FROM usuarios WHERE correo='$usuario' AND contraseña='$contraseña'";
+$consulta="SELECT*FROM administrador WHERE correo='$usuario' AND contraseña='$contraseña'";
 
-$rol="SELECT*FROM usuarios WHERE Rol='super admin'";
+$rol="SELECT*FROM administrador WHERE Rol='super admin'";
 
 
 $resultado=mysqli_query($conexion,$consulta);

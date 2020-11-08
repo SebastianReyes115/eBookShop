@@ -22,12 +22,12 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`Genero` (
 
 CREATE TABLE IF NOT EXISTS `ebookshop`.`Usuarios` (
   `id_usuario` INT NOT NULL,
-  `Nombre` VARCHAR(50) NULL,
-  `Apellido` VARCHAR(50) NULL,
-  `correo` VARCHAR(50) NULL,
-  `contraseña` VARCHAR(50) NULL,
-  `Rol` varchar(20) null,
-  `FechaDeRegistro` datetime,
+  `NombreCliente` VARCHAR(50) NULL,
+  `ApellidosCliente` VARCHAR(50) NULL,
+  `Pais` varchar(30) null,
+  `Ciudad` varchar(30) null,
+  `correo` VARCHAR(30) NULL,
+  `contraseña` int null,
   PRIMARY KEY (`id_usuario`));
   
 CREATE TABLE IF NOT EXISTS `ebookshop`.`MetodoPago` (
@@ -190,15 +190,15 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`autor_libro` (
     ON UPDATE NO ACTION);
 
 
-    CREATE TABLE IF NOT EXISTS `ebookshop`.`Cliente` (
-  `id_cliente` INT NOT NULL,
-  `NombreCliente` VARCHAR(50) NULL,
-  `ApellidosCliente` VARCHAR(50) NULL,
-  `Pais` varchar(30) null,
-  `Ciudad` varchar(30) null,
-  `correo` VARCHAR(30) NULL,
-  `contraseña` int null,
-  PRIMARY KEY (`id_cliente`));
+    CREATE TABLE IF NOT EXISTS `ebookshop`.`Administrador` (
+  `id_admin` INT NOT NULL,
+  `Nombre` VARCHAR(50) NULL,
+  `Apellido` VARCHAR(50) NULL,
+  `correo` VARCHAR(50) NULL,
+  `contraseña` VARCHAR(50) NULL,
+  `Rol` varchar(20) null,
+  `FechaDeRegistro` datetime,
+  PRIMARY KEY (`id_admin`));
 
 
       CREATE TABLE IF NOT EXISTS `ebookshop`.`MasVendidos` (
@@ -244,12 +244,9 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`autor_libro` (
 
   CREATE TABLE IF NOT EXISTS `ebookshop`.`VisitasPagina` (
   `id_visita` INT NOT NULL,
-  `id_cliente` int NULL,
+  `id_usuario` int NULL,
   `FechaDeVisita` varchar(30), 
   PRIMARY KEY (`id_visita`));
-
-
-
 
 ALTER TABLE masvendidos
 ADD FOREIGN KEY (id_libro) REFERENCES Libros(id_libro);
@@ -259,3 +256,7 @@ ALTER TABLE Recomendaciones
 ADD FOREIGN KEY (id_libro) REFERENCES Libros(id_libro);
 ALTER TABLE Ofertas
 ADD FOREIGN KEY (id_libro) REFERENCES Libros(id_libro);
+ALTER TABLE VisitasPagina
+ADD FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario);
+ALTER TABLE HistoriaRegistro
+ADD FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario);
