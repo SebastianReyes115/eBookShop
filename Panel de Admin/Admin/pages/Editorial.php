@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="refresh"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Editoriales</title>
+  <title>Editorial</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -32,7 +33,6 @@
           <a href="../index.php" class="d-block">Super Administrador</a>
         </div>
       </div>
-
       <!-- SidebarSearch Form -->
       <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
@@ -44,21 +44,27 @@
           </div>
         </div>
       </div>
-
       <!-- Sidebar Menu -->
+
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-header">Administrar Base de Datos</li>
-
           <li class="nav-item">
-            <a href="AutorLibro.php" class="nav-link">
-              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-chevron-contract" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M3.646 13.854a.5.5 0 0 0 .708 0L8 10.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708zm0-11.708a.5.5 0 0 1 .708 0L8 5.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708z"/>
+            <a href="autores.php" class="nav-link">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
               </svg>
-              <p>AutorLibro</p>
+              <p>Autor</p>
             </a>
           </li>
-
+          <li class="nav-item">
+            <a href="Editorial.php" class="nav-link">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-book" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+              </svg>
+              <p>Editorial</p>
+            </a>
+          </li>
           <li class="nav-item">
             <a href="Genero.php" class="nav-link">
               <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-ui-radios-grid" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -68,22 +74,54 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="Editorial.php" class="nav-link">
-              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-book" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-              </svg>
-              <p>Editoriales</p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="autores.php" class="nav-link">
+            <a href="Libros.php" class="nav-link">
               <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
               </svg>
-              <p>Autores</p>
+              <p>Libros</p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="LibrosStock.php" class="nav-link">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg>
+              <p>Libros Disponibles</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="MetodoPago.php" class="nav-link">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg>
+              <p>Método de pago</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="Ofertas.php" class="nav-link">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg>
+              <p>Ofertas</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="Recomendaciones.php" class="nav-link">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg>
+              <p>Recomendaciones</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="Usuarios.php" class="nav-link">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg>
+              <p>Usuarios</p>
+            </a>
+          </li>
+
           <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <li class="nav-header">Administracion general</li>
@@ -119,7 +157,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Editoriales</h1>
+            <h1 class="m-0">Autores</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -131,28 +169,35 @@
     </div>
     </section>
 
-    <!-- Main content -->
+    <!-- Form principal -->
     <section class="content">
-        <div style="width:50%; -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); margin-left: 200px;">
+        <div id="form1" class="shadow-lg p-3 mb-5 bg-white rounded" style="width:50%; margin-left:250px;">
         <form method="post">
   <div class="form-group">
     <label for="NombreEditorial">Nombre Editorial</label>
-    <input type="text" class="form-control" name="NombreEditorial" id="Editorial" aria-describedby="emailHelp">
-    <small id="sna" class="form-text text-muted">Ingresa el nombre del autor</small>
+    <input type="text" class="form-control" name="NombreEditorial" id="NombreEditorial" aria-describedby="emailHelp">
+    <small id="sna" class="form-text text-muted">Ingresa nombre de la editorial</small>
   </div>
-  <input type="submit" name="b1" class="btn btn-primary" value="Guardar">
+  <div class="form-group">
+    <label for="ApellidoAutor">Pais</label>
+    <input type="text" class="form-control" name="Pais" aria-describedby="emailHelp">
+    <small id="sn" class="form-text text-muted">Ingresa país de la editorial</small>
+  </div>
+  <input type="submit" name="b1" onClick="cargar()" class="btn btn-primary btn-lg btn-block" value="Guardar">
 </form>
+
+    <!-- Tabla de la consulta -->
         </div>
-        <br><br><br>
+        <br><br>
         <table class="table table-dark">
             <tr>
                 <td>Id</td>
-                <td>Genero</td>
+                <td>NombreEditorial</td>
+                <td>Pais</td>
             </tr>
+
         <?php
-$con=mysqli_connect("localhost","Hector","Pagina1234","ebookshop");
+$con=mysqli_connect("localhost","root","","ebookshop");
 $obtener="SELECT * FROM editorial";
 $ejecuta=mysqli_query($con,$obtener);
 while($fila=$ejecuta->fetch_assoc())
@@ -160,16 +205,14 @@ while($fila=$ejecuta->fetch_assoc())
 ?>
 <tr>
     <td><?php echo $fila['id_editorial'] ?> </td>
-
     <td><?php echo $fila['Editorial'] ?> </td>
+    <td><?php echo $fila['Pais'] ?> </td>
     <td> <div class="container">
-    <?php echo '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal_' . $fila['id_editorial'] . '" id=' . $fila['id_editorial'] . '" >Editar</button>' ?>
+    <?php echo '<button type="button" class="btn btn-info btn-m" data-toggle="modal" data-target="#Modal_' . $fila['id_editorial'] . '" id=' . $fila['id_editorial'] . '" >Editar</button>' ?>
              <!--<?php /*echo *///'<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal" id=' . $row['id'] . '" >Editar</button>' ?>-->
              <div class="modal fade" id="Modal_<?= $fila['id_editorial']; ?>" role="dialog">
                 <div class="modal-dialog">
-
                     <div class="modal-content">
-
                         <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
@@ -179,12 +222,20 @@ while($fila=$ejecuta->fetch_assoc())
                                         <table class="table table-dark">
                                         <tr>
                                                 <td><label for="Ida">ID:</label></td>
-                                                <td><input type="text" name="ida" id="ida" value='<?php echo  $fila['id_editorial'] ;?>'   readonly="readonly"></td>
+                                                <td><input type="text" name="ide" id="ida" value='<?php echo  $fila['id_editorial'] ;?>'   readonly="readonly"></td>
                                             </tr>
                                             <tr>
-                                                <td><label for="Nombre">Genero:</label></td>
-                                                <td><input type="text" name="edi" id="nombre" value='<?php echo  $fila['Editorial'] ;?>'></td>
+                                                <td><label for="NombreEditorial">Nombre:</label></td>
+                                                <td><input type="text" name="nomE" id="nombre" value='<?php echo  $fila['Editorial'] ;?>'></td>
                                             </tr>
+                                            <tr>
+                                                <td><label for="Nombre">Pais:</label></td>
+                                                <td><input type="text" name="PaisE" id="nombre" value='<?php echo  $fila['Pais'] ;?>'></td>
+                                            </tr>
+
+                                            </tr>
+                                            <tr>
+                                                
                                             </tr>
                                             <tr>
                                                 <td>
@@ -206,7 +257,7 @@ while($fila=$ejecuta->fetch_assoc())
     <td>
         <form method="post" id="form_eliminar_<?php  echo $fila['id_editorial']?>">
         <input type="hidden" name="eliminar" value="<?php echo $fila['id_editorial'];?>" />
-    <input type="submit" value="Eliminar" class="btn btn-danger"/>
+    <input type="submit" value="Eliminar" class="btn btn-danger btn-m"/>
         </form>
 </td>
 </tr>
@@ -214,85 +265,100 @@ while($fila=$ejecuta->fetch_assoc())
 }
 if(isset($_POST['eliminar'])){ //Eliminar Autor
     $ideli=$_POST['eliminar'];
-    $con=mysqli_connect("localhost","Hector","Pagina1234","ebookshop");
+    $con=mysqli_connect("localhost","root","","ebookshop");
     $sql2="DELETE FROM editorial WHERE id_editorial='$ideli'";
     if(mysqli_query($con,$sql2)){
     echo "";
     echo "<div class='alert alert-warning' role='alert'>
-        Elimindo
-      </div>";
+        Eliminado
+      </div>";     
     $con->close();
+    echo "<meta http-equiv=refresh content=0;URL=editorial.php>";
     }
 }
 if(isset($_POST["actualiza"])){ //Actualizar Actor
-    $con=mysqli_connect("localhost","Hector","Pagina1234","ebookshop");
-$idupdate=$_POST['ida'];
-$n=$_POST['edi'];
-$updat="UPDATE editorial SET Editorial='$n' WHERE id_editorial='$idupdate'";
+  $con=mysqli_connect("localhost","root","","ebookshop");
+$idupdate=$_POST['ide'];
+$n=$_POST['nomE'];
+$appp=$_POST['PaisE'];
+$updat="UPDATE editorial SET Editorial='$n',Pais='$appp' WHERE id_editorial='$idupdate'";
 if(mysqli_query($con,$updat)){
-    echo "correcto";
     unset($_POST);
     echo "<div class='alert alert-primary' role='alert'>
         Actualizado
       </div>";
+      $page = $_SERVER['PHP_SELF'];
+      echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
     $con->close();
+    echo "<meta http-equiv=refresh content=0;URL=editorial.php>";
+
 }
 else{
     echo "error";
 }
 }
 ?>
+</table>
 <?php
 $contador=0;
-$con=mysqli_connect("localhost","Hector","Pagina1234","ebookshop");
-$sql="SELECT Editorial FROM editorial";
+$con=mysqli_connect("localhost","root","","ebookshop");
+$sql="SELECT editorial FROM editorial";
 $ejecuta=mysqli_query($con,$sql);
 foreach($ejecuta as $nose){
 $contador++;
 }
 $id=$contador+1;
-if(isset($_POST["b1"]) && !empty($_POST["b1"])) {
+if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
     $nombre = $_POST['NombreEditorial'];
-    $sql1="INSERT INTO editorial (id_editorial,Editorial) VALUES ($id,'$nombre')";
-    if(mysqli_query($con,$sql1)){
-        echo "<div class='alert alert-success' role='alert'>
-        Agregado Correctamente
-      </div>";
-        $nombre="";
-        unset($_POST);
-    }
-    else{
-        echo "Error: " . $sql . "<br>" . mysqli_error($con);
-    }
+    $nacio= $_POST['Pais'];
+    if(empty($nombre)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el nombre del autor</div>";}
+    if(empty($nacio)){echo "<div class='alert alert-primary' role='alert'> Falta la nacionalidad del autor </div>";}
+      else{
+        
+    if(!empty($nombre) && !empty($nacio)){
+        $sql1="INSERT INTO editorial (id_editorial,Editorial,Pais) VALUES ($id,'$nombre','$nacio')";
+        if(mysqli_query($con,$sql1)){
+            echo "<div class='alert alert-success' role='alert'>
+            Agregado Correctamente
+          </div>";
+            $nombre="";
+            $nacio="";
+            $apa="";
+            $age="";
+            unset($_POST);
+            $con->close();
+            echo "<meta http-equiv=refresh content=0;URL=editorial.php>";
+        }
+        else{
+            echo "Error: " . $sql . "<br>" . mysqli_error($con);
+        }
+      }     
+      }
+        
 }
 ?>
-<?php
-//$con=mysqli_connect("localhost","Hector","Pagina1234","ebookshop");
-//$sql="SELECT * FROM usuarios WHERE id_usuario=1";
-//$ejecuta=mysqli_query($con,$sql);
-//$fila=mysqli_fetch_array($ejecuta);
-//$Nombrecom=$fila['Nombres'];
-//echo $Nombrecom;
-
-?>
+<script>
+    function cargar(){
+        window.location.href="autores.php";
+    }
+</script>
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.1.0-pre
     </div>
     <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
   </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-
-  <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
 
