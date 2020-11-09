@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`Libros` (
   `Idioma` VARCHAR(30) NULL,
   `Edicion` INT NULL,
   `Año` VARCHAR(30) NULL,
-  `ImagenLibro` LONGBLOB NULL,
+  `ImagenLibro` VARCHAR(50) NULL,
   PRIMARY KEY (`id_libro`),
   CONSTRAINT `FK__Libros__id_Autor__6B24EA82`
     FOREIGN KEY (`id_Autor`)
