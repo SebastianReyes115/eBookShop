@@ -225,7 +225,11 @@
     <input type="number" class="form-control" name="edad" aria-describedby="emailHelp">
     <small id="sn" class="form-text text-muted">Ingresa la edad del autor</small>
   </div>
+<<<<<<< HEAD
+  <input type="submit" name="b1" style="margin-left:235px;" class="btn btn-primary" value="Guardar">
+=======
   <input type="submit" name="b1" onClick="cargar()" class="btn btn-primary btn-lg btn-block" value="Guardar">
+>>>>>>> ee9a59a1a08351a1bd5503e06d421dfec85d6bbd
 </form>
 
     <!-- Tabla de la consulta -->
@@ -283,7 +287,7 @@ while($fila=$ejecuta->fetch_assoc())
                                             </tr>
                                             <tr>
                                                 <td><label for="Nombre">Edad:</label></td>
-                                                <td><input type="text" name="edadautor" id="nombre" value='<?php echo  $fila['Edad'] ;?>'></td>
+                                                <td><input type="number" name="edadautor" id="nombre" value='<?php echo  $fila['Edad'] ;?>'></td>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -319,7 +323,13 @@ if(isset($_POST['eliminar'])){ //Eliminar Autor
     echo "";
     echo "<div class='alert alert-warning' role='alert'>
         Eliminado
+<<<<<<< HEAD
+      </div>";
+      $page = $_SERVER['PHP_SELF'];
+      echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
+=======
       </div>";     
+>>>>>>> ee9a59a1a08351a1bd5503e06d421dfec85d6bbd
     $con->close();
     echo "<meta http-equiv=refresh content=0;URL=autores.php>";
     }
@@ -337,6 +347,8 @@ if(mysqli_query($con,$updat)){
     echo "<div class='alert alert-primary' role='alert'>
         Actualizado
       </div>";
+      $page = $_SERVER['PHP_SELF'];
+      echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
     $con->close();
     echo "<meta http-equiv=refresh content=0;URL=autores.php>";
 
@@ -349,6 +361,11 @@ else{
 </table>
 <?php
 $contador=0;
+<<<<<<< HEAD
+if(isset($_POST["b1"])) { //Agregar Autor
+    $con=mysqli_connect("localhost","Hector","Pagina1234","ebookshop");
+    $id=4;
+=======
 $con=mysqli_connect("localhost","root","","ebookshop");
 $sql="SELECT NombreAutor FROM autor";
 $ejecuta=mysqli_query($con,$sql);
@@ -357,6 +374,7 @@ $contador++;
 }
 $id=$contador+1;
 if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
+>>>>>>> ee9a59a1a08351a1bd5503e06d421dfec85d6bbd
     $nombre = $_POST['Nombre'];
     $nacio= $_POST['Nacionalidad'];
     $apa=$_POST['Apellido'];
@@ -370,6 +388,27 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
         }
     if(!empty($nombre) && !empty($nacio) && !empty($apa) && !empty($age) && $age>15){
         $sql1="INSERT INTO autor (id_autor,NombreAutor,ApellidosAutor,Nacionalidad,Edad) VALUES ($id,'$nombre','$apa','$nacio','$age')";
+<<<<<<< HEAD
+      if(mysqli_query($con,$sql1)){
+        echo "<div class='alert alert-success' role='alert'>
+        Agregado Correctamente
+      </div>";
+      $page = $_SERVER['PHP_SELF'];
+      echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
+      $nombre="";
+        $nacio="";
+        $apa="";
+        $age="";
+        unset($nombre);
+        unset($nacio);
+        unset($apa);
+        unset($age);
+         $con->close();    
+      }
+      else{
+        echo "Error: " . $sql . "<br>" . mysqli_error($con);
+    }
+=======
         if(mysqli_query($con,$sql1)){
             echo "<div class='alert alert-success' role='alert'>
             Agregado Correctamente
@@ -388,6 +427,7 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
       }     
       }
         
+>>>>>>> ee9a59a1a08351a1bd5503e06d421dfec85d6bbd
 }
 ?>
 <script>
