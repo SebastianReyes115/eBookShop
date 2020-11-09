@@ -52,15 +52,15 @@
           <li class="nav-header">Administrar</li>
           
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="pages/calendarAtencion.html" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>Calendario</p>
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="pages/productos.html" class="nav-link">
-              <i class="nav-icon fas fa-envelope"></i>
+            <a href="pages/mailbox/mailboxA.html" class="nav-link">
+            <i class="nav-icon fas fa-envelope"></i>
                 <p>Inbox</p>
             </a>
           </li>
