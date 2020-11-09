@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="refresh"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Autores</title>
+  <title>Usuarios</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -157,7 +157,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Autores</h1>
+            <h1 class="m-0">Usuarios</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -176,22 +176,27 @@
   <div class="form-group">
     <label for="NombreAutor">Nombre</label>
     <input type="text" class="form-control" name="Nombre" id="NombreAutor" aria-describedby="emailHelp">
-    <small id="sna" class="form-text text-muted">Ingresa el nombre del autor</small>
+    <small id="sna" class="form-text text-muted">Ingresa el nombre del usuario</small>
   </div>
   <div class="form-group">
-    <label for="ApellidoAutor">Apellidos Autor</label>
+    <label for="ApellidoAutor">Apellidos</label>
     <input type="text" class="form-control" name="Apellido" aria-describedby="emailHelp">
-    <small id="sn" class="form-text text-muted">Ingresa los apellidos del autor</small>
+    <small id="sn" class="form-text text-muted">Ingresa los apellidos del usuario</small>
   </div>
   <div class="form-group">
-    <label for="Nacionalidad">Nacionalidad</label>
-    <input type="text" class="form-control" name="Nacionalidad" aria-describedby="emailHelp">
+    <label for="Nacionalidad">correo</label>
+    <input type="email" class="form-control" name="correo" aria-describedby="emailHelp">
     <small id="sn" class="form-text text-muted">Ingresa la nacionalidad del autor</small>
   </div>
   <div class="form-group">
-    <label for="Edad">Edad</label>
-    <input type="number" class="form-control" name="edad" aria-describedby="emailHelp">
-    <small id="sn" class="form-text text-muted">Ingresa la edad del autor</small>
+    <label for="Edad">Contraseña</label>
+    <input type="password" class="form-control" name="contra" aria-describedby="emailHelp">
+    <small id="sn" class="form-text text-muted">Ingresa una contraseña</small>
+  </div>
+  <div class="form-group">
+    <label for="ApellidoAutor">Rol</label>
+    <input type="text" class="form-control" name="rol" aria-describedby="emailHelp">
+    <small id="sn" class="form-text text-muted">Ingresa el rol que va a tener</small>
   </div>
   <input type="submit" name="b1" onClick="cargar()" class="btn btn-primary btn-lg btn-block" value="Guardar">
 </form>
@@ -202,29 +207,34 @@
         <table class="table table-dark">
             <tr>
                 <td>Id</td>
-                <td>NombreAutor</td>
+                <td>Nombre</td>
                 <td>Apellidos</td>
-                <td>Nacionalidad</td>
-                <td>Edad</td>
+                <td>Correo</td>
+                <td>Contraseña</td>
+                <td>Rol</td>
+                <td>Fecha de registro</td>
             </tr>
 
         <?php
 $con=mysqli_connect("localhost","root","","ebookshop");
-$obtener="SELECT * FROM autor";
+$obtener="SELECT * FROM administrador";
 $ejecuta=mysqli_query($con,$obtener);
 while($fila=$ejecuta->fetch_assoc())
 {
 ?>
 <tr>
-    <td><?php echo $fila['id_autor'] ?> </td>
-    <td><?php echo $fila['NombreAutor'] ?> </td>
-    <td><?php echo $fila['ApellidosAutor'] ?> </td>
-    <td><?php echo $fila['Nacionalidad'] ?> </td>
-    <td><?php echo $fila['Edad']?> </td>
+    <td><?php echo $fila['id_admin'] ?> </td>
+    <td><?php echo $fila['Nombre'] ?> </td>
+    <td><?php echo $fila['Apellido'] ?> </td>
+    <td><?php echo $fila['correo']?> </td>
+    <td><?php echo $fila['contraseña']?> </td>
+    <td><?php echo $fila['Rol']?> </td>
+    <td><?php echo $fila['FechaDeRegistro']?> </td>
+
     <td> <div class="container">
-    <?php echo '<button type="button" class="btn btn-info btn-m" data-toggle="modal" data-target="#Modal_' . $fila['id_autor'] . '" id=' . $fila['id_autor'] . '" >Editar</button>' ?>
+    <?php echo '<button type="button" class="btn btn-info btn-m" data-toggle="modal" data-target="#Modal_' . $fila['id_admin'] . '" id=' . $fila['id_admin'] . '" >Editar</button>' ?>
              <!--<?php /*echo *///'<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal" id=' . $row['id'] . '" >Editar</button>' ?>-->
-             <div class="modal fade" id="Modal_<?= $fila['id_autor']; ?>" role="dialog">
+             <div class="modal fade" id="Modal_<?= $fila['id_admin']; ?>" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -236,22 +246,26 @@ while($fila=$ejecuta->fetch_assoc())
                                         <table class="table table-dark">
                                         <tr>
                                                 <td><label for="Ida">ID:</label></td>
-                                                <td><input type="text" name="ida" id="ida" value='<?php echo  $fila['id_autor'] ;?>'   readonly="readonly"></td>
+                                                <td><input type="text" name="ida" id="ida" value='<?php echo  $fila['id_admin'] ;?>'   readonly="readonly"></td>
                                             </tr>
                                             <tr>
                                                 <td><label for="Nombre">Nombre:</label></td>
-                                                <td><input type="text" name="nom" id="nombre" value='<?php echo  $fila['NombreAutor'] ;?>'></td>
+                                                <td><input type="text" name="nom" id="nombre" value='<?php echo  $fila['Nombre'] ;?>'></td>
                                             </tr>
                                             <tr>
-                                                <td><label for="Nombre">Apellidos:</label></td>
-                                                <td><input type="text" name="apsa" id="nombre" value='<?php echo  $fila['ApellidosAutor'] ;?>'></td>
+                                                <td><label for="Apellido">Apellidos:</label></td>
+                                                <td><input type="text" name="apsa" id="nombre" value='<?php echo  $fila['Apellido'] ;?>'></td>
                                             </tr>
-                                                <td><label for="Direccion">Nacionalidad:</label></td>
-                                                <td><input type="text" name="naci" id="direccion" value='<?php echo $fila['Nacionalidad'];?>'/></td>
+                                                <td><label for="Correo">Email:</label></td>
+                                                <td><input type="email" name="email" id="correo" value='<?php echo $fila['correo'];?>'/></td>
                                             </tr>
                                             <tr>
-                                                <td><label for="Nombre">Edad:</label></td>
-                                                <td><input type="number" name="edadautor" id="nombre" value='<?php echo  $fila['Edad'] ;?>'></td>
+                                                <td><label for="Contra">Contraseña:</label></td>
+                                                <td><input type="password" name="contrasena" id="contraseña" value='<?php echo  $fila['contrasena'] ;?>'></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="Rol">Rol:</label></td>
+                                                <td><input type="text" name="rol" id="rol" value='<?php echo  $fila['Rol'] ;?>'></td>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -271,8 +285,8 @@ while($fila=$ejecuta->fetch_assoc())
         </div>
         </td>
     <td>
-        <form method="post" id="form_eliminar_<?php  echo $fila['id_autor']?>">
-        <input type="hidden" name="eliminar" value="<?php echo $fila['id_autor'];?>" />
+        <form method="post" id="form_eliminar_<?php  echo $fila['id_admin']?>">
+        <input type="hidden" name="eliminar" value="<?php echo $fila['id_admin'];?>" />
     <input type="submit" value="Eliminar" class="btn btn-danger btn-m"/>
         </form>
 </td>
@@ -282,14 +296,14 @@ while($fila=$ejecuta->fetch_assoc())
 if(isset($_POST['eliminar'])){ //Eliminar Autor
     $ideli=$_POST['eliminar'];
     $con=mysqli_connect("localhost","root","","ebookshop");
-    $sql2="DELETE FROM autor WHERE id_autor='$ideli'";
+    $sql2="DELETE FROM administrador WHERE id_admin='$ideli'";
     if(mysqli_query($con,$sql2)){
     echo "";
     echo "<div class='alert alert-warning' role='alert'>
         Eliminado
       </div>";     
     $con->close();
-    echo "<meta http-equiv=refresh content=0;URL=autores.php>";
+    echo "<meta http-equiv=refresh content=0;URL=Usuarios.php>";
     }
 }
 if(isset($_POST["actualiza"])){ //Actualizar Actor
@@ -297,9 +311,10 @@ if(isset($_POST["actualiza"])){ //Actualizar Actor
 $idupdate=$_POST['ida'];
 $n=$_POST['nom'];
 $appp=$_POST['apsa'];
-$e=$_POST['edadautor'];
-$na=$_POST['naci'];
-$updat="UPDATE autor SET NombreAutor='$n',ApellidosAutor='$appp',Nacionalidad='$na',Edad='$e' WHERE id_autor='$idupdate'";
+$e=$_POST['email'];
+$na=$_POST['contrasena'];
+$rol=$_POST['rol'];
+$updat="UPDATE administrador SET Nombre='$n',Apellido='$appp', correo='$e',contraseña='$na', rol='rol' WHERE id_admin='$idupdate'";
 if(mysqli_query($con,$updat)){
     unset($_POST);
     echo "<div class='alert alert-primary' role='alert'>
@@ -308,8 +323,7 @@ if(mysqli_query($con,$updat)){
       $page = $_SERVER['PHP_SELF'];
       echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
     $con->close();
-    echo "<meta http-equiv=refresh content=0;URL=autores.php>";
-
+    echo "<meta http-equiv=refresh content=0;URL=Usuarios.php>";
 }
 else{
     echo "error";
@@ -320,7 +334,7 @@ else{
 <?php
 $contador=0;
 $con=mysqli_connect("localhost","root","","ebookshop");
-$sql="SELECT NombreAutor FROM autor";
+$sql="SELECT Nombre FROM administrador";
 $ejecuta=mysqli_query($con,$sql);
 foreach($ejecuta as $nose){
 $contador++;
@@ -328,18 +342,19 @@ $contador++;
 $id=$contador+1;
 if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
     $nombre = $_POST['Nombre'];
-    $nacio= $_POST['Nacionalidad'];
     $apa=$_POST['Apellido'];
-    $age=$_POST['edad'];
-    if(empty($nombre)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el nombre del autor</div>";}
-    if(empty($nacio)){echo "<div class='alert alert-primary' role='alert'> Falta la nacionalidad del autor </div>";}
-    if(empty($apa)){echo "<div class='alert alert-primary' role='alert'> Falta el apellido del autor </div>";}
-    if(empty($age)){echo "<div class='alert alert-primary' role='alert'> Falta la edad del autor</div>";
-      }else{
-        if($age<15){ echo "<div class='alert alert-primary' role='alert'> Edad no aceptada para un autor </div>";
-        }
-    if(!empty($nombre) && !empty($nacio) && !empty($apa) && !empty($age) && $age>15){
-        $sql1="INSERT INTO autor (id_autor,NombreAutor,ApellidosAutor,Nacionalidad,Edad) VALUES ($id,'$nombre','$apa','$nacio','$age')";
+    $correo=$_POST['correo'];
+    $contra=$_POST['contra'];
+    $rol=$_POST['rol'];
+    
+    if(empty($nombre)){echo "<div class='alert alert-danger' role='alert' style='background-color:red'>Falta el nombre</div>";}
+    if(empty($apa)){echo "<div class='alert alert-danger' role='alert'> Falta el apellido</div>";}
+    if(empty($correo)){echo "<div class='alert alert-danger' role='alert'> Falta el correo</div>";}
+    if(empty($contra)){echo "<div class='alert alert-danger' role='alert'> Falta la contraseña</div>";}
+    if(empty($rol)){echo "<div class='alert alert-danger' role='alert'> Falta el Rol</div>";}
+      
+    if(!empty($nombre) && !empty($apa) && !empty($correo) && !empty($contra) && !empty($rol)){
+        $sql1="INSERT INTO administrador (id_admin,Nombre,Apellido,correo,contraseña, rol, FechaDeRegistro) VALUES ($id,'$nombre','$apa','$correo','$contra', '$rol', now())";
         if(mysqli_query($con,$sql1)){
             echo "<div class='alert alert-success' role='alert'>
             Agregado Correctamente
@@ -350,19 +365,18 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
             $age="";
             unset($_POST);
             $con->close();
-            echo "<meta http-equiv=refresh content=0;URL=autores.php>";
+            echo "<meta http-equiv=refresh content=0;URL=Usuarios.php>";
         }
         else{
             echo "Error: " . $sql . "<br>" . mysqli_error($con);
         }
       }     
-      }
-        
+      
 }
 ?>
 <script>
     function cargar(){
-        window.location.href="autores.php";
+        window.location.href="Usuarios.php";
     }
 </script>
     </section>
@@ -380,7 +394,7 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.1.0-pre
     </div>
-    <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2014-2020 Team 6.</strong> All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->
