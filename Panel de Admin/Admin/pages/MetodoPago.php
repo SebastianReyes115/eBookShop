@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="refresh"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Genero</title>
+  <title>Método de Pago</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -157,7 +157,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Generos</h1>
+            <h1 class="m-0">Métodos de Pago</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -174,9 +174,9 @@
         <div id="form1" class="shadow-lg p-3 mb-5 bg-white rounded" style="width:50%; margin-left:250px;">
         <form method="post">
   <div class="form-group">
-    <label for="NombreEditorial">Nombre Genero</label>
-    <input type="text" class="form-control" name="NombreG" id="NombreG" aria-describedby="emailHelp">
-    <small id="sna" class="form-text text-muted">Ingresa nombre de la editorial</small>
+    <label for="NombrePago">Nombre de Pago</label>
+    <input type="text" class="form-control" name="NombrePago" id="NombrePago" aria-describedby="emailHelp">
+    <small id="sna" class="form-text text-muted">Ingresa el tipo de pago</small>
   </div>
   <input type="submit" name="b1" onClick="cargar()" class="btn btn-primary btn-lg btn-block" value="Guardar">
 </form>
@@ -187,23 +187,23 @@
         <table class="table table-dark">
             <tr>
                 <td>Id</td>
-                <td>Nombre Genero</td>
+                <td>Tipo de Pago</td>
             </tr>
 
         <?php
 $con=mysqli_connect("localhost","root","","ebookshop");
-$obtener="SELECT * FROM genero";
+$obtener="SELECT * FROM metodopago";
 $ejecuta=mysqli_query($con,$obtener);
 while($fila=$ejecuta->fetch_assoc())
 {
 ?>
 <tr>
-    <td><?php echo $fila['id_genero'] ?> </td>
-    <td><?php echo $fila['Genero'] ?> </td>
+    <td><?php echo $fila['id_metodo'] ?> </td>
+    <td><?php echo $fila['nombreMetodo'] ?> </td>
     <td> <div class="container">
-    <?php echo '<button type="button" class="btn btn-info btn-m" data-toggle="modal" data-target="#Modal_' . $fila['id_genero'] . '" id=' . $fila['id_genero'] . '" >Editar</button>' ?>
+    <?php echo '<button type="button" class="btn btn-info btn-m" data-toggle="modal" data-target="#Modal_' . $fila['id_metodo'] . '" id=' . $fila['id_metodo'] . '" >Editar</button>' ?>
              <!--<?php /*echo *///'<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal" id=' . $row['id'] . '" >Editar</button>' ?>-->
-             <div class="modal fade" id="Modal_<?= $fila['id_genero']; ?>" role="dialog">
+             <div class="modal fade" id="Modal_<?= $fila['id_metodo']; ?>" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -215,11 +215,11 @@ while($fila=$ejecuta->fetch_assoc())
                                         <table class="table table-dark">
                                         <tr>
                                                 <td><label for="Ida">ID:</label></td>
-                                                <td><input type="text" name="ide" id="ida" value='<?php echo  $fila['id_genero'] ;?>' readonly="readonly"></td>
+                                                <td><input type="text" name="ide" id="ida" value='<?php echo  $fila['id_metodo'] ;?>' readonly="readonly"></td>
                                             </tr>
                                             <tr>
                                                 <td><label for="Nombre">Nombre:</label></td>
-                                                <td><input type="text" name="nomG" id="nombre" value='<?php echo  $fila['Genero'] ;?>'></td>
+                                                <td><input type="text" name="nomP" id="nombre" value='<?php echo  $fila['nombreMetodo'] ;?>'></td>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -239,8 +239,8 @@ while($fila=$ejecuta->fetch_assoc())
         </div>
         </td>
     <td>
-        <form method="post" id="form_eliminar_<?php  echo $fila['id_genero']?>">
-        <input type="hidden" name="eliminar" value="<?php echo $fila['id_genero'];?>" />
+        <form method="post" id="form_eliminar_<?php  echo $fila['id_metodo']?>">
+        <input type="hidden" name="eliminar" value="<?php echo $fila['id_metodo'];?>" />
     <input type="submit" value="Eliminar" class="btn btn-danger btn-m"/>
         </form>
 </td>
@@ -250,21 +250,21 @@ while($fila=$ejecuta->fetch_assoc())
 if(isset($_POST['eliminar'])){ //Eliminar Autor
     $ideli=$_POST['eliminar'];
     $con=mysqli_connect("localhost","root","","ebookshop");
-    $sql2="DELETE FROM genero WHERE id_genero='$ideli'";
+    $sql2="DELETE FROM metodopago WHERE id_metodo='$ideli'";
     if(mysqli_query($con,$sql2)){
     echo "";
     echo "<div class='alert alert-warning' role='alert'>
         Eliminado
       </div>";     
     $con->close();
-    echo "<meta http-equiv=refresh content=0;URL=Genero.php>";
+    echo "<meta http-equiv=refresh content=0;URL=MetodoPago.php>";
     }
 }
 if(isset($_POST["actualiza"])){ //Actualizar Actor
   $con=mysqli_connect("localhost","root","","ebookshop");
 $idupdate=$_POST['ide'];
-$n=$_POST['nomG'];
-$updat="UPDATE genero SET Genero='$n' WHERE id_genero='$idupdate'";
+$n=$_POST['nomP'];
+$updat="UPDATE metodopago SET nombreMetodo='$n' WHERE id_metodo='$idupdate'";
 if(mysqli_query($con,$updat)){
     unset($_POST);
     echo "<div class='alert alert-primary' role='alert'>
@@ -273,7 +273,7 @@ if(mysqli_query($con,$updat)){
       $page = $_SERVER['PHP_SELF'];
       echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
     $con->close();
-    echo "<meta http-equiv=refresh content=0;URL=Genero.php>";
+    echo "<meta http-equiv=refresh content=0;URL=MetodoPago.php>";
 
 }
 else{
@@ -285,19 +285,19 @@ else{
 <?php
 $contador=0;
 $con=mysqli_connect("localhost","root","","ebookshop");
-$sql="SELECT Genero FROM genero";
+$sql="SELECT nombreMetodo FROM metodopago";
 $ejecuta=mysqli_query($con,$sql);
 foreach($ejecuta as $nose){
 $contador++;
 }
 $id=$contador+1;
 if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
-  $nombre = $_POST['NombreG'];
-    if(empty($nombre)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el nombre del genero</div>";}
+  $nombre = $_POST['NombrePago'];
+    if(empty($nombre)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el tipo de pago</div>";}
       else{
         
     if(!empty($nombre)){
-        $sql1="INSERT INTO genero (id_genero,Genero) VALUES ($id,'$nombre')";
+        $sql1="INSERT INTO metodopago (id_metodo,nombreMetodo) VALUES ($id,'$nombre')";
         if(mysqli_query($con,$sql1)){
             echo "<div class='alert alert-success' role='alert'>
             Agregado Correctamente
@@ -305,7 +305,7 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
             $nombre="";
             unset($_POST);
             $con->close();
-            echo "<meta http-equiv=refresh content=0;URL=Genero.php>";
+            echo "<meta http-equiv=refresh content=0;URL=MetodoPago.php>";
         }
         else{
             echo "Error: " . $sql . "<br>" . mysqli_error($con);
@@ -317,7 +317,7 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
 ?>
 <script>
     function cargar(){
-        window.location.href="Genero.php";
+        window.location.href="MetodoPago.php";
     }
 </script>
     </section>
