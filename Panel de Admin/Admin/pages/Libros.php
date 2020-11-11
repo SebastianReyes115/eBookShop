@@ -58,27 +58,11 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="AutorLibro.php" class="nav-link">
-              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-chevron-contract" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M3.646 13.854a.5.5 0 0 0 .708 0L8 10.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708zm0-11.708a.5.5 0 0 1 .708 0L8 5.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708z"/>
-              </svg>
-              <p>Autor_Libro</p>
-            </a>
-          </li>
-          <li class="nav-item">
             <a href="Editorial.php" class="nav-link">
               <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-book" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
               </svg>
               <p>Editorial</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="EditorialLibro.php" class="nav-link">
-              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-book" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-              </svg>
-              <p>Editorial_Libro</p>
             </a>
           </li>
           <li class="nav-item">
@@ -90,58 +74,42 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="GeneroLibro.php" class="nav-link">
-              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-book" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-              </svg>
-              <p>Genero_Libro</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="Libros_ISBN.php" class="nav-link">
-              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-              </svg>
-              <p>Libros_ISBN</p>
-            </a>
-          </li>
-          <li class="nav-item">
             <a href="Libros.php" class="nav-link">
-              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-book" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
               </svg>
               <p>Libros</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="LibrosStock.php" class="nav-link">
-              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-              </svg>
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-book" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+            </svg>
               <p>Libros Disponibles</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="MetodoPago.php" class="nav-link">
-              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-ui-radios-grid" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3.5 15a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm9-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM16 3.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0zm-9 9a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0zm5.5 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm-9-11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 2a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
               </svg>
               <p>Método de pago</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="Ofertas.php" class="nav-link">
-              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-              </svg>
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-book" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+            </svg>
               <p>Ofertas</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="Recomendaciones.php" class="nav-link">
-              <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-              </svg>
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-book" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+            </svg>
               <p>Recomendaciones</p>
             </a>
           </li>
@@ -150,7 +118,7 @@
               <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
               </svg>
-              <p>Usuarios</p>
+              <p>Usuarios Administrador</p>
             </a>
           </li>
 
@@ -208,52 +176,52 @@
   <div class="form-group">
     <label for="Titulo">Titulo</label>
     <input type="text" class="form-control" name="titulo" id="Titulo" aria-describedby="emailHelp">
-    <small id="sna" class="form-text text-muted">Ingresa el nombre del autor</small>
+    <small id="sna" class="form-text text-muted">Ingresa el nombre del libro</small>
   </div>
   <div class="form-group">
     <label for="idautor">Nombre Del Autor</label>
     <input type="text" class="form-control" name="idautor" aria-describedby="emailHelp">
-    <small id="sn" class="form-text text-muted">Ingresa los apellidos del autor</small>
+    <small id="sn" class="form-text text-muted">Ingresa el nombre del autor</small>
   </div>
   <div class="form-group">
     <label for="genero">Genero</label>
     <input type="text" class="form-control" name="genero" aria-describedby="emailHelp">
-    <small id="sn" class="form-text text-muted">Ingresa la nacionalidad del autor</small>
+    <small id="sn" class="form-text text-muted">Ingresa el genero del libro</small>
   </div>
   <div class="form-group">
     <label for="editorial">Editorial</label>
     <input type="text" class="form-control" name="editorial" aria-describedby="emailHelp">
-    <small id="sn" class="form-text text-muted">Ingresa la nacionalidad del autor</small>
+    <small id="sn" class="form-text text-muted">Ingresa la editorial</small>
   </div>
   <div class="form-group">
     <label for="nopaginas">No. de paginas</label>
     <input type="number" class="form-control" name="nopaginas" aria-describedby="emailHelp">
-    <small id="sn" class="form-text text-muted">Ingresa la nacionalidad del autor</small>
+    <small id="sn" class="form-text text-muted">Ingresa el numero de paginas</small>
   </div>
   <div class="form-group">
     <label for="Precio">Precio</label>
     <input type="number" class="form-control" name="precio" aria-describedby="emailHelp">
-    <small id="sn" class="form-text text-muted">Ingresa la nacionalidad del autor</small>
+    <small id="sn" class="form-text text-muted">Ingresa el precio</small>
   </div>
   <div class="form-group">
     <label for="idioma">Idioma</label>
     <input type="text" class="form-control" name="idioma" aria-describedby="emailHelp">
-    <small id="sn" class="form-text text-muted">Ingresa la nacionalidad del autor</small>
+    <small id="sn" class="form-text text-muted">Ingresa el idioma</small>
   </div>
   <div class="form-group">
     <label for="edicion">Edicion</label>
     <input type="text" class="form-control" name="edicion" aria-describedby="emailHelp">
-    <small id="sn" class="form-text text-muted">Ingresa la nacionalidad del autor</small>
+    <small id="sn" class="form-text text-muted">Ingresa la edicion</small>
   </div>
   <div class="form-group">
     <label for="año">Año</label>
     <input type="number" class="form-control" name="año" aria-describedby="emailHelp">
-    <small id="sn" class="form-text text-muted">Ingresa la edad del autor</small>
+    <small id="sn" class="form-text text-muted">Ingresa el año de publicacionr</small>
   </div>
   <div class="form-group">
     <label for="imagen">Insertar Imagen</label>
     <input type="file" class="form-control" name="img" aria-describedby="emailHelp">
-    <small id="sn" class="form-text text-muted">Ingresa la nacionalidad del autor</small>
+    <small id="sn" class="form-text text-muted">Ingresa imagen del producto</small>
   </div>
   <input type="submit" name="b1" onClick="cargar()" class="btn btn-primary btn-lg btn-block" value="Guardar">
 </form>
@@ -265,9 +233,9 @@
             <tr>
                 <td>Id</td>
                 <td>Titulo</td>    
-                <td>Id_Autor</td>
-                <td>Id_genero</td>
-                <td>Id_editorial</td>
+                <td>Autor</td>
+                <td>Genero</td>
+                <td>Editorial</td>
                 <td>No. Pag.</td>
                 <td>Precio</td>
                 <td>isbn</td>
@@ -367,6 +335,7 @@ while($fila=$ejecuta->fetch_assoc())
                                             </tr>
                                             <tr>
                                               <td><label for="imagen">Insertar Imagen</label></td>
+                                              <td><input accept="image/*" type="file" class="form-control" name="img1" value='<?php echo $fila['ImagenLibro']; ?>' aria-describedby="emailHelp"></td>
                                               <td><input type="file" name="img1" class="form-control" aria-describedby="emailHelp"></td>
                                             </tr>
                                             <tr>
