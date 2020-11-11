@@ -52,18 +52,18 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`Libros` (
   CONSTRAINT `FK__Libros__id_Autor__6B24EA82`
     FOREIGN KEY (`id_Autor`)
     REFERENCES `ebookshop`.`Autor` (`id_autor`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `FK__Libros__id_Gener__6C190EBB`
     FOREIGN KEY (`id_Genero`)
     REFERENCES `ebookshop`.`Genero` (`id_genero`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `FK__Libros__id_Edito__6D0D32F4`
     FOREIGN KEY (`id_Editorial`)
     REFERENCES `ebookshop`.`Editorial` (`id_editorial`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
 
 CREATE TABLE IF NOT EXISTS `ebookshop`.`Libros_Stock` (
   `id_libro` INT NOT NULL,
@@ -75,8 +75,8 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`Libros_Stock` (
   CONSTRAINT `FK__Libros_St__id_li__160F4887`
     FOREIGN KEY (`id_libro`)
     REFERENCES `ebookshop`.`Libros` (`id_libro`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
 
 CREATE TABLE IF NOT EXISTS `ebookshop`.`Venta` (
   `id_venta` INT NOT NULL,
@@ -88,18 +88,18 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`Venta` (
   CONSTRAINT `FK__venta__id_libro__18EBB532`
     FOREIGN KEY (`id_libro`)
     REFERENCES `ebookshop`.`Libros` (`id_libro`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `FK__venta__id_metodo__19DFD96B`
     FOREIGN KEY (`id_metodo`)
     REFERENCES `ebookshop`.`MetodoPago` (`id_metodo`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `FK__venta__id_usuari__1AD3FDA4`
     FOREIGN KEY (`id_usuario`)
     REFERENCES `ebookshop`.`Usuarios` (`id_usuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
   
 CREATE TABLE IF NOT EXISTS `ebookshop`.`isbn_libro` (
   `isbn` INT NULL,
@@ -107,13 +107,13 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`isbn_libro` (
   CONSTRAINT `FK__isbn_libro__isbn__02FC7413`
     FOREIGN KEY (`isbn`)
     REFERENCES `ebookshop`.`Libros` (`id_libro`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `FK__isbn_libr__id_li__03F0984C`
     FOREIGN KEY (`id_libro`)
     REFERENCES `ebookshop`.`Libros` (`id_libro`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
     
 CREATE TABLE IF NOT EXISTS `ebookshop`.`genero_libro` (
   `id_genero` INT NULL,
@@ -121,13 +121,13 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`genero_libro` (
   CONSTRAINT `FK__genero_li__id_ge__74AE54BC`
     FOREIGN KEY (`id_genero`)
     REFERENCES `ebookshop`.`Genero` (`id_genero`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `FK__genero_li__id_li__75A278F5`
     FOREIGN KEY (`id_libro`)
     REFERENCES `ebookshop`.`Libros` (`id_libro`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
     
 CREATE TABLE IF NOT EXISTS `ebookshop`.`editorial_libro` (
   `id_editorial` INT NULL,
@@ -135,13 +135,13 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`editorial_libro` (
   CONSTRAINT `FK__editorial__id_ed__7B5B524B`
     FOREIGN KEY (`id_editorial`)
     REFERENCES `ebookshop`.`Editorial` (`id_editorial`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `FK__editorial__id_li__7C4F7684`
     FOREIGN KEY (`id_libro`)
     REFERENCES `ebookshop`.`Libros` (`id_libro`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
     
 CREATE TABLE IF NOT EXISTS `ebookshop`.`WishList` (
   `id_libro` INT NULL,
@@ -151,13 +151,13 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`WishList` (
   CONSTRAINT `FK__WishList__id_usu__1BC821DD`
     FOREIGN KEY (`id_usuario`)
     REFERENCES `ebookshop`.`Usuarios` (`id_usuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `FK__WishList__id_lib__7E37BEF6`
     FOREIGN KEY (`id_libro`)
     REFERENCES `ebookshop`.`Libros` (`id_libro`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
     
 CREATE TABLE IF NOT EXISTS `ebookshop`.`carrito` (
   `id_libro` INT NULL,
@@ -167,13 +167,13 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`carrito` (
   CONSTRAINT `FK__carrito__id_libr__01142BA1`
     FOREIGN KEY (`id_libro`)
     REFERENCES `ebookshop`.`Libros` (`id_libro`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `FK__carrito__id_usua__02084FDA`
     FOREIGN KEY (`id_usuario`)
     REFERENCES `ebookshop`.`Usuarios` (`id_usuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
   
 CREATE TABLE IF NOT EXISTS `ebookshop`.`autor_libro` (
   `id_autor` INT NULL,
@@ -181,13 +181,13 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`autor_libro` (
   CONSTRAINT `FK__autor_lib__id_au__797309D9`
     FOREIGN KEY (`id_autor`)
     REFERENCES `ebookshop`.`Autor` (`id_autor`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `FK__autor_lib__id_li__7A672E12`
     FOREIGN KEY (`id_libro`)
     REFERENCES `ebookshop`.`Libros` (`id_libro`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
 
 
     CREATE TABLE IF NOT EXISTS `ebookshop`.`Administrador` (
