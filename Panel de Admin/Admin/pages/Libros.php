@@ -145,8 +145,6 @@
               </li>
             </ul>
           </nav>
-      
-        
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
@@ -292,8 +290,8 @@ while($fila=$ejecuta->fetch_assoc())
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                             <div class="modal-body">
-                                <fieldset style="width:400px">
-                                    <form method="post">
+                                <fieldset style="width:450px">
+                                    <form method="post" enctype="multipart/form-data" >
                                         <table class="table table-dark">
                                         <tr>
                                                 <td><label for="Ida">ID:</label></td>
@@ -338,6 +336,7 @@ while($fila=$ejecuta->fetch_assoc())
                                             <tr>
                                               <td><label for="imagen">Insertar Imagen</label></td>
                                               <td><input accept="image/*" type="file" class="form-control" name="img1" value='<?php echo $fila['ImagenLibro']; ?>' aria-describedby="emailHelp"></td>
+                                              <td><input type="file" name="img1" class="form-control" aria-describedby="emailHelp"></td>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -389,7 +388,7 @@ if(isset($_POST["actualiza"])){ //Actualizar Actor
   $precio=$_POST['precio'];
   $edicion=$_POST['edicion'];
   $año=$_POST['año'];
-  $imagen1= $_FILES['img1'];
+  $imagen1=$_FILES['img1'];
   $idioma=$_POST['idioma'];
   $imagenguarda1=$imagen1['tmp_name'];
   //validar si existe el titulo
@@ -495,6 +494,12 @@ $idee=$fila['id_editorial'];
         $sql1="INSERT INTO libros (id_libro,Titulo,id_Autor,id_Genero,id_Editorial,NoPaginas,Precio,isbn,Idioma,Edicion,Año,ImagenLibro)
          VALUES ($id,'$titulo','$idau','$idg','$idee','$nopaginas','$precio','15','$idioma','$edicion','$año','$imagenguarda')";
         if(mysqli_query($con,$sql1)){
+          $sqlal="INSERT INTO autor_libro (id_autor,id_libro) VALUES ('$idau','$id')";
+          $sqllg="INSERT INTO genero_libro (id_genero,id_libro) VALUES ('$idg','$id')";
+          $sqlle="INSERT INTO editorial_libro (id_editorial,id_libro) VALUES ('$idee','$id')";
+          $ejecuta=mysqli_query($con,$sqlal);
+          $ejecuta=mysqli_query($con,$sqllg);
+          $ejecuta=mysqli_query($con,$sqlle);
             echo "<div class='alert alert-success' role='alert'>
             Agregado Correctamente
           </div>";
