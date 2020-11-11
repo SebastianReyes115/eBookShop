@@ -346,8 +346,28 @@ if(isset($_POST["actualiza"])){ //Actualizar Actor
     else{
         echo "Error: " . $sql . "<br>" . mysqli_error($con);
     }
+    if(empty($fecha)){
+      $sql="UPDATE ofertas SET FechaFinal='$fechaf',PrecioNuevo='$precionuevo' WHERE id_libro='$idupdate'";
+      if(mysqli_query($con,$sql)){
+        echo "<div class='alert alert-success' role='alert'>
+        Agregado Correctamente
+      </div>";
+        unset($_POST);
+        $con->close();
+        echo "<meta http-equiv=refresh content=0;URL=Ofertas.php>";
     }
-    
+    }
+    if(empty($fechaf)){
+      $sql="UPDATE ofertas SET FechaInicio='$fecha',FechaFinal='$fechaf',PrecioNuevo='$precionuevo' WHERE id_libro='$idupdate'";
+      if(mysqli_query($con,$sql)){
+        echo "<div class='alert alert-success' role='alert'>
+        Agregado Correctamente
+      </div>";
+        unset($_POST);
+        $con->close();
+        echo "<meta http-equiv=refresh content=0;URL=Ofertas.php>";
+    }
+    }
   } 
  }
 
