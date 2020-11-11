@@ -389,7 +389,7 @@ $e=mysqli_query($con,$sqlv);
 
     if(!empty($nametitulo)){
       if(!empty($titulo) && !empty($fecha) && !empty($fechaf) && !empty($precionuevo)){
-        if(empty($e)){
+        if(!empty($e)){
           $sql1="INSERT INTO ofertas (id_libro, titulo, FechaInicio, FechaFinal, PrecioViejo, PrecioNuevo) 
           VALUES ('$idl','$titulo','$fecha','$fechaf','$preciovi','$precionuevo')";
           if(mysqli_query($con,$sql1)){
