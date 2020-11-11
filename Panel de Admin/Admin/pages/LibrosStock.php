@@ -145,8 +145,8 @@
               </li>
             </ul>
           </nav>
-      
-        
+
+
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
@@ -159,7 +159,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Libros en Stock</h1>
+            <h1 class="m-0">Libros disponibles</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -199,7 +199,7 @@
         <table class="table table-dark">
             <tr>
                 <td>Id</td>
-                <td>ISBN</td>    
+                <td>ISBN</td>
                 <td>Titulo</td>
                 <td>Unidades en Stock</td>
                 <td>Fecha de Entrada</td>
@@ -213,7 +213,7 @@ while($fila=$ejecuta->fetch_assoc())
 {
 ?>
 <tr>
-<?php 
+<?php
    $idamt=$fila['id_libro'];
    $sqlam="SELECT *FROM libros_stock WHERE id_libro=$idamt";
    $ejecutas=mysqli_query($con,$sqlam);
@@ -325,7 +325,7 @@ if(isset($_POST['eliminar'])){ //Eliminar Autor
     echo "";
     echo "<div class='alert alert-warning' role='alert'>
         Eliminado
-      </div>";     
+      </div>";
     $con->close();
     echo "<meta http-equiv=refresh content=0;URL=libros.php>";
     }
@@ -457,7 +457,7 @@ $idee=$fila['id_editorial'];
         else{
             echo "Error: " . $sql . "<br>" . mysqli_error($con);
         }
-      }     
+      }
       }
 ?>
 <script>
