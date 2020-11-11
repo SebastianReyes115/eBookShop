@@ -77,7 +77,14 @@
                 <p>Inbox</p>
             </a>
           </li>
-
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-header">Sesión</li>
+            <li class="nav-item">
+              <a href="../index.php" class="nav-link">
+                <i class="nav-icon far fa-circle text-danger"></i>
+                <p>Salir</p>
+              </a>
+            </li>
         </ul>
       </nav>
 
