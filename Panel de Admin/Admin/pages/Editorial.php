@@ -145,8 +145,8 @@
               </li>
             </ul>
           </nav>
-      
-        
+
+
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
@@ -159,7 +159,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Autores</h1>
+            <h1 class="m-0">Editorial</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -237,7 +237,7 @@ while($fila=$ejecuta->fetch_assoc())
 
                                             </tr>
                                             <tr>
-                                                
+
                                             </tr>
                                             <tr>
                                                 <td>
@@ -273,7 +273,7 @@ if(isset($_POST['eliminar'])){ //Eliminar Autor
     echo "";
     echo "<div class='alert alert-warning' role='alert'>
         Eliminado
-      </div>";     
+      </div>";
     $con->close();
     echo "<meta http-equiv=refresh content=0;URL=editorial.php>";
     }
@@ -316,7 +316,7 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
     if(empty($nombre)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el nombre del autor</div>";}
     if(empty($nacio)){echo "<div class='alert alert-primary' role='alert'> Falta la nacionalidad del autor </div>";}
       else{
-        
+
     if(!empty($nombre) && !empty($nacio)){
         $sql1="INSERT INTO editorial (id_editorial,Editorial,Pais) VALUES ($id,'$nombre','$nacio')";
         if(mysqli_query($con,$sql1)){
@@ -334,9 +334,9 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
         else{
             echo "Error: " . $sql . "<br>" . mysqli_error($con);
         }
-      }     
       }
-        
+      }
+
 }
 ?>
 <script>

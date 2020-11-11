@@ -218,8 +218,6 @@ while($fila=$ejecuta->fetch_assoc())
 {
 ?>
 <tr>
-<?php 
-?>
     <td><?php echo $fila['id_libro'] ?> </td>
     <td><?php echo $fila['isbn'] ?> </td>
     <td><?php echo $fila['titulo'] ?> </td>
@@ -247,7 +245,7 @@ while($fila=$ejecuta->fetch_assoc())
                                             </tr>
                                             <tr>
                                               <td><label for="ISBN">ISBN</label></td>
-                                              <td><input type="text" class="form-control" name="isbn" value='<?php echo  $fila['isbn'] ;?>'0 id="isbn"  readonly="readonly" aria-describedby="emailHelp"></td>
+                                              <td><input type="text" class="form-control" name="isbn" value='<?php echo  $fila['isbn'] ;?>'0 id="isbn"  readonly="readonly"  aria-describedby="emailHelp"></td>
                                             </tr>
                                             <tr>
                                             <td><label for="nombre">Nombre Del Libro</label></td>

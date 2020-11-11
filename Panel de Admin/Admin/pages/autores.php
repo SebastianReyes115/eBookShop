@@ -157,7 +157,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Autores</h1>
+            <h1 class="m-0">Autor</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -276,7 +276,7 @@ if(isset($_POST['eliminar'])){ //Eliminar Autor
     echo "";
     echo "<div class='alert alert-warning' role='alert'>
         Eliminado
-      </div>";     
+      </div>";
     $con->close();
     echo "<meta http-equiv=refresh content=0;URL=autores.php>";
     }
@@ -340,9 +340,9 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
         else{
             echo "Error: " . $sql . "<br>" . mysqli_error($con);
         }
-      }     
       }
-        
+      }
+
 }
 ?>
 <script>

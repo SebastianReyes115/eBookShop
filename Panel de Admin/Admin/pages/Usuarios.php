@@ -314,7 +314,7 @@ $appp=$_POST['apsa'];
 $e=$_POST['email'];
 $na=$_POST['contrasena'];
 $rol=$_POST['rol'];
-$updat="UPDATE administrador SET Nombre='$n',Apellido='$appp', correo='$e',contraseña='$na', rol='rol' WHERE id_admin='$idupdate'";
+$updat="UPDATE administrador SET Nombre='$n',Apellido='$appp', Correo='$e',Contraseña='$na', Rol='$rol' WHERE id_admin='$idupdate'";
 if(mysqli_query($con,$updat)){
     unset($_POST);
     echo "<div class='alert alert-primary' role='alert'>
@@ -343,9 +343,9 @@ $id=$contador+1;
 if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
     $nombre = $_POST['Nombre'];
     $apa=$_POST['Apellido'];
-    $correo=$_POST['correo'];
-    $contra=$_POST['contra'];
-    $rol=$_POST['rol'];
+    $correo=$_POST['Correo'];
+    $contra=$_POST['Contra'];
+    $rol=$_POST['Rol'];
     
     if(empty($nombre)){echo "<div class='alert alert-danger' role='alert' style='background-color:red'>Falta el nombre</div>";}
     if(empty($apa)){echo "<div class='alert alert-danger' role='alert'> Falta el apellido</div>";}
