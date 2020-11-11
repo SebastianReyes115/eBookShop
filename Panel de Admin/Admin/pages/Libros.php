@@ -443,7 +443,8 @@ $sqlautor="SELECT *FROM editorial WHERE Editorial='$editorial'";
 $ejecuta=mysqli_query($con,$sqlautor);
 $fila=mysqli_fetch_array($ejecuta);
 $idee=$fila['id_editorial'];
-  if(!empty($titulo) && !empty($idautor) && empty($nametitulo) && !empty($generoid)&& !empty($editorial)&& !empty($idau)&& !empty($idg) && !empty($nopaginas)&& !empty($precio)&& !empty($edicion)&& !empty($año)&& !empty($idioma)&& !empty($imagenguarda1)){
+
+if(!empty($titulo) && !empty($idautor) && empty($nametitulo) && !empty($generoid)&& !empty($editorial)&& !empty($idau)&& !empty($idg) && !empty($nopaginas)&& !empty($precio)&& !empty($edicion)&& !empty($año)&& !empty($idioma)&& !empty($imagenguarda1)){
     $updat="UPDATE libros SET Titulo='$titulo',id_Autor='$idau',id_Genero='$idg',id_Editorial='$idee',NoPaginas='$nopaginas',Precio='$precio',Idioma='$idioma',Edicion='$edicion',Año='$año',ImagenLibro='$imagenguarda1' WHERE id_libro='$idupdate'";
     if(mysqli_query($con,$updat)){
         unset($_POST);
@@ -458,6 +459,20 @@ $idee=$fila['id_editorial'];
     else{
         echo "error";
     }
+  }
+  else{
+    $updat="UPDATE libros SET Titulo='$titulo',id_Autor='$idau',id_Genero='$idg',id_Editorial='$idee',NoPaginas='$nopaginas',Precio='$precio',Idioma='$idioma',Edicion='$edicion',Año='$año' WHERE id_libro='$idupdate'";
+    if(mysqli_query($con,$updat)){
+      unset($_POST);
+      echo "<div class='alert alert-primary' role='alert'>
+          Actualizado
+        </div>";
+        $page = $_SERVER['PHP_SELF'];
+        echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
+      $con->close();
+      echo "<meta http-equiv=refresh content=0;URL=libros.php>";
+  }
+
   }
 }
 ?>
