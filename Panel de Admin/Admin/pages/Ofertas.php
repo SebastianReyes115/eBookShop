@@ -368,8 +368,9 @@ if(isset($_POST["actualiza"])){ //Actualizar Actor
         echo "<meta http-equiv=refresh content=0;URL=Ofertas.php>";
     }
     }
-  } 
- }
+  }
+} 
+}
 
 ?>
 </table>
