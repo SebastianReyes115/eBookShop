@@ -335,7 +335,6 @@ while($fila=$ejecuta->fetch_assoc())
                                             </tr>
                                             <tr>
                                               <td><label for="imagen">Insertar Imagen</label></td>
-                                              <td><input accept="image/*" type="file" class="form-control" name="img1" value='<?php echo $fila['ImagenLibro']; ?>' aria-describedby="emailHelp"></td>
                                               <td><input type="file" name="img1" class="form-control" aria-describedby="emailHelp"></td>
                                             </tr>
                                             <tr>
