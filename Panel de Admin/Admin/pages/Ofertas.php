@@ -320,7 +320,7 @@ if(isset($_POST["actualiza"])){ //Actualizar Actor
   $idupdate=$_POST['ida'];
   if(!empty($fecha) && !empty($fechaf) && !empty($precionuevo)){
     $sql="UPDATE ofertas SET FechaInicio='$fecha', FechaFinal='$fechaf', PrecioNuevo='$precionuevo' WHERE id_libro='$idupdate'";
-    if(mysqli_query($con,$sql1)){
+    if(mysqli_query($con,$sql)){
       echo "<div class='alert alert-success' role='alert'>
       Agregado Correctamente
     </div>";
