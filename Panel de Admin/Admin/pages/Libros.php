@@ -355,9 +355,9 @@ while($fila=$ejecuta->fetch_assoc())
         </div>
         </td>
     <td>
-        <form method="post" id="form_eliminar_<?php  echo $fila['id_libro']?>">
+        <form method="post" enctype="multipart/form-data"  id="form_eliminar_<?php  echo $fila['id_libro']?>">
         <input type="hidden" name="eliminar" value="<?php echo $fila['id_libro'];?>" />
-    <input type="submit" value="Eliminar" class="btn btn-danger btn-m"/>
+         <input type="submit" value="Eliminar" class="btn btn-danger btn-m"/>
         </form>
 </td>
 </tr>
@@ -468,6 +468,7 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
   $idioma=$_POST['idioma'];
   $imagenguarda=$imagen['tmp_name'];
   move_uploaded_file($imagen['tmp_name'],"imagenes/".$imagen['name']);
+  $isbn=rand(1,1000000);
 //validar si existe el titulo
 $sqlautor="SELECT *FROM libros WHERE Titulo='$titulo'";
 $ejecuta=mysqli_query($con,$sqlautor);
@@ -506,14 +507,16 @@ $idee=$fila['id_editorial'];
 
     if(!empty($titulo) && !empty($idautor) && empty($nametitulo) && !empty($generoid)&& !empty($editorial)&& !empty($idau)&& !empty($idg) && !empty($nopaginas)&& !empty($precio)&& !empty($edicion)&& !empty($año)&& !empty($idioma)&& !empty($imagenguarda)){
         $sql1="INSERT INTO libros (id_libro,Titulo,id_Autor,id_Genero,id_Editorial,NoPaginas,Precio,isbn,Idioma,Edicion,Año,ImagenLibro)
-         VALUES ($id,'$titulo','$idau','$idg','$idee','$nopaginas','$precio','15','$idioma','$edicion','$año','$imagenguarda')";
+         VALUES ($id,'$titulo','$idau','$idg','$idee','$nopaginas','$precio','$isbn','$idioma','$edicion','$año','$imagenguarda')";
         if(mysqli_query($con,$sql1)){
           $sqlal="INSERT INTO autor_libro (id_autor,id_libro) VALUES ('$idau','$id')";
           $sqllg="INSERT INTO genero_libro (id_genero,id_libro) VALUES ('$idg','$id')";
           $sqlle="INSERT INTO editorial_libro (id_editorial,id_libro) VALUES ('$idee','$id')";
+          $sqlisl="INSERT INTO isbn_libro (isbn,id_libro) VALUES ('$isbn','$id')";
           $ejecuta=mysqli_query($con,$sqlal);
           $ejecuta=mysqli_query($con,$sqllg);
           $ejecuta=mysqli_query($con,$sqlle);
+          $ejecuta=mysqli_query($con,$sqlisl);
             echo "<div class='alert alert-success' role='alert'>
             Agregado Correctamente
           </div>";

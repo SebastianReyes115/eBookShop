@@ -175,6 +175,11 @@
     <section class="content">
         <div id="form1" class="shadow-lg p-3 mb-5 bg-white rounded" style="width:50%; margin-left:250px;">
         <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+    <label for="ISBN">Id Libro</label>
+    <input type="text" class="form-control" name="idLibro" id="isbn" aria-describedby="emailHelp">
+    <small id="sna" class="form-text text-muted">Ingresa el ID del libro</small>
+  </div>
   <div class="form-group">
     <label for="ISBN">ISBN</label>
     <input type="text" class="form-control" name="isbn" id="isbn" aria-describedby="emailHelp">
@@ -214,26 +219,15 @@ while($fila=$ejecuta->fetch_assoc())
 ?>
 <tr>
 <?php 
-   $idamt=$fila['id_libro'];
-   $sqlam="SELECT *FROM libros_stock WHERE id_libro=$idamt";
-   $ejecutas=mysqli_query($con,$sqlam);
-   $fila1=mysqli_fetch_array($ejecutas);
-
-   $idgmt=$fila['id_Genero'];
-   $sqlam="SELECT *FROM genero WHERE id_genero=$idgmt";
-   $ejecutas=mysqli_query($con,$sqlam);
-   $fila2=mysqli_fetch_array($ejecutas);
-
-   $idemt=$fila['id_Editorial'];
-   $sqlam="SELECT *FROM editorial WHERE id_editorial=$idemt";
-   $ejecutas=mysqli_query($con,$sqlam);
-   $fila3=mysqli_fetch_array($ejecutas);
 ?>
     <td><?php echo $fila['id_libro'] ?> </td>
     <td><?php echo $fila['isbn'] ?> </td>
-    <td><?php echo $fila1['titulo'] ?> </td>
-    <td><?php echo $fila2['UnidadesEnStock'] ?> </td>
-    <td><?php echo $fila3['FechaDeEntrega']?> </td>
+    <td><?php echo $fila['titulo'] ?> </td>
+    <td><?php echo $fila['UnidadesEnStock'] ?> </td>
+    <td><?php 
+    $date = date_create($fila['FechaDeEntrada']);
+    echo date_format($date, 'Y-m-d H:i:s');
+     ?> </td>
     <td> <div class="container">
     <?php echo '<button type="button" class="btn btn-info btn-m" data-toggle="modal" data-target="#Modal_' . $fila['id_libro'] . '" id=' . $fila['id_libro'] . '" >Editar</button>' ?>
              <!--<?php /*echo *///'<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal" id=' . $row['id'] . '" >Editar</button>' ?>-->
@@ -252,44 +246,16 @@ while($fila=$ejecuta->fetch_assoc())
                                                 <td><input type="text" name="ida" id="ida" value='<?php echo  $fila['id_libro'] ;?>'   readonly="readonly"></td>
                                             </tr>
                                             <tr>
-                                              <td><label for="Titulo">Titulo</label></td>
-                                              <td><input type="text" class="form-control" name="titulo" id="Titulo" value='<?php echo  $fila['Titulo'] ;?>'   aria-describedby="emailHelp"></td>
+                                              <td><label for="ISBN">ISBN</label></td>
+                                              <td><input type="text" class="form-control" name="isbn" value='<?php echo  $fila['isbn'] ;?>'0 id="isbn"  readonly="readonly" aria-describedby="emailHelp"></td>
                                             </tr>
                                             <tr>
-                                              <td><label for="idautor">Nombre Del Autor</label></td>
-                                              <td><input type="text" class="form-control" name="idautor" value='<?php echo $fila1['NombreAutor']; ?>'  aria-describedby="emailHelp"></td>
+                                            <td><label for="nombre">Nombre Del Libro</label></td>
+                                              <td><input type="text" class="form-control" name="nombre"  readonly="readonly" value='<?php echo  $fila['titulo'] ;?>' aria-describedby="emailHelp"></td>
                                             </tr>
                                             <tr>
-                                              <td><label for="genero">Genero</label></td>
-                                              <td><input type="text" class="form-control" name="genero" value='<?php echo $fila2['Genero']; ?>' aria-describedby="emailHelp"></td>
-                                            </tr>
-                                            <tr>
-                                              <td><label for="editorial">Editorial</label></td>
-                                              <td><input type="text" class="form-control" name="editorial" value='<?php echo $fila3['Editorial']; ?>' aria-describedby="emailHelp"></td>
-                                            </tr>
-                                            <tr>
-                                              <td><label for="nopaginas">No. de paginas</label></td>
-                                              <td><input type="number" class="form-control" name="nopaginas" value='<?php echo $fila['NoPaginas']; ?>' aria-describedby="emailHelp"></td>
-                                            </tr>
-                                            <tr>
-                                              <td><label for="Precio">Precio</label></td>
-                                              <td><input type="number" class="form-control" name="precio" value='<?php echo $fila['Precio']; ?>' aria-describedby="emailHelp"></td>
-                                            </tr>
-                                            <tr>
-                                              <td><label for="idioma">Idioma</label></td>
-                                              <td><input type="text" class="form-control" name="idioma" value='<?php echo $fila['Idioma']; ?>' aria-describedby="emailHelp"></td>
-                                            </tr>
-                                            <tr>
-                                              <td><label for="edicion">Edicion</label></td>
-                                              <td><input type="text" class="form-control" name="edicion" value='<?php echo $fila['Edicion']; ?>' aria-describedby="emailHelp"></td>
-                                            </tr>
-                                            <tr>
-                                              <td><label for="año">Año</label></td>
-                                              <td><input type="number" class="form-control" name="año" value='<?php echo $fila['Año']; ?>' aria-describedby="emailHelp"></td>
-                                            </tr>
-                                            <tr>
-                                              <td><label for="imagen">Insertar Imagen</label></td>
-                                              <td><input accept="image/*" type="file" class="form-control" name="img1" value='<?php echo $fila['ImagenLibro']; ?>' aria-describedby="emailHelp"></td>
+                                            <td><label for="genero">Unidades en Stock</label></td>
+                                              <td><input type="number" class="form-control" name="stock" value='<?php echo  $fila['UnidadesEnStock'] ;?>' aria-describedby="emailHelp"></td>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -320,67 +286,52 @@ while($fila=$ejecuta->fetch_assoc())
 if(isset($_POST['eliminar'])){ //Eliminar Autor
     $ideli=$_POST['eliminar'];
     $con=mysqli_connect("localhost","root","","ebookshop");
-    $sql2="DELETE FROM libros WHERE id_libro='$ideli'";
+    $sql2="DELETE FROM libros_stock WHERE id_libro='$ideli'";
     if(mysqli_query($con,$sql2)){
     echo "";
     echo "<div class='alert alert-warning' role='alert'>
         Eliminado
       </div>";     
     $con->close();
-    echo "<meta http-equiv=refresh content=0;URL=libros.php>";
+    echo "<meta http-equiv=refresh content=0;URL=LibrosStock.php>";
     }
 }
 if(isset($_POST["actualiza"])){ //Actualizar Actor
   $con=mysqli_connect("localhost","root","","ebookshop");
   $idupdate=$_POST['ida'];
-  $titulo=$_POST['titulo'];
-  $idautor=$_POST['idautor'];
-  $generoid=$_POST['genero'];
-  $editorial=$_POST['editorial'];
-  $nopaginas=$_POST['nopaginas'];
-  $precio=$_POST['precio'];
-  $edicion=$_POST['edicion'];
-  $año=$_POST['año'];
-  $imagen1= $_FILES['img1'];
-  $idioma=$_POST['idioma'];
-  $imagenguarda1=$imagen1['tmp_name'];
-  //validar si existe el titulo
+  $isbn=$_POST['isbn'];
+  $titulo=$_POST['nombre'];
+  $UnidadesEnStock=$_POST['stock'];
+  $fecha_hora_actual = date('Y-m-d H:i:s');
+//validar si existe el titulo
 $sqlautor="SELECT *FROM libros WHERE Titulo='$titulo'";
 $ejecuta=mysqli_query($con,$sqlautor);
 $fila=mysqli_fetch_array($ejecuta);
-$isbn=
 $nametitulo=$fila['Titulo'];
-//validar si existe el genero
-$sqlautor="SELECT *FROM genero WHERE Genero='$generoid'";
-$ejecuta=mysqli_query($con,$sqlautor);
-$fila=mysqli_fetch_array($ejecuta);
-$idg=$fila['id_genero'];
-//validar si existe el autor
-$sqlautor="SELECT *FROM autor WHERE NombreAutor='$idautor'";
-$ejecuta=mysqli_query($con,$sqlautor);
-$fila=mysqli_fetch_array($ejecuta);
-$idau=$fila['id_autor'];
-//validar si existe el editorial
-$sqlautor="SELECT *FROM editorial WHERE Editorial='$editorial'";
-$ejecuta=mysqli_query($con,$sqlautor);
-$fila=mysqli_fetch_array($ejecuta);
-$idee=$fila['id_editorial'];
-  if(!empty($titulo) && !empty($idautor) && empty($nametitulo) && !empty($generoid)&& !empty($editorial)&& !empty($idau)&& !empty($idg) && !empty($nopaginas)&& !empty($precio)&& !empty($edicion)&& !empty($año)&& !empty($idioma)&& !empty($imagenguarda1)){
-    $updat="UPDATE libros SET Titulo='$titulo',id_Autor='$idau',id_Genero='$idg',id_Editorial='$idee',NoPaginas='$nopaginas',Precio='$precio',Idioma='$idioma',Edicion='$edicion',Año='$año',ImagenLibro='$imagenguarda1' WHERE id_libro='$idupdate'";
-    if(mysqli_query($con,$updat)){
-        unset($_POST);
-        echo "<div class='alert alert-primary' role='alert'>
-            Actualizado
-          </div>";
-          $page = $_SERVER['PHP_SELF'];
-          echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
-        $con->close();
-        echo "<meta http-equiv=refresh content=0;URL=libros.php>";
-    }
-    else{
-        echo "error";
-    }
-  }
+$idtl=$fila['id_libro'];
+$isbntl=$fila['isbn'];
+
+    if(empty($titulo)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el titulo</div>";}
+    if(empty($nametitulo)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>No existe el libro</div>";}
+    if(empty($titulo)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el titulo</div>";}
+    if(empty($titulo)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el titulo</div>";}
+
+    if(!empty($titulo) && !empty($isbn) && !empty($UnidadesEnStock)){
+        $sql1="UPDATE libros_stock SET UnidadesEnStock='$UnidadesEnStock' WHERE id_libro='$idupdate'";
+       if(mysqli_query($con,$sql1)){
+           echo "<div class='alert alert-success' role='alert'>
+           Agregado Correctamente
+         </div>";
+           unset($_POST);
+           $con->close();
+           echo "<meta http-equiv=refresh content=0;URL=LibrosStock.php>";
+       }
+       else{
+           echo "Error: " . $sql . "<br>" . mysqli_error($con);
+       }     
+      }
+      else{
+      }
 }
 ?>
 </table>
@@ -395,69 +346,49 @@ $contador++;
 $id=$contador+1;
 
 if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
-  $titulo=$_POST['titulo'];
-  $idautor=$_POST['idautor'];
-  $generoid=$_POST['genero'];
-  $editorial=$_POST['editorial'];
-  $nopaginas=$_POST['nopaginas'];
-  $precio=$_POST['precio'];
-  $edicion=$_POST['edicion'];
-  $año=$_POST['año'];
-  $imagen= $_FILES['img'];
-  $idioma=$_POST['idioma'];
-  $imagenguarda=$imagen['tmp_name'];
-  move_uploaded_file($imagen['tmp_name'],"imagenes/".$imagen['name']);
+  $idLibro=$_POST['idLibro'];
+  $isbn=$_POST['isbn'];
+  $titulo=$_POST['nombre'];
+  $UnidadesEnStock=$_POST['stock'];
+  $fecha_hora_actual = date('Y-m-d H:i:s');
 //validar si existe el titulo
 $sqlautor="SELECT *FROM libros WHERE Titulo='$titulo'";
 $ejecuta=mysqli_query($con,$sqlautor);
 $fila=mysqli_fetch_array($ejecuta);
 $nametitulo=$fila['Titulo'];
-//validar si existe el genero
-$sqlautor="SELECT *FROM genero WHERE Genero='$generoid'";
-$ejecuta=mysqli_query($con,$sqlautor);
-$fila=mysqli_fetch_array($ejecuta);
-$idg=$fila['id_genero'];
-//validar si existe el autor
-$sqlautor="SELECT *FROM autor WHERE NombreAutor='$idautor'";
-$ejecuta=mysqli_query($con,$sqlautor);
-$fila=mysqli_fetch_array($ejecuta);
-$idau=$fila['id_autor'];
-//validar si existe el editorial
-$sqlautor="SELECT *FROM editorial WHERE Editorial='$editorial'";
-$ejecuta=mysqli_query($con,$sqlautor);
-$fila=mysqli_fetch_array($ejecuta);
-$idee=$fila['id_editorial'];
+$idtl=$fila['id_libro'];
+$isbntl=$fila['isbn'];
 
     if(empty($titulo)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el titulo</div>";}
-    if(empty($idautor)){echo "<div class='alert alert-primary' role='alert'> Falta el autor </div>";}
-    if(empty($generoid)){echo "<div class='alert alert-primary' role='alert'> Falta el genero </div>";}
-    if(empty($editorial)){echo "<div class='alert alert-primary' role='alert'> Falta la editorial</div>";}
-    if(empty($nopaginas)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta Numero de paginas</div>";}
-    if(empty($precio)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el precio del libro</div>";}
-    if(empty($edicion)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta la edicion</div>";}
-    if(empty($año)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el año</div>";}
-    if(empty($idioma)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el idioma</div>";}
-    if(empty($imagenguarda)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta la imagen</div>";}
-    if(empty($idg)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>NO EXISTE ESE GENERO</div>";}
-    if(empty($idau)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>NO EXISTE ESE AUTOR</div>";}
-    if(empty($idee)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>NO EXISTE ESE LA EDITORIAL</div>";}
-    if(!empty($nametitulo)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>YA EXISTE ESE LIBRO</div>";}
+    if(empty($nametitulo)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>No existe el libro</div>";}
+    if(empty($titulo)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el titulo</div>";}
+    if(empty($titulo)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el titulo</div>";}
 
-    if(!empty($titulo) && !empty($idautor) && empty($nametitulo) && !empty($generoid)&& !empty($editorial)&& !empty($idau)&& !empty($idg) && !empty($nopaginas)&& !empty($precio)&& !empty($edicion)&& !empty($año)&& !empty($idioma)&& !empty($imagenguarda)){
-        $sql1="INSERT INTO libros (id_libro,Titulo,id_Autor,id_Genero,id_Editorial,NoPaginas,Precio,isbn,Idioma,Edicion,Año,ImagenLibro)
-         VALUES ($id,'$titulo','$idau','$idg','$idee','$nopaginas','$precio','15','$idioma','$edicion','$año','$imagenguarda')";
-        if(mysqli_query($con,$sql1)){
-            echo "<div class='alert alert-success' role='alert'>
-            Agregado Correctamente
-          </div>";
-            unset($_POST);
-            $con->close();
-            echo "<meta http-equiv=refresh content=0;URL=Libros.php>";
-        }
-        else{
-            echo "Error: " . $sql . "<br>" . mysqli_error($con);
-        }
-      }     
+    if(!empty($titulo) && !empty($isbn) && !empty($UnidadesEnStock) && !empty($idLibro)){
+      if($idLibro==$idtl && $isbn==$isbntl){
+        $sql1="INSERT INTO libros_stock (id_libro,isbn,titulo,UnidadesEnStock,FechaDeEntrada)
+        VALUES ('$idLibro','$isbn','$titulo','$UnidadesEnStock','$fecha_hora_actual')";
+       if(mysqli_query($con,$sql1)){
+           echo "<div class='alert alert-success' role='alert'>
+           Agregado Correctamente
+         </div>";
+           unset($_POST);
+           $con->close();
+           echo "<meta http-equiv=refresh content=0;URL=LibrosStock.php>";
+       }
+       else{
+           echo "Error: " . $sql . "<br>" . mysqli_error($con);
+       }
+     }     
+      }
+      else{
+          if($idLibro!=$idtl){
+            echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Los Id No es el correcto</div>";
+          }
+          if($isbn!=$isbntl){
+            echo "<div class='alert alert-primary' role='alert' style='background-color:red'>El isbn no es el correcto</div>";
+          }
+      }
       }
 ?>
 <script>
