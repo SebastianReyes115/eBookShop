@@ -182,12 +182,12 @@
   </div>
   <div class="form-group">
     <label for="fecha">Fecha de Inicio</label>
-    <input type="text" class="form-control" name="fecha" aria-describedby="emailHelp">
+    <input type="date" class="form-control" name="fecha" aria-describedby="emailHelp">
     <small id="sn" class="form-text text-muted">Ingresa la fecha de inicio de la oferta</small>
   </div>
   <div class="form-group">
     <label for="fechafin">Fecha de Termino</label>
-    <input type="number" class="form-control" name="stock" aria-describedby="emailHelp">
+    <input type="date" class="form-control" name="stock" aria-describedby="emailHelp">
     <small id="sn" class="form-text text-muted">Ingresa la fecha de fin de la oferta</small>
   </div>
   <div class="form-group">

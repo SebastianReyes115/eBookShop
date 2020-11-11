@@ -182,7 +182,7 @@
   </div>
   <div class="form-group">
     <label for="fecha">Fecha de Recomendación</label>
-    <input type="text" class="form-control" name="fecha" aria-describedby="emailHelp">
+    <input type="date" class="form-control" name="fecha" aria-describedby="emailHelp">
     <small id="sn" class="form-text text-muted">Ingresa la fecha</small>
   </div>
   <input type="submit" name="b1" onClick="cargar()" class="btn btn-primary btn-lg btn-block" value="Guardar">
