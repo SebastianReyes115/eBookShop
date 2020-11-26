@@ -3,29 +3,29 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>eBooks Shop | eCommers</title>
+    <title>eBook Shop | eCommers</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
     <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="Recursos/img/favicon_ebook.png"
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="Recursos/img/favicon_ebook.png"
     />
 
     <!-- CSS here -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="assets/css/flaticon.css">
-        <link rel="stylesheet" href="assets/css/slicknav.css">
-        <link rel="stylesheet" href="assets/css/animate.min.css">
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="assets/css/themify-icons.css">
-        <link rel="stylesheet" href="assets/css/slick.css">
-        <link rel="stylesheet" href="assets/css/nice-select.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/estilosProductos.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/estilosProductos.css">
 
 
 </head>
@@ -48,10 +48,10 @@
                             <nav>                                                
                                 <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">Productos</a></li>
-                                    <li class="hot"><a href="ofertas.html">Ofertas</a></li>
-                                    <li><a href="about.html">Acerca de nosotros</a></li>
-                                    <li><a href="contact.html">Contacto</a></li>
+                                    <li><a href="shop.php">Productos</a></li>
+                                    <li class="hot"><a href="ofertas.php">Ofertas</a></li>
+                                    <li><a href="about.php">Acerca de nosotros</a></li>
+                                    <li><a href="contact.php">Contacto</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -63,8 +63,8 @@
                                         <span class="flaticon-search"></span>
                                     </div>
                                 </li>
-                                <li> <a href="login.html"><span class="flaticon-user"></span></a></li>
-                                <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li>
+                                <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
+                                <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
                             </ul>
                         </div>
                     </div>
@@ -85,16 +85,16 @@
         <br>
         <div class="row"  style="width: 100%;">
             <div class="col-md-4 imagenes" >
-                <img  class="tamañoImagen" src="https://images-na.ssl-images-amazon.com/images/I/91Orrw6CobL.jpg"/>
+                <img  class="tamañoImagen" src="Recursos/img/traidor.jpg"/>
             </div>
             <div class="col-md-4 tituloLibro" >
-                <h2 >EL LADRON DEL RAYO (PERCY JACKSON Y LOS DIOSES DEL OLIMPO 1)</h2>
-                    <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > RICK RIORDAN</a>
+                <h2>EL TRAIDOR</h2>
+                    <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Anabel Hernández</a>
                     <br>
-                    <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > SALAMADRA INFANTIL Y JUVENIL</a>
+                    <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > GRIJALBO</a>
             </div>
             <div class="col-md-4 ContenedorPrecio">
-                <span class="PriceTag"> Precio: $60 MXN </span>
+                <span class="PriceTag"> Precio: $79 MXN </span>
                 <div class="add_to_cart">
                     <br/>
                     <a href="#" class="BotonAgregar" style="width: 200px;">Agregar al carrito</a>
@@ -105,18 +105,10 @@
         <div>
             <div>
                 <h2 class="headerproductos">Descripción</h2>
-                <p class="descripcion">
-                    ¿Qué pasaría si un día descubrieras que, en realidad, eres hijo de un dios griego que 
-                    debe cumplir una misión secreta? Pues eso es lo que le sucede a Percy Jackson, que a 
-                    partir de ese momento se dispone a vivir los acontecimientos más emocionantes de su vida. 
-                    Expulsado de seis colegios, Percy padece dislexia y dificultades para concentrarse, 
-                    o al menos ésa es la versión oficial. Objeto de burlas por inventarse historias fantásticas,
-                     ni siquiera él mismo acaba de creérselas hasta el día que los dioses del Olimpo le revelan 
-                     la verdad: Percy es nada menos que un semidiós, es decir, el hijo de un dios y una mortal. 
-                     Y como tal ha de descubrir quién ha robado el rayo de Zeus y así evitar que estalle una 
-                     guerra entre los dioses. Para cumplir la misión contará con la ayuda de sus amigos Grover, 
-                     un joven sátiro, y Annabeth, hija de Atenea.</p>
-                    <br>
+                <p class="descripcion">El traidor es uno de los trabajos periodísticos más ambiciosos en la trayectoria de Anabel Hernández. Su historia se remonta a enero de 2011, cuando la contactó uno de los abogados de Vicente Zambada Niebla, mejor conocido como Vicentillo, quien enfrentaba un juicio en una corte de Chicago. La intención era compartir con la periodista documentos y hechos que ampliaban y esclarecían varios de los episodios que acababa de dar a conocer en Los señores del narco.
+
+                    Entre los documentos a los que tuvo acceso se encuentran el inquietante autorretrato como payaso que aparece en la portada y los diarios realizados por Vicentillo durante las negociaciones para colaborar con el gobierno norteamericano, los cuales hasta ahora eran secretos. En ellos el capo reconstruyó su historia y la historia de una de las organizaciones de tráfico de estupefacientes más grandes del planeta.</P>
+                <br>
             <hr class="separador">
 
             <div>
@@ -151,9 +143,7 @@
                 </div>
                 </div>
         </div>
-
         </div>
-        <!-- subscribe part end -->
     </main>
     <footer>
         <!-- Footer Start-->
@@ -252,7 +242,7 @@
           </div>
         </div>
         <!-- Footer End-->
-      </footer>
+    </footer>
     <!--? Search model Begin -->
     <div class="search-model-box">
         <div class="h-100 d-flex align-items-center justify-content-center">

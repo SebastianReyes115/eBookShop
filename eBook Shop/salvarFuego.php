@@ -48,10 +48,10 @@
                             <nav>                                                
                                 <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">Productos</a></li>
-                                    <li class="hot"><a href="ofertas.html">Ofertas</a></li>
-                                    <li><a href="about.html">Acerca de nosotros</a></li>
-                                    <li><a href="contact.html">Contacto</a></li>
+                                    <li><a href="shop.php">Productos</a></li>
+                                    <li class="hot"><a href="ofertas.php">Ofertas</a></li>
+                                    <li><a href="about.php">Acerca de nosotros</a></li>
+                                    <li><a href="contact.php">Contacto</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -63,8 +63,8 @@
                                         <span class="flaticon-search"></span>
                                     </div>
                                 </li>
-                                <li> <a href="login.html"><span class="flaticon-user"></span></a></li>
-                                <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li>
+                                <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
+                                <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
                             </ul>
                         </div>
                     </div>
@@ -85,16 +85,16 @@
         <br>
         <div class="row"  style="width: 100%;">
             <div class="col-md-4 imagenes" >
-                <img  class="tamañoImagen" src="Recursos/img/increbrantable.jpg"/>
+                <img  class="tamañoImagen" src="https://m.media-amazon.com/images/I/41qt7EkWhqL.jpg"/>
             </div>
             <div class="col-md-4 tituloLibro" >
-                <h2>INQUEBRANTABLES</h2>
-                    <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > DANIEL HABIF</a>
+                <h2>SALVAR EL FUEGO</h2>
+                    <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Guillermo Arriaga</a>
                     <br>
-                    <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > HARPERCOLLINS MEXICO</a>
+                    <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > ALFAGUARA</a>
             </div>
             <div class="col-md-4 ContenedorPrecio">
-                <span class="PriceTag"> Precio: $75 MXN </span>
+                <span class="PriceTag"> Precio: $60 MXN </span>
                 <div class="add_to_cart">
                     <br/>
                     <a href="#" class="BotonAgregar" style="width: 200px;">Agregar al carrito</a>
@@ -106,19 +106,10 @@
             <div>
                 <h2 class="headerproductos">Descripción</h2>
                 <p class="descripcion">
-                    Inquebrantables reúne y expande los mensajes de inspiración que mayor impacto han tenido 
-                    y que mejor representan a Daniel Habif como orador motivacional, e inspiran al lector a 
-                    mirar más allá de sus circunstancias actuales para crear la vida que desean vivir. 
-                    Este es un libro que no acepta resúmenes. No forma parte de los títulos que tachas y 
-                    vas a otra cosa. No es un trofeo, ni un manual de procedimientos. No es una tesis, 
-                    ni un texto académico. Si tu intención es pasar por él sin dejar que él lo haga por ti, 
-                    no servirá de nada. El dinero lo podrás recuperar, pero te advierto que el tiempo se habrá 
-                    do para siempre. Su belleza no está en las palabras que yo escribí, sino en las que tú 
-                    generes con él. Está compuesto de mil pedazos míos, trozos sueltos de mi alma y de mi carne: 
-                    un alcázar edificado con todas las piedras que me han lanzado, una diadema confeccionada con 
-                    las perlas que he recibido. Hallarás soledades y alegrías, anhelos y zozobras, inquietudes y 
-                    esperanzas, clamores y murmullos. No fue fácil desprenderme de ellos. 
-                    -Daniel Habif (tomado de la introducción del libro)</p>
+                    Marina, una mujer casada, con tres hijos, con una vida familiar resuelta, coreógrafa de cierto prestigio, se ve involucrada en un amorío improbable con un hombre impensable. Salvar el fuego retrata dos Méxicos completamente escindidos uno del otro, en los que Marina, que pertenece a la clase social más alta, se vincula con un hombre al extremo de la sociedad.
+
+Ésta es una novela que retrata las contradicciones de un país y las contradicciones más hondas de la naturaleza humana. Es una novela de amor y es una novela que al final termina por brindar esperanza.
+                </P>
                     <br>
             <hr class="separador">
 
@@ -140,7 +131,7 @@
                         <tr> <th>Año de publicación </th>
                         <td>10/06/2020</td>
                         </tr>
-                        <tr><th>Edición:</th>
+                        <tr><th>Edicioón:</th>
                         <td>
                         <a href="#" tabindex="0">Practical Magic Series</a></td>
                         </tr>
@@ -154,7 +145,9 @@
                 </div>
                 </div>
         </div>
+
         </div>
+        
     </main>
     <footer>
         <!-- Footer Start-->

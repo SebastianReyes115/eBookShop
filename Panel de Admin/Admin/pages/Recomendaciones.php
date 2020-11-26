@@ -126,13 +126,13 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <li class="nav-header">Administracion general</li>
               <li class="nav-item">
-                <a href="calendar.html" class="nav-link">
+                <a href="calendar.php" class="nav-link">
                   <i class="nav-icon far fa-calendar-alt"></i>
                   <p>Calendario</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="Estadistica.html" class="nav-link">
+                <a href="Estadistica.php" class="nav-link">
                   <i class="nav-icon fas fa-chart-pie"></i>
                   <p>Estadísticas</p>
                 </a>
@@ -145,8 +145,8 @@
               </li>
             </ul>
           </nav>
-      
-        
+
+
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
@@ -194,7 +194,7 @@
         <table class="table table-dark">
             <tr>
                 <td>Id</td>
-                <td>Titulo</td>    
+                <td>Titulo</td>
                 <td>Fecha de Recomendación</td>
             </tr>
 
@@ -226,7 +226,7 @@ if(isset($_POST['eliminar'])){ //Eliminar Autor
     echo "";
     echo "<div class='alert alert-warning' role='alert'>
         Eliminado
-      </div>";     
+      </div>";
     $con->close();
     echo "<meta http-equiv=refresh content=0;URL=Recomendaciones.php>";
     }
@@ -274,7 +274,7 @@ if(!empty($titulo) && !empty($fecha)){
     else{
       echo "<div class='alert alert-primary' role='alert' style='background-color:red'>No existe ese titulo</div>";
 
-    }  
+    }
       }
 ?>
 <script>

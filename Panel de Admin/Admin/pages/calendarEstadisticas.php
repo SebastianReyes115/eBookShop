@@ -50,14 +50,14 @@
           <li class="nav-header">Administrar</li>
 
           <li class="nav-item">
-            <a href="calendarEstadisticas.html" class="nav-link">
+            <a href="calendarEstadisticas.php" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>Calendario</p>
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="EstadisticaE.html" class="nav-link">
+            <a href="EstadisticaE.php" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
                 <p>Estadísticas</p>
             </a>

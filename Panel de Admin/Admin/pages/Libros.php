@@ -126,13 +126,13 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <li class="nav-header">Administracion general</li>
               <li class="nav-item">
-                <a href="calendar.html" class="nav-link">
+                <a href="calendar.php" class="nav-link">
                   <i class="nav-icon far fa-calendar-alt"></i>
                   <p>Calendario</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="Estadistica.html" class="nav-link">
+                <a href="Estadistica.php" class="nav-link">
                   <i class="nav-icon fas fa-chart-pie"></i>
                   <p>Estadísticas</p>
                 </a>
@@ -232,7 +232,7 @@
         <table class="table table-dark">
             <tr>
                 <td>Id</td>
-                <td>Titulo</td>    
+                <td>Titulo</td>
                 <td>Autor</td>
                 <td>Genero</td>
                 <td>Editorial</td>
@@ -253,7 +253,7 @@ while($fila=$ejecuta->fetch_assoc())
 {
 ?>
 <tr>
-<?php 
+<?php
    $idamt=$fila['id_Autor'];
    $sqlam="SELECT *FROM autor WHERE id_autor=$idamt";
    $ejecutas=mysqli_query($con,$sqlam);
@@ -371,7 +371,7 @@ if(isset($_POST['eliminar'])){ //Eliminar Autor
     echo "";
     echo "<div class='alert alert-warning' role='alert'>
         Eliminado
-      </div>";     
+      </div>";
     $con->close();
     echo "<meta http-equiv=refresh content=0;URL=libros.php>";
     }
@@ -527,7 +527,7 @@ $idee=$fila['id_editorial'];
         else{
             echo "Error: " . $sql . "<br>" . mysqli_error($con);
         }
-      }     
+      }
       }
 ?>
 <script>

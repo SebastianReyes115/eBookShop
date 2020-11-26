@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>eBook Shop | eCommers</title>
+    <title>eBooks Shop | eCommers</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -48,10 +48,10 @@
                             <nav>                                                
                                 <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">Productos</a></li>
-                                    <li class="hot"><a href="ofertas.html">Ofertas</a></li>
-                                    <li><a href="about.html">Acerca de nosotros</a></li>
-                                    <li><a href="contact.html">Contacto</a></li>
+                                    <li><a href="shop.php">Productos</a></li>
+                                    <li class="hot"><a href="ofertas.php">Ofertas</a></li>
+                                    <li><a href="about.php">Acerca de nosotros</a></li>
+                                    <li><a href="contact.php">Contacto</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -63,8 +63,8 @@
                                         <span class="flaticon-search"></span>
                                     </div>
                                 </li>
-                                <li> <a href="login.html"><span class="flaticon-user"></span></a></li>
-                                <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li>
+                                <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
+                                <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
                             </ul>
                         </div>
                     </div>
@@ -85,16 +85,16 @@
         <br>
         <div class="row"  style="width: 100%;">
             <div class="col-md-4 imagenes" >
-                <img  class="tamañoImagen" src="https://m.media-amazon.com/images/I/41KHjzaEgAL._SY346_.jpg"/>
+                <img  class="tamañoImagen" src="Recursos/img/felipe.jpg"/>
             </div>
             <div class="col-md-4 tituloLibro" >
-                <h2>A PROPÓSITO DE NADA</h2>
-                    <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Woody Allen</a>
+                <h2>FELIPE,EL OSCURO</h2>
+                    <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > OLGA WORNAT</a>
                     <br>
-                    <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > PATRIA MÉXICO</a>
+                    <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > GEOPLANETA</a>
             </div>
             <div class="col-md-4 ContenedorPrecio">
-                <span class="PriceTag"> Precio: $30 MXN </span>
+                <span class="PriceTag"> Precio: $50 MXN</span>
                 <div class="add_to_cart">
                     <br/>
                     <a href="#" class="BotonAgregar" style="width: 200px;">Agregar al carrito</a>
@@ -105,10 +105,13 @@
         <div>
             <div>
                 <h2 class="headerproductos">Descripción</h2>
-                <p class="descripcion">Autobiografía de Woody Allen que brinda una visión completa de lo que ha sido su vida, nos relata sus amores,
-                    sus películas, su labor de líder y director de cine y teatro, también nos narra su paso por la televisión,
-                    los clubes nocturnos y su incursión en la escritura. Y no podía faltar su amplia respuesta y postura sobre la
-                    demanda por abuso sexual que recibió por parte de su exesposa Mia Farrow.</p>
+                <p class="descripcion">La periodista Olga Wornat presenta a detalle la historia de un fracaso: el sexenio negro de Felipe Calderón.
+
+                    Calderón es una mezcla de malas maneras y mala suerte. Como no creo en la mala o buena suerte, deposito énfasis en las malas maneras. Llegó en circunstancias muy penosas, en medio de acusaciones razonadas de fraude; ha intentado persuadir, conmover, seducir y no lo ha logrado. —Carlos Monsiváis en La Jornada, 2008.
+                    
+                    Desde la falta de estrategia como presidente, los peores casos de corrupción, el enriquecimiento ilícito, los favores a sus familiares y amigos, y su protección al Cártel de Sinaloa y a los actos criminales de Genaro García Luna, hasta la intimidad de su frágil relación con Margarita Zavala, sus problemas con el alcohol y el miedo constante a ser el presidente más odiado por los mexicanos. Como nadie lo había logrado, Wornat revela la mejor investigación del calderonato.
+                    
+                    </p>
                     <br>
             <hr class="separador">
 
@@ -146,9 +149,6 @@
         </div>
 
         </div>
-        <!--================End Single Product Area =================-->
-        <!-- subscribe part here -->
-        
     </main>
     <footer>
         <!-- Footer Start-->

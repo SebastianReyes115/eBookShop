@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html lang="zxx">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -26,7 +26,6 @@
         <link rel="stylesheet" href="assets/css/nice-select.css">
         <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
     <header>
         <!-- Header Start -->
@@ -41,12 +40,12 @@
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
                             <nav>                                                
-                                <ul id="navigation">
+                                <ul id="navigation">  
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">Productos</a></li>
-                                    <li class="hot"><a href="ofertas.html">Ofertas</a></li>
-                                    <li><a href="about.html">Acerca de nosotros</a></li>
-                                    <li><a href="contact.html">Contacto</a></li>
+                                    <li><a href="shop.php">Productos</a></li>
+                                    <li class="hot"><a href="ofertas.php">Ofertas</a></li>
+                                    <li><a href="about.php">Acerca de nosotros</a></li>
+                                    <li><a href="contact.php">Contacto</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -58,8 +57,8 @@
                                         <span class="flaticon-search"></span>
                                     </div>
                                 </li>
-                                <li> <a href="login.html"><span class="flaticon-user"></span></a></li>
-                                <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li>
+                                <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
+                                <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
                             </ul>
                         </div>
                     </div>
@@ -80,7 +79,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap text-center">
-                                <h2>Ofertas</h2>
+                                <h2>Sign In</h2>
                             </div>
                         </div>
                     </div>
@@ -88,117 +87,71 @@
             </div>
         </div>
         <!-- Hero Area End-->
-        <!-- Latest Products Start -->
-        <section class="popular-items latest-padding">
+        <!--================login_part Area =================-->
+        <section class="login_part section_padding ">
             <div class="container">
-                <div class="row product-btn justify-content-between mb-40">
-                    <div class="properties__button">
-                        <!--Nav Button  -->
-                        <nav>                                                      
-                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Ofertas</a>
-                            </div>
-                        </nav>
-                        <!--End Nav Button  -->
-                    </div>
-                    <!-- Grid and List view -->
-                    <div class="grid-list-view">
-                    </div>
-                </div>
-                <!-- Nav Card -->
-                <div class="tab-content" id="nav-tabContent">
-                    <!-- card one -->
-                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <div class="row">
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-popular-items mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="Recursos/img/principito.jpg" alt="">
-                                        <div class="img-cap">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
-                                        </div>
-                                    </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="pricipito.html">El Principito</a></h3>
-                                        <span>$ 40 MXN</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-popular-items mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="Recursos/img/salvarfuego.jpg" alt="">
-                                        <div class="img-cap">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
-                                        </div>
-                                    </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="salvarFuego.html">Salvar el Fuego</a></h3>
-                                        <span>$ 60 MXN</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-popular-items mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="Recursos/img/teoria.jpg" alt="">
-                                        <div class="img-cap">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
-                                        </div>
-                                    </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="teoriaTodo.html">La teoria del todo</a></h3>
-                                        <span>$ 25 MXN</span>
-                                    </div>
-                                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="login_part_text text-center">
+                            <div class="login_part_text_iner">
+                                <h2>¿Ya tienes cuenta?</h2>
+                                <p></p>
+                                <a href="login.php" class="btn_3">ingresar ahora</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- End Nav Card -->
-            </div>
-        </section>
-        <!-- Latest Products End -->
-        <!--? Shop Method Start-->
-        <div class="shop-method-area">
-            <div class="container">
-                <div class="method-wrapper">
-                    <div class="row d-flex justify-content-between">
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-method mb-40">
-                                <i class="ti-package"></i>
-                                <h6>Recibe tu libro digital de manera segura</h6>
-                                <p>Recibirás tu libro de manera segura en tu correo una vez que se haya efectuado el pago.</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-method mb-40">
-                                <i class="ti-unlock"></i>
-                                <h6>Sistema de pago seguro</h6>
-                                <p>Las transacciones se realizan a través de PayPal©</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-method mb-40">
-                                <i class="ti-reload"></i>
-                                <h6>Devoluciones</h6>
-                                <p>En caso de no ser de tu agrado, cuentas con 24 hrs para realizar la devolución de tu compra</p>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="login_part_form">
+                            <div class="login_part_form_iner">
+                                <h3>Bienvenido! <br>
+                                    Porfavor ingresa tus datos</h3>
+                                <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                                    <div class="col-md-12 form-group p_star">
+                                        <p>Nombre:</p>
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
+                                        <input type="text" class="form-control" id="name" name="name" value=""
+                                            placeholder="Juan Lopez">
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
+                                        <p>Correo Electrónico:</p>
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
+                                        <input type="email" class="form-control" id="email" name="email" value=""
+                                            placeholder="ejemplo@gmail.com">
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
+                                        <p>Contraseña:</p>
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
+                                        <input type="password" class="form-control" id="password" name="password" value=""
+                                            placeholder="Password">
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
+                                        <p>Confirmar contraseña:</p>
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
+                                        <input type="password" class="form-control" id="password" name="password" value=""
+                                            placeholder="Password">
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <div class="creat_account d-flex align-items-center">
+                                            <input type="checkbox" id="f-option" name="selector">
+                                            <label for="f-option">Recordarmeme</label>
+                                        </div>
+                                        <button type="submit" value="submit" class="btn_3">
+                                            Ingresar
+                                        </button>
+                                        <a class="lost_pass" href="#">¿Olvidaste la contraseña?</a>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Shop Method End-->
+        </section>
+        <!--================login_part end =================-->
     </main>
     <footer>
         <!-- Footer Start-->
@@ -308,9 +261,9 @@
         </div>
     </div>
     <!-- Search model end -->
+    
+    <!-- JS here -->
 
-<!-- JS here -->
-    <!-- All JS Custom Plugins Link Here here -->
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -326,13 +279,13 @@
     <!-- One Page, Animated-HeadLin -->
     <script src="./assets/js/wow.min.js"></script>
     <script src="./assets/js/animated.headline.js"></script>
-    <script src="./assets/js/jquery.magnific-popup.js"></script>
-
+    
     <!-- Scroll up, nice-select, sticky -->
     <script src="./assets/js/jquery.scrollUp.min.js"></script>
     <script src="./assets/js/jquery.nice-select.min.js"></script>
     <script src="./assets/js/jquery.sticky.js"></script>
-    
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+
     <!-- contact js -->
     <script src="./assets/js/contact.js"></script>
     <script src="./assets/js/jquery.form.js"></script>
@@ -343,6 +296,7 @@
     <!-- Jquery Plugins, main Jquery -->	
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
-    
+
 </body>
+    
 </html>

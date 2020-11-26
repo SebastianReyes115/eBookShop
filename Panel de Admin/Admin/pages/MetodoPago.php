@@ -126,13 +126,13 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <li class="nav-header">Administracion general</li>
               <li class="nav-item">
-                <a href="calendar.html" class="nav-link">
+                <a href="calendar.php" class="nav-link">
                   <i class="nav-icon far fa-calendar-alt"></i>
                   <p>Calendario</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="Estadistica.html" class="nav-link">
+                <a href="Estadistica.php" class="nav-link">
                   <i class="nav-icon fas fa-chart-pie"></i>
                   <p>Estadísticas</p>
                 </a>
@@ -145,7 +145,7 @@
               </li>
             </ul>
           </nav>
-    
+
     </div>
     <!-- /.sidebar -->
   </aside>
@@ -255,7 +255,7 @@ if(isset($_POST['eliminar'])){ //Eliminar Autor
     echo "";
     echo "<div class='alert alert-warning' role='alert'>
         Eliminado
-      </div>";     
+      </div>";
     $con->close();
     echo "<meta http-equiv=refresh content=0;URL=MetodoPago.php>";
     }
@@ -295,7 +295,7 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
   $nombre = $_POST['NombrePago'];
     if(empty($nombre)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el tipo de pago</div>";}
       else{
-        
+
     if(!empty($nombre)){
         $sql1="INSERT INTO metodopago (id_metodo,nombreMetodo) VALUES ($id,'$nombre')";
         if(mysqli_query($con,$sql1)){
@@ -310,9 +310,9 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
         else{
             echo "Error: " . $sql . "<br>" . mysqli_error($con);
         }
-      }     
       }
-        
+      }
+
 }
 ?>
 <script>

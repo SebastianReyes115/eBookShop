@@ -126,13 +126,13 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <li class="nav-header">Administracion general</li>
               <li class="nav-item">
-                <a href="calendar.html" class="nav-link">
+                <a href="calendar.php" class="nav-link">
                   <i class="nav-icon far fa-calendar-alt"></i>
                   <p>Calendario</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="Estadistica.html" class="nav-link">
+                <a href="Estadistica.php" class="nav-link">
                   <i class="nav-icon fas fa-chart-pie"></i>
                   <p>Estadísticas</p>
                 </a>
@@ -145,7 +145,7 @@
               </li>
             </ul>
           </nav>
-      
+
         </div>
     <!-- /.sidebar -->
   </aside>
@@ -301,7 +301,7 @@ if(isset($_POST['eliminar'])){ //Eliminar Autor
     echo "";
     echo "<div class='alert alert-warning' role='alert'>
         Eliminado
-      </div>";     
+      </div>";
     $con->close();
     echo "<meta http-equiv=refresh content=0;URL=Usuarios.php>";
     }
@@ -346,13 +346,13 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
     $correo=$_POST['Correo'];
     $contra=$_POST['Contra'];
     $rol=$_POST['Rol'];
-    
+
     if(empty($nombre)){echo "<div class='alert alert-danger' role='alert' style='background-color:red'>Falta el nombre</div>";}
     if(empty($apa)){echo "<div class='alert alert-danger' role='alert'> Falta el apellido</div>";}
     if(empty($correo)){echo "<div class='alert alert-danger' role='alert'> Falta el correo</div>";}
     if(empty($contra)){echo "<div class='alert alert-danger' role='alert'> Falta la contraseña</div>";}
     if(empty($rol)){echo "<div class='alert alert-danger' role='alert'> Falta el Rol</div>";}
-      
+
     if(!empty($nombre) && !empty($apa) && !empty($correo) && !empty($contra) && !empty($rol)){
         $sql1="INSERT INTO administrador (id_admin,Nombre,Apellido,correo,contraseña, rol, FechaDeRegistro) VALUES ($id,'$nombre','$apa','$correo','$contra', '$rol', now())";
         if(mysqli_query($con,$sql1)){
@@ -370,8 +370,8 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
         else{
             echo "Error: " . $sql . "<br>" . mysqli_error($con);
         }
-      }     
-      
+      }
+
 }
 ?>
 <script>

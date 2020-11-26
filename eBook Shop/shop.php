@@ -43,10 +43,10 @@
                             <nav>                                                
                                 <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">Productos</a></li>
-                                    <li class="hot"><a href="ofertas.html">Ofertas</a></li>
-                                    <li><a href="about.html">Acerca de nosotros</a></li>
-                                    <li><a href="contact.html">Contacto</a></li>
+                                    <li><a href="shop.php">Productos</a></li>
+                                    <li class="hot"><a href="ofertas.php">Ofertas</a></li>
+                                    <li><a href="about.php">Acerca de nosotros</a></li>
+                                    <li><a href="contact.php">Contacto</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -58,8 +58,8 @@
                                         <span class="flaticon-search"></span>
                                     </div>
                                 </li>
-                                <li> <a href="login.html"><span class="flaticon-user"></span></a></li>
-                                <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li>
+                                <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
+                                <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
                             </ul>
                         </div>
                     </div>
@@ -124,7 +124,7 @@
                                         </div>
                                     </div>
                                     <div class="popular-caption">
-                                        <h3><a href="harryPotter1.html">Harry Potter y la Piedra Filosofal</a></h3>
+                                        <h3><a href="harryPotter1.php">Harry Potter y la Piedra Filosofal</a></h3>
                                         <span>$ 45 MXN</span>
                                     </div>
                                 </div>
@@ -141,7 +141,7 @@
                                         </div>
                                     </div>
                                     <div class="popular-caption">
-                                        <h3><a href="pricipito.html">El Principito</a></h3>
+                                        <h3><a href="pricipito.php">El Principito</a></h3>
                                         <span>$ 40 MXN</span>
                                     </div>
                                 </div>
@@ -158,7 +158,7 @@
                                         </div>
                                     </div>
                                     <div class="popular-caption">
-                                        <h3><a href="ladronRayo.html">Percy Jackson Y El Ladron del Rayo</a></h3>
+                                        <h3><a href="ladronRayo.php">Percy Jackson Y El Ladron del Rayo</a></h3>
                                         <span>$ 60 MXN</span>
                                     </div>
                                 </div>
@@ -180,7 +180,7 @@
                                         </div>
                                     </div>
                                     <div class="popular-caption">
-                                        <h3><a href="salvarFuego.html">Salvar Fuego</a></h3>
+                                        <h3><a href="salvarFuego.php">Salvar Fuego</a></h3>
                                         <span>$ 60 MXN</span>
                                     </div>
                                 </div>
@@ -197,7 +197,7 @@
                                         </div>
                                     </div>
                                     <div class="popular-caption">
-                                        <h3><a href="elTraidor.html">El traidor</a></h3>
+                                        <h3><a href="elTraidor.php">El traidor</a></h3>
                                         <span>$ 30 MXN</span>
                                     </div> 
                                 </div>
@@ -219,7 +219,7 @@
                                         </div>
                                     </div>
                                     <div class="popular-caption">
-                                        <h3><a href="suiteArte.html">El Sutil Arte de que te Importe un Caraj*</a></h3>
+                                        <h3><a href="suiteArte.php">El Sutil Arte de que te Importe un Caraj*</a></h3>
                                         <span>$ 35 MXN</span>
                                     </div>
                                 </div>
@@ -236,7 +236,7 @@
                                         </div>
                                     </div>
                                     <div class="popular-caption">
-                                        <h3><a href="propositoDeNata.html">A propósito de nada</a></h3>
+                                        <h3><a href="propositoDeNata.php">A propósito de nada</a></h3>
                                         <span>$ 30 MXN</span>
                                     </div>
                                 </div>
@@ -253,7 +253,7 @@
                                         </div>
                                     </div>
                                     <div class="popular-caption">
-                                        <h3><a href="inquebrantables.html">Inquebrantables</a></h3>
+                                        <h3><a href="inquebrantables.php">Inquebrantables</a></h3>
                                         <span>$ 45 MXN</span>
                                     </div>
                                 </div>
@@ -270,7 +270,7 @@
                                         </div>
                                     </div>
                                     <div class="popular-caption">
-                                        <h3><a href="felipeOscuro.html">Felipe, El Oscuro</a></h3>
+                                        <h3><a href="felipeOscuro.php">Felipe, El Oscuro</a></h3>
                                         <span>$ 10 MXN</span>
                                     </div>
                                 </div>
@@ -287,7 +287,7 @@
                                         </div>
                                     </div>
                                     <div class="popular-caption">
-                                        <h3><a href="teoriaTodo.html">La Teoría del Todo</a></h3>
+                                        <h3><a href="teoriaTodo.php">La Teoría del Todo</a></h3>
                                         <span>$ 25 MXN</span>
                                     </div>
                                 </div>

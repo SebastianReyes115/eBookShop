@@ -126,13 +126,13 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <li class="nav-header">Administracion general</li>
               <li class="nav-item">
-                <a href="calendar.html" class="nav-link">
+                <a href="calendar.php" class="nav-link">
                   <i class="nav-icon far fa-calendar-alt"></i>
                   <p>Calendario</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="Estadistica.html" class="nav-link">
+                <a href="Estadistica.php" class="nav-link">
                   <i class="nav-icon fas fa-chart-pie"></i>
                   <p>Estadísticas</p>
                 </a>
@@ -145,8 +145,8 @@
               </li>
             </ul>
           </nav>
-      
-        
+
+
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
@@ -204,7 +204,7 @@
         <table class="table table-dark">
             <tr>
                 <td>Id</td>
-                <td>ISBN</td>    
+                <td>ISBN</td>
                 <td>Titulo</td>
                 <td>Unidades en Stock</td>
                 <td>Fecha de Entrada</td>
@@ -222,7 +222,7 @@ while($fila=$ejecuta->fetch_assoc())
     <td><?php echo $fila['isbn'] ?> </td>
     <td><?php echo $fila['titulo'] ?> </td>
     <td><?php echo $fila['UnidadesEnStock'] ?> </td>
-    <td><?php 
+    <td><?php
     $date = date_create($fila['FechaDeEntrada']);
     echo date_format($date, 'Y-m-d H:i:s');
      ?> </td>
@@ -289,7 +289,7 @@ if(isset($_POST['eliminar'])){ //Eliminar Autor
     echo "";
     echo "<div class='alert alert-warning' role='alert'>
         Eliminado
-      </div>";     
+      </div>";
     $con->close();
     echo "<meta http-equiv=refresh content=0;URL=LibrosStock.php>";
     }
@@ -326,7 +326,7 @@ $isbntl=$fila['isbn'];
        }
        else{
            echo "Error: " . $sql . "<br>" . mysqli_error($con);
-       }     
+       }
       }
       else{
       }
@@ -377,7 +377,7 @@ $isbntl=$fila['isbn'];
        else{
            echo "Error: " . $sql . "<br>" . mysqli_error($con);
        }
-     }     
+     }
       }
       else{
           if($idLibro!=$idtl){

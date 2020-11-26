@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  
+
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon_ebook.png"/>
 </head>
 <body class="hold-transition sidebar-mini">
@@ -50,16 +50,16 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-header">Administrar</li>
-          
+
           <li class="nav-item">
-            <a href="pages/calendarEstadisticas.html" class="nav-link">
+            <a href="pages/calendarEstadisticas.php" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>Calendario</p>
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="pages/EstadisticaE.html" class="nav-link">
+            <a href="pages/EstadisticaE.php" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
                 <p>Estádisticas</p>
             </a>

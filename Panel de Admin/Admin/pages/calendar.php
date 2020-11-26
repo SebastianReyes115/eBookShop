@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Atención | Calendario</title>
+  <title>Super Admin | Calendario</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -28,7 +28,7 @@
           <img src="../images/admin.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="../indexAtencionCliente.php" class="d-block">Call Center</a>
+          <a href="../index.php" class="d-block">Super Administrador</a>
         </div>
       </div>
 
@@ -50,14 +50,28 @@
           <li class="nav-header">Administrar</li>
 
           <li class="nav-item">
-            <a href="calendarAtencion.html" class="nav-link">
+            <a href="calendar.php" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>Calendario</p>
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="mailbox/mailboxA.html" class="nav-link">
+            <a href="Estadistica.php" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+                <p>Estadísticas</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="BaseDatos.php" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+                <p>Base de Datos</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="./mailbox/mailbox.html" class="nav-link">
               <i class="nav-icon fas fa-envelope"></i>
                 <p>Inbox</p>
             </a>
@@ -77,7 +91,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Calendario</h1>
+            <h1>eBook Shop / Calendario</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">

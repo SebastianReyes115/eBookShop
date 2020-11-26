@@ -51,21 +51,21 @@
           <li class="nav-header">Administrar</li>
 
           <li class="nav-item">
-            <a href="calendar.html" class="nav-link">
+            <a href="calendar.php" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>Calendario</p>
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="productos.html" class="nav-link">
+            <a href="productos.php" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>Productos</p>
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="Estadistica.html" class="nav-link">
+            <a href="Estadistica.php" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>Estádisticas</p>
             </a>

@@ -126,13 +126,13 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <li class="nav-header">Administracion general</li>
               <li class="nav-item">
-                <a href="calendar.html" class="nav-link">
+                <a href="calendar.php" class="nav-link">
                   <i class="nav-icon far fa-calendar-alt"></i>
                   <p>Calendario</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="Estadistica.html" class="nav-link">
+                <a href="Estadistica.php" class="nav-link">
                   <i class="nav-icon fas fa-chart-pie"></i>
                   <p>Estadísticas</p>
                 </a>
@@ -145,8 +145,8 @@
               </li>
             </ul>
           </nav>
-      
-        
+
+
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
@@ -204,7 +204,7 @@
         <table class="table table-dark">
             <tr>
                 <td>Id</td>
-                <td>Titulo</td>    
+                <td>Titulo</td>
                 <td>Fecha de Inicio</td>
                 <td>Fecha de Fin</td>
                 <td>Precio Viejo</td>
@@ -219,15 +219,15 @@ while($fila=$ejecuta->fetch_assoc())
 {
 ?>
 <tr>
-<?php 
+<?php
 ?>
     <td><?php echo $fila['id_libro'] ?> </td>
     <td><?php echo $fila['titulo'] ?> </td>
-    <td><?php 
+    <td><?php
     $date = date_create($fila['FechaInicio']);
     echo date_format($date, 'Y-m-d H:i:s');
     ?> </td>
-    <td><?php 
+    <td><?php
     $date1 = date_create($fila['FechaFinal']);
     echo date_format($date1, 'Y-m-d H:i:s');
      ?> </td>
@@ -256,14 +256,14 @@ while($fila=$ejecuta->fetch_assoc())
                                            </tr>
                                            <tr>
                                             <td><label for="fecha">Fecha de Inicio</label></td>
-                                            <td><input type="date" class="form-control" name="fechai" value="<?php 
+                                            <td><input type="date" class="form-control" name="fechai" value="<?php
     $date = date_create($fila['FechaInicio']);
     echo date_format($date, 'Y-m-d H:i:s');
     ?>" aria-describedby="emailHelp"></td>
                                            </tr>
                                            <tr>
                                               <td><label for="fechafin">Fecha de Termino</label></td>
-                                              <td><input type="date" class="form-control" name="fechaf" value="<?php 
+                                              <td><input type="date" class="form-control" name="fechaf" value="<?php
     $date = date_create($fila['FechaFinal']);
     echo date_format($date, 'Y-m-d H:i:s');
     ?>" aria-describedby="emailHelp"></td>
@@ -306,7 +306,7 @@ if(isset($_POST['eliminar'])){ //Eliminar Autor
     echo "";
     echo "<div class='alert alert-warning' role='alert'>
         Eliminado
-      </div>";     
+      </div>";
     $con->close();
     echo "<meta http-equiv=refresh content=0;URL=Ofertas.php>";
     }
@@ -369,7 +369,7 @@ if(isset($_POST["actualiza"])){ //Actualizar Actor
     }
     }
   }
-} 
+}
 }
 
 ?>
@@ -411,7 +411,7 @@ $e=mysqli_query($con,$sqlv);
     if(!empty($nametitulo)){
       if(!empty($titulo) && !empty($fecha) && !empty($fechaf) && !empty($precionuevo)){
         if(!empty($e)){
-          $sql1="INSERT INTO ofertas (id_libro, titulo, FechaInicio, FechaFinal, PrecioViejo, PrecioNuevo) 
+          $sql1="INSERT INTO ofertas (id_libro, titulo, FechaInicio, FechaFinal, PrecioViejo, PrecioNuevo)
           VALUES ('$idl','$titulo','$fecha','$fechaf','$preciovi','$precionuevo')";
           if(mysqli_query($con,$sql1)){
               echo "<div class='alert alert-success' role='alert'>
@@ -428,13 +428,13 @@ $e=mysqli_query($con,$sqlv);
   else{
     echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Ya existe el titulo en oferta</div>";
   }
-         
-        } 
+
+        }
     }
     else{
       echo "<div class='alert alert-primary' role='alert' style='background-color:red'>No existe ese titulo</div>";
 
-    }    
+    }
       }
 ?>
 <script>

@@ -3,11 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>eBook Shop | eCommers</title>
+    <title>eBooks Shop | eCommers</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="Recursos/img/favicon_ebook.png"
+    />
 
     <!-- CSS here -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -44,10 +48,10 @@
                             <nav>                                                
                                 <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">Productos</a></li>
-                                    <li class="hot"><a href="ofertas.html">Ofertas</a></li>
-                                    <li><a href="about.html">Acerca de nosotros</a></li>
-                                    <li><a href="contact.html">Contacto</a></li>
+                                    <li><a href="shop.php">Productos</a></li>
+                                    <li class="hot"><a href="ofertas.php">Ofertas</a></li>
+                                    <li><a href="about.php">Acerca de nosotros</a></li>
+                                    <li><a href="contact.php">Contacto</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -59,8 +63,8 @@
                                         <span class="flaticon-search"></span>
                                     </div>
                                 </li>
-                                <li> <a href="login.html"><span class="flaticon-user"></span></a></li>
-                                <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li>
+                                <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
+                                <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
                             </ul>
                         </div>
                     </div>
@@ -79,18 +83,18 @@
         <!--================Single Product Area =================-->
         <br>
         <br>
-        <div class="row"  style="width: 100%; text-align: center;">
+        <div class="row"  style="width: 100%;">
             <div class="col-md-4 imagenes" >
-                <img  class="tamañoImagen" src="https://images-na.ssl-images-amazon.com/images/I/714tsbPWteL.jpg"/>
+                <img  class="tamañoImagen" src="https://images-na.ssl-images-amazon.com/images/I/91Orrw6CobL.jpg"/>
             </div>
             <div class="col-md-4 tituloLibro" >
-                <h2>EL SUTIL ARTE DE QUE TE IMPORTE UN CARAJO</h2>
-                    <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Mark Manson</a>
+                <h2 >EL LADRON DEL RAYO (PERCY JACKSON Y LOS DIOSES DEL OLIMPO 1)</h2>
+                    <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > RICK RIORDAN</a>
                     <br>
-                    <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > HARPERCOLLINS</a>
+                    <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > SALAMADRA INFANTIL Y JUVENIL</a>
             </div>
             <div class="col-md-4 ContenedorPrecio">
-                <span class="PriceTag"> Precio: $ 35 MXN</span>
+                <span class="PriceTag"> Precio: $60 MXN </span>
                 <div class="add_to_cart">
                     <br/>
                     <a href="#" class="BotonAgregar" style="width: 200px;">Agregar al carrito</a>
@@ -101,17 +105,17 @@
         <div>
             <div>
                 <h2 class="headerproductos">Descripción</h2>
-                <p class="descripcion">Por décadas se nos ha dicho que el pensamiento positivo es la clave de 
-                    la felicidad, la esencia de una vida prospera. Pero en los días que vivimos HOY eso se 
-                    acabo. Al Diablo Con La Positividad, es lo que dice Mark Manson. Seamos honestos, algunas
-                    veces las cosas estarás mal y nosotros tenemos que vivir con eso. Por lo que la clave es 
-                    dejar de tratar de ser positivo todo el tiempo y en lugar de eso ser mejores al momento de
-                     manejar la adversidad. Es tiempo de presentarte la antítesis de los libros de desarrollo 
-                     personal, una forma distinta de ver la vida, una forma distinta de alcanzar la buena vida 
-                     y está se da cuándo empezamos a dominar el sutil arte de mandar las cosas al diablo, 
-                     Aclaración: No se trata de que dejes de hacer las cosas, sino todo lo contrario, hacerlas 
-                     en función de saber que hacer y saber en que enfocarte, reconocer tus verdaderos valores 
-                     y ser fiel a esa persona en la que te quieres convertir. El autor dice que hay que aprender a vivir con la verdad y esta es simple: Los seres humanos son defectuosos y limitados. No todo mundo puede ser extraordinario, hay ganadores y perdedores, esto posiblemente no sea justo ni sea tu culpa, pero así es, y hay que saber vivir con ello</p>
+                <p class="descripcion">
+                    ¿Qué pasaría si un día descubrieras que, en realidad, eres hijo de un dios griego que 
+                    debe cumplir una misión secreta? Pues eso es lo que le sucede a Percy Jackson, que a 
+                    partir de ese momento se dispone a vivir los acontecimientos más emocionantes de su vida. 
+                    Expulsado de seis colegios, Percy padece dislexia y dificultades para concentrarse, 
+                    o al menos ésa es la versión oficial. Objeto de burlas por inventarse historias fantásticas,
+                     ni siquiera él mismo acaba de creérselas hasta el día que los dioses del Olimpo le revelan 
+                     la verdad: Percy es nada menos que un semidiós, es decir, el hijo de un dios y una mortal. 
+                     Y como tal ha de descubrir quién ha robado el rayo de Zeus y así evitar que estalle una 
+                     guerra entre los dioses. Para cumplir la misión contará con la ayuda de sus amigos Grover, 
+                     un joven sátiro, y Annabeth, hija de Atenea.</p>
                     <br>
             <hr class="separador">
 
@@ -149,9 +153,6 @@
         </div>
 
         </div>
-        <!--================End Single Product Area =================-->
-        <!-- subscribe part here -->
-        
         <!-- subscribe part end -->
     </main>
     <footer>

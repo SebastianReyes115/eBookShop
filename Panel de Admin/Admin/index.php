@@ -52,20 +52,20 @@
           <li class="nav-header">Administrar</li>
 
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="pages/calendar.php" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>Calendario</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/Estadistica.html" class="nav-link">
+            <a href="pages/Estadistica.php" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
                 <p>Estadísticas</p>
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="pages/BaseDatos.html" class="nav-link">
+            <a href="pages/BaseDatos.php" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
                 <p>Base de Datos</p>
             </a>

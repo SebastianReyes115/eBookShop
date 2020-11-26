@@ -7,11 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="Recursos/img/favicon_ebook.png"
-    />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -25,8 +21,14 @@
         <link rel="stylesheet" href="assets/css/slick.css">
         <link rel="stylesheet" href="assets/css/nice-select.css">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/estilosProductos.css">
+
+
 </head>
+    
+
 <body>
+    
     <header>
         <!-- Header Start -->
         <div class="header-area">
@@ -40,12 +42,12 @@
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
                             <nav>                                                
-                                <ul id="navigation">  
+                                <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">Productos</a></li>
-                                    <li class="hot"><a href="ofertas.html">Ofertas</a></li>
-                                    <li><a href="about.html">Acerca de nosotros</a></li>
-                                    <li><a href="contact.html">Contacto</a></li>
+                                    <li><a href="shop.php">Productos</a></li>
+                                    <li class="hot"><a href="ofertas.php">Ofertas</a></li>
+                                    <li><a href="about.php">Acerca de nosotros</a></li>
+                                    <li><a href="contact.php">Contacto</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -57,8 +59,8 @@
                                         <span class="flaticon-search"></span>
                                     </div>
                                 </li>
-                                <li> <a href="login.html"><span class="flaticon-user"></span></a></li>
-                                <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li>
+                                <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
+                                <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
                             </ul>
                         </div>
                     </div>
@@ -72,86 +74,85 @@
         <!-- Header End -->
     </header>
     <main>
-        <!-- Hero Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider slider-height2 d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap text-center">
-                                <h2>Sign In</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <!-- Hero Area End-->
-        <!--================login_part Area =================-->
-        <section class="login_part section_padding ">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="login_part_text text-center">
-                            <div class="login_part_text_iner">
-                                <h2>¿Ya tienes cuenta?</h2>
-                                <p></p>
-                                <a href="login.html" class="btn_3">ingresar ahora</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="login_part_form">
-                            <div class="login_part_form_iner">
-                                <h3>Bienvenido! <br>
-                                    Porfavor ingresa tus datos</h3>
-                                <form class="row contact_form" action="#" method="post" novalidate="novalidate">
-                                    <div class="col-md-12 form-group p_star">
-                                        <p>Nombre:</p>
-                                    </div>
-                                    <div class="col-md-12 form-group p_star">
-                                        <input type="text" class="form-control" id="name" name="name" value=""
-                                            placeholder="Juan Lopez">
-                                    </div>
-                                    <div class="col-md-12 form-group p_star">
-                                        <p>Correo Electrónico:</p>
-                                    </div>
-                                    <div class="col-md-12 form-group p_star">
-                                        <input type="email" class="form-control" id="email" name="email" value=""
-                                            placeholder="ejemplo@gmail.com">
-                                    </div>
-                                    <div class="col-md-12 form-group p_star">
-                                        <p>Contraseña:</p>
-                                    </div>
-                                    <div class="col-md-12 form-group p_star">
-                                        <input type="password" class="form-control" id="password" name="password" value=""
-                                            placeholder="Password">
-                                    </div>
-                                    <div class="col-md-12 form-group p_star">
-                                        <p>Confirmar contraseña:</p>
-                                    </div>
-                                    <div class="col-md-12 form-group p_star">
-                                        <input type="password" class="form-control" id="password" name="password" value=""
-                                            placeholder="Password">
-                                    </div>
-                                    <div class="col-md-12 form-group">
-                                        <div class="creat_account d-flex align-items-center">
-                                            <input type="checkbox" id="f-option" name="selector">
-                                            <label for="f-option">Recordarmeme</label>
-                                        </div>
-                                        <button type="submit" value="submit" class="btn_3">
-                                            Ingresar
-                                        </button>
-                                        <a class="lost_pass" href="#">¿Olvidaste la contraseña?</a>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+        <!--================Single Product Area =================-->
+        <br>
+        <br>
+        <div class="row"  style="width: 100%; text-align: center;">
+            <div class="col-md-4 imagenes" >
+                <img  class="tamañoImagen" src="https://images-na.ssl-images-amazon.com/images/I/714tsbPWteL.jpg"/>
+            </div>
+            <div class="col-md-4 tituloLibro" >
+                <h2>EL SUTIL ARTE DE QUE TE IMPORTE UN CARAJO</h2>
+                    <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Mark Manson</a>
+                    <br>
+                    <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > HARPERCOLLINS</a>
+            </div>
+            <div class="col-md-4 ContenedorPrecio">
+                <span class="PriceTag"> Precio: $ 35 MXN</span>
+                <div class="add_to_cart">
+                    <br/>
+                    <a href="#" class="BotonAgregar" style="width: 200px;">Agregar al carrito</a>
                 </div>
             </div>
-        </section>
-        <!--================login_part end =================-->
+          </div>
+          <hr class="separador">
+        <div>
+            <div>
+                <h2 class="headerproductos">Descripción</h2>
+                <p class="descripcion">Por décadas se nos ha dicho que el pensamiento positivo es la clave de 
+                    la felicidad, la esencia de una vida prospera. Pero en los días que vivimos HOY eso se 
+                    acabo. Al Diablo Con La Positividad, es lo que dice Mark Manson. Seamos honestos, algunas
+                    veces las cosas estarás mal y nosotros tenemos que vivir con eso. Por lo que la clave es 
+                    dejar de tratar de ser positivo todo el tiempo y en lugar de eso ser mejores al momento de
+                     manejar la adversidad. Es tiempo de presentarte la antítesis de los libros de desarrollo 
+                     personal, una forma distinta de ver la vida, una forma distinta de alcanzar la buena vida 
+                     y está se da cuándo empezamos a dominar el sutil arte de mandar las cosas al diablo, 
+                     Aclaración: No se trata de que dejes de hacer las cosas, sino todo lo contrario, hacerlas 
+                     en función de saber que hacer y saber en que enfocarte, reconocer tus verdaderos valores 
+                     y ser fiel a esa persona en la que te quieres convertir. El autor dice que hay que aprender a vivir con la verdad y esta es simple: Los seres humanos son defectuosos y limitados. No todo mundo puede ser extraordinario, hay ganadores y perdedores, esto posiblemente no sea justo ni sea tu culpa, pero así es, y hay que saber vivir con ello</p>
+                    <br>
+            <hr class="separador">
+
+            <div>
+                <h2 class="headerproductos">Detalles del producto</h2>
+                <div class="detallesproducto">
+                    <table class="plain centered">
+                        <tbody>
+                        <tr>
+                        <th>SKU:</th>
+                        <td>Valor del SKu</td>
+                        </tr>
+                        <tr>
+                        <th>Idioma:</th>
+                        <td>
+                        <a href="#" tabindex="0"><span itemprop="publisher">Valor del Idioma.</span>
+                        </a></td>
+                        </tr>
+                        <tr> <th>Año de publicación </th>
+                        <td>10/06/2020</td>
+                        </tr>
+                        <tr><th>Edicioón:</th>
+                        <td>
+                        <a href="#" tabindex="0">Practical Magic Series</a></td>
+                        </tr>
+                        <tr> <th>Páginas:</th>
+                        <td>416</td>
+                        </tr>
+                         
+                        </tbody><tbody>
+                        </tbody></table>
+                
+                </div>
+                </div>
+        </div>
+
+        </div>
+        <!--================End Single Product Area =================-->
+        <!-- subscribe part here -->
+        
+        <!-- subscribe part end -->
     </main>
     <footer>
         <!-- Footer Start-->
@@ -261,42 +262,49 @@
         </div>
     </div>
     <!-- Search model end -->
-    
+
     <!-- JS here -->
 
-    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <!-- Jquery, Popper, Bootstrap -->
-    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <!-- Jquery Mobile Menu -->
-    <script src="./assets/js/jquery.slicknav.min.js"></script>
+        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <!-- Jquery, Popper, Bootstrap -->
+        <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="./assets/js/popper.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <!-- Jquery Mobile Menu -->
+        <script src="./assets/js/jquery.slicknav.min.js"></script>
 
-    <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="./assets/js/slick.min.js"></script>
+        <!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="./assets/js/owl.carousel.min.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
 
-    <!-- One Page, Animated-HeadLin -->
-    <script src="./assets/js/wow.min.js"></script>
-    <script src="./assets/js/animated.headline.js"></script>
-    
-    <!-- Scroll up, nice-select, sticky -->
-    <script src="./assets/js/jquery.scrollUp.min.js"></script>
-    <script src="./assets/js/jquery.nice-select.min.js"></script>
-    <script src="./assets/js/jquery.sticky.js"></script>
-    <script src="./assets/js/jquery.magnific-popup.js"></script>
+        <!-- One Page, Animated-HeadLin -->
+        <script src="./assets/js/wow.min.js"></script>
+        <script src="./assets/js/animated.headline.js"></script>
+        <script src="./assets/js/jquery.magnific-popup.js"></script>
 
-    <!-- contact js -->
-    <script src="./assets/js/contact.js"></script>
-    <script src="./assets/js/jquery.form.js"></script>
-    <script src="./assets/js/jquery.validate.min.js"></script>
-    <script src="./assets/js/mail-script.js"></script>
-    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-    
-    <!-- Jquery Plugins, main Jquery -->	
-    <script src="./assets/js/plugins.js"></script>
-    <script src="./assets/js/main.js"></script>
+        <!-- Scroll up, nice-select, sticky -->
+        <script src="./assets/js/jquery.scrollUp.min.js"></script>
+        <script src="./assets/js/jquery.nice-select.min.js"></script>
+        <script src="./assets/js/jquery.sticky.js"></script>
+        
+        <!-- contact js -->
+        <script src="./assets/js/contact.js"></script>
+        <script src="./assets/js/jquery.form.js"></script>
+        <script src="./assets/js/jquery.validate.min.js"></script>
+        <script src="./assets/js/mail-script.js"></script>
+        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+        
+        <!-- Jquery Plugins, main Jquery -->    
+        <script src="./assets/js/plugins.js"></script>
+        <script src="./assets/js/main.js"></script>
+
+        <!-- swiper js -->
+        <script src="./assets/js/swiper.min.js"></script>
+            <!-- swiper js -->
+        <script src="./assets/js/mixitup.min.js"></script>
+        <script src="./assets/js/jquery.counterup.min.js"></script>
+        <script src="./assets/js/waypoints.min.js"></script>
 
 </body>
-    
+
 </html>

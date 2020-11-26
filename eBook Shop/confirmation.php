@@ -14,17 +14,17 @@
     />
 
   <!-- CSS here -->
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-      <link rel="stylesheet" href="assets/css/flaticon.css">
-      <link rel="stylesheet" href="assets/css/slicknav.css">
-      <link rel="stylesheet" href="assets/css/animate.min.css">
-      <link rel="stylesheet" href="assets/css/magnific-popup.css">
-      <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-      <link rel="stylesheet" href="assets/css/themify-icons.css">
-      <link rel="stylesheet" href="assets/css/slick.css">
-      <link rel="stylesheet" href="assets/css/nice-select.css">
-      <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -43,10 +43,10 @@
                         <nav>                                                
                             <ul id="navigation">
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="shop.html">Productos</a></li>
-                                <li class="hot"><a href="ofertas.html">Ofertas</a></li>
-                                <li><a href="about.html">Acerca de nosotros</a></li>
-                                <li><a href="contact.html">Contacto</a></li>
+                                <li><a href="shop.php">Productos</a></li>
+                                <li class="hot"><a href="ofertas.php">Ofertas</a></li>
+                                <li><a href="about.php">Acerca de nosotros</a></li>
+                                <li><a href="contact.php">Contacto</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -58,8 +58,8 @@
                                     <span class="flaticon-search"></span>
                                 </div>
                             </li>
-                            <li> <a href="login.html"><span class="flaticon-user"></span></a></li>
-                            <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li>
+                            <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
+                            <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
                         </ul>
                     </div>
                 </div>
@@ -80,74 +80,131 @@
                   <div class="row">
                       <div class="col-xl-12">
                           <div class="hero-cap text-center">
-                              <h2>Carrito de Compras</h2>
+                              <h2>Confirmation</h2>
                           </div>
                       </div>
                   </div>
               </div>
           </div>
       </div>
-      <!--================Cart Area =================-->
-      <section class="cart_area section_padding">
+      <!--================ confirmation part start =================-->
+      <section class="confirmation_part section_padding">
         <div class="container">
-          <div class="cart_inner">
-            <div class="table-responsive">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Producto</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Total</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="media">
-                        <div class="d-flex">
-                          <img src="Recursos/img/harry.jpg" alt="" />
-                        </div>
-                        <div class="media-body">
-                          <p>Harry Potter nunca ha oído hablar de Hogwarts cuando en el felpudo del número 4 de Privet Drive empieza a caer una lluvia de sobres de pergamino amarillento, con la dirección escrita con tinta verde y un sello de lacre púrpura...</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <h5>$ 45 MXN</h5>
-                    </td>
-                    <td>
-                      <div class="product_count">
-                        <span class="input-number-decrement"> <i class="ti-minus"></i></span>
-                        <input class="input-number" type="text" value="1" min="0" max="10">
-                        <span class="input-number-increment"> <i class="ti-plus"></i></span>
-                      </div>
-                    </td>
-                    <td>
-                      <h5>$720.00</h5>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <h5>Total</h5>
-                    </td>
-                    <td>
-                      <h5>$45</h5>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="checkout_btn_inner float-right">
-                <a class="btn_1" href="#">Continuar Comprando</a>
-                <a class="btn_1 checkout_btn_1" href="#">Pasar a pagar</a>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="confirmation_tittle">
+                <span>Thank you. Your order has been received.</span>
+              </div>
+            </div>
+            <div class="col-lg-6 col-lx-4">
+              <div class="single_confirmation_details">
+                <h4>order info</h4>
+                <ul>
+                  <li>
+                    <p>order number</p><span>: 60235</span>
+                  </li>
+                  <li>
+                    <p>data</p><span>: Oct 03, 2017</span>
+                  </li>
+                  <li>
+                    <p>total</p><span>: USD 2210</span>
+                  </li>
+                  <li>
+                    <p>mayment methord</p><span>: Check payments</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6 col-lx-4">
+              <div class="single_confirmation_details">
+                <h4>Billing Address</h4>
+                <ul>
+                  <li>
+                    <p>Street</p><span>: 56/8</span>
+                  </li>
+                  <li>
+                    <p>city</p><span>: Los Angeles</span>
+                  </li>
+                  <li>
+                    <p>country</p><span>: United States</span>
+                  </li>
+                  <li>
+                    <p>postcode</p><span>: 36952</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6 col-lx-4">
+              <div class="single_confirmation_details">
+                <h4>shipping Address</h4>
+                <ul>
+                  <li>
+                    <p>Street</p><span>: 56/8</span>
+                  </li>
+                  <li>
+                    <p>city</p><span>: Los Angeles</span>
+                  </li>
+                  <li>
+                    <p>country</p><span>: United States</span>
+                  </li>
+                  <li>
+                    <p>postcode</p><span>: 36952</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="order_details_iner">
+                <h3>Order Details</h3>
+                <table class="table table-borderless">
+                  <thead>
+                    <tr>
+                      <th scope="col" colspan="2">Product</th>
+                      <th scope="col">Quantity</th>
+                      <th scope="col">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th colspan="2"><span>Pixelstore fresh Blackberry</span></th>
+                      <th>x02</th>
+                      <th> <span>$720.00</span></th>
+                    </tr>
+                    <tr>
+                      <th colspan="2"><span>Pixelstore fresh Blackberry</span></th>
+                      <th>x02</th>
+                      <th> <span>$720.00</span></th>
+                    </tr>
+                    <tr>
+                      <th colspan="2"><span>Pixelstore fresh Blackberry</span></th>
+                      <th>x02</th>
+                      <th> <span>$720.00</span></th>
+                    </tr>
+                    <tr>
+                      <th colspan="3">Subtotal</th>
+                      <th> <span>$2160.00</span></th>
+                    </tr>
+                    <tr>
+                      <th colspan="3">shipping</th>
+                      <th><span>flat rate: $50.00</span></th>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th scope="col" colspan="3">Quantity</th>
+                      <th scope="col">Total</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <!--================End Cart Area =================-->
-  </main>>
+      <!--================ confirmation part end =================-->
+  </main>
   <footer>
     <!-- Footer Start-->
     <div class="footer-area footer-padding">
@@ -248,17 +305,17 @@
   </footer>
   <!--? Search model Begin -->
   <div class="search-model-box">
-      <div class="h-100 d-flex align-items-center justify-content-center">
-          <div class="search-close-btn">+</div>
-          <form class="search-model-form">
-              <input type="text" id="search-input" placeholder="Searching key.....">
-          </form>
-      </div>
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="search-close-btn">+</div>
+        <form class="search-model-form">
+            <input type="text" id="search-input" placeholder="Searching key.....">
+        </form>
+    </div>
   </div>
   <!-- Search model end -->
 
   <!-- JS here -->
-
+  
   <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
   <!-- Jquery, Popper, Bootstrap -->
   <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -274,23 +331,23 @@
   <!-- One Page, Animated-HeadLin -->
   <script src="./assets/js/wow.min.js"></script>
   <script src="./assets/js/animated.headline.js"></script>
-  
-  <!-- Scrollup, nice-select, sticky -->
+  <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+  <!-- Scroll up, nice-select, sticky -->
   <script src="./assets/js/jquery.scrollUp.min.js"></script>
   <script src="./assets/js/jquery.nice-select.min.js"></script>
   <script src="./assets/js/jquery.sticky.js"></script>
-  <script src="./assets/js/jquery.magnific-popup.js"></script>
-
+  
   <!-- contact js -->
   <script src="./assets/js/contact.js"></script>
   <script src="./assets/js/jquery.form.js"></script>
   <script src="./assets/js/jquery.validate.min.js"></script>
   <script src="./assets/js/mail-script.js"></script>
   <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-  
+      
   <!-- Jquery Plugins, main Jquery -->	
   <script src="./assets/js/plugins.js"></script>
   <script src="./assets/js/main.js"></script>
-
+      
 </body>
 </html>

@@ -25,14 +25,8 @@
         <link rel="stylesheet" href="assets/css/slick.css">
         <link rel="stylesheet" href="assets/css/nice-select.css">
         <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/estilosProductos.css">
-
-
 </head>
-    
-
 <body>
-    
     <header>
         <!-- Header Start -->
         <div class="header-area">
@@ -46,12 +40,12 @@
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
                             <nav>                                                
-                                <ul id="navigation">
+                                <ul id="navigation">  
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">Productos</a></li>
-                                    <li class="hot"><a href="ofertas.html">Ofertas</a></li>
-                                    <li><a href="about.html">Acerca de nosotros</a></li>
-                                    <li><a href="contact.html">Contacto</a></li>
+                                    <li><a href="shop.php">Productos</a></li>
+                                    <li class="hot"><a href="ofertas.php">Ofertas</a></li>
+                                    <li><a href="about.php">Acerca de nosotros</a></li>
+                                    <li><a href="contact.php">Contacto</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -63,8 +57,8 @@
                                         <span class="flaticon-search"></span>
                                     </div>
                                 </li>
-                                <li> <a href="login.html"><span class="flaticon-user"></span></a></li>
-                                <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li>
+                                <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
+                                <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
                             </ul>
                         </div>
                     </div>
@@ -78,79 +72,76 @@
         <!-- Header End -->
     </header>
     <main>
-
+        <!-- Hero Area Start-->
+        <div class="slider-area ">
+            <div class="single-slider slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center">
+                                <h2>Login</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Hero Area End-->
-        <!--================Single Product Area =================-->
-        <br>
-        <br>
-        <div class="row"  style="width: 100%;">
-            <div class="col-md-4 imagenes" >
-                <img  class="tamañoImagen" src="https://www.librosdemario.com/covers/01/11/60/cover.jpg"/>
-            </div>
-            <div class="col-md-4 tituloLibro" >
-                <h2>LA TEORÍA DEL TODO</h2>
-                    <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Stephen Hawking</a>
-                    <br>
-                    <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > DEBATE</a>
-            </div>
-            <div class="col-md-4 ContenedorPrecio">
-                <span class="PriceTag"> Precio: $25 MXN</span>
-                <div class="add_to_cart">
-                    <br/>
-                    <a href="#" class="BotonAgregar" style="width: 200px;">Agregar al carrito</a>
+        <!--================login_part Area =================-->
+        <section class="login_part section_padding ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="login_part_text text-center">
+                            <div class="login_part_text_iner">
+                                <h2>¿Nuevo en nuestra tienda?</h2>
+                                <p></p>
+                                <a href="signin.php" class="btn_3">CREAR CUENTA</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="login_part_form">
+                            <div class="login_part_form_iner">
+                                <h3>Bienvenido de vuelta! <br>
+                                    Porfavor ingresa ahora</h3>
+                                <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                                    <div class="col-md-12 form-group p_star">
+                                        <input type="email" class="form-control" id="email" name="email" value=""
+                                            placeholder="ejemplo@gmail.com">
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
+                                        <input type="password" class="form-control" id="password" name="password" value=""
+                                            placeholder="Password">
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <div class="creat_account d-flex align-items-center">
+                                            <input type="checkbox" id="f-option" name="selector">
+                                            <label for="f-option">Recordarmeme</label>
+                                        </div>
+                                        <button type="submit" value="submit" class="btn_3">  
+                                          <a href="../Panel de Admin/index.php">
+                                          
+                                            Ingresar
+                                          </a>
+                                        </button>
+                                        <a class="lost_pass" href="#">¿Olvidaste la contraseña?</a>
+
+                                        <button type="submit" value="submit" class="btn_3">
+                                        <a href="../Panel%20de%20Admin/index.php" style="color: black" >
+                                            ¿Eres administrador?
+                                        </a>
+                                        </button>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-          </div>
-          <hr class="separador">
-        <div>
-            <div>
-                <h2 class="headerproductos">Descripción</h2>
-                <p class="descripcion">Una manera clara y amena de acercarse a los misterios del universo.
-
-                    En esta esclarecedora obra, el gran físico británico Stephen Hawking nos ofrece una historia del universo, del big bang a los agujeros negros.
-                    
-                    En siete pasos, Hawking logra explicar la historia del universo, desde las primeras teorías del mundo griego y de la epoca medieval hasta las más complejas teorías actuales, siempre con su característico tono didáctico y accesible a todos los públicos. Newton, Einstein, la mecánica cuántica, los agujeros negros y la teoría de la gran unificación desfilan por estas páginas acercando al lector los misterios del universo.</div>
-            <br>
-            <hr class="separador">
-
-            <div>
-                <h2 class="headerproductos">Detalles del producto</h2>
-                <div class="detallesproducto">
-                    <table class="plain centered">
-                        <tbody>
-                        <tr>
-                        <th>SKU:</th>
-                        <td>Valor del SKu</td>
-                        </tr>
-                        <tr>
-                        <th>Idioma:</th>
-                        <td>
-                        <a href="#" tabindex="0"><span itemprop="publisher">Valor del Idioma.</span>
-                        </a></td>
-                        </tr>
-                        <tr> <th>Año de publicación </th>
-                        <td>10/06/2020</td>
-                        </tr>
-                        <tr><th>Edicioón:</th>
-                        <td>
-                        <a href="#" tabindex="0">Practical Magic Series</a></td>
-                        </tr>
-                        <tr> <th>Páginas:</th>
-                        <td>416</td>
-                        </tr>
-                         
-                        </tbody><tbody>
-                        </tbody></table>
-                
-                </div>
-                </div>
-        </div>
-
-        </div>
-        <!--================End Single Product Area =================-->
-        <!-- subscribe part here -->
-        
-        <!-- subscribe part end -->
+        </section>
+        <!--================login_part end =================-->
     </main>
     <footer>
         <!-- Footer Start-->
@@ -260,49 +251,42 @@
         </div>
     </div>
     <!-- Search model end -->
-
+    
     <!-- JS here -->
 
-        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-        <!-- Jquery, Popper, Bootstrap -->
-        <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="./assets/js/popper.min.js"></script>
-        <script src="./assets/js/bootstrap.min.js"></script>
-        <!-- Jquery Mobile Menu -->
-        <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
 
-        <!-- Jquery Slick , Owl-Carousel Plugins -->
-        <script src="./assets/js/owl.carousel.min.js"></script>
-        <script src="./assets/js/slick.min.js"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
 
-        <!-- One Page, Animated-HeadLin -->
-        <script src="./assets/js/wow.min.js"></script>
-        <script src="./assets/js/animated.headline.js"></script>
-        <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    
+    <!-- Scroll up, nice-select, sticky -->
+    <script src="./assets/js/jquery.scrollUp.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
 
-        <!-- Scroll up, nice-select, sticky -->
-        <script src="./assets/js/jquery.scrollUp.min.js"></script>
-        <script src="./assets/js/jquery.nice-select.min.js"></script>
-        <script src="./assets/js/jquery.sticky.js"></script>
-        
-        <!-- contact js -->
-        <script src="./assets/js/contact.js"></script>
-        <script src="./assets/js/jquery.form.js"></script>
-        <script src="./assets/js/jquery.validate.min.js"></script>
-        <script src="./assets/js/mail-script.js"></script>
-        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-        
-        <!-- Jquery Plugins, main Jquery -->    
-        <script src="./assets/js/plugins.js"></script>
-        <script src="./assets/js/main.js"></script>
-
-        <!-- swiper js -->
-        <script src="./assets/js/swiper.min.js"></script>
-            <!-- swiper js -->
-        <script src="./assets/js/mixitup.min.js"></script>
-        <script src="./assets/js/jquery.counterup.min.js"></script>
-        <script src="./assets/js/waypoints.min.js"></script>
+    <!-- contact js -->
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    
+    <!-- Jquery Plugins, main Jquery -->	
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
 
 </body>
-
+    
 </html>

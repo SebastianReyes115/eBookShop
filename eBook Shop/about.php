@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zxx">
+<html class="no-js" lang="zxx">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,31 +8,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
     <link
-    rel="shortcut icon"
-    type="image/x-icon"
-    href="Recursos/img/favicon_ebook.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="Recursos/img/favicon_ebook.png"
     />
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/estilosProductos.css">
-
-
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/slicknav.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/css/themify-icons.css">
+        <link rel="stylesheet" href="assets/css/slick.css">
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <link rel="stylesheet" href="assets/css/style.css">
 </head>
-    
 
 <body>
-    
     <header>
         <!-- Header Start -->
         <div class="header-area">
@@ -48,10 +43,10 @@
                             <nav>                                                
                                 <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">Productos</a></li>
-                                    <li class="hot"><a href="ofertas.html">Ofertas</a></li>
-                                    <li><a href="about.html">Acerca de nosotros</a></li>
-                                    <li><a href="contact.html">Contacto</a></li>
+                                    <li><a href="shop.php">Productos</a></li>
+                                    <li class="hot"><a href="ofertas.php">Ofertas</a></li>
+                                    <li><a href="about.php">Acerca de nosotros</a></li>
+                                    <li><a href="contact.php">Contacto</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -63,8 +58,8 @@
                                         <span class="flaticon-search"></span>
                                     </div>
                                 </li>
-                                <li> <a href="login.html"><span class="flaticon-user"></span></a></li>
-                                <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li>
+                                <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
+                                <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
                             </ul>
                         </div>
                     </div>
@@ -76,74 +71,74 @@
             </div>
         </div>
         <!-- Header End -->
-    </header>
-    <main>
-
+        </header>
+        <main>
+        <!-- Hero Area Start-->
+        <div class="slider-area ">
+            <div class="single-slider slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center">
+                                <h2>Acerca de Nosotros</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Hero Area End-->
-        <!--================Single Product Area =================-->
-        <br>
-        <br>
-        <div class="row"  style="width: 100%;">
-            <div class="col-md-4 imagenes" >
-                <img  class="tamañoImagen" src="Recursos/img/traidor.jpg"/>
-            </div>
-            <div class="col-md-4 tituloLibro" >
-                <h2>EL TRAIDOR</h2>
-                    <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Anabel Hernández</a>
-                    <br>
-                    <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > GRIJALBO</a>
-            </div>
-            <div class="col-md-4 ContenedorPrecio">
-                <span class="PriceTag"> Precio: $79 MXN </span>
-                <div class="add_to_cart">
-                    <br/>
-                    <a href="#" class="BotonAgregar" style="width: 200px;">Agregar al carrito</a>
-                </div>
-            </div>
-          </div>
-          <hr class="separador">
-        <div>
-            <div>
-                <h2 class="headerproductos">Descripción</h2>
-                <p class="descripcion">El traidor es uno de los trabajos periodísticos más ambiciosos en la trayectoria de Anabel Hernández. Su historia se remonta a enero de 2011, cuando la contactó uno de los abogados de Vicente Zambada Niebla, mejor conocido como Vicentillo, quien enfrentaba un juicio en una corte de Chicago. La intención era compartir con la periodista documentos y hechos que ampliaban y esclarecían varios de los episodios que acababa de dar a conocer en Los señores del narco.
+        <!-- About Details Start -->
+        <div class="about-details section-padding30">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-1 col-lg-8">
+                        <div class="about-details-cap mb-50">
+                            <h4>¿Quiénes somos?</h4>
+                            <p style="text-align: justify">Somos un equipo de desarrollo de software que busca generar su primer tienda en línea, nuestro proyecto, eBookShop busca ofrecer un negocio de venta de libros electrónicos disponibles a todo público con precios asequibles.</p>
+                        </div>
 
-                    Entre los documentos a los que tuvo acceso se encuentran el inquietante autorretrato como payaso que aparece en la portada y los diarios realizados por Vicentillo durante las negociaciones para colaborar con el gobierno norteamericano, los cuales hasta ahora eran secretos. En ellos el capo reconstruyó su historia y la historia de una de las organizaciones de tráfico de estupefacientes más grandes del planeta.</P>
-                <br>
-            <hr class="separador">
+                        <div class="about-details-cap mb-50">
+                            <h4>Nuestro Objetivo</h4>
+                            <p style="text-align: justify">El objetivo de este proyecto es realizar una pagina web empleando las tecnologías de la información, así como la administración de negocios para crear nuestro propio E-Business, empelando conocimientos obtenidos en materias anteriores como: Programación web, Desarrollo de emprendedores, Ingeniería de Software, Talle de ingeniería de software, así como Fundamento de Base de datos y taller de base de datos, podremos realizar este proyecto satisfactoriamente. </p>
 
-            <div>
-                <h2 class="headerproductos">Detalles del producto</h2>
-                <div class="detallesproducto">
-                    <table class="plain centered">
-                        <tbody>
-                        <tr>
-                        <th>SKU:</th>
-                        <td>Valor del SKu</td>
-                        </tr>
-                        <tr>
-                        <th>Idioma:</th>
-                        <td>
-                        <a href="#" tabindex="0"><span itemprop="publisher">Valor del Idioma.</span>
-                        </a></td>
-                        </tr>
-                        <tr> <th>Año de publicación </th>
-                        <td>10/06/2020</td>
-                        </tr>
-                        <tr><th>Edicioón:</th>
-                        <td>
-                        <a href="#" tabindex="0">Practical Magic Series</a></td>
-                        </tr>
-                        <tr> <th>Páginas:</th>
-                        <td>416</td>
-                        </tr>
-                         
-                        </tbody><tbody>
-                        </tbody></table>
-                
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+        <!-- About Details End -->
+        <!--? Shop Method Start-->
+        <div class="shop-method-area">
+            <div class="container">
+                <div class="method-wrapper">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single-method mb-40">
+                                <i class="ti-package"></i>
+                                <h6>Recibe tu libro digital de manera segura</h6>
+                                <p>Recibirás tu libro de manera segura en tu correo una vez que se haya efectuado el pago.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single-method mb-40">
+                                <i class="ti-unlock"></i>
+                                <h6>Sistema de pago seguro</h6>
+                                <p>Las transacciones se realizan a través de PayPal©</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single-method mb-40">
+                                <i class="ti-reload"></i>
+                                <h6>Devoluciones</h6>
+                                <p>En caso de no ser de tu agrado, cuentas con 24 hrs para realizar la devolución de tu compra</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
         </div>
-        </div>
+        <!-- Shop Method End-->
     </main>
     <footer>
         <!-- Footer Start-->
@@ -242,7 +237,7 @@
           </div>
         </div>
         <!-- Footer End-->
-    </footer>
+      </footer>
     <!--? Search model Begin -->
     <div class="search-model-box">
         <div class="h-100 d-flex align-items-center justify-content-center">
@@ -256,46 +251,38 @@
 
     <!-- JS here -->
 
-        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-        <!-- Jquery, Popper, Bootstrap -->
-        <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="./assets/js/popper.min.js"></script>
-        <script src="./assets/js/bootstrap.min.js"></script>
-        <!-- Jquery Mobile Menu -->
-        <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
 
-        <!-- Jquery Slick , Owl-Carousel Plugins -->
-        <script src="./assets/js/owl.carousel.min.js"></script>
-        <script src="./assets/js/slick.min.js"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
 
-        <!-- One Page, Animated-HeadLin -->
-        <script src="./assets/js/wow.min.js"></script>
-        <script src="./assets/js/animated.headline.js"></script>
-        <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
 
-        <!-- Scroll up, nice-select, sticky -->
-        <script src="./assets/js/jquery.scrollUp.min.js"></script>
-        <script src="./assets/js/jquery.nice-select.min.js"></script>
-        <script src="./assets/js/jquery.sticky.js"></script>
-        
-        <!-- contact js -->
-        <script src="./assets/js/contact.js"></script>
-        <script src="./assets/js/jquery.form.js"></script>
-        <script src="./assets/js/jquery.validate.min.js"></script>
-        <script src="./assets/js/mail-script.js"></script>
-        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-        
-        <!-- Jquery Plugins, main Jquery -->    
-        <script src="./assets/js/plugins.js"></script>
-        <script src="./assets/js/main.js"></script>
-
-        <!-- swiper js -->
-        <script src="./assets/js/swiper.min.js"></script>
-            <!-- swiper js -->
-        <script src="./assets/js/mixitup.min.js"></script>
-        <script src="./assets/js/jquery.counterup.min.js"></script>
-        <script src="./assets/js/waypoints.min.js"></script>
+    <!-- Scrollup, nice-select, sticky -->
+    <script src="./assets/js/jquery.scrollUp.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    
+    <!-- contact js -->
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    
+    <!-- Jquery Plugins, main Jquery -->	
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
 
 </body>
-
 </html>

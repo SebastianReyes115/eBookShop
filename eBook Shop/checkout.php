@@ -44,10 +44,10 @@
                         <nav>                                                
                             <ul id="navigation">
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="shop.html">Productos</a></li>
-                                <li class="hot"><a href="ofertas.html">Ofertas</a></li>
-                                <li><a href="about.html">Acerca de nosotros</a></li>
-                                <li><a href="contact.html">Contacto</a></li>
+                                <li><a href="shop.php">Productos</a></li>
+                                <li class="hot"><a href="ofertas.php">Ofertas</a></li>
+                                <li><a href="about.php">Acerca de nosotros</a></li>
+                                <li><a href="contact.php">Contacto</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -59,8 +59,8 @@
                                     <span class="flaticon-search"></span>
                                 </div>
                             </li>
-                            <li> <a href="login.html"><span class="flaticon-user"></span></a></li>
-                            <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li>
+                            <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
+                            <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
                         </ul>
                     </div>
                 </div>

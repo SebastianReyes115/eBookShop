@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Estadisticas</title>
+  <title>Super Admin | Estadisticas</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -28,7 +28,7 @@
           <img src="../images/admin.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="../indexEstadisticas.php" class="d-block">Estadisticas</a>
+          <a href="../index.php" class="d-block">Administrador</a>
         </div>
       </div>
 
@@ -50,16 +50,37 @@
           <li class="nav-header">Administrar</li>
 
           <li class="nav-item">
-            <a href="calendarEstadisticas.html" class="nav-link">
+            <a href="calendar.php" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>Calendario</p>
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="EstadisticaE.html" class="nav-link">
+            <a href=".productos.html" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>Productos</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Estadistica.php" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>Estádisticas</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="productos.php" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>Base de Datos</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="productos.php" class="nav-link">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>Inbox</p>
             </a>
           </li>
 
@@ -103,7 +124,7 @@
             <img src="../images/admin.png" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="../index.php" class="d-block">Estadísticas</a>
+            <a href="../index.php" class="d-block">Super Administrador</a>
           </div>
         </div>
 
@@ -125,16 +146,30 @@
             <li class="nav-header">Administrar</li>
 
             <li class="nav-item">
-              <a href="calendarEstadisticas.html" class="nav-link">
+              <a href="calendar.php" class="nav-link">
                 <i class="nav-icon far fa-calendar-alt"></i>
                 <p>Calendario</p>
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="EstadisticaE.html" class="nav-link">
+              <a href="Estadistica.php" class="nav-link">
                 <i class="nav-icon fas fa-chart-pie"></i>
                 <p>Estadísticas</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="BaseDatos.php" class="nav-link">
+                <i class="nav-icon fas fa-table"></i>
+                <p>Base de Datos</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="./mailbox/mailbox.html" class="nav-link">
+                <i class="nav-icon fas fa-envelope"></i>
+                <p>Inbox</p>
               </a>
             </li>
 
@@ -151,7 +186,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">eBook Shop</h1>
+              <h1 class="m-0">eBook Shop / Estadística</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -232,7 +267,7 @@
                     <tbody>
                     <tr>
                       <td>
-                        
+
                         Harry Potter y la Piedra Filosofal
                       </td>
                       <td>$45 MXN</td>

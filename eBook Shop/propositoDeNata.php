@@ -48,10 +48,10 @@
                             <nav>                                                
                                 <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">Productos</a></li>
-                                    <li class="hot"><a href="ofertas.html">Ofertas</a></li>
-                                    <li><a href="about.html">Acerca de nosotros</a></li>
-                                    <li><a href="contact.html">Contacto</a></li>
+                                    <li><a href="shop.php">Productos</a></li>
+                                    <li class="hot"><a href="ofertas.php">Ofertas</a></li>
+                                    <li><a href="about.php">Acerca de nosotros</a></li>
+                                    <li><a href="contact.php">Contacto</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -63,8 +63,8 @@
                                         <span class="flaticon-search"></span>
                                     </div>
                                 </li>
-                                <li> <a href="login.html"><span class="flaticon-user"></span></a></li>
-                                <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li>
+                                <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
+                                <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
                             </ul>
                         </div>
                     </div>
@@ -85,16 +85,16 @@
         <br>
         <div class="row"  style="width: 100%;">
             <div class="col-md-4 imagenes" >
-                <img  class="tamañoImagen" src="Recursos/img/harry.jpg"/>
+                <img  class="tamañoImagen" src="https://m.media-amazon.com/images/I/41KHjzaEgAL._SY346_.jpg"/>
             </div>
             <div class="col-md-4 tituloLibro" >
-                <h2>HARRY POTTERY LA PIEDRA FILOSOFAL</h2>
-                    <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > J.K. Rowling</a>
+                <h2>A PROPÓSITO DE NADA</h2>
+                    <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Woody Allen</a>
                     <br>
-                    <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > SALAMANDRA BOLSILLO</a>
+                    <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > PATRIA MÉXICO</a>
             </div>
             <div class="col-md-4 ContenedorPrecio">
-                <span class="PriceTag"> Precio: $40 MXN </span>
+                <span class="PriceTag"> Precio: $30 MXN </span>
                 <div class="add_to_cart">
                     <br/>
                     <a href="#" class="BotonAgregar" style="width: 200px;">Agregar al carrito</a>
@@ -105,7 +105,10 @@
         <div>
             <div>
                 <h2 class="headerproductos">Descripción</h2>
-                <p class="descripcion">Harry Potter nunca ha oído hablar de Hogwarts cuando en el felpudo del número 4 de Privet Drive empieza a caer una lluvia de sobres de pergamino amarillento, con la dirección escrita con tinta verde y un sello de lacre púrpura. Y aunque los horribles tíos de Harry se apresuran a confiscar las cartas, el día que Harry cumple once años un hombre gigantesco llamado Rubeus Hagrid, cuyos ojos brillan como escarabajos negros, irrumpe con una noticia extraordinaria: Harry Potter es un mago, y le han concedido una plaza en el Colegio Hogwarts de Magia y Hechicería. ¡Una aventura increíble está a punto de comenzar!</p>
+                <p class="descripcion">Autobiografía de Woody Allen que brinda una visión completa de lo que ha sido su vida, nos relata sus amores,
+                    sus películas, su labor de líder y director de cine y teatro, también nos narra su paso por la televisión,
+                    los clubes nocturnos y su incursión en la escritura. Y no podía faltar su amplia respuesta y postura sobre la
+                    demanda por abuso sexual que recibió por parte de su exesposa Mia Farrow.</p>
                     <br>
             <hr class="separador">
 
@@ -143,6 +146,8 @@
         </div>
 
         </div>
+        <!--================End Single Product Area =================-->
+        <!-- subscribe part here -->
         
     </main>
     <footer>
