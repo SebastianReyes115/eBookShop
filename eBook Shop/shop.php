@@ -96,9 +96,10 @@
                         <!--Nav Button  -->
                         <nav>                                                      
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Indantiles/Juveniles</a>
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Infantiles/Juveniles</a>
                                 <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"> Novelas</a>
                                 <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"> Educativos </a>
+                                <a class="nav-item nav-link" id="nav-all-tab" data-toggle="tab" href="#nav-all" role="tab" aria-controls="nav-all" aria-selected="false"> Todo </a>
                             </div>
                         </nav>
                         <!--End Nav Button  -->
@@ -109,9 +110,43 @@
                 </div>
                 <!-- Nav Card -->
                 <div class="tab-content" id="nav-tabContent">
-                    <!-- card one -->
+                    <!-- Infantiles/Juveniles -->
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                         <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Amargo.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="ElArteAmargo.php">El arte de amargarse la vida</a></h3>
+                                        <span>$ 35 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Amigadisc.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="AmigaDisc.php">Un plan sin pretextos para abrazar y alcanzar tus metas</a></h3>
+                                        <span>$ 70 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-popular-items mb-50 text-center">
                                     <div class="popular-img">
@@ -165,9 +200,495 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Card two -->
+                    <!-- Novelas -->
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                         <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/LaBailarinaAusch.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="LabailarinadeAuschwitz.php">La bailarina de Auschwitz</a></h3>
+                                        <span> $50 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/IslaWomen.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="VardoIslaWomen.php">Vardo: La isla de las mujeres</a></h3>
+                                        <span>$ 30 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Elseñorobsc.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="ElSeñorObsc.php">El Señor de la Obscuridad</a></h3>
+                                        <span>$ 65 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/salvarfuego.jpg" alt="">
+                                        <div class="img-cap">
+                                            <span>Aladir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="salvarFuego.php">Salvar Fuego</a></h3>
+                                        <span>$ 60 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Demonthief.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="DemonThief.php">Demon thief</a></h3>
+                                        <span>$ 50 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/traidor.jpg" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="elTraidor.php">El traidor</a></h3>
+                                        <span>$ 30 MXN</span>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Educativos -->
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/EducaF.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="EducaciónF.php">Educación financiera</a></h3>
+                                        <span>$ 65 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Rabia.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="Rabia.php">Rabia</a></h3>
+                                        <span>$ 120 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Monemtop.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="MomentoP.php">¿Cuándo?: La ciencia de encontrar el momento preciso</a></h3>
+                                        <span>$ 60 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Pensamientocreativo.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="PensamientoCreativo.php">El poder del pensamiento lateral para la creación de nuevas ideas</a></h3>
+                                        <span>$ 70 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/sutilarte.jpg" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="suiteArte.php">El Sutil Arte de que te Importe un Caraj*</a></h3>
+                                        <span>$ 35 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/proposito.jpg" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="propositoDeNata.php">A propósito de nada</a></h3>
+                                        <span>$ 30 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/increbrantable.jpg" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="inquebrantables.php">Inquebrantables</a></h3>
+                                        <span>$ 45 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/felipe.jpg" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="felipeOscuro.php">Felipe, El Oscuro</a></h3>
+                                        <span>$ 10 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/teoria.jpg" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="teoriaTodo.php">La Teoría del Todo</a></h3>
+                                        <span>$ 25 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    -----------------------------------------------------
+                    <div class="tab-pane fade" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Amargo.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="ElArteAmargo.php">El arte de amargarse la vida</a></h3>
+                                        <span>$ 35 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/EducaF.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="EducaciónF.php">Educación financiera</a></h3>
+                                        <span>$ 65 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/LaBailarinaAusch.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="LabailarinadeAuschwitz.php">La bailarina de Auschwitz</a></h3>
+                                        <span> $50 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Rabia.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="Rabia.php">Rabia</a></h3>
+                                        <span>$ 120 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/IslaWomen.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="VardoIslaWomen.php">Vardo: La isla de las mujeres</a></h3>
+                                        <span>$ 30 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Elseñorobsc.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="ElSeñorObsc.php">El Señor de la Obscuridad</a></h3>
+                                        <span>$ 65 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Monemtop.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="MomentoP.php">¿Cuándo?: La ciencia de encontrar el momento preciso</a></h3>
+                                        <span>$ 60 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Amigadisc.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="AmigaDisc.php">Un plan sin pretextos para abrazar y alcanzar tus metas</a></h3>
+                                        <span>$ 70 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Demonthief.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="DemonThief.php">Demon thief</a></h3>
+                                        <span>$ 50 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Pensamientocreativo.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="PensamientoCreativo.php">El poder del pensamiento lateral para la creación de nuevas ideas (e)</a></h3>
+                                        <span>$ 70 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/harry.jpg" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="harryPotter1.php">Harry Potter y la Piedra Filosofal</a></h3>
+                                        <span>$ 45 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/principito.jpg" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="pricipito.php">El Principito</a></h3>
+                                        <span>$ 40 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/percyjackson.jpg" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="ladronRayo.php">Percy Jackson Y El Ladron del Rayo</a></h3>
+                                        <span>$ 60 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-popular-items mb-50 text-center">
                                     <div class="popular-img">
@@ -199,14 +720,9 @@
                                     <div class="popular-caption">
                                         <h3><a href="elTraidor.php">El traidor</a></h3>
                                         <span>$ 30 MXN</span>
-                                    </div> 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Card three -->
-                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                        <div class="row">
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-popular-items mb-50 text-center">
                                     <div class="popular-img">
