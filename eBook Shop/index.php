@@ -1,84 +1,9 @@
-<!DOCTYPE html>
-<html class="no-js" lang="zxx">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>eBook Shop | eCommerce</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="shortcut icon" type="image/x-icon" href="Recursos/img/favicon_ebook.png"/>
-    <meta http-equiv="Expires" content="0" />
-    <meta http-equiv="Last-Modified" content="0" />
-    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="assets/css/flaticon.css" />
-    <link rel="stylesheet" href="assets/css/slicknav.css" />
-    <link rel="stylesheet" href="assets/css/animate.min.css" />
-    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
-    <link rel="stylesheet" href="assets/css/themify-icons.css" />
-    <link rel="stylesheet" href="assets/css/slick.css" />
-    <link rel="stylesheet" href="assets/css/nice-select.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/estilosProductos.css" />
-
-  </head>
-
+<?php
+  include 'cabecera.php';
+  include 'carrito.php';
+?>
   <body>
-    <header>
-      <!-- Header Start -->
-      <div class="header-area">
-        <div class="main-header header-sticky">
-          <div class="container-fluid">
-            <div class="menu-wrapper">
-              <!-- Logo -->
-              <div class="logo">
-                <a href="index.html"><h1 class="logoEstilosHeader">eBook Shop</h1></a>
-              </div>
-              <!-- Main-menu -->
-              <div class="main-menu d-none d-lg-block">
-                <nav>
-                  <ul id="navigation">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="shop.php">Productos</a></li>
-                    <li class="hot"><a href="ofertas.php">Ofertas</a></li>
-                    <li><a href="about.php">Acerca de nosotros</a></li>
-                    <li><a href="contact.php">Contacto</a></li>
-                  </ul>
-                </nav>
-              </div>
-              <!-- Header Right -->
-              <div class="header-right">
-                <ul>
-                  <li>
-                    <div class="nav-search search-switch">
-                      <span class="flaticon-search"></span>
-                    </div>
-                  </li>
-                  <li>
-                    <a href="login.php"><span class="flaticon-user"></span></a>
-                  </li>
-                  <li>
-                    <a href="cart.php"
-                      ><span class="flaticon-shopping-cart"></span
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- Mobile Menu -->
-            <div class="col-12">
-              <div class="mobile_menu d-block d-lg-none"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Header End -->
-    </header>
+    
     <main>
       <!--? Carousel principal -->
       <div style="padding: 80px" class="text-center">
@@ -162,6 +87,12 @@
               </div>
             </div>
           </div>
+          <?php
+              $sentencia = $pdo->prepare("SELECT * FROM `libros`");
+              $sentencia->execute();
+              $listaProductos = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+          ?>
+          
           <div class="row">
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
               <div class="single-new-pro mb-30 text-center">
@@ -219,7 +150,7 @@
                 <div class="popular-img">
                   <img src="Recursos/img/principito.jpg" alt="" />
                   <div class="img-cap">
-                    <span>Agregar al carrito</span>
+                    <span >Agregar al carrito</span>
                   </div>
                   <div class="favorit-items">
                     <span class="flaticon-heart"></span>

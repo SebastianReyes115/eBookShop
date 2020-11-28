@@ -129,7 +129,7 @@
                         <tr> <th>Año de publicación </th>
                         <td>10/06/2020</td>
                         </tr>
-                        <tr><th>Edicioón:</th>
+                        <tr><th>Edición:</th>
                         <td>
                         <a href="#" tabindex="0">Practical Magic Series</a></td>
                         </tr>

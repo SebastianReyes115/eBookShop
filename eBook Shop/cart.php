@@ -1,77 +1,10 @@
-<!doctype html>
-<html lang="zxx">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>eBook Shop | eCommers</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="manifest" href="site.webmanifest">
-  <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="Recursos/img/favicon_ebook.png"
-    />
 
-  <!-- CSS here -->
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-      <link rel="stylesheet" href="assets/css/flaticon.css">
-      <link rel="stylesheet" href="assets/css/slicknav.css">
-      <link rel="stylesheet" href="assets/css/animate.min.css">
-      <link rel="stylesheet" href="assets/css/magnific-popup.css">
-      <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-      <link rel="stylesheet" href="assets/css/themify-icons.css">
-      <link rel="stylesheet" href="assets/css/slick.css">
-      <link rel="stylesheet" href="assets/css/nice-select.css">
-      <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
+<?php
+  include 'cabecera.php';
+  include 'carrito.php';
+?>
 <body>
-  <header>
-    <!-- Header Start -->
-    <div class="header-area">
-        <div class="main-header header-sticky">
-            <div class="container-fluid">
-                <div class="menu-wrapper">
-                    <!-- Logo -->
-                    <div class="logo">
-                        <a href="index.html"><h1>eBook Shop</h1></a>
-                    </div>
-                    <!-- Main-menu -->
-                    <div class="main-menu d-none d-lg-block">
-                        <nav>                                                
-                            <ul id="navigation">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="shop.php">Productos</a></li>
-                                <li class="hot"><a href="ofertas.php">Ofertas</a></li>
-                                <li><a href="about.php">Acerca de nosotros</a></li>
-                                <li><a href="contact.php">Contacto</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <!-- Header Right -->
-                    <div class="header-right">
-                        <ul>
-                            <li>
-                                <div class="nav-search search-switch">
-                                    <span class="flaticon-search"></span>
-                                </div>
-                            </li>
-                            <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
-                            <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Mobile Menu -->
-                <div class="col-12">
-                    <div class="mobile_menu d-block d-lg-none"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Header End -->
-  </header>
+  
   <main>
       <!-- Hero Area Start-->
       <div class="slider-area ">
@@ -92,6 +25,8 @@
         <div class="container">
           <div class="cart_inner">
             <div class="table-responsive">
+              <?php $total=0;?>
+              <?php if(!empty($_SESSION['Cart'])){?>
               <table class="table">
                 <thead>
                   <tr>
@@ -101,30 +36,34 @@
                     <th scope="col">Total</th>
                   </tr>
                 </thead>
+                <?php foreach($_SESSION['Cart'] as $i=>$producto){
+                  
+                  
+                ?>
+
                 <tbody>
                   <tr>
                     <td>
                       <div class="media">
                         <div class="d-flex">
-                          <img src="Recursos/img/harry.jpg" alt="" />
+                          <img src="<?php echo $producto['Imagen']?>" alt="" />
                         </div>
                         <div class="media-body">
-                          <p>Harry Potter nunca ha oído hablar de Hogwarts cuando en el felpudo del número 4 de Privet Drive empieza a caer una lluvia de sobres de pergamino amarillento, con la dirección escrita con tinta verde y un sello de lacre púrpura...</p>
+                          <p><?php echo $producto['Nombre']?></p>
                         </div>
                       </div>
                     </td>
                     <td>
-                      <h5>$ 45 MXN</h5>
+                      <h5><?php echo $producto['Precio']?></h5>
                     </td>
                     <td>
-                      <div class="product_count">
-                        <span class="input-number-decrement"> <i class="ti-minus"></i></span>
-                        <input class="input-number" type="text" value="1" min="0" max="10">
-                        <span class="input-number-increment"> <i class="ti-plus"></i></span>
-                      </div>
+                        <h5 style="text-align: center;"><?php echo $producto['Cantidad']?></h5>
                     </td>
                     <td>
-                      <h5>$720.00</h5>
+                    <?php $total=$total+$producto['Precio']*$producto['Cantidad'];?>
+                      <h5> <?php echo $total?> </h5>
+                      <?php 
+                      }?>
                     </td>
                   </tr>
                   <tr>
@@ -139,123 +78,24 @@
                   </tr>
                 </tbody>
               </table>
+              <?php }else{?>
+                      <div class="alert alert-success">No hay elementos en el carrito</div>
+              <?php } ?>
               <div class="checkout_btn_inner float-right">
                 <a class="btn_1" href="#">Continuar Comprando</a>
-                <a class="btn_1 checkout_btn_1" href="#">Pasar a pagar</a>
+                <a class="btn_1 checkout_btn_1" href="pagar.php">Pasar a pagar</a>
               </div>
             </div>
           </div>
       </section>
       <!--================End Cart Area =================-->
   </main>>
-  <footer>
-    <!-- Footer Start-->
-    <div class="footer-area footer-padding">
-      <div class="container">
-        <div class="row d-flex justify-content-between">
-          <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
-            <div class="single-footer-caption mb-50">
-              <div class="single-footer-caption mb-30">
-                <!-- logo -->
-                <div class="footer-logo">
-                  <a href="index.html"><h2 class="logoEstilos">eBook Shop</h2></a>
-                </div>
-                <div class="footer-tittle">
-                  <div class="footer-pera">
-                    <p class="logoEstilos">
-                      El libro que siempre has buscado, será tuyo 
-                      en tan solo un click!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
-            <div class="single-footer-caption mb-50">
-              <div class="footer-tittle">
-                <h4>Atajos</h4>
-                <ul>
-                  <li><a href="#">Acerca de</a></li>
-                  <li><a href="#"> Ofertas </a></li>
-                  <li><a href="#"> Login</a></li>
-                  <li><a href="#"> Contacto</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
-            <div class="single-footer-caption mb-50">
-              <div class="footer-tittle">
-                <h4>Categorías</h4>
-                <ul>
-                  <li><a href="#">Los más vendidos</a></li>
-                  <li><a href="#">Recomendaciones</a></li>
-                  <li><a href="#">Nuevas ofertas</a></li>
-                  <li><a href="#"> Nuestra Recomendación</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
-            <div class="single-footer-caption mb-50">
-              <div class="footer-tittle">
-                <h4>Soporte</h4>
-                <ul>
-                  <li><a href="#">Preguntas frecuentes</a></li>
-                  <li><a href="#">Términos y Condiciones</a></li>
-                  <li><a href="#">Aviso de privacidad</a></li>
-                  <li><a href="#">Reportar un problema </a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Footer bottom -->
-        <div class="row align-items-center">
-          <div class="col-xl-7 col-lg-8 col-md-7">
-            <div class="footer-copy-right">
-              <p>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                Todos los derechos reservados | This template is made with
-                <i class="fa fa-heart" aria-hidden="true"></i> by
-                <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              </p>
-            </div>
-          </div>
-          <div class="col-xl-5 col-lg-4 col-md-5">
-            <div class="footer-copy-right f-right">
-              <!-- social -->
-              <div class="footer-social">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.facebook.com/sai4ull"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a href="#"><i class="fab fa-behance"></i></a>
-                <a href="#"><i class="fas fa-globe"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Footer End-->
-  </footer>
-  <!--? Search model Begin -->
-  <div class="search-model-box">
-      <div class="h-100 d-flex align-items-center justify-content-center">
-          <div class="search-close-btn">+</div>
-          <form class="search-model-form">
-              <input type="text" id="search-input" placeholder="Searching key.....">
-          </form>
-      </div>
-  </div>
-  <!-- Search model end -->
+
+<?php
+ 
+ include 'pie.php';
+
+?>
 
   <!-- JS here -->
 
