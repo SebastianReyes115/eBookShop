@@ -37,13 +37,13 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><h1>eBook Shop</h1></a>
+                            <a href="index.php"><h1>eBook Shop</h1></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
                             <nav>                                                
                                 <ul id="navigation">
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="index.php">Home</a></li>
                                     <li><a href="shop.php">Productos</a></li>
                                     <li class="hot"><a href="ofertas.php">Ofertas</a></li>
                                     <li><a href="about.php">Acerca de nosotros</a></li>

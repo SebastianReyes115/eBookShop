@@ -41,7 +41,7 @@
                 <div class="menu-wrapper">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="index.html"><h1>eBook Shop</h1></a>
+                        <a href="index.php"><h1>eBook Shop</h1></a>
                     </div>
                     <!-- Main-menu -->
                     <div class="main-menu d-none d-lg-block">
