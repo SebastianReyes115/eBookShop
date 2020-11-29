@@ -26,6 +26,10 @@
       <link rel="stylesheet" href="assets/css/nice-select.css">
       <link rel="stylesheet" href="assets/css/style.css">
       <link rel="stylesheet" href="assets/css/estilosProductos.css">
+      
+      <link rel="stylesheet" href="js/estilos.css">
+      <script src="js/jquery.js"></script>
+      <script src="js/jquery.dataTables.min.js"></script>
 </head>
 <header>
     <!-- Header Start -->
@@ -53,9 +57,116 @@
                     <div class="header-right">
                         <ul>
                             <li>
+                                <input type="search" id="input-search" placeholder="Buscar libro">
+                                    <div class="content-search">
+                                        <div class="content-table">
+                                            <table id="table">
+                                                <thead>
+                                                    <tr>
+                                                        <td></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="FabricanteDeMuñecas.php">El fabircante de muñecas</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="MiVida.php">Mi vida (no del todo) perfecta</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="LaHijaÚnica.php">La hija única</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="Los4Hábitos.php">Los 4 hábitos de la gente delgada</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="LasTinieblasyElAlba.php">Las tinieblas y el alba</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="LoQuePaso.php">Lo que paso</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="LaVueltaAlMundo.php">La vuelta al mundo en 80 días</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="ElGatoBlack.php">El Gato Negro</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="InglesDummies.php">Inglés para Dummies</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="Dumplin.php">Dumplin</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="ElArteAmargo.php">El arte de amargarse la vida</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="EducaciónF.php">Educación Financiera</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="LabailarinadeAuschwitz.php">La bailarina de Auschwitz</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="Rabia.php">Rabia</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="VardoIslaWomen.php">Vardo: La isla de las mujeres</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="ElSeñorObsc.php">El Señor de la Oscuridad</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="MomentoP.php">¿Cuándo?: La ciencia de encontrar el momento preciso</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="AmigaDisc.php">Un plan sin pretextos para abrazar y alcanzar tus metas</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="DemonThief.php">Demon thief</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="PensamientoCreativo.php">El poder del pensamiento lateral para la creación de nuevas ideas</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="harryPotter1.php">Harry Potter y la Piedra Filosofal</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="principito.php">El Principito</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="ladronRayo.php">Percy Jackson Y El Ladron del Rayp</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="salvarFuego.php">Salvar Fuego</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="elTraidor.php">El traidor</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="suiteArte.php">El Sutil Arte De Que Te Importe Un Caraj*</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="propositoDeNata.php">A propósito de nada</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="inquebrantables.php">Inquebrantables</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="felipeOscuro.php">Felipe, El Oscuro</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="teoriaTodo.php">La teoría del todo</a></td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                            <li>
                                 <div class="nav-search search-switch">
                                     <span class="flaticon-search"></span>
                                 </div>
+                            </li>
                             </li>
                             <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
                             <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
@@ -71,3 +182,4 @@
     </div>
     <!-- Header End -->
   </header>
+  <script src="js/buscador.js"></script>
