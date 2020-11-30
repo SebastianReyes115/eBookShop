@@ -1,4 +1,7 @@
 <!doctype html>
+<?php 
+session_start();
+?>
 <html lang="zxx">
 <head>
     <meta charset="utf-8">
@@ -106,40 +109,61 @@
                                 <h3>Bienvenido! <br>
                                     Porfavor ingresa tus datos</h3>
                                 <form class="row contact_form" action="#" method="post" novalidate="novalidate">
-                                    <div class="col-md-12 form-group p_star">
+                                <div class="col-md-12 form-group p_star">
                                         <p>Nombre:</p>
                                     </div>
                                     <div class="col-md-12 form-group p_star">
                                         <input type="text" class="form-control" id="name" name="name" value=""
-                                            placeholder="Juan Lopez">
+                                            placeholder="Juan" required>
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
+                                        <p>Apellidos:</p>
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
+                                        <input type="text" class="form-control" id="apellido" name="apellido" value=""
+                                            placeholder="Lopez" required>
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
+                                        <p>Pais:</p>
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
+                                        <input type="text" class="form-control" id="pais" name="pais" value=""
+                                            placeholder="Mexico" required>
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
+                                        <p>Ciudad:</p>
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
+                                        <input type="text" class="form-control" id="ciudad" name="ciudad" value=""
+                                            placeholder="Ags" required>
                                     </div>
                                     <div class="col-md-12 form-group p_star">
                                         <p>Correo Electrónico:</p>
                                     </div>
                                     <div class="col-md-12 form-group p_star">
                                         <input type="email" class="form-control" id="email" name="email" value=""
-                                            placeholder="ejemplo@gmail.com">
+                                            placeholder="ejemplo@gmail.com" required>
                                     </div>
                                     <div class="col-md-12 form-group p_star">
                                         <p>Contraseña:</p>
                                     </div>
                                     <div class="col-md-12 form-group p_star">
                                         <input type="password" class="form-control" id="password" name="password" value=""
-                                            placeholder="Password">
+                                            placeholder="Password" required>
                                     </div>
                                     <div class="col-md-12 form-group p_star">
                                         <p>Confirmar contraseña:</p>
                                     </div>
                                     <div class="col-md-12 form-group p_star">
-                                        <input type="password" class="form-control" id="password" name="password" value=""
-                                            placeholder="Password">
+                                        <input type="password" class="form-control" id="password2" name="password2" value=""
+                                            placeholder="Password" required>
                                     </div>
                                     <div class="col-md-12 form-group">
                                         <div class="creat_account d-flex align-items-center">
                                             <input type="checkbox" id="f-option" name="selector">
                                             <label for="f-option">Recordarmeme</label>
                                         </div>
-                                        <button type="submit" value="submit" class="btn_3">
+                                        <button type="submit" name="guardar" value="submit" class="btn_3">
                                             Ingresar
                                         </button>
                                         <a class="lost_pass" href="#">¿Olvidaste la contraseña?</a>
@@ -151,6 +175,48 @@
                 </div>
             </div>
         </section>
+        <?php
+        if(isset($_POST["guardar"]) && !empty($_POST["guardar"])) {
+          $con=mysqli_connect("localhost","root","","ebookshop");
+          $sql="SELECT NombreCliente FROM usuarios";
+          $ejecuta=mysqli_query($con,$sql);
+          $id=($ejecuta->num_rows)+1;
+          $name=$_POST['name'];
+          $apellidos=$_POST['apellido'];
+          $pais=$_POST['pais'];
+          $ciudad=$_POST['ciudad'];
+          $email=$_POST['email'];
+          $contraseña1=$_POST['password'];
+          $contraseña2=$_POST['password2'];
+          $sql="SELECT *FROM usuarios WHERE correo='$email'";
+          $ejecuta=mysqli_query($con,$sql);
+          if(($ejecuta->num_rows)==0){
+            $existe=false;
+          }
+          else{
+            $existe=true;
+          }
+          if(!empty($name) && !empty($apellidos) && !empty($pais) && !empty($ciudad) && !empty($email) && !empty($contraseña1) && !empty($contraseña2)){
+           if($contraseña1==$contraseña2){
+             if($existe){
+              echo "<div class='alert alert-warning' role='alert'>El correo ya existe</div>";
+             }
+             else{
+              $sql="INSERT INTO usuarios (id_usuario,NombreCliente,ApellidosCliente,Pais,Ciudad,correo,contraseña)
+              VALUES ('$id','$name','$apellidos','$pais','$ciudad','$email','$contraseña1')";
+              if(mysqli_query($con,$sql)){
+                $_SESSION['Name'] = $name;
+                echo "<meta http-equiv=refresh content=0;URL=index.php>";
+             }
+            }
+           } else{
+            echo "<div class='alert alert-warning' role='alert'>Contraseñas diferentes</div>";
+           }
+          }else{
+            echo "<div class='alert alert-warning' role='alert'>Faltan algunos campos por llenar verifica</div>";
+          }
+        }
+        ?>
         <!--================login_part end =================-->
     </main>
     <footer>

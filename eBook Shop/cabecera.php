@@ -1,4 +1,6 @@
 <!doctype html>
+<?php 
+?>
 <html lang="zxx">
 <head>
   <meta charset="utf-8">
@@ -163,13 +165,28 @@
                                         </div>
                                     </div>
                             <li>
-                                <div class="nav-search search-switch">
-                                    <span class="flaticon-search"></span>
-                                </div>
+                               <!-- <div class="nav-search search-switch">
+                                  <span class="flaticon-search"></span>
+                                </div> -->
                             </li>
                             </li>
                             <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
                             <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
+                            <?php
+                            if(!empty($_SESSION['Name'])){
+                                ?> 
+                            <li><a href="user.php"><span><?php echo $_SESSION['Name']; ?></span></a></li>
+                            <form method="post">
+                            <input type="submit" value="Salir" name="salir" />
+                            </form> 
+                            <?php 
+                            }
+                            if(isset($_POST['salir'])){
+                                session_destroy();
+                                echo "<meta http-equiv=refresh content=0;URL=index.php>";
+                            }
+                            ?>
+
                         </ul>
                     </div>
                 </div>
