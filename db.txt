@@ -260,3 +260,7 @@ ALTER TABLE VisitasPagina
 ADD FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario);
 ALTER TABLE HistoriaRegistro
 ADD FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario);
+
+
+
+alter table libros add COLUMN href varchar(30)
