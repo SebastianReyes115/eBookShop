@@ -41,7 +41,7 @@
                 <div class="menu-wrapper">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="index.php"><h1>eBook Shop</h1></a>
+                        <a href="index.html"><h1>eBook Shop</h1></a>
                     </div>
                     <!-- Main-menu -->
                     <div class="main-menu d-none d-lg-block">
@@ -85,17 +85,17 @@
     <br>
     <div class="row"  style="width: 100%;">
         <div class="col-md-4 imagenes" >
-            <img  class="tamañoImagen" src="Recursos/img/Amigadisc.png"/>
+            <img  class="tamañoImagen" src="Recursos/img/ElGato.png"/>
         </div>
         <div class="col-md-4 tituloLibro" >
-            <h2>Amiga, deja de disculparte: Un plan sin pretextos para abrazar y alcanzar tus metas</h2>
+            <h2>El gato negro</h2>
 
-            <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Rachel Hollis</a>
+            <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Edgar Allan Poe</a>
             <br>
-            <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > Thomas Nelson</a>
+            <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" >E-BOOKARAMA</a>
         </div>
         <div class="col-md-4 ContenedorPrecio">
-            <span class="PriceTag"> Precio: $70 MXN </span>
+            <span class="PriceTag"> Precio: $15 MXN </span>
             <div class="add_to_cart">
                 <br/>
                 <a href="#" class="BotonAgregar" style="width: 200px;">Agregar al carrito</a>
@@ -107,7 +107,7 @@
         <div>
             <h2 class="headerproductos">Descripción</h2>
             <p class="descripcion">
-                Rachel Hollis, autora del superventas y fundadora de TheChicSite.com, exhorta a las mujeres a dejar de disculparse por sus deseos, esperanzas y sueños y, en cambio, perseguirlos con pasión y confianza.
+                El "gato negro" de Edgar Allan Poe entrega todos los elementos espeluznantes que hacen una historia aterradora y frecuentadora. Este cuento oscuro particular combina el miedo y la culpa con la brutalidad y la violencia, en última instancia, conduce al asesinato de la esposa del narrador. Sin embargo, también explora los temas de las profundidades de las fallas en el espíritu humano, incluyendo la lucha contra el alcoholismo, los peligros de la violencia doméstica y el juicio final que sigue a los más atroces de los pecados.
             </P>
             <br>
             <hr class="separador">
@@ -119,20 +119,20 @@
                         <tbody>
                         <tr>
                             <th>SKU: </th>
-                            <td>9781400213603</td>
+                            <td>9788827576915</td>
                         </tr>
                         <tr>
                             <th>Idioma:</th>
                             <td>Español</td>
                         </tr>
                         <tr> <th>Año de publicación:</th>
-                            <td>2019</td>
+                            <td>22/02/2018</td>
                         </tr>
                         <tr><th>Edición:</th>
                             <td></td>
                         </tr>
                         <tr> <th>Páginas:</th>
-                            <td>286</td>
+                            <td>19</td>
                         </tr>
 
                         </tbody><tbody>

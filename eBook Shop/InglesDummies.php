@@ -41,7 +41,7 @@
                 <div class="menu-wrapper">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="index.php"><h1>eBook Shop</h1></a>
+                        <a href="index.html"><h1>eBook Shop</h1></a>
                     </div>
                     <!-- Main-menu -->
                     <div class="main-menu d-none d-lg-block">
@@ -85,17 +85,17 @@
     <br>
     <div class="row"  style="width: 100%;">
         <div class="col-md-4 imagenes" >
-            <img  class="tamañoImagen" src="Recursos/img/Amigadisc.png"/>
+            <img  class="tamañoImagen" src="Recursos/img/InlgesDummies.png"/>
         </div>
         <div class="col-md-4 tituloLibro" >
-            <h2>Amiga, deja de disculparte: Un plan sin pretextos para abrazar y alcanzar tus metas</h2>
+            <h2>Inglés para Dummies</h2>
 
-            <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Rachel Hollis</a>
+            <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Gail Brenner</a>
             <br>
-            <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > Thomas Nelson</a>
+            <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" >Para Dummies</a>
         </div>
         <div class="col-md-4 ContenedorPrecio">
-            <span class="PriceTag"> Precio: $70 MXN </span>
+            <span class="PriceTag"> Precio: $120 MXN </span>
             <div class="add_to_cart">
                 <br/>
                 <a href="#" class="BotonAgregar" style="width: 200px;">Agregar al carrito</a>
@@ -107,7 +107,10 @@
         <div>
             <h2 class="headerproductos">Descripción</h2>
             <p class="descripcion">
-                Rachel Hollis, autora del superventas y fundadora de TheChicSite.com, exhorta a las mujeres a dejar de disculparse por sus deseos, esperanzas y sueños y, en cambio, perseguirlos con pasión y confianza.
+                Tanto si tienes un interés personal en el inglés como si lo necesitas para el trabajo, esta guía práctica te ayudará a sentirte cómodo con él.
+
+                En ella encontrarás las claves para pronunciar correctamente, saber un poco de gramática y conocer muchos trucos sencillos. Los saludos, presentaciones o conversaciones telefónicas se ejemplifican con aspectos de la vida cotidiana como ir de compras o hacer excursiones.
+
             </P>
             <br>
             <hr class="separador">
@@ -119,20 +122,20 @@
                         <tbody>
                         <tr>
                             <th>SKU: </th>
-                            <td>9781400213603</td>
+                            <td>9788432900198</td>
                         </tr>
                         <tr>
                             <th>Idioma:</th>
                             <td>Español</td>
                         </tr>
                         <tr> <th>Año de publicación:</th>
-                            <td>2019</td>
+                            <td>30/11/2012</td>
                         </tr>
                         <tr><th>Edición:</th>
                             <td></td>
                         </tr>
                         <tr> <th>Páginas:</th>
-                            <td>286</td>
+                            <td>627</td>
                         </tr>
 
                         </tbody><tbody>
@@ -298,4 +301,4 @@
 
 </body>
 
-</html>
+</html><?php

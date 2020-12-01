@@ -41,7 +41,7 @@
                 <div class="menu-wrapper">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="index.php"><h1>eBook Shop</h1></a>
+                        <a href="index.html"><h1>eBook Shop</h1></a>
                     </div>
                     <!-- Main-menu -->
                     <div class="main-menu d-none d-lg-block">
@@ -85,14 +85,14 @@
     <br>
     <div class="row"  style="width: 100%;">
         <div class="col-md-4 imagenes" >
-            <img  class="tamañoImagen" src="Recursos/img/Amigadisc.png"/>
+            <img  class="tamañoImagen" src="Recursos/img/LoQuePaso.png"/>
         </div>
         <div class="col-md-4 tituloLibro" >
-            <h2>Amiga, deja de disculparte: Un plan sin pretextos para abrazar y alcanzar tus metas</h2>
+            <h2>Lo que pasó</h2>
 
-            <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Rachel Hollis</a>
+            <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Hillary Rodham Clinton</a>
             <br>
-            <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > Thomas Nelson</a>
+            <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" >Simon & Schuster</a>
         </div>
         <div class="col-md-4 ContenedorPrecio">
             <span class="PriceTag"> Precio: $70 MXN </span>
@@ -107,7 +107,7 @@
         <div>
             <h2 class="headerproductos">Descripción</h2>
             <p class="descripcion">
-                Rachel Hollis, autora del superventas y fundadora de TheChicSite.com, exhorta a las mujeres a dejar de disculparse por sus deseos, esperanzas y sueños y, en cambio, perseguirlos con pasión y confianza.
+                En este libro de memorias “cándido y tragicómico” (The New York Times), Hillary Rodham Clinton revela lo que pensaba y sentía durante una de las más controversiales e impredecibles elecciones presidenciales de la historia. Nos lleva dentro de una experiencia personal intensa de haber sido la primera mujer nominada para presidente por un importante partido en una elección marcada por ira, sexismo, excitantes altas y exasperantes bajas, giros más raros que en una obra de ficción, interferencia rusa, y un opositor que violó todas las reglas.
             </P>
             <br>
             <hr class="separador">
@@ -119,20 +119,20 @@
                         <tbody>
                         <tr>
                             <th>SKU: </th>
-                            <td>9781400213603</td>
+                            <td>9781982102029</td>
                         </tr>
                         <tr>
                             <th>Idioma:</th>
                             <td>Español</td>
                         </tr>
                         <tr> <th>Año de publicación:</th>
-                            <td>2019</td>
+                            <td>18/09/2018</td>
                         </tr>
                         <tr><th>Edición:</th>
                             <td></td>
                         </tr>
                         <tr> <th>Páginas:</th>
-                            <td>286</td>
+                            <td>755</td>
                         </tr>
 
                         </tbody><tbody>

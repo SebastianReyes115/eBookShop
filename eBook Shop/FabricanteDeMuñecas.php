@@ -41,7 +41,7 @@
                 <div class="menu-wrapper">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="index.php"><h1>eBook Shop</h1></a>
+                        <a href="index.html"><h1>eBook Shop</h1></a>
                     </div>
                     <!-- Main-menu -->
                     <div class="main-menu d-none d-lg-block">
@@ -85,17 +85,17 @@
     <br>
     <div class="row"  style="width: 100%;">
         <div class="col-md-4 imagenes" >
-            <img  class="tamañoImagen" src="Recursos/img/Amigadisc.png"/>
+            <img  class="tamañoImagen" src="Recursos/img/Muñecas.png"/>
         </div>
         <div class="col-md-4 tituloLibro" >
-            <h2>Amiga, deja de disculparte: Un plan sin pretextos para abrazar y alcanzar tus metas</h2>
+            <h2>El fabricante de muñecas</h2>
 
-            <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Rachel Hollis</a>
+            <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" >R.M. Romero</a>
             <br>
-            <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > Thomas Nelson</a>
+            <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" >Roca editorial</a>
         </div>
         <div class="col-md-4 ContenedorPrecio">
-            <span class="PriceTag"> Precio: $70 MXN </span>
+            <span class="PriceTag"> Precio: $25 MXN </span>
             <div class="add_to_cart">
                 <br/>
                 <a href="#" class="BotonAgregar" style="width: 200px;">Agregar al carrito</a>
@@ -107,7 +107,7 @@
         <div>
             <h2 class="headerproductos">Descripción</h2>
             <p class="descripcion">
-                Rachel Hollis, autora del superventas y fundadora de TheChicSite.com, exhorta a las mujeres a dejar de disculparse por sus deseos, esperanzas y sueños y, en cambio, perseguirlos con pasión y confianza.
+                Karolina es una muñeca que vive en la Tierra de las Muñecas. Pero cuando el rey y la reina de su país son derrocados, Karolina será enviada a la ciudad humana de Cracovia, en Polonia, donde se encontrará reencarnada en una nueva muñeca de la tienda de juguetes propiedad de un veterano de la Primera Guerra Mundial, conocido como "El fabricante de muñecas", un hombre con un poder inusual y un pasado marcado.
             </P>
             <br>
             <hr class="separador">
@@ -119,20 +119,20 @@
                         <tbody>
                         <tr>
                             <th>SKU: </th>
-                            <td>9781400213603</td>
+                            <td>9788417167332</td>
                         </tr>
                         <tr>
                             <th>Idioma:</th>
                             <td>Español</td>
                         </tr>
                         <tr> <th>Año de publicación:</th>
-                            <td>2019</td>
+                            <td>08/02/2016</td>
                         </tr>
                         <tr><th>Edición:</th>
                             <td></td>
                         </tr>
                         <tr> <th>Páginas:</th>
-                            <td>286</td>
+                            <td>291</td>
                         </tr>
 
                         </tbody><tbody>
@@ -299,3 +299,5 @@
 </body>
 
 </html>
+
+

@@ -1,4 +1,7 @@
 <!doctype html>
+<?php 
+session_start();
+?>
 <html lang="zxx">
 <head>
     <meta charset="utf-8">
@@ -35,13 +38,13 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><h1>eBook Shop</h1></a>
+                            <a href="index.php"><h1>eBook Shop</h1></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
                             <nav>                                                
                                 <ul id="navigation">  
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="index.php">Home</a></li>
                                     <li><a href="shop.php">Productos</a></li>
                                     <li class="hot"><a href="ofertas.php">Ofertas</a></li>
                                     <li><a href="about.php">Acerca de nosotros</a></li>
@@ -105,25 +108,24 @@
                             <div class="login_part_form_iner">
                                 <h3>Bienvenido de vuelta! <br>
                                     Porfavor ingresa ahora</h3>
-                                <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                                <form class="row contact_form"  method="post">
                                     <div class="col-md-12 form-group p_star">
                                         <input type="email" class="form-control" id="email" name="email" value=""
-                                            placeholder="ejemplo@gmail.com">
+                                            placeholder="ejemplo@gmail.com" required>
                                     </div>
                                     <div class="col-md-12 form-group p_star">
                                         <input type="password" class="form-control" id="password" name="password" value=""
-                                            placeholder="Password">
+                                            placeholder="Password" required>
                                     </div>
                                     <div class="col-md-12 form-group">
                                         <div class="creat_account d-flex align-items-center">
                                             <input type="checkbox" id="f-option" name="selector">
                                             <label for="f-option">Recordarmeme</label>
                                         </div>
-                                        <button type="submit" value="submit" class="btn_3">  
-                                          <a href="../Panel de Admin/index.php">
+                                        <button type="submit" value="submit" name="entrar" class="btn_3">  
                                           
                                             Ingresar
-                                          </a>
+                                          
                                         </button>
                                         <a class="lost_pass" href="#">¿Olvidaste la contraseña?</a>
 
@@ -141,6 +143,30 @@
                 </div>
             </div>
         </section>
+        <?php 
+        if(isset($_POST['entrar'])){
+          $con=mysqli_connect("localhost","root","","ebookshop");
+          $email=$_POST['email'];
+          $contraseña=$_POST['password'];
+          $sql="SELECT * FROM usuarios WHERE correo='$email'";
+          $ejecuta=mysqli_query($con,$sql);
+          if(($ejecuta->num_rows) ==0){
+            echo "<div class='alert alert-warning' role='alert'>No existe ese email</div>";
+          }
+          else{
+            $fila=mysqli_fetch_array($ejecuta);
+            if($fila['contraseña']== $contraseña){
+              $_SESSION['Name']=$fila['NombreCliente'];
+              $_SESSION['correo']=$email;
+              echo "<meta http-equiv=refresh content=0;URL=index.php>";
+            }
+            else{
+              echo "<div class='alert alert-warning' role='alert'>La contraseña es incorrecta</div>";
+            }
+          }
+        }
+
+        ?>
         <!--================login_part end =================-->
     </main>
     <footer>

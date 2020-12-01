@@ -36,13 +36,13 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><h1>eBook Shop</h1></a>
+                            <a href="index.php"><h1>eBook Shop</h1></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
                             <nav>                                                
                                 <ul id="navigation">
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="index.php">Home</a></li>
                                     <li><a href="shop.php">Productos</a></li>
                                     <li class="hot"><a href="ofertas.php">Ofertas</a></li>
                                     <li><a href="about.php">Acerca de nosotros</a></li>
@@ -113,6 +113,74 @@
                     <!-- Infantiles/Juveniles -->
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                         <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Muñecas.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="FabricanteDeMuñecas.php">El fabricante de muñecas</a></h3>
+                                        <span>$ 25 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/MiVida.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="MiVida.php">Mi vida (no del todo) perfecta</a></h3>
+                                        <span>$ 35 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/HijaÚnica.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="LaHijaÚnica.php">La hija única</a></h3>
+                                        <span>$ 25 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Dumplin.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="Dumplin.php">Dumplin</a></h3>
+                                        <span>$ 75 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-popular-items mb-50 text-center">
                                     <div class="popular-img">
@@ -203,6 +271,57 @@
                     <!-- Novelas -->
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                         <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Tinieblas.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="LasTinieblasyElAlba.php">Las tinieblas y el alba</a></h3>
+                                        <span>$ 65 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/LaVueltaAlM.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="LaVueltaAlMundo.php">La vuelta al mundo en 80 días</a></h3>
+                                        <span>$ 50 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/ElGato.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="ElGatoBlack.php">El Gato negro</a></h3>
+                                        <span>$ 15 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-popular-items mb-50 text-center">
                                     <div class="popular-img">
@@ -310,6 +429,57 @@
                     <!-- Educativos -->
                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                         <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/LosCuatroHábitos.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="Los4Hábitos.php">Los 4 hábitos de la gente delgada</a></h3>
+                                        <span>$ 35 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/LoQuePaso.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="LoQuePaso.php">Lo que pasó</a></h3>
+                                        <span>$ 70 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/InlgesDummies.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="InglesDummies.php">Inglés para Dummies</a></h3>
+                                        <span>$ 120 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-popular-items mb-50 text-center">
                                     <div class="popular-img">
@@ -468,6 +638,176 @@
                     -----------------------------------------------------
                     <div class="tab-pane fade" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
                         <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Muñecas.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="FabricanteDeMuñecas.php">El fabricante de muñecas</a></h3>
+                                        <span>$ 25 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/MiVida.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="MiVida.php">Mi vida (no del todo) perfecta</a></h3>
+                                        <span>$ 35 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/HijaÚnica.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="LaHijaÚnica.php">La hija única</a></h3>
+                                        <span>$ 25 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/LosCuatroHábitos.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="Los4Hábitos.php">Los 4 hábitos de la gente delgada</a></h3>
+                                        <span>$ 35 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Tinieblas.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="LasTinieblasyElAlba.php">Las tinieblas y el alba</a></h3>
+                                        <span>$ 65 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/LoQuePaso.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="LoQuePaso.php">Lo que pasó</a></h3>
+                                        <span>$ 70 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/LaVueltaAlM.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="LaVueltaAlMundo.php">La vuelta al mundo en 80 días</a></h3>
+                                        <span>$ 50 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/ElGato.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="ElGatoBlack.php">El Gato negro</a></h3>
+                                        <span>$ 15 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/InlgesDummies.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="InglesDummies.php">Inglés para Dummies</a></h3>
+                                        <span>$ 120 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <img src="Recursos/img/Dumplin.png" alt="">
+                                        <div class="img-cap">
+                                            <span>Añadir al carrito</span>
+                                        </div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="Dumplin.php">Dumplin</a></h3>
+                                        <span>$ 75 MXN</span>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-popular-items mb-50 text-center">
                                     <div class="popular-img">

@@ -41,7 +41,7 @@
                 <div class="menu-wrapper">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="index.php"><h1>eBook Shop</h1></a>
+                        <a href="index.html"><h1>eBook Shop</h1></a>
                     </div>
                     <!-- Main-menu -->
                     <div class="main-menu d-none d-lg-block">
@@ -85,17 +85,17 @@
     <br>
     <div class="row"  style="width: 100%;">
         <div class="col-md-4 imagenes" >
-            <img  class="tamañoImagen" src="Recursos/img/Amigadisc.png"/>
+            <img  class="tamañoImagen" src="Recursos/img/LosCuatroHábitos.png"/>
         </div>
         <div class="col-md-4 tituloLibro" >
-            <h2>Amiga, deja de disculparte: Un plan sin pretextos para abrazar y alcanzar tus metas</h2>
+            <h2>Los 4 hábitos de la gente delgada: La comida no engorda, tu ansiedad sí</h2>
 
-            <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Rachel Hollis</a>
+            <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" >Luis Navarro Sanz</a>
             <br>
-            <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > Thomas Nelson</a>
+            <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" >Grupo Planeta</a>
         </div>
         <div class="col-md-4 ContenedorPrecio">
-            <span class="PriceTag"> Precio: $70 MXN </span>
+            <span class="PriceTag"> Precio: $35 MXN </span>
             <div class="add_to_cart">
                 <br/>
                 <a href="#" class="BotonAgregar" style="width: 200px;">Agregar al carrito</a>
@@ -107,7 +107,7 @@
         <div>
             <h2 class="headerproductos">Descripción</h2>
             <p class="descripcion">
-                Rachel Hollis, autora del superventas y fundadora de TheChicSite.com, exhorta a las mujeres a dejar de disculparse por sus deseos, esperanzas y sueños y, en cambio, perseguirlos con pasión y confianza.
+                Con este revolucionario método aprenderás a gestionar tu ansiedad y tus emociones y a aplicar, poco a poco, los 4 hábitos cotidianos que te ayudarán a perder peso progresivamente y sin esfuerzo. Es decir, adelgazarás de una forma natural y saludable. Es, además, una aventura en la que descubrirás la inteligencia de tu estómago, aceptarás tu cuerpo y te liberarás de la mentalidad de dieta, que es la causante de la ansiedad, la culpabilidad y el sobrepeso.
             </P>
             <br>
             <hr class="separador">
@@ -119,20 +119,20 @@
                         <tbody>
                         <tr>
                             <th>SKU: </th>
-                            <td>9781400213603</td>
+                            <td>9788408206095</td>
                         </tr>
                         <tr>
                             <th>Idioma:</th>
                             <td>Español</td>
                         </tr>
                         <tr> <th>Año de publicación:</th>
-                            <td>2019</td>
+                            <td>12/02/2019</td>
                         </tr>
                         <tr><th>Edición:</th>
                             <td></td>
                         </tr>
                         <tr> <th>Páginas:</th>
-                            <td>286</td>
+                            <td>236</td>
                         </tr>
 
                         </tbody><tbody>

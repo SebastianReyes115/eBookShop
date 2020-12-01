@@ -41,7 +41,7 @@
                 <div class="menu-wrapper">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="index.php"><h1>eBook Shop</h1></a>
+                        <a href="index.html"><h1>eBook Shop</h1></a>
                     </div>
                     <!-- Main-menu -->
                     <div class="main-menu d-none d-lg-block">
@@ -85,17 +85,17 @@
     <br>
     <div class="row"  style="width: 100%;">
         <div class="col-md-4 imagenes" >
-            <img  class="tamañoImagen" src="Recursos/img/Amigadisc.png"/>
+            <img  class="tamañoImagen" src="Recursos/img/MiVida.png"/>
         </div>
         <div class="col-md-4 tituloLibro" >
-            <h2>Amiga, deja de disculparte: Un plan sin pretextos para abrazar y alcanzar tus metas</h2>
+            <h2>Mi vida (no del todo) perfecta</h2>
 
-            <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Rachel Hollis</a>
+            <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" >Sophie Kinsella</a>
             <br>
-            <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" > Thomas Nelson</a>
+            <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href="" >Los Libros del Lince</a>
         </div>
         <div class="col-md-4 ContenedorPrecio">
-            <span class="PriceTag"> Precio: $70 MXN </span>
+            <span class="PriceTag"> Precio: $35 MXN </span>
             <div class="add_to_cart">
                 <br/>
                 <a href="#" class="BotonAgregar" style="width: 200px;">Agregar al carrito</a>
@@ -107,7 +107,9 @@
         <div>
             <h2 class="headerproductos">Descripción</h2>
             <p class="descripcion">
-                Rachel Hollis, autora del superventas y fundadora de TheChicSite.com, exhorta a las mujeres a dejar de disculparse por sus deseos, esperanzas y sueños y, en cambio, perseguirlos con pasión y confianza.
+                La vida no siempre es tan perfecta como muestra nuestro muro de Instagram.
+
+                Parece que Katie Brenner tiene una vida perfecta: un apartamento en Londres, un trabajo glamuroso y un muro de Instagram de lo más envidiable; pero las cosas no son como parecen. Lo cierto es que vive en una habitación de alquiler donde apenas cabe su ropa, tiene un trabajo mediocre y la vida que refleja en Instagram no es realmente la suya. Y todo puede empeorar. Su vida (no tan) perfecta se vendrá abajo cuando su jefa vaya a por ella, la despida y Katie no tenga más remedio que regresar al campo de donde procede y poner en marcha un nuevo negocio, un glamping, un camping glamuroso. Pero no contaba con que una de sus primeras clientas será su exjefa ni con todas las incógnitas que esa visita va a detonar.
             </P>
             <br>
             <hr class="separador">
@@ -119,20 +121,20 @@
                         <tbody>
                         <tr>
                             <th>SKU: </th>
-                            <td>9781400213603</td>
+                            <td>9788417302122</td>
                         </tr>
                         <tr>
                             <th>Idioma:</th>
                             <td>Español</td>
                         </tr>
                         <tr> <th>Año de publicación:</th>
-                            <td>2019</td>
+                            <td>19/03/2017</td>
                         </tr>
                         <tr><th>Edición:</th>
                             <td></td>
                         </tr>
                         <tr> <th>Páginas:</th>
-                            <td>286</td>
+                            <td>473</td>
                         </tr>
 
                         </tbody><tbody>
@@ -299,3 +301,5 @@
 </body>
 
 </html>
+
+
