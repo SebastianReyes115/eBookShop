@@ -1,80 +1,10 @@
 <!doctype html>
 <?php 
 session_start();
+include 'cabecera.php';
+  include 'carrito.php';
 ?>
 <html class="no-js" lang="zxx">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>eBook Shop | eCommers</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="Recursos/img/favicon_ebook.png"
-    />
-
-    <!-- CSS here -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="assets/css/flaticon.css">
-        <link rel="stylesheet" href="assets/css/slicknav.css">
-        <link rel="stylesheet" href="assets/css/animate.min.css">
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="assets/css/themify-icons.css">
-        <link rel="stylesheet" href="assets/css/slick.css">
-        <link rel="stylesheet" href="assets/css/nice-select.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
-<body>
-    <header>
-        <!-- Header Start -->
-        <div class="header-area">
-            <div class="main-header header-sticky">
-                <div class="container-fluid">
-                    <div class="menu-wrapper">
-                        <!-- Logo -->
-                        <div class="logo">
-                            <a href="index.php"><h1>eBook Shop</h1></a>
-                        </div>
-                        <!-- Main-menu -->
-                        <div class="main-menu d-none d-lg-block">
-                            <nav>                                                
-                                <ul id="navigation">
-                                    <li><a href="index.php">Home</a></li>
-                                    <li><a href="shop.php">Productos</a></li>
-                                    <li class="hot"><a href="ofertas.php">Ofertas</a></li>
-                                    <li><a href="about.php">Acerca de nosotros</a></li>
-                                    <li><a href="contact.php">Contacto</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <!-- Header Right -->
-                        <div class="header-right">
-                            <ul>
-                                <li>
-                                    <div class="nav-search search-switch">
-                                        <span class="flaticon-search"></span>
-                                    </div>
-                                </li>
-                                <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
-                                <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Mobile Menu -->
-                    <div class="col-12">
-                        <div class="mobile_menu d-block d-lg-none"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Header End -->
-        </header>
         <main>
         <!-- Hero Area Start-->
         <div class="slider-area ">
@@ -92,7 +22,83 @@ session_start();
         </div>
         <!-- Hero Area End-->
         <!-- About Details Start -->
-       
+        <h2 style="margin-left:550px;">Modificar datos</h2>
+        <br>
+        <?php
+        $con=mysqli_connect("localhost","root","","ebookshop");
+        $correo=$_SESSION['correo'];
+        $sql="SELECT * FROM usuarios WHERE correo='$correo'";
+        $ejecuta=mysqli_query($con,$sql);
+        $fila=mysqli_fetch_array($ejecuta);
+        ?>
+       <form method="post" class="lead" style="width:50%; align:center; margin-left:300px;">
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Nombre</label>
+    <div class="col-sm-10">
+      <input type="text" name="name" value="<?php echo $fila['NombreCliente']; ?>" class="form-control form-control-lg" id="colFormLabelLg">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Apellidos</label>
+    <div class="col-sm-10">
+      <input type="text" name="apellidos" value="<?php echo $fila['ApellidosCliente']; ?>" class="form-control form-control-lg" id="colFormLabelLg">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Pais</label>
+    <div class="col-sm-10">
+      <input type="text" name="pais" value="<?php echo $fila['Pais']; ?>" class="form-control form-control-lg" id="colFormLabelLg">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Ciudad</label>
+    <div class="col-sm-10">
+      <input type="text" name="ciudad" value="<?php echo $fila['Ciudad']; ?>" class="form-control form-control-lg" id="colFormLabelLg">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Correo</label>
+    <div class="col-sm-10">
+      <input type="correo" name="correo" value="<?php echo $fila['correo']; ?>" class="form-control form-control-lg" id="colFormLabelLg">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Contraseña</label>
+    <div class="col-sm-10">
+      <input type="password" name="contraseña" value="<?php echo $fila['contraseña']; ?>" class="form-control form-control-lg" id="colFormLabelLg">
+    </div>
+  </div>
+  <input type="submit" value="Modificar" name="change" style="margin-left:305px;" class="btn btn-primary" />
+       </form>
+
+<?php
+if(isset($_POST['change'])){
+    $name=$_POST['name'];
+    $apellidos=$_POST['apellidos'];
+    $pais=$_POST['pais'];
+    $ciudad=$_POST['ciudad'];
+    $correo=$_POST['correo'];
+    $contraseña=$_POST['contraseña'];
+    $id=$fila['id_usuario'];
+    if(!empty($name) && !empty($apellidos) && !empty($pais) && !empty($ciudad) && !empty($correo) && !empty($contraseña)){
+        $updat="UPDATE usuarios SET NombreCliente='$name',ApellidosCliente='$apellidos',Pais='$pais',
+        Ciudad='$ciudad', correo='$correo', contraseña='$contraseña' WHERE id_usuario='$id'";
+        if(mysqli_query($con,$updat)){
+            $_SESSION['Name']=$name;
+            $_SESSION['correo']=$correo;
+            echo "<div class='alert alert-success' role='alert'>
+            ACTUALIZADO
+          </div>";
+          echo "<meta http-equiv=refresh content=0; URL=user.php>";
+        }
+    }
+    else{
+        echo "<div class='alert alert-danger' role='alert'>
+        Falta algun campo que debes llenar!.
+      </div>";
+    }
+}
+?>
             <!-- Footer bottom -->
             <div class="row align-items-center">
               <div class="col-xl-7 col-lg-8 col-md-7">

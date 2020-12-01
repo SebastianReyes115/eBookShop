@@ -206,6 +206,7 @@ session_start();
               VALUES ('$id','$name','$apellidos','$pais','$ciudad','$email','$contraseña1')";
               if(mysqli_query($con,$sql)){
                 $_SESSION['Name'] = $name;
+                $_SESSION['correo']=$email;
                 echo "<meta http-equiv=refresh content=0;URL=index.php>";
              }
             }
