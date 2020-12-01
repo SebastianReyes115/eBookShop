@@ -88,9 +88,7 @@
             </div>
           </div>
           <?php
-              $sentencia = $pdo->prepare("SELECT * FROM `libros`");
-              $sentencia->execute();
-              $listaProductos = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+
           ?>
           
           <div class="row">
@@ -120,6 +118,9 @@
               <div class="single-new-pro mb-30 text-center">
                 <div class="product-img">
                   <img src="Recursos/img/teoria.jpg" alt="" />
+                  <div class="img-cap">
+                    <span >Agregar al carrito</span>
+                  </div>
                 </div>
                 <div class="product-caption">
                   <h3><a href="teoriaTodo.php">La teoria del todo</a></h3>

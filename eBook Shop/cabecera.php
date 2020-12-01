@@ -25,7 +25,12 @@
       <link rel="stylesheet" href="assets/css/slick.css">
       <link rel="stylesheet" href="assets/css/nice-select.css">
       <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
       <link rel="stylesheet" href="assets/css/estilosProductos.css">
+      <link rel="stylesheet" href="assets/css/estilos.css">
+
+
+      
 </head>
 <header>
     <!-- Header Start -->

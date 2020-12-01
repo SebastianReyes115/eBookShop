@@ -101,16 +101,16 @@
 
               ?>
           
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <div class="single-new-pro mb-30 text-center">
                 <div class="product-img">
-                  <img src="<?php echo $fila['Imagen'];?>"alt="" />
+                  <img src="Recursos/img/teoria.jpg" alt="" />
                 </div>
                 <div class="product-caption">
-                  <h3><a href="pricipito.php"><?php echo $fila['Titulo'];?></a></h3>
+                  <h3><a href="<?php echo $fila['href'];?>"><?php echo $fila['Titulo'];?></a></h3>
                   <span>$<?php echo number_format($fila['Precio'],2);?></span>
                 </div>
-            </div>
+              </div>
               <form action="" method="post" style="text-align: center;">
                         <input type="hidden" name="id" id="id" value="<?php echo $fila['ID'];?>" > 
                         <input type="hidden" name="nombre" id="nombre" value="<?php echo $fila['Titulo'];?>">
@@ -145,7 +145,7 @@
           </div>
         
           <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <div class="single-popular-items mb-50 text-center">
                 <div class="popular-img">
                   <img src="Recursos/img/principito.jpg" alt="" />
@@ -291,6 +291,8 @@
           </div>
         </div>
       </div>
+
+     
       <!-- Watch Choice  End-->
       <!--? Shop Method Start-->
       <div class="shop-method-area">
@@ -350,7 +352,7 @@
     <!-- Search model end -->
 
     <!-- JS here -->
-
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
