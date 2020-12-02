@@ -81,7 +81,7 @@
         <br>
         <div class="row"  style="width: 100%; text-align: center;">
             <div class="col-md-4 imagenes" >
-                <img  class="tamañoImagen" src="https://images-na.ssl-images-amazon.com/images/I/714tsbPWteL.jpg"/>
+                <img  class="tamañoImagen" src="Recursos/img/sutilarte.jpg"/>
             </div>
             <div class="col-md-4 tituloLibro" >
                 <h2>EL SUTIL ARTE DE QUE TE IMPORTE UN CARAJO</h2>

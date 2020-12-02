@@ -88,7 +88,7 @@
             <img  class="tamañoImagen" src="Recursos/img/Monemtop.png"/>
         </div>
         <div class="col-md-4 tituloLibro" >
-            <h2>Demon thief</h2>
+            <h2>¿Cuándo?: La ciencia de encontrar el momento preciso</h2>
 
             <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href="" > Daniel H. Pink</a>
             <br>
