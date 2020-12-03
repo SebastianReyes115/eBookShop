@@ -85,7 +85,7 @@
         <br>
         <div class="row"  style="width: 100%;">
             <div class="col-md-4 imagenes" >
-                <img  class="tamañoImagen" src="https://m.media-amazon.com/images/I/41KHjzaEgAL._SY346_.jpg"/>
+                <img  class="tamañoImagen" src="Recursos/img/proposito.jpg"/>
             </div>
             <div class="col-md-4 tituloLibro" >
                 <h2>A PROPÓSITO DE NADA</h2>

@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`Autor` (
   `ApellidosAutor` VARCHAR(50) NULL,
   `Nacionalidad` VARCHAR(30) NULL,
   `Edad` int null,
+  `id_nacionalidad` int null,
   PRIMARY KEY (`id_autor`));
   
 CREATE TABLE IF NOT EXISTS `ebookshop`.`Editorial` (
@@ -248,6 +249,11 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`autor_libro` (
   `FechaDeVisita` varchar(30), 
   PRIMARY KEY (`id_visita`));
 
+  CREATE TABLE IF NOT EXISTS `ebookshop`.`nacionalidades` (
+   `id_nacionalidad` INT NOT NULL ,
+   `Nacionalidad` VARCHAR(35) NOT NULL ,
+    PRIMARY KEY (`id_nacionalidad`));
+
 ALTER TABLE masvendidos
 ADD FOREIGN KEY (id_libro) REFERENCES Libros(id_libro);
 ALTER TABLE masvisitados
@@ -260,3 +266,13 @@ ALTER TABLE VisitasPagina
 ADD FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario);
 ALTER TABLE HistoriaRegistro
 ADD FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario);
+
+
+ALTER TABLE `autor` CHANGE `Edad` `Edad` DATETIME(6) NULL DEFAULT NULL;
+ALTER TABLE `autor` CHANGE `a` `FNacimiento` DATETIME(6) NULL DEFAULT NULL;
+ALTER TABLE `autor` CHANGE `FNacimiento` `FNacimiento` DATE NULL DEFAULT NULL;
+alter table autor add id_nacionalidad int not null
+
+alter table libros add COLUMN href varchar(30);
+ALTER TABLE `nacionalidades` CHANGE `Id` `id_nacionalidad` INT(11) NOT NULL;
+ALTER TABLE `nacionalidades` CHANGE `id_nacionalidad` `id_nacionalidad` INT(11) NULL;

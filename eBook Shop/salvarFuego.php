@@ -85,7 +85,7 @@
         <br>
         <div class="row"  style="width: 100%;">
             <div class="col-md-4 imagenes" >
-                <img  class="tamañoImagen" src="https://m.media-amazon.com/images/I/41qt7EkWhqL.jpg"/>
+                <img  class="tamañoImagen" src="Recursos/img/salvarfuego.jpg"/>
             </div>
             <div class="col-md-4 tituloLibro" >
                 <h2>SALVAR EL FUEGO</h2>

@@ -85,7 +85,7 @@
         <br>
         <div class="row"  style="width: 100%;">
             <div class="col-md-4 imagenes" >
-                <img  class="tamañoImagen" src="https://www.librosdemario.com/covers/01/11/60/cover.jpg"/>
+                <img  class="tamañoImagen" src="Recursos/img/teoria.jpg"/>
             </div>
             <div class="col-md-4 tituloLibro" >
                 <h2>LA TEORÍA DEL TODO</h2>

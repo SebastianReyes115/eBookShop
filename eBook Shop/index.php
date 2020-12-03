@@ -87,8 +87,7 @@ session_start();
                 <h2>Nuevas Ofertas</h2>
               </div>
             </div>
-          </div>
-          
+          </div>          
           <div class="row">
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
               <div class="single-new-pro mb-30 text-center">
@@ -116,6 +115,9 @@ session_start();
               <div class="single-new-pro mb-30 text-center">
                 <div class="product-img">
                   <img src="Recursos/img/teoria.jpg" alt="" />
+                  <div class="img-cap">
+                    <span >Agregar al carrito</span>
+                  </div>
                 </div>
                 <div class="product-caption">
                   <h3><a href="teoriaTodo.php">La teoria del todo</a></h3>

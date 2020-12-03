@@ -14,7 +14,7 @@
         <br>
         <div class="row"  style="width: 100%;">
             <div class="col-md-4 imagenes" >
-                <img  class="tamañoImagen" src="https://images-na.ssl-images-amazon.com/images/I/51hyi0j5BJL._SX331_BO1,204,203,200_.jpg"/>
+                <img  class="tamañoImagen" src="Recursos/img/principito.jpg"/>
             </div>
             <div class="col-md-4 tituloLibro" >
                 <h2>EL PRINCIPITO</h2>
