@@ -465,6 +465,11 @@ if(isset($_POST["b1"]) && !empty($_POST["b1"])) { //Agregar Autor
   $edicion=$_POST['edicion'];
   $año=$_POST['año'];
   $imagen= $_FILES['img'];
+  $typeimagen=$_FILES['img']['type'];
+  $sizeimagen=$_FILES['img']['size'];
+  $imagensubida=fopen($_FILES['img']['tmp_name'],'r');
+  $binaryimagen=fread($imagensubida,$sizeimagen);
+  $binaryimagen=mysqli_escape_string($con,$binaryimagen);
   $idioma=$_POST['idioma'];
   $imagenguarda=$imagen['tmp_name'];
   move_uploaded_file($imagen['tmp_name'],"imagenes/".$imagen['name']);
@@ -499,15 +504,15 @@ $idee=$fila['id_editorial'];
     if(empty($edicion)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta la edicion</div>";}
     if(empty($año)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el año</div>";}
     if(empty($idioma)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta el idioma</div>";}
-    if(empty($imagenguarda)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta la imagen</div>";}
+    if(empty($binaryimagen)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>Falta la imagen</div>";}
     if(empty($idg)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>NO EXISTE ESE GENERO</div>";}
     if(empty($idau)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>NO EXISTE ESE AUTOR</div>";}
     if(empty($idee)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>NO EXISTE ESE LA EDITORIAL</div>";}
     if(!empty($nametitulo)){echo "<div class='alert alert-primary' role='alert' style='background-color:red'>YA EXISTE ESE LIBRO</div>";}
 
-    if(!empty($titulo) && !empty($idautor) && empty($nametitulo) && !empty($generoid)&& !empty($editorial)&& !empty($idau)&& !empty($idg) && !empty($nopaginas)&& !empty($precio)&& !empty($edicion)&& !empty($año)&& !empty($idioma)&& !empty($imagenguarda)){
+    if(!empty($titulo) && !empty($idautor) && empty($nametitulo) && !empty($generoid)&& !empty($editorial)&& !empty($idau)&& !empty($idg) && !empty($nopaginas)&& !empty($precio)&& !empty($edicion)&& !empty($año)&& !empty($idioma)&& !empty($binaryimagen)){
         $sql1="INSERT INTO libros (id_libro,Titulo,id_Autor,id_Genero,id_Editorial,NoPaginas,Precio,isbn,Idioma,Edicion,Año,ImagenLibro)
-         VALUES ($id,'$titulo','$idau','$idg','$idee','$nopaginas','$precio','$isbn','$idioma','$edicion','$año','$imagenguarda')";
+         VALUES ($id,'$titulo','$idau','$idg','$idee','$nopaginas','$precio','$isbn','$idioma','$edicion','$año','".$binaryimagen."')";
         if(mysqli_query($con,$sql1)){
           $sqlal="INSERT INTO autor_libro (id_autor,id_libro) VALUES ('$idau','$id')";
           $sqllg="INSERT INTO genero_libro (id_genero,id_libro) VALUES ('$idg','$id')";

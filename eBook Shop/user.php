@@ -30,7 +30,10 @@ include 'cabecera.php';
         $sql="SELECT * FROM usuarios WHERE correo='$correo'";
         $ejecuta=mysqli_query($con,$sql);
         $fila=mysqli_fetch_array($ejecuta);
+        $id=$fila['id_usuario'];
+       // echo '<img src="data:image/png;base64,' . base64_encode( $fila1['ImagenLibro'] ) . '" width="100"/>';
         ?>
+
        <form method="post" class="lead" style="width:50%; align:center; margin-left:300px;">
   <div class="form-group row">
     <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Nombre</label>
@@ -70,7 +73,7 @@ include 'cabecera.php';
   </div>
   <input type="submit" value="Modificar" name="change" style="margin-left:305px;" class="btn btn-primary" />
        </form>
-
+<h2>Productos Comprados</h2>
 <?php
 if(isset($_POST['change'])){
     $name=$_POST['name'];
@@ -79,7 +82,6 @@ if(isset($_POST['change'])){
     $ciudad=$_POST['ciudad'];
     $correo=$_POST['correo'];
     $contraseña=$_POST['contraseña'];
-    $id=$fila['id_usuario'];
     if(!empty($name) && !empty($apellidos) && !empty($pais) && !empty($ciudad) && !empty($correo) && !empty($contraseña)){
         $updat="UPDATE usuarios SET NombreCliente='$name',ApellidosCliente='$apellidos',Pais='$pais',
         Ciudad='$ciudad', correo='$correo', contraseña='$contraseña' WHERE id_usuario='$id'";
@@ -98,9 +100,29 @@ if(isset($_POST['change'])){
       </div>";
     }
 }
+$sqlventas="SELECT *FROM venta WHERE id_usuario='$id'";
+$ejecutaventas=mysqli_query($con,$sqlventas);
+foreach ($ejecutaventas as $venta) {
+  $idlibro=$venta['id_libro'];
+$sqllibro="SELECT *FROM libros WHERE id_libro='$idlibro'";
+$ejecutalibro=mysqli_query($con,$sqllibro);
+$filalibro=mysqli_fetch_array($ejecutalibro);
+  ?>
+  <div class="card" value="<?php echo $venta['id_venta']; ?>" style="width: 18rem; float: left;">
+ <?php echo '<img src="data:image/png;base64,' . base64_encode( $filalibro['ImagenLibro'] ) . '" width="280px"/>';?>
+  <div class="card-body">
+    <p class="card-text">Nombre del libro:</p>
+    <?php echo $filalibro['Titulo']; ?>
+  </div>
+  <input type="submit" value="borrar" name="borrar" class="btn btn-danger" />
+</div>
+<?php 
+}
 ?>
+
             <!-- Footer bottom -->
-            <div class="row align-items-center">
+            <div class="row align-items-center" style="position: -webkit-sticky;
+  position: sticky;">
               <div class="col-xl-7 col-lg-8 col-md-7">
                 <div class="footer-copy-right">
                   <p>
