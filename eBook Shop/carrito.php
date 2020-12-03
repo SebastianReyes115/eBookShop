@@ -2,6 +2,7 @@
 @session_start(); 
 $mensaje = "";
 
+
 if (isset($_POST['btnAccion'])) {
     switch ($_POST['btnAccion']) {
         case 'Agregar':
@@ -71,4 +72,3 @@ if (isset($_POST['btnAccion'])) {
             break;
     }
 }
-?>

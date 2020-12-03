@@ -61,10 +61,12 @@ include 'carrito.php';
                         <h5>$<?php echo number_format($fila['Precio'], 2); ?></h5>
                       </td>
 
+
                       <!-- TERCER ELEMENTO DE LA TABLA-->
                       <td>
                         <h5 style="text-align: center;"><?php echo $fila['Cantidad'] ?></h5>
                       </td>
+
 
                       <!-- CUARTO ELEMENTO DE LA TABLA-->
                       <td>
@@ -72,6 +74,7 @@ include 'carrito.php';
                         <h5> $<?php echo number_format($fila['Precio'] * $fila['Cantidad'], 2); ?> </h5>
 
                       </td>
+
 
                       <!-- QUINTO ELEMENTO DE LA TABLA-->
                       <form action="" method="post">
@@ -82,6 +85,7 @@ include 'carrito.php';
                         </td>
                       </form>
                       <?php } ?>
+
 
                     </tr>
                     <tr>
