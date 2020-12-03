@@ -1,7 +1,6 @@
 <!doctype html>
 <?php 
-session_start();
-include 'cabecera.php';
+  include 'cabecera.php';
   include 'carrito.php';
 ?>
 <html class="no-js" lang="zxx">
@@ -31,7 +30,7 @@ include 'cabecera.php';
         $ejecuta=mysqli_query($con,$sql);
         $fila=mysqli_fetch_array($ejecuta);
         ?>
-       <form method="post" class="lead" style="width:50%; align:center; margin-left:300px;">
+       <form method="post" class="lead" style="width:50%; align-items:center; margin-left:300px;">
   <div class="form-group row">
     <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Nombre</label>
     <div class="col-sm-10">

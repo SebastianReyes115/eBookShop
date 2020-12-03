@@ -119,6 +119,9 @@ section p {
     font-weight: 700;
     text-transform: uppercase;
 }
+.logo:hover{
+    
+}
 .left-nav ul {
     margin: 0;
     padding: 0;

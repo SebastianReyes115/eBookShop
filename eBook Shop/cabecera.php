@@ -1,5 +1,6 @@
 <!doctype html>
 <?php 
+include 'carrito.php';
 ?>
 <html lang="zxx">
 <head>
@@ -29,7 +30,7 @@
       <link rel="stylesheet" href="assets/css/style.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
       <link rel="stylesheet" href="assets/css/estilosProductos.css">
-      <link rel="stylesheet" href="assets/css/estilos.css">
+
 
 
       
@@ -176,7 +177,7 @@
                             </li>
                             </li>
                             <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
-                            <li><a href="cart.php"><span class="flaticon-shopping-cart"></span></a> </li>
+                            <li><a href="cart.php"><span class="flaticon-shopping-cart">(<?php echo (empty($_SESSION['Cart']))?0:count($_SESSION['Cart']);?>)</span></a> </li>
                             <?php
                             if(!empty($_SESSION['Name'])){
                                 ?> 
