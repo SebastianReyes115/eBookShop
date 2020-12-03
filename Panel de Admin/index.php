@@ -24,7 +24,7 @@
                 <button type="submit" value="ingresar" class="btn btn-secondary">Ingresar</button>
 
                 <button type="submit" value="Regresar" class="btn btn-secondary">
-                    <a href="../eBook%20Shop/index.html" style="color: white">
+                    <a href="../eBook%20Shop/index.php" style="color: white">
                         Regresar
                     </a>
                 </button>

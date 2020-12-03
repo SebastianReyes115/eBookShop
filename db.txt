@@ -276,3 +276,4 @@ alter table autor add id_nacionalidad int not null
 alter table libros add COLUMN href varchar(30);
 ALTER TABLE `nacionalidades` CHANGE `Id` `id_nacionalidad` INT(11) NOT NULL;
 ALTER TABLE `nacionalidades` CHANGE `id_nacionalidad` `id_nacionalidad` INT(11) NULL;
+alter table autor add CONSTRAINT fk_nac FOREIGN Key (id_nacionalidad) REFERENCES nacionalidades(id_nacionalidad)
