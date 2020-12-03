@@ -1,4 +1,5 @@
 <?php
+
 include 'cabecera.php';
 include 'carrito.php';
 ?>

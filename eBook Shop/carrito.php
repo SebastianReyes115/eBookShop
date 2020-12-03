@@ -2,19 +2,18 @@
 @session_start(); 
 $mensaje = "";
 
-
 if (isset($_POST['btnAccion'])) {
     switch ($_POST['btnAccion']) {
         case 'Agregar':
             if (is_numeric($_POST['id'])) {
                 $id = $_POST['id'];
-            }
+            } 
             if (is_string($_POST['nombre'])) {
                 $nombre = $_POST['nombre'];
             }
             if (is_numeric($_POST['precio'])) {
                 $precio = $_POST['precio'];
-            }
+            } 
             if (is_numeric($_POST['cantidad'])) {
                 $cantidad = $_POST['cantidad'];
             }
@@ -29,16 +28,17 @@ if (isset($_POST['btnAccion'])) {
                     'Cantidad' => $cantidad,
                     'Imagen' => $imagen
                 );
-                $_SESSION['Cart'][0] = $producto;
-                $mensaje = "Listo. Agregado.";
+                $_SESSION['Cart'][0] = $fila;
+                $mensaje= 'Artículo '.$nombre.''.$precio;
+
             } else {
 
-                $idProductos = array_column($_SESSION['Cart'], 'ID');
+                $idProductos=array_column($_SESSION['Cart'],'ID');
 
-                if (in_array($id, $idProductos)) {
-                    echo "<script> alert('El producto ya ha sido agregado al carrito.') </script>";
-                    $mensaje = " ";
-                } else {
+                if(in_array($id,$idProductos)){
+                    echo "<script> alert('El producto ya ha sido agregado al Cart.') </script>";
+                    $mensaje=" ";
+                }else{
 
                     $NumeroProductos = count($_SESSION['Cart']);
                     $fila = array(
@@ -52,6 +52,7 @@ if (isset($_POST['btnAccion'])) {
                     $mensaje="Listo. Agregado.";
     
                 }
+
             }
             break;
 
@@ -66,8 +67,8 @@ if (isset($_POST['btnAccion'])) {
                             
                         }
                     }
-                }
-            }
+                } 
             break;
     }
 }
+?>
