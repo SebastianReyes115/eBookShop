@@ -1,32 +1,32 @@
-
 <?php
-  include 'cabecera.php';
-  include 'carrito.php';
+include 'cabecera.php';
+include 'carrito.php';
 ?>
+
 <body>
-  
+
   <main>
-      <!-- Hero Area Start-->
-      <div class="slider-area ">
-          <div class="single-slider slider-height2 d-flex align-items-center">
-              <div class="container">
-                  <div class="row">
-                      <div class="col-xl-12">
-                          <div class="hero-cap text-center">
-                              <h2>Carrito de Compras</h2>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!--================Cart Area =================-->
-      <section class="cart_area section_padding">
+    <!-- Hero Area Start-->
+    <div class="slider-area ">
+      <div class="single-slider slider-height2 d-flex align-items-center">
         <div class="container">
-          <div class="cart_inner">
-            <div class="table-responsive">
-              <?php $total=0;?>
-              <?php if(!empty($_SESSION['Cart'])){?>
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="hero-cap text-center">
+                <h2>Carrito de Compras</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--================Cart Area =================-->
+    <section class="cart_area section_padding">
+      <div class="container">
+        <div class="cart_inner">
+          <div class="table-responsive">
+            <?php $total = 0; ?>
+            <?php if (!empty($_SESSION['Cart'])) { ?>
               <table class="table">
                 <thead>
                   <tr>
@@ -36,66 +36,66 @@
                     <th scope="col">Total</th>
                   </tr>
                 </thead>
-                <?php foreach($_SESSION['Cart'] as $i=>$producto){
-                  
-                  
+                <?php foreach ($_SESSION['Cart'] as $i => $producto) {
+
+
                 ?>
 
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="media">
-                        <div class="d-flex">
-                          <img src="<?php echo $producto['Imagen']?>" alt="" />
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="media">
+                          <div class="d-flex">
+                            <img src="<?php echo $producto['Imagen'] ?>" alt="" />
+                          </div>
+                          <div class="media-body">
+                            <p><?php echo $producto['Nombre'] ?></p>
+                          </div>
                         </div>
-                        <div class="media-body">
-                          <p><?php echo $producto['Nombre']?></p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <h5><?php echo $producto['Precio']?></h5>
-                    </td>
-                    <td>
-                        <h5 style="text-align: center;"><?php echo $producto['Cantidad']?></h5>
-                    </td>
-                    <td>
-                    <?php $total=$total+$producto['Precio']*$producto['Cantidad'];?>
-                      <h5> <?php echo $total?> </h5>
-                      <?php 
-                      }?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <h5>Total</h5>
-                    </td>
-                    <td>
-                      <h5>$45</h5>
-                    </td>
-                  </tr>
-                </tbody>
+                      </td>
+                      <td>
+                        <h5><?php echo $producto['Precio'] ?></h5>
+                      </td>
+                      <td>
+                        <h5 style="text-align: center;"><?php echo $producto['Cantidad'] ?></h5>
+                      </td>
+                      <td>
+                        <?php $total = $total + $producto['Precio'] * $producto['Cantidad']; ?>
+                        <h5> <?php echo $total ?> </h5>
+                      <?php
+                    } ?>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <h5>Total</h5>
+                      </td>
+                      <td>
+                        <h5>$45</h5>
+                      </td>
+                    </tr>
+                  </tbody>
               </table>
-              <?php }else{?>
-                      <div class="alert alert-success">No hay elementos en el carrito</div>
-              <?php } ?>
-              <div class="checkout_btn_inner float-right">
-                <a class="btn_1" href="#">Continuar Comprando</a>
-                <a class="btn_1 checkout_btn_1" href="pagar.php">Pasar a pagar</a>
-              </div>
+            <?php } else { ?>
+              <div class="alert alert-success">No hay elementos en el carrito</div>
+            <?php } ?>
+            <div class="checkout_btn_inner float-right">
+              <a class="btn_1" href="#">Continuar Comprando</a>
+              <a class="btn_1 checkout_btn_1" href="pagar.php">Pasar a pagar</a>
             </div>
           </div>
-      </section>
-      <!--================End Cart Area =================-->
+        </div>
+    </section>
+    <!--================End Cart Area =================-->
   </main>>
 
-<?php
- 
- include 'pie.php';
+  <?php
 
-?>
+  include 'pie.php';
+
+  ?>
 
   <!-- JS here -->
 
@@ -114,7 +114,7 @@
   <!-- One Page, Animated-HeadLin -->
   <script src="./assets/js/wow.min.js"></script>
   <script src="./assets/js/animated.headline.js"></script>
-  
+
   <!-- Scrollup, nice-select, sticky -->
   <script src="./assets/js/jquery.scrollUp.min.js"></script>
   <script src="./assets/js/jquery.nice-select.min.js"></script>
@@ -127,10 +127,11 @@
   <script src="./assets/js/jquery.validate.min.js"></script>
   <script src="./assets/js/mail-script.js"></script>
   <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-  
-  <!-- Jquery Plugins, main Jquery -->	
+
+  <!-- Jquery Plugins, main Jquery -->
   <script src="./assets/js/plugins.js"></script>
   <script src="./assets/js/main.js"></script>
 
 </body>
+
 </html>
