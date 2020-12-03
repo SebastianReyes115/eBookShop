@@ -88,11 +88,6 @@ session_start();
               </div>
             </div>
           </div>
-          <?php
-              $sentencia = $pdo->prepare("SELECT * FROM `libros`");
-              $sentencia->execute();
-              $listaProductos = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-          ?>
           
           <div class="row">
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
