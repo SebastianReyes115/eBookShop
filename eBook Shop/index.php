@@ -75,11 +75,11 @@ include 'carrito.php';
               </div>
               <br>
               <form action="" method="post" style="text-align: center;">
-                <input type="text" name="id" id="id" value="<?php echo $fila['id_libro'];?>">
-                <input type="text" name="nombre" id="nombre" value="<?php echo $fila['Titulo'];?>">
-                <input type="text" name="precio" id="precio" value="<?php echo $fila['Precio'];?>">
-                <input type="text" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
-                <input type="text" name="imagen" id="imagen" value="<?php echo $fila['ImagenLibro'];?>">
+                <input type="hidden" name="id" id="id" value="<?php echo $fila['id_libro'];?>">
+                <input type="hidden" name="nombre" id="nombre" value="<?php echo $fila['Titulo'];?>">
+                <input type="hidden" name="precio" id="precio" value="<?php echo $fila['Precio'];?>">
+                <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                <input type="hidden" name="imagen" id="imagen" value="<?php echo $fila['ImagenLibro'];?>">
                 <button class="btn" name="btnAccion" value="Agregar" type="submit">
                   Agregar al Carrito
                 </button>

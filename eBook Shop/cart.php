@@ -107,7 +107,10 @@ include 'carrito.php';
             <div class="checkout_btn_inner float-right">
               <a class="btn_1" href="index.php">Continuar Comprando</a>
               <a class="btn_1 checkout_btn_1" href="pagar.php">Pasar a pagar</a>
-
+              <?php if (empty($_SESSION['Name'])){
+                    echo "<div class='alert alert-success'>inicie sesión imbecil</div>";
+              }
+                ?>
             </div>
           </div>
         </div>
