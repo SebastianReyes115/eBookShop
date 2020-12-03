@@ -85,3 +85,7 @@
     transition:all .6s ease-in-out;
     color: #ff2020;
 }
+
+div h3 .estilosTitulo:hover{
+    text-decoration: none;
+}

@@ -1,10 +1,100 @@
 <?php
-session_start();
 include 'cabecera.php';
 include 'carrito.php';
 ?>
 
 <body>
+  <main>
+
+    <!-- Hero Area End-->
+    <!--================Single Product Area =================-->
+    <br>
+    <br>
+    <div class="row" style="width: 100%;">
+      <div class="col-md-4 imagenes">
+        <img class="tamañoImagen" src="Recursos/img/principito.jpg" />
+      </div>
+      <div class="col-md-4 tituloLibro">
+        <h2>EL PRINCIPITO</h2>
+        <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href=""> Antoine de Saint-Exupery</a>
+        <br>
+        <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href=""> Grijalbo</a>
+      </div>
+      <div class="col-md-4 ContenedorPrecio">
+        <span class="PriceTag"> Precio: $40 MXN</span>
+        <div class="add_to_cart">
+          <br />
+          <form action="" method="post" style="text-align: center;">
+            <input type="hidden" name="id" id="id" value="1">
+            <input type="hidden" name="nombre" id="nombre" value="El Principito">
+            <input type="hidden" name="precio" id="precio" value="40">
+            <input type="hidden" name="cantidad" id="cantidad" value="1">
+            <input type="hidden" name="imagen" id="imagen" value="https://images-na.ssl-images-amazon.com/images/I/51hyi0j5BJL._SX331_BO1,204,203,200_.jpg">
+            <button class="btn btn-primary" name="btnAccion" value="Agregar" type="submit">
+              Agregar al Carrito
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <hr class="separador">
+    <div>
+      <div>
+        <h2 class="headerproductos">Descripción</h2>
+        <p class="descripcion">El principito es una narración corta del escritor francés Antoine de Saint-Exupéry, que trata de la historia de un pequeño príncipe que parte de su asteroide a una travesía por el universo, en la cual descubre la extraña forma en que los adultos ven la vida y comprende el valor del amor y la amistad.
+
+          El principito es tenido como uno de los mejores libros de todos los tiempos y un clásico contemporáneo de la literatura universal.
+
+          Debido a su estilo sencillo y directo se lo ha considerado un libro para niños; no obstante, su profundo carácter reflexivo sobre la vida, la sociedad y el amor, lo convierten en una narración de interés para todos.
+
+          Fue publicado en abril de 1943, en Estados Unidos, puesto que, debido a la segunda guerra mundial, la obra no pudo ser imprimida en Francia.
+
+          El libro ha sido traducido a decenas de lenguas y adaptado a diversos formatos, como el teatro, el cine, la serie animada, el ballet y la ópera.</p>
+      </div>
+      <br>
+      <hr class="separador">
+
+      <div>
+        <h2 class="headerproductos">Detalles del producto</h2>
+        <div class="detallesproducto">
+          <table class="plain centered">
+            <tbody>
+              <tr>
+                <th>SKU:</th>
+                <td>Valor del SKu</td>
+              </tr>
+              <tr>
+                <th>Idioma:</th>
+                <td>
+                  <a href="#" tabindex="0"><span itemprop="publisher">Valor del Idioma.</span>
+                  </a></td>
+              </tr>
+              <tr>
+                <th>Año de publicación </th>
+                <td>10/06/2020</td>
+              </tr>
+              <tr>
+                <th>Edición:</th>
+                <td>
+                  <a href="#" tabindex="0">Practical Magic Series</a></td>
+              </tr>
+              <tr>
+                <th>Páginas:</th>
+                <td>416</td>
+              </tr>
+
+            </tbody>
+            <tbody>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+    <!-- subscribe part end -->
+  </main>
   <footer>
     <!-- Footer Start-->
     <div class="footer-area footer-padding">
@@ -133,7 +223,7 @@ include 'carrito.php';
   <script src="./assets/js/animated.headline.js"></script>
   <script src="./assets/js/jquery.magnific-popup.js"></script>
 
-  <!-- Scrollup, nice-select, sticky -->
+  <!-- Scroll up, nice-select, sticky -->
   <script src="./assets/js/jquery.scrollUp.min.js"></script>
   <script src="./assets/js/jquery.nice-select.min.js"></script>
   <script src="./assets/js/jquery.sticky.js"></script>
@@ -148,6 +238,13 @@ include 'carrito.php';
   <!-- Jquery Plugins, main Jquery -->
   <script src="./assets/js/plugins.js"></script>
   <script src="./assets/js/main.js"></script>
+
+  <!-- swiper js -->
+  <script src="./assets/js/swiper.min.js"></script>
+  <!-- swiper js -->
+  <script src="./assets/js/mixitup.min.js"></script>
+  <script src="./assets/js/jquery.counterup.min.js"></script>
+  <script src="./assets/js/waypoints.min.js"></script>
 
 </body>
 

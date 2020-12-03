@@ -1,10 +1,7 @@
-<!doctype html>
 <?php 
-session_start();
-include 'cabecera.php';
+  include 'cabecera.php';
   include 'carrito.php';
 ?>
-<html class="no-js" lang="zxx">
         <main>
         <!-- Hero Area Start-->
         <div class="slider-area ">
@@ -33,8 +30,12 @@ include 'cabecera.php';
         $id=$fila['id_usuario'];
        // echo '<img src="data:image/png;base64,' . base64_encode( $fila1['ImagenLibro'] ) . '" width="100"/>';
         ?>
+<<<<<<< HEAD
 
        <form method="post" class="lead" style="width:50%; align:center; margin-left:300px;">
+=======
+       <form method="post" class="lead" style="width:50%; align-items:center; margin-left:300px;">
+>>>>>>> 093872dc0687b2eca15f8d21e0d1da3cdab8a036
   <div class="form-group row">
     <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Nombre</label>
     <div class="col-sm-10">

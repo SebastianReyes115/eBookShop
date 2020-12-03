@@ -1,11 +1,9 @@
 <?php
-
-//session_start();
+@session_start(); 
 $mensaje = "";
 
 if (isset($_POST['btnAccion'])) {
     switch ($_POST['btnAccion']) {
-
         case 'Agregar':
             if (is_numeric($_POST['id'])) {
                 $id = $_POST['id'];
@@ -18,39 +16,39 @@ if (isset($_POST['btnAccion'])) {
             } 
             if (is_numeric($_POST['cantidad'])) {
                 $cantidad = $_POST['cantidad'];
-            } 
-            if(is_string($_POST['imagen'])){
-                $imagen= $_POST['imagen'];
+            }
+            if (is_string($_POST['imagen'])) {
+                $imagen = $_POST['imagen'];
             }
             if (!isset($_SESSION['Cart'])) {
-                $producto = array(
+                $fila = array(
                     'ID' => $id,
                     'Nombre' => $nombre,
                     'Precio' => $precio,
                     'Cantidad' => $cantidad,
                     'Imagen' => $imagen
                 );
-                $_SESSION['Cart'][0] = $producto;
-                $mensaje="Listo. Agregado.";
+                $_SESSION['Cart'][0] = $fila;
+                $mensaje= 'Artículo '.$nombre.''.$precio;
 
             } else {
 
                 $idProductos=array_column($_SESSION['Cart'],'ID');
 
                 if(in_array($id,$idProductos)){
-                    echo "<script> alert('El producto ya ha sido agregado al carrito.') </script>";
+                    echo "<script> alert('El producto ya ha sido agregado al Cart.') </script>";
                     $mensaje=" ";
                 }else{
 
                     $NumeroProductos = count($_SESSION['Cart']);
-                    $producto = array(
+                    $fila = array(
                         'ID' => $id,
                         'Nombre' => $nombre,
                         'Precio' => $precio,
                         'Cantidad' => $cantidad,
                         'Imagen' => $imagen
                     );
-                    $_SESSION['Cart'][$NumeroProductos] = $producto;
+                    $_SESSION['Cart'][$NumeroProductos] = $fila;
                     $mensaje="Listo. Agregado.";
     
                 }
@@ -62,8 +60,8 @@ if (isset($_POST['btnAccion'])) {
                 if (is_numeric($_POST['id'])) {
                     $id = $_POST['id'];
                     
-                    foreach($_SESSION['Cart'] as $i =>$producto){
-                        if($producto['ID']==$id){
+                    foreach($_SESSION['Cart'] as $i =>$fila){
+                        if($fila['ID']==$id){
                             unset($_SESSION['Cart'][$i]);
                             echo "<script> Elemento eliminado. </script>";
                             
@@ -73,3 +71,4 @@ if (isset($_POST['btnAccion'])) {
             break;
     }
 }
+?>
