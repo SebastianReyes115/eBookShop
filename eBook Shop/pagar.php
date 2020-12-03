@@ -4,19 +4,15 @@ include 'cabecera.php';
 ?>
 
 <?php
-    if($_POST){
-        $total=0;
+        $total=$_POST['total'];
         $sid=session_id();
-        $correo=$_POST['email'];
-        foreach($_SESSION['Cart'] as $indice=>$fila){
-
-            $total=$total+$fila['Precio']*$fila['Cantidad'];
-
-        }
-    }
+        
+        $con=mysqli_connect("localhost","root","","ebookshop");
+        $obtener="SELECT * FROM libros order by rand()";
+        $ejecuta=mysqli_query($con,$obtener);
+        while($fila=$ejecuta->fetch_assoc())
+        {
     
-
-
 ?>
 <br>
 <head>
@@ -29,7 +25,7 @@ include 'cabecera.php';
 <div class="jumbotron text-center">
   <h1 class="display-4">! Ya casi !</h1>
   <p class="lead">La transacción se finalizará al pagar la cantidad de: </p>
-  <h4>$<?php echo number_format($total,2);?></h4>
+  <h4>$<?php echo number_format($total,2);?> MXN</h4>
   <hr class="my-4">
   <p>Al finalizar la compra mediante Paypal, los productos ya estarán disponibles para su descarga.</p>
     <!-- Set up a container element for the button -->
@@ -40,6 +36,9 @@ include 'cabecera.php';
 
 
 <body>
+
+
+
 
     <script>
         // Render the PayPal button into #paypal-button-container
@@ -59,6 +58,7 @@ include 'cabecera.php';
             // Finalize the transaction
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
+                    console.log(details);
                     // Show a success message to the buyer
                     alert('Compra completada! ' + details.payer.name.given_name + '!');
                     window.location="verificador.php?id="+details.id;

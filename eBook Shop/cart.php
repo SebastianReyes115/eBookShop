@@ -1,6 +1,7 @@
 <?php
 include 'cabecera.php';
 include 'carrito.php';
+
 ?>
 
 <body>
@@ -84,7 +85,7 @@ include 'carrito.php';
                           </button>
                         </td>
                       </form>
-                      <?php } ?>
+                    <?php } ?>
 
 
                     </tr>
@@ -96,6 +97,7 @@ include 'carrito.php';
                       </td>
                       <td>
                         <h5>$<?php echo number_format($total, 2); ?></h5>
+
                       </td>
                       <td></td>
                     </tr>
@@ -105,12 +107,14 @@ include 'carrito.php';
               <div class="alert alert-success">No hay elementos en el carrito</div>
             <?php } ?>
             <div class="checkout_btn_inner float-right">
-              <a class="btn_1" href="index.php">Continuar Comprando</a>
-              <a class="btn_1 checkout_btn_1" href="pagar.php">Pasar a pagar</a>
-              <?php if (empty($_SESSION['Name'])){
-                    echo "<div class='alert alert-success'>inicie sesión imbecil</div>";
-              }
-                ?>
+            <button href="index.php" class="btn btn-danger" name='btnAccion' >Continuar comprando
+                </button>
+              <form action="pagar.php" method="post">
+                <input type="hidden" name="total" value=<?php echo $total ?>>
+                <button colspan="3" type="submit" class="btn btn-danger" name='btnAccion' >Proceder a pagar
+                </button>
+              </form>
+
             </div>
           </div>
         </div>
