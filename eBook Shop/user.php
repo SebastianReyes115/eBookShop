@@ -1,9 +1,7 @@
-<!doctype html>
 <?php 
   include 'cabecera.php';
   include 'carrito.php';
 ?>
-<html class="no-js" lang="zxx">
         <main>
         <!-- Hero Area Start-->
         <div class="slider-area ">

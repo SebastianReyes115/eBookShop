@@ -19,6 +19,7 @@ include 'carrito.php';
                       </div>
                   </div>
               </div>
+            </div>
           </div>
       </div>-->
     <!--================Cart Area ================= clase del padding section_padding-->
@@ -28,7 +29,6 @@ include 'carrito.php';
           <div class="table-responsive">
             <?php $total = 0; ?>
             <?php if (!empty($_SESSION['Cart'])) { ?>
-
               <table class="table">
                 <thead>
                   <tr>

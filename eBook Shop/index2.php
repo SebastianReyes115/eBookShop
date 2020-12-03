@@ -4,8 +4,9 @@ include 'carrito.php';
 ?>
 
 <body>
+
   <main>
-    <!----------------------? Carousel principal ------------------------>
+    <!--? Carousel principal -->
     <div style="padding: 80px" class="text-center">
       <div class="card-body">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -55,39 +56,45 @@ include 'carrito.php';
             </div>
           </div>
         </div>
-        <div class="row">
-        <?php 
-            $con=mysqli_connect("localhost","root","","ebookshop");
-            $obtener="SELECT * FROM libros order by rand()";
-            $ejecuta=mysqli_query($con,$obtener);
-            while($fila=$ejecuta->fetch_assoc())
-            {
+        <?php
+        $con = mysqli_connect("localhost", "root", "", "ebookshop");
+        $obtener = "SELECT * FROM libros";
+        $ejecuta = mysqli_query($con, $obtener);
         ?>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-            <div class="single-new-pro mb-30 text-center">
-              <div class="product-img">
-                <img src="<?php echo $fila['ImagenLibro'];?>" alt="" />
+
+        <div class="row">
+          <?php
+          while ($fila = $ejecuta->fetch_assoc()) {
+
+
+
+          ?>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="single-new-pro mb-30 text-center">
+                <div class="product-img">
+                  <img src="Recursos/img/teoria.jpg" alt="" />
+                </div>
+                <div class="product-caption">
+                  <h3><a href="<?php echo $fila['href']; ?>"><?php echo $fila['Titulo']; ?></a></h3>
+                  <span>$<?php echo number_format($fila['Precio'], 2); ?></span>
+                </div>
               </div>
-              <div class="product-caption">
-                <h3><a class="estilosTitulo" href="<?php echo $fila['href'];?>"><?php echo $fila['Titulo'];?></a></h3>
-                <span>$<?php echo number_format($fila['Precio'],2);?> MXN</span>
-              </div>
-              <br>
               <form action="" method="post" style="text-align: center;">
-                <input type="text" name="id" id="id" value="<?php echo $fila['id_libro'];?>">
-                <input type="text" name="nombre" id="nombre" value="<?php echo $fila['Titulo'];?>">
-                <input type="text" name="precio" id="precio" value="<?php echo $fila['Precio'];?>">
-                <input type="text" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
-                <input type="text" name="imagen" id="imagen" value="<?php echo $fila['ImagenLibro'];?>">
-                <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                <input type="hidden" name="id" id="id" value="<?php echo $fila['ID']; ?>">
+                <input type="hidden" name="nombre" id="nombre" value="<?php echo $fila['Titulo']; ?>">
+                <input type="hidden" name="precio" id="precio" value="<?php echo $fila['Precio']; ?>">
+                <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                <input type="hidden" name="imagen" id="imagen" value="<?php echo $fila['Imagen'];  ?>">
+                <button class="btn btn-primary" name="btnAccion" value="Agregar" type="submit">
                   Agregar al Carrito
                 </button>
-                </form>
+              </form>
+
             </div>
-          </div>
-            <?php }?>
-         
+          <?php } ?>
         </div>
+      </div>
     </section>
     <!--  Nuevas ofertas End -->
 
@@ -102,43 +109,115 @@ include 'carrito.php';
             </div>
           </div>
         </div>
-        
+
         <div class="row">
-        <?php 
-            $con=mysqli_connect("localhost","root","","ebookshop");
-            $obtener="SELECT * FROM libros";
-            $ejecuta=mysqli_query($con,$obtener);
-            while($fila=$ejecuta->fetch_assoc())
-            {
-        ?>
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-            <div class="single-new-pro mb-30 text-center">
-              <div class="product-img">
-                <img src="<?php echo $fila['ImagenLibro'];?>" alt="" />
+            <div class="single-popular-items mb-50 text-center">
+              <div class="popular-img">
+                <img src="Recursos/img/principito.jpg" alt="" />
+                <div class="img-cap">
+                  <span>Agregar al carrito</span>
+                </div>
+                <div class="favorit-items">
+                  <span class="flaticon-heart"></span>
+                </div>
               </div>
-              <div class="product-caption">
-                <h3 class='hoverTexto'><a href="<?php echo $fila['href'];?>"><?php echo $fila['Titulo'];?></a></h3>
-                <span>$<?php echo number_format($fila['Precio'],2);?> MXN</span>
+              <div class="popular-caption">
+                <h3><a href="pricipito.php">El Principito</a></h3>
+                <span>$ 40 MXN</span>
               </div>
-              <br>
-              <form action="" method="post" style="text-align: center;">
-                <input type="hidden" name="id" id="id" value="<?php echo $fila['id_libro'];?>">
-                <input type="hidden" name="nombre" id="nombre" value="<?php echo $fila['Titulo'];?>">
-                <input type="hidden" name="precio" id="precio" value="<?php echo $fila['Precio'];?>">
-                <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
-                <input type="hidden" name="imagen" id="imagen" value="<?php echo $fila['ImagenLibro'];?>">
-                <button class="btn" name="btnAccion" value="Agregar" type="submit">
-                  Agregar al Carrito
-                </button>
             </div>
           </div>
-            <?php }?>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+            <div class="single-popular-items mb-50 text-center">
+              <div class="popular-img">
+                <img src="Recursos/img/teoria.jpg" alt="" />
+                <div class="img-cap">
+                  <span>Agregar al carrito</span>
+                </div>
+                <div class="favorit-items">
+                  <span class="flaticon-heart"></span>
+                </div>
+              </div>
+              <div class="popular-caption">
+                <h3><a href="teoriaTodo.php">La teoría del Todo</a></h3>
+                <span>$ 25 MXN</span>
+              </div>
+            </div>
           </div>
-          
-          
-          
-          
-          
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+            <div class="single-popular-items mb-50 text-center">
+              <div class="popular-img">
+                <img src="Recursos/img/salvarfuego.jpg" alt="" />
+                <div class="img-cap">
+                  <span>Agregar al carrito</span>
+                </div>
+                <div class="favorit-items">
+                  <span class="flaticon-heart"></span>
+                </div>
+              </div>
+              <div class="popular-caption">
+                <h3><a href="salvarFuego.php">Salvar el fuego</a></h3>
+                <span>$ 60 MXN</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+            <div class="single-popular-items mb-50 text-center">
+              <div class="popular-img">
+                <img src="Recursos/img/proposito.jpg" alt="" />
+                <div class="img-cap">
+                  <span>Agregar al carrito</span>
+                </div>
+                <div class="favorit-items">
+                  <span class="flaticon-heart"></span>
+                </div>
+              </div>
+              <div class="popular-caption">
+                <h3>
+                  <a href="propositoDeNata.php">A propósito de nada</a>
+                </h3>
+                <span>$ 30 MXN</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+            <div class="single-popular-items mb-50 text-center">
+              <div class="popular-img">
+                <img src="Recursos/img/sutilarte.jpg" alt="" />
+                <div class="img-cap">
+                  <span>Agregar al carrito</span>
+                </div>
+                <div class="favorit-items">
+                  <span class="flaticon-heart"></span>
+                </div>
+              </div>
+              <div class="popular-caption">
+                <h3>
+                  <a href="suiteArte.php">El sutil arte de que te impote un carajo</a>
+                </h3>
+                <span>$ 35 MXN</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+            <div class="single-popular-items mb-50 text-center">
+              <div class="popular-img">
+                <img src="Recursos/img/percyjackson.jpg" alt="" />
+                <div class="img-cap">
+                  <span>Agregar al carrito</span>
+                </div>
+                <div class="favorit-items">
+                  <span class="flaticon-heart"></span>
+                </div>
+              </div>
+              <div class="popular-caption">
+                <h3><a href="ladronRayo.php">EL LADRON DEL RAYO</a></h3>
+                <span>$ 60 MXN</span>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Button -->
         <div class="row justify-content-center">
           <div class="room-btn pt-70">
@@ -152,7 +231,7 @@ include 'carrito.php';
     <div class="watch-area section-padding30">
       <div class="container">
         <div class="row align-items-center justify-content-between padding-130">
-          <div class="col-lg-4 col-md-6" style="margin-left:100px ;">
+          <div class="col-lg-5 col-md-6">
             <div class="watch-details mb-40">
               <h2>Nuestra Recomendación</h2>
               <p style="text-align: justify">
@@ -166,7 +245,7 @@ include 'carrito.php';
               <a href="ladronRayo.php" class="btn">Comprar</a>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-10" style="margin-right: 150px;">
+          <div class="col-lg-6 col-md-6 col-sm-10">
             <div class="choice-watch-img mb-40">
               <img src="Recursos/img/percyjackson.jpg" alt="" />
             </div>
@@ -174,6 +253,8 @@ include 'carrito.php';
         </div>
       </div>
     </div>
+
+
     <!-- Watch Choice  End-->
     <!--? Shop Method Start-->
     <div class="shop-method-area">
@@ -214,104 +295,9 @@ include 'carrito.php';
     <!-- Shop Method End-->
   </main>
 
-  <footer>
-    <!-- Footer Start-->
-    <div class="footer-area footer-padding">
-      <div class="container">
-        <div class="row d-flex justify-content-between">
-          <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
-            <div class="single-footer-caption mb-50">
-              <div class="single-footer-caption mb-30">
-                <!-- logo -->
-                <div class="footer-logo">
-                  <a href="index.html">
-                    <h2 class="logoEstilos">eBook Shop</h2>
-                  </a>
-                </div>
-                <div class="footer-tittle">
-                  <div class="footer-pera">
-                    <p class="logoEstilos">
-                      El libro que siempre has buscado, será tuyo
-                      en tan solo un click!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
-            <div class="single-footer-caption mb-50">
-              <div class="footer-tittle">
-                <h4>Atajos</h4>
-                <ul>
-                  <li><a href="#">Acerca de</a></li>
-                  <li><a href="#"> Ofertas </a></li>
-                  <li><a href="#"> Login</a></li>
-                  <li><a href="#"> Contacto</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
-            <div class="single-footer-caption mb-50">
-              <div class="footer-tittle">
-                <h4>Categorías</h4>
-                <ul>
-                  <li><a href="#">Los más vendidos</a></li>
-                  <li><a href="#">Recomendaciones</a></li>
-                  <li><a href="#">Nuevas ofertas</a></li>
-                  <li><a href="#"> Nuestra Recomendación</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
-            <div class="single-footer-caption mb-50">
-              <div class="footer-tittle">
-                <h4>Soporte</h4>
-                <ul>
-                  <li><a href="#">Preguntas frecuentes</a></li>
-                  <li><a href="#">Términos y Condiciones</a></li>
-                  <li><a href="#">Aviso de privacidad</a></li>
-                  <li><a href="#">Reportar un problema </a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Footer bottom -->
-        <div class="row align-items-center">
-          <div class="col-xl-7 col-lg-8 col-md-7">
-            <div class="footer-copy-right">
-              <p>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                Todos los derechos reservados | This template is made with
-                <i class="fa fa-heart" aria-hidden="true"></i> by
-                <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              </p>
-            </div>
-          </div>
-          <div class="col-xl-5 col-lg-4 col-md-5">
-            <div class="footer-copy-right f-right">
-              <!-- social -->
-              <div class="footer-social">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-behance"></i></a>
-                <a href="#"><i class="fas fa-globe"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Footer End-->
-  </footer>
+  <?php
+  include 'pie.php';
+  ?>
   <!--? Search model Begin -->
   <div class="search-model-box">
     <div class="h-100 d-flex align-items-center justify-content-center">
@@ -324,7 +310,7 @@ include 'carrito.php';
   <!-- Search model end -->
 
   <!-- JS here -->
-
+  <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
   <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
   <!-- Jquery, Popper, Bootstrap -->
   <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -357,10 +343,6 @@ include 'carrito.php';
   <!-- Jquery Plugins, main Jquery -->
   <script src="./assets/js/plugins.js"></script>
   <script src="./assets/js/main.js"></script>
-
-  <!-- Buscador -->
-  <script src="js/buscador.js"></script>
-
 </body>
 
 </html>
