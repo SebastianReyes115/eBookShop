@@ -183,7 +183,7 @@ include 'carrito.php';
                                 ?> 
                             <li><a href="user.php"><span><?php echo $_SESSION['Name']; ?></span></a></li>
                             <form method="post">
-                            <input type="submit" value="Salir" name="salir" />
+                            <input type="submit" value="Salir" name="salir" class="btn-danger btn-sm"/>
                             </form> 
                             <?php 
                             }
