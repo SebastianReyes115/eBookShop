@@ -1,0 +1,39 @@
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('1', 'Argentina');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('2', 'Boliviana');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('3', 'Brasileña');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('4', 'Británica');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('5', 'Canadiense');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('6', 'Chilena');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('7', 'China');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('8', 'Colombiana');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('9', 'Costarricense');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('10', 'Cubana');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('11', 'Dominica');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('12', 'Dominicana');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('13', 'Egipcia');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('14', 'Española');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('15', 'Estadounidense');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('16', 'Finlandesa');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('17', 'Francesa');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('18', 'Griega');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('19', 'Guatemalteca');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('20', 'Hondureña');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('21', 'Húngara');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('22', 'Irlandesa');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('23', 'Islandesa');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('24', 'Italiana');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('25', 'Jamaiquina');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('26', 'Mexicana');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('27', 'Nicaragüense');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('28', 'Norcoreana');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('29', 'Panameña');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('30', 'Paraguaya');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('31', 'Peruana');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('32', 'Puertorriqueña');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('33', 'Salvadoreña');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('34', 'Sudafricana');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('35', 'Sudcoreana');
+INSERT INTO `nacionalidades` (`Id`, `Nacionalidad`) VALUES ('36', 'Venezolana');
+
+
+alter table autor add CONSTRAINT fk_nac FOREIGN Key (id_nacionalidad) REFERENCES nacionalidades(id_nacionalidad)

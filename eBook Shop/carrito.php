@@ -1,5 +1,5 @@
 <?php
-@session_start(); 
+@session_start();
 $mensaje = "";
 
 
@@ -8,13 +8,13 @@ if (isset($_POST['btnAccion'])) {
         case 'Agregar':
             if (is_numeric($_POST['id'])) {
                 $id = $_POST['id'];
-            } 
+            }
             if (is_string($_POST['nombre'])) {
                 $nombre = $_POST['nombre'];
             }
             if (is_numeric($_POST['precio'])) {
                 $precio = $_POST['precio'];
-            } 
+            }
             if (is_numeric($_POST['cantidad'])) {
                 $cantidad = $_POST['cantidad'];
             }
@@ -51,24 +51,24 @@ if (isset($_POST['btnAccion'])) {
                     );
                     $_SESSION['Cart'][$NumeroProductos] = $fila;
                     $mensaje="Listo. Agregado.";
-    
+
                 }
 
             }
             break;
 
-            case 'Eliminar':
-                if (is_numeric($_POST['id'])) {
-                    $id = $_POST['id'];
-                    
-                    foreach($_SESSION['Cart'] as $i =>$fila){
-                        if($fila['ID']==$id){
-                            unset($_SESSION['Cart'][$i]);
-                            echo "<script> Elemento eliminado. </script>";
-                            
-                        }
+        case 'Eliminar':
+            if (is_numeric($_POST['id'])) {
+                $id = $_POST['id'];
+
+                foreach($_SESSION['Cart'] as $i =>$fila){
+                    if($fila['ID']==$id){
+                        unset($_SESSION['Cart'][$i]);
+                        echo "<script> Elemento eliminado. </script>";
+
                     }
-                } 
+                }
+            }
             break;
     }
 }
