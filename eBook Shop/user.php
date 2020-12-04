@@ -96,7 +96,7 @@ include 'carrito.php';
       </div>";
       }
     }
-    $sqlventas = "SELECT *FROM venta WHERE id_usuario='$id'";
+    $sqlventas = "SELECT *FROM detallesventa WHERE id_usuario='$id'";
     $ejecutaventas = mysqli_query($con, $sqlventas);
     foreach ($ejecutaventas as $venta) {
       $idlibro = $venta['id_libro'];
@@ -105,7 +105,7 @@ include 'carrito.php';
       $filalibro = mysqli_fetch_array($ejecutalibro);
     ?>
       <div class="card" value="<?php echo $venta['id_venta']; ?>" style="width: 18rem; float: left;">
-        <?php echo '<img src="data:image/png;base64,' . base64_encode($filalibro['ImagenLibro']) . '" width="280px"/>'; ?>
+        <img src="<?php echo ($filalibro['ImagenLibro']); ?>" alt="">
         <div class="card-body">
           <p class="card-text">Nombre del libro:</p>
           <?php echo $filalibro['Titulo']; ?>

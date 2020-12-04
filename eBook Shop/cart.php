@@ -24,7 +24,6 @@ include 'carrito.php';
       </div>-->
     <!--================Cart Area ================= clase del padding section_padding-->
     <section class="cart_area ">
-<<<<<<< HEAD
       <div class="container">
         <div class="cart_inner">
           <div class="table-responsive">
@@ -53,7 +52,7 @@ include 'carrito.php';
                             <img src="<?php echo $fila['Imagen'] ?>" alt="" />
                           </div>
                           <div class="media-body">
-                            <p><?php echo $fila['Nombre'] ?></p>
+                            <a href="<?php echo $fila['href'] ?>" style="background-color: white; color:black"><?php echo $fila['Nombre'] ?></a>
                           </div>
                         </div>
                       </td>
@@ -104,108 +103,25 @@ include 'carrito.php';
                     </tr>
                   </tbody>
               </table>
-            <?php } else { ?>
-              <div class="alert alert-success">No hay elementos en el carrito</div>
-            <?php } ?>
-            <div class="checkout_btn_inner float-right">
-            <button href="index.php" class="btn btn-danger" name='btnAccion' >Continuar comprando
+              <div class="checkout_btn_inner float-left">
+              <button href="index.php" class="btn btn-danger" name='btnAccion' >Continuar comprando
                 </button>
-              <form action="pagar.php" method="post">
+                </div>
+                <div class="checkout_btn_inner float-right">
+                <form action="pagar.php" method="post">
                 <input type="hidden" name="total" value=<?php echo $total ?>>
                 <button colspan="3" type="submit" class="btn btn-danger" name='btnAccion' >Proceder a pagar
                 </button>
               </form>
-
-=======
-        <div class="container">
-            <div class="cart_inner">
-                <div class="table-responsive">
-                    <?php $total = 0; ?>
-                    <?php if (!empty($_SESSION['Cart'])) { ?>
-
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th scope="colspan=3" style="color: black;  font-size: 24px;">Producto</th>
-                                <th scope="col">Precio</th>
-                                <th scope="col">Cantidad</th>
-                                <th scope="col">Total</th>
-                                <th scope="col"> -- </th>
-                            </tr>
-                            </thead>
-                            <?php foreach ($_SESSION['Cart'] as $i => $fila) {
-                            ?>
-
-                            <tbody>
-                            <tr>
-                                <!-- PRIMER ELEMENTO DE LA TABLA-->
-                                <td>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="<?php echo $fila['Imagen'] ?>" alt="" />
-                                        </div>
-                                        <div class="media-body">
-                                            <p><?php echo $fila['Nombre'] ?></p>
-                                        </div>
-                                    </div>
-                                </td>
-
-                                <!-- SEGUNDO ELEMENTO DE LA TABLA-->
-                                <td>
-                                    <h5>$<?php echo number_format($fila['Precio'], 2); ?></h5>
-                                </td>
-
-
-                                <!-- TERCER ELEMENTO DE LA TABLA-->
-                                <td>
-                                    <h5 style="text-align: center;"><?php echo $fila['Cantidad'] ?></h5>
-                                </td>
-
-
-                                <!-- CUARTO ELEMENTO DE LA TABLA-->
-                                <td>
-                                    <?php $total = $total + $fila['Precio'] * $fila['Cantidad']; ?>
-                                    <h5> $<?php echo number_format($fila['Precio'] * $fila['Cantidad'], 2); ?> </h5>
-
-                                </td>
-
-
-                                <!-- QUINTO ELEMENTO DE LA TABLA-->
-                                <form action="" method="post">
-                                    <td>
-                                        <input type="hidden" name="id" value=<?php echo $fila['ID'] ?>>
-                                        <button type="submit" class="btn btn-danger" name='btnAccion' value='Eliminar'>Eliminar
-                                        </button>
-                                    </td>
-                                </form>
-                                <?php } ?>
-
-
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <h5>Total</h5>
-                                </td>
-                                <td>
-                                    <h5>$<?php echo number_format($total, 2); ?></h5>
-                                </td>
-                                <td></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    <?php } else { ?>
-                        <div class="alert alert-success">No hay elementos en el carrito</div>
-                    <?php } ?>
-                    <div class="checkout_btn_inner float-right">
-                        <a class="btn_1" href="index.php">Continuar Comprando</a>
-                        <a class="btn_1 checkout_btn_1" href="pagar.php">Pasar a pagar</a>
-
-                    </div>
                 </div>
->>>>>>> 9d7851f04906a5c2edd3625e8916ea0850385595
-            </div>
+            <?php } else { ?>
+              <div class="alert alert-success">No hay elementos en el carrito</div>
+              
+            <?php } ?>
+           
+       
+
+            
     </section>
     <!--================End Cart Area =================-->
 </main>>

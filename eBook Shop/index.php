@@ -80,6 +80,7 @@ include 'carrito.php';
                 <input type="hidden" name="precio" id="precio" value="<?php echo $fila['Precio'];?>">
                 <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
                 <input type="hidden" name="imagen" id="imagen" value="<?php echo $fila['ImagenLibro'];?>">
+                <input type="hidden" name="href" id="href" value="<?php echo $fila['href'];?>">
                 <button class="btn" name="btnAccion" value="Agregar" type="submit">
                   Agregar al Carrito
                 </button>

@@ -31,7 +31,6 @@ include 'carrito.php';
 
 
 
-
     <link rel="stylesheet" href="js/estilos.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>

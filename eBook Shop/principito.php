@@ -93,8 +93,13 @@ include 'carrito.php';
     </div>
 
     </div>
+   
+
+  </div>
     <!-- subscribe part end -->
   </main>
+
+
   <footer>
     <!-- Footer Start-->
     <div class="footer-area footer-padding">

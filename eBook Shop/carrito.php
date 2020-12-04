@@ -21,16 +21,20 @@ if (isset($_POST['btnAccion'])) {
             if (is_string($_POST['imagen'])) {
                 $imagen = $_POST['imagen'];
             }
+            if (is_string($_POST['href'])) {
+                $href = $_POST['href'];
+            }
             if (!isset($_SESSION['Cart'])) {
                 $fila = array(
                     'ID' => $id,
                     'Nombre' => $nombre,
                     'Precio' => $precio,
                     'Cantidad' => $cantidad,
-                    'Imagen' => $imagen
+                    'Imagen' => $imagen,
+                    'href'=> $href
                 );
                 $_SESSION['Cart'][0] = $fila;
-                $mensaje= 'Artículo '.$nombre.''.$precio;
+                $mensaje= 'Artículo agregado';
 
             } else {
 
@@ -47,10 +51,11 @@ if (isset($_POST['btnAccion'])) {
                         'Nombre' => $nombre,
                         'Precio' => $precio,
                         'Cantidad' => $cantidad,
-                        'Imagen' => $imagen
+                        'Imagen' => $imagen,
+                        'href'=> $href
                     );
                     $_SESSION['Cart'][$NumeroProductos] = $fila;
-                    $mensaje="Listo. Agregado.";
+                    $mensaje="Articulo(s) agregado(s)";
 
                 }
 
