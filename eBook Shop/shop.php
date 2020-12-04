@@ -79,7 +79,7 @@ include 'carrito.php';
                                                     <button class="btn" name="btnAccion" value="Agregar" type="submit">
                                                         Agregar al Carrito
                                                     </button>
-                                                    </form>
+                                                </form>
                                             </span>
                                         </div>
                                     </div>
@@ -150,10 +150,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/Amigadisc.png" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 13; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Un plan sin pretextos para abrazar y alcanzar tus metas'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 70; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/Amigadisc.png" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -167,10 +175,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/harry.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 10; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Harry Potter y la Piedra Filosofal'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 45; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/harry.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -184,10 +200,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/principito.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 9; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'El Principito'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 40; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/principito.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -201,10 +225,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/percyjackson.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 8; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Percy Jackson Y El Ladron del Rayo'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 60; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/percyjackson.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -308,10 +340,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/Elseñorobsc.png" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 15; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'El Señor de la Oscuridad'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 65; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/Elseñorobsc.png" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -325,10 +365,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/salvarfuego.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Aladir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 7; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Salvar Fuego'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 60; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/salvarfuego.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -342,10 +390,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/Demonthief.png" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 12; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Demon thief'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 50; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/Demonthief.png" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -359,10 +415,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/traidor.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 6; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'El Traidor'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 30; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/traidor.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -466,10 +530,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/Monemtop.png" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 14; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo '¿Cuándo?: La ciencia de encontrar el momento preciso'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 60; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/Monemtop.png" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -483,10 +555,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/Pensamientocreativo.png" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 11; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'El poder del pensamiento lateral para la creación de nuevas ideas'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 70; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/Pensamientocreativo.png" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -500,10 +580,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/sutilarte.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 5; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'El Sutil Arte de que te Importe un Caraj*'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 35; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/sutilarte.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -517,10 +605,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/proposito.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 4; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'A propósito de nada'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 30; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/proposito.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -534,10 +630,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/increbrantable.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 3; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Inquebrantables'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 45; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/increbrantable.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -551,10 +655,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/felipe.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 2; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Felipe, El Oscuro'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 10; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/felipe.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -568,10 +680,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/teoria.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'La Teoría del Todo'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 25; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/teoria.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -845,10 +965,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/Elseñorobsc.png" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 15; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'El Señor de la Oscuridad'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 65; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/Elseñorobsc.png" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -862,10 +990,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/Monemtop.png" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 14; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo '¿Cuándo?: La ciencia de encontrar el momento preciso'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 60; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/Monemtop.png" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -879,10 +1015,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/Amigadisc.png" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 13; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Un plan sin pretextos para abrazar y alcanzar tus metas'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 70; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/Amigadisc.png" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -896,10 +1040,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/Demonthief.png" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 12; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Demon thief'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 50; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/Demonthief.png" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -913,14 +1065,22 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/Pensamientocreativo.png" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 11; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'El poder del pensamiento lateral para la creación de nuevas ideas'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 70; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/Pensamientocreativo.png" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
-                                        <h3><a href="PensamientoCreativo.php">El poder del pensamiento lateral para la creación de nuevas ideas (e)</a></h3>
+                                        <h3><a href="PensamientoCreativo.php">El poder del pensamiento lateral para la creación de nuevas ideas</a></h3>
                                         <span>$ 70 MXN</span>
                                     </div>
                                 </div>
@@ -930,10 +1090,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/harry.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 10; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Harry Potter y la Piedra Filosofal'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 45; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/harry.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -947,10 +1115,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/principito.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 9; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'El Principito'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 40; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/principito.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -964,10 +1140,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/percyjackson.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 8; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Percy Jackson Y El Ladron del Rayo'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 60; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/percyjackson.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -981,10 +1165,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/salvarfuego.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Aladir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 7; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Salvar Fuego'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 60; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/salvarfuego.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -998,10 +1190,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/traidor.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 6; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'El Traidor'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 30; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/traidor.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -1015,10 +1215,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/sutilarte.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 5; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'El Sutil Arte de que te Importe un Caraj*'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 35; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/sutilarte.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -1032,10 +1240,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/proposito.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 4; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'A propósito de nada'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 30; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/proposito.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -1049,10 +1265,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/increbrantable.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 3; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Inquebrantables'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 45; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/increbrantable.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -1066,10 +1290,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/felipe.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 2; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Felipe, El Oscuro'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 10; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/felipe.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -1083,10 +1315,18 @@ include 'carrito.php';
                                     <div class="popular-img">
                                         <img src="Recursos/img/teoria.jpg" alt="">
                                         <div class="img-cap">
-                                            <span>Añadir al carrito</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
+                                            <span>
+                                                <form action="" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="id" id="id" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="nombre" id="nombre" value="<?php echo 'La Teoría del Todo'; ?>">
+                                                    <input type="hidden" name="precio" id="precio" value="<?php echo 25; ?>">
+                                                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                                    <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/teoria.jpg" ?>">
+                                                    <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                                        Agregar al Carrito
+                                                    </button>
+                                                </form>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
