@@ -269,7 +269,6 @@ ADD FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario);
 
 
 ALTER TABLE `autor` CHANGE `Edad` `Edad` DATETIME(6) NULL DEFAULT NULL;
-ALTER TABLE `autor` CHANGE `a` `FNacimiento` DATETIME(6) NULL DEFAULT NULL;
 ALTER TABLE `autor` CHANGE `FNacimiento` `FNacimiento` DATE NULL DEFAULT NULL;
 alter table autor add id_nacionalidad int not null
 
