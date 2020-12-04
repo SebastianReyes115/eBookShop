@@ -30,10 +30,7 @@ include 'carrito.php';
   $id = $fila['id_usuario'];
   // echo '<img src="data:image/png;base64,' . base64_encode( $fila1['ImagenLibro'] ) . '" width="100"/>';
   ?>
-  <<<<<<< HEAD <form method="post" class="lead" style="width:50%; align:center; margin-left:300px;">
-    =======
     <form method="post" class="lead" style="width:50%; align-items:center; margin-left:300px;">
-      >>>>>>> 093872dc0687b2eca15f8d21e0d1da3cdab8a036
       <div class="form-group row">
         <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Nombre</label>
         <div class="col-sm-10">
@@ -73,6 +70,7 @@ include 'carrito.php';
       <input type="submit" value="Modificar" name="change" style="margin-left:305px;" class="btn btn-primary" />
     </form>
     <h2>Productos Comprados</h2>
+    <div class="container">
     <?php
     if (isset($_POST['change'])) {
       $name = $_POST['name'];
@@ -112,15 +110,31 @@ include 'carrito.php';
           <p class="card-text">Nombre del libro:</p>
           <?php echo $filalibro['Titulo']; ?>
         </div>
-        <input type="submit" value="borrar" name="borrar" class="btn btn-danger" />
+        <form method="post" id="form_eliminar_<?php  echo $venta['id_venta']?>">
+        <input type="hidden" name="eliminar" value="<?php echo $venta['id_venta'];?>" />
+    <input type="submit" value="Eliminar" class="btn btn-danger btn-m"/>
+        </form>
       </div>
     <?php
     }
     ?>
-
+    </div>
+<?php 
+if(isset($_POST['eliminar'])){ //Eliminar Autor
+  $idventa=$_POST['eliminar'];
+  $con=mysqli_connect("localhost","root","","ebookshop");
+  $sql2="DELETE FROM venta WHERE id_venta='$idventa'";
+  if(mysqli_query($con,$sql2)){
+  echo "<div class='alert alert-warning' role='alert'>
+      Eliminado
+    </div>";
+  $con->close();
+  echo "<meta http-equiv=refresh content=0;URL=user.php>";
+  }
+}
+?>
     <!-- Footer bottom -->
-    <div class="row align-items-center" style="position: -webkit-sticky;
-  position: sticky;">
+    <div class="row align-items-center" style="clear:left;">
       <div class="col-xl-7 col-lg-8 col-md-7">
         <div class="footer-copy-right">
           <p>
