@@ -1130,7 +1130,7 @@ include 'carrito.php';
                                         </div>
                                     </div>
                                     <div class="popular-caption">
-                                        <h3><a href="pricipito.php">El Principito</a></h3>
+                                        <h3><a href="principito.php">El Principito</a></h3>
                                         <span>$ 40 MXN</span>
                                     </div>
                                 </div>
