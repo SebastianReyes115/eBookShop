@@ -75,7 +75,6 @@ $ejecuta = mysqli_query($con, $insertVenta);
 
     $con = mysqli_connect("localhost", "root", "", "ebookshop");
     foreach ($_SESSION['Cart'] as $indice => $fila) {
-        print_r("Hay elementos en el carrito");
         $id_libro=$fila['ID'];
         $precio=$fila['Precio'];
         $insertDetallesVenta = "INSERT INTO `detallesventa` (`id`, `id_venta`, `id_usuario`, `id_libro`, `precio`) 
