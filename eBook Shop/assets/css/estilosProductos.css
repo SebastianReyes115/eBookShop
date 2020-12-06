@@ -1,5 +1,5 @@
 .imagenes{
-    padding-left: 250px;
+    padding-left: 20px;
     margin: auto;
 }
 
@@ -41,6 +41,7 @@
     border-bottom: 1px solid #333; 
     height:0;
     width: 85%;
+    margin: auto;
 }
 
 .tamañoImagen{
@@ -88,4 +89,16 @@
 
 div h3 .estilosTitulo:hover{
     text-decoration: none;
+}
+
+.wlEstilo{
+    color: orangered;
+
+}
+
+.wlEstilo:hover{
+    cursor: pointer;
+    color: orangered;
+    opacity: 0.5;
+    
 }

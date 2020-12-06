@@ -11,8 +11,8 @@ include 'carrito.php';
     <br>
     <br>
     <div class="row" style="width: 100%;">
-      <div class="col-md-4 imagenes">
-        <img class="tamañoImagen" src="https://images-na.ssl-images-amazon.com/images/I/51hyi0j5BJL._SX331_BO1,204,203,200_.jpg" />
+      <div class="col-md-4" style="padding-left: 130px;">
+        <img src="Recursos/img/principito.jpg" style="height: 480px; width:380px; padding-left:10px" />
       </div>
       <div class="col-md-4 tituloLibro">
         <h2>EL PRINCIPITO</h2>
@@ -21,23 +21,40 @@ include 'carrito.php';
         <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href=""> Grijalbo</a>
       </div>
       <div class="col-md-4 ContenedorPrecio">
-        <span class="PriceTag"> Precio: $40 MXN</span>
+
         <div class="add_to_cart">
+          <span class="PriceTag"> Precio: $40 MXN</span>
           <br />
-          <form action="" method="post" style="text-align: center;">
-            <input type="hidden" name="id" id="id" value="1">
+          <br>
+          <form action="" method="post">
+            <input type="hidden" name="id" id="id" value="5">
             <input type="hidden" name="nombre" id="nombre" value="El Principito">
             <input type="hidden" name="precio" id="precio" value="40">
             <input type="hidden" name="cantidad" id="cantidad" value="1">
-            <input type="hidden" name="imagen" id="imagen" value="https://images-na.ssl-images-amazon.com/images/I/51hyi0j5BJL._SX331_BO1,204,203,200_.jpg">
-            <button class="btn btn-primary" name="btnAccion" value="Agregar" type="submit">
+            <input type="hidden" name="imagen" id="imagen" value="Recursos/img/principito.jpg">
+            <button class="btn btn-danger" name="btnAccion" value="Agregar" type="submit">
               Agregar al Carrito
             </button>
           </form>
+          <br>
+
+          <div class="favorit-items">
+            <form action="user.php" method="post">
+              <input type="hidden" name="idwl" id="idwl" value="5">
+              <input type="hidden" name="nombrewl" id="nombrewl" value="El Principito">
+              <input type="hidden" name="preciowl" id="preciowl" value="40">
+              <input type="hidden" name="imagenwl" id="imagenwl" value="Recursos/img/principito.jpg">
+              <input type="hidden" name="hrefwl" id="href" value="principito.php">            
+              <input href="wishlist.php" class="wlEstilo" style="border: 0; background-color:white; cursor:pointer" name='AgregarWL' type="submit" value="❤ Agregar a mi lista de deseos"> </input>
+            </form>
+            
+          </div>
         </div>
       </div>
     </div>
-    <hr class="separador">
+    <br>
+    <hr class="separador" style="margin:auto">
+    <br>
     <div>
       <div>
         <h2 class="headerproductos">Descripción</h2>
@@ -52,9 +69,10 @@ include 'carrito.php';
           El libro ha sido traducido a decenas de lenguas y adaptado a diversos formatos, como el teatro, el cine, la serie animada, el ballet y la ópera.</p>
       </div>
       <br>
-      <hr class="separador">
+      <hr class="separador" style="margin:auto">
 
       <div>
+        <br>
         <h2 class="headerproductos">Detalles del producto</h2>
         <div class="detallesproducto">
           <table class="plain centered">
@@ -66,8 +84,8 @@ include 'carrito.php';
               <tr>
                 <th>Idioma:</th>
                 <td>
-                  <a href="#" tabindex="0"><span itemprop="publisher">Valor del Idioma.</span>
-                  </a></td>
+                  Valor del Idioma.
+                  </td>
               </tr>
               <tr>
                 <th>Año de publicación </th>
@@ -76,8 +94,9 @@ include 'carrito.php';
               <tr>
                 <th>Edición:</th>
                 <td>
-                  <a href="#" tabindex="0">Practical Magic Series</a></td>
+                 Practical Magic Series</td>
               </tr>
+              
               <tr>
                 <th>Páginas:</th>
                 <td>416</td>
@@ -91,11 +110,16 @@ include 'carrito.php';
         </div>
       </div>
     </div>
-
+    <br>
+    <div class="comentarios">
+      <hr class="separador" style="margin: auto;">
+      <br>
+      <h2 class="headerproductos">Comentarios</h2>
+      <br>
+      
     </div>
-   
-
-  </div>
+    </div>
+    </div>
     <!-- subscribe part end -->
   </main>
 

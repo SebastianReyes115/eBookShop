@@ -34,7 +34,15 @@ if (isset($_POST['btnAccion'])) {
                     'href'=> $href
                 );
                 $_SESSION['Cart'][0] = $fila;
-                $mensaje= 'Artículo agregado';
+                $correo=$_SESSION['correo'];
+                $con = mysqli_connect("localhost", "root", "", "ebookshop");
+                $buscarID="SELECT id_usuario from usuarios where correo='$correo'";
+                $exebuscarid=mysqli_query($con,$buscarID);
+                foreach($exebuscarid as $i => $valor){
+                    $id_usuario=$valor['id_usuario'];
+                }
+                $insertWL="INSERT INTO carrito values('$id','$id_usuario','$precio',now())";
+                $exeInsertWL=mysqli_query($con,$insertWL);
 
             } else {
 
@@ -55,7 +63,15 @@ if (isset($_POST['btnAccion'])) {
                         'href'=> $href
                     );
                     $_SESSION['Cart'][$NumeroProductos] = $fila;
-                    $mensaje="Articulo(s) agregado(s)";
+                    $correo=$_SESSION['correo'];
+                    $con = mysqli_connect("localhost", "root", "", "ebookshop");
+                    $buscarID="SELECT id_usuario from usuarios where correo='$correo'";
+                    $exebuscarid=mysqli_query($con,$buscarID);
+                    foreach($exebuscarid as $i => $valor){
+                        $id_usuario=$valor['id_usuario'];
+                    }
+                    $insertWL="INSERT INTO carrito values('$id','$id_usuario','$precio',now())";
+                    $exeInsertWL=mysqli_query($con,$insertWL);
 
                 }
 

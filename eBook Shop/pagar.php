@@ -4,11 +4,12 @@ include 'cabecera.php';
 ?>
 
 <?php
+
 $total = $_POST['total'];
 $id = 1;
 $sid = session_id();
 $con = mysqli_connect("localhost", "root", "", "ebookshop");
-$insertVenta = "INSERT INTO `venta` (`id_venta`, `id_usuario`, `id_metodo`, `FechaVenta`) VALUES ('$sid', '$id','1', now());";
+$insertVenta = "INSERT INTO `venta` (`id_venta`, `id_usuario`, `id_metodo`, `Precio`, `FechaVenta`) VALUES ('$sid', '$id','1','$total', now());";
 $ejecuta = mysqli_query($con, $insertVenta);
 
 
@@ -70,7 +71,7 @@ $ejecuta = mysqli_query($con, $insertVenta);
         }).render('#paypal-button-container');
     </script>
     <?php
-    $contadorVenta=0;
+
     $contadorVenta++;
     $con = mysqli_connect("localhost", "root", "", "ebookshop");
     foreach ($_SESSION['Cart'] as $indice => $fila) {
@@ -78,8 +79,9 @@ $ejecuta = mysqli_query($con, $insertVenta);
         $id_libro=$fila['ID'];
         $precio=$fila['Precio'];
         $insertDetallesVenta = "INSERT INTO `detallesventa` (`id`, `id_venta`, `id_usuario`, `id_libro`, `precio`) 
-        VALUES ('$contadorVenta', '$sid', '$id', ' $id_libro', '$precio');";
-        $ejecuta = mysqli_query($con, $insertVenta);
+                                    VALUES (null, '$sid', '$id', '$id_libro', '$precio');";
+        $ejecuta = mysqli_query($con, $insertDetallesVenta);
+        $_SESSION['Cart']=null;
     }
     ?>
 </body>

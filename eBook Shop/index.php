@@ -59,7 +59,7 @@ include 'carrito.php';
         <div class="row">
         <?php 
             $con=mysqli_connect("localhost","root","","ebookshop");
-            $obtener="SELECT * FROM libros order by rand()";
+            $obtener="SELECT * FROM libros order by rand()  DESC LIMIT 4";
             $ejecuta=mysqli_query($con,$obtener);
             while($fila=$ejecuta->fetch_assoc())
             {
@@ -108,7 +108,7 @@ include 'carrito.php';
         <div class="row">
         <?php 
             $con=mysqli_connect("localhost","root","","ebookshop");
-            $obtener="SELECT * FROM libros";
+            $obtener="SELECT * FROM libros order by id_libro DESC LIMIT 4";
             $ejecuta=mysqli_query($con,$obtener);
             while($fila=$ejecuta->fetch_assoc())
             {

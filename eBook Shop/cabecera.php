@@ -176,6 +176,7 @@ include 'carrito.php';
                             </li>
                             <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
                             <li><a href="cart.php"><span class="flaticon-shopping-cart">(<?php echo (empty($_SESSION['Cart'])) ? 0 : count($_SESSION['Cart']); ?>)</span></a> </li>
+                            
                             <?php
                             if (!empty($_SESSION['Name'])) {
                             ?>
