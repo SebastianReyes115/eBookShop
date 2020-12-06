@@ -31,7 +31,6 @@ include 'carrito.php';
 
 
 
-
     <link rel="stylesheet" href="js/estilos.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
@@ -177,6 +176,7 @@ include 'carrito.php';
                             </li>
                             <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
                             <li><a href="cart.php"><span class="flaticon-shopping-cart">(<?php echo (empty($_SESSION['Cart'])) ? 0 : count($_SESSION['Cart']); ?>)</span></a> </li>
+                            
                             <?php
                             if (!empty($_SESSION['Name'])) {
                             ?>

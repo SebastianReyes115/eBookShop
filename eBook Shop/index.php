@@ -59,7 +59,7 @@ include 'carrito.php';
         <div class="row">
         <?php 
             $con=mysqli_connect("localhost","root","","ebookshop");
-            $obtener="SELECT * FROM libros order by rand()";
+            $obtener="SELECT * FROM libros order by rand()  DESC LIMIT 4";
             $ejecuta=mysqli_query($con,$obtener);
             while($fila=$ejecuta->fetch_assoc())
             {
@@ -80,6 +80,7 @@ include 'carrito.php';
                 <input type="hidden" name="precio" id="precio" value="<?php echo $fila['Precio'];?>">
                 <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
                 <input type="hidden" name="imagen" id="imagen" value="<?php echo $fila['ImagenLibro'];?>">
+                <input type="hidden" name="href" id="href" value="<?php echo $fila['href'];?>">
                 <button class="btn" name="btnAccion" value="Agregar" type="submit">
                   Agregar al Carrito
                 </button>
@@ -107,7 +108,7 @@ include 'carrito.php';
         <div class="row">
         <?php 
             $con=mysqli_connect("localhost","root","","ebookshop");
-            $obtener="SELECT * FROM libros";
+            $obtener="SELECT * FROM libros order by id_libro DESC LIMIT 4";
             $ejecuta=mysqli_query($con,$obtener);
             while($fila=$ejecuta->fetch_assoc())
             {
