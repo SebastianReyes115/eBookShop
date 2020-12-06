@@ -72,7 +72,7 @@ $ejecuta = mysqli_query($con, $insertVenta);
     </script>
     <?php
 
-    $contadorVenta++;
+
     $con = mysqli_connect("localhost", "root", "", "ebookshop");
     foreach ($_SESSION['Cart'] as $indice => $fila) {
         print_r("Hay elementos en el carrito");
