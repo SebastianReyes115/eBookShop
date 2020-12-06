@@ -15,7 +15,7 @@ include 'carrito.php';
         <img class="tamañoImagen" src="https://images-na.ssl-images-amazon.com/images/I/51hyi0j5BJL._SX331_BO1,204,203,200_.jpg" />
       </div>
       <div class="col-md-4 tituloLibro">
-        <h2>EL PRINCIPITO</h2>
+        <h2>EL Principito</h2>
         <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href=""> Antoine de Saint-Exupery</a>
         <br>
         <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href=""> Grijalbo</a>
