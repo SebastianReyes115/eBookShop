@@ -15,7 +15,7 @@ include 'carrito.php';
                 <img class="tamañoImagen" src="Recursos/img/Monemtop.png" />
             </div>
             <div class="col-md-4 tituloLibro">
-                <h2>Demon thief</h2>
+                <h2>¿Cuándo?: La ciencia de encontrar el momento preciso</h2>
 
                 <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href=""> Daniel H. Pink</a>
                 <br>
@@ -23,10 +23,18 @@ include 'carrito.php';
             </div>
             <div class="col-md-4 ContenedorPrecio">
                 <span class="PriceTag"> Precio: $60 MXN </span>
-                <div class="add_to_cart">
-                    <br />
-                    <a href="#" class="BotonAgregar" style="width: 200px;">Agregar al carrito</a>
-                </div>
+                <span>
+                    <form action="" method="post" style="text-align: center;">
+                        <input type="hidden" name="id" id="id" value="<?php echo 14; ?>">
+                        <input type="hidden" name="nombre" id="nombre" value="<?php echo '¿Cuándo?: La ciencia de encontrar el momento preciso'; ?>">
+                        <input type="hidden" name="precio" id="precio" value="<?php echo 60; ?>">
+                        <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                        <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/Monemtop.png" ?>">
+                        <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                            Agregar al Carrito
+                        </button>
+                    </form>
+                </span>
             </div>
         </div>
         <hr class="separador">

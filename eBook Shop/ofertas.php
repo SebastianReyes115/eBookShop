@@ -47,10 +47,18 @@ include 'carrito.php';
                   <div class="popular-img">
                     <img src="Recursos/img/principito.jpg" alt="">
                     <div class="img-cap">
-                      <span>Add to cart</span>
-                    </div>
-                    <div class="favorit-items">
-                      <span class="flaticon-heart"></span>
+                       <span>
+                           <form action="" method="post" style="text-align: center;">
+                               <input type="hidden" name="id" id="id" value="<?php echo 9; ?>">
+                               <input type="hidden" name="nombre" id="nombre" value="<?php echo 'El Principito'; ?>">
+                               <input type="hidden" name="precio" id="precio" value="<?php echo 40; ?>">
+                               <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                               <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/principito.jpg" ?>">
+                               <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                   Agregar al Carrito
+                               </button>
+                           </form>
+                       </span>
                     </div>
                   </div>
                   <div class="popular-caption">
@@ -64,10 +72,18 @@ include 'carrito.php';
                   <div class="popular-img">
                     <img src="Recursos/img/salvarfuego.jpg" alt="">
                     <div class="img-cap">
-                      <span>Add to cart</span>
-                    </div>
-                    <div class="favorit-items">
-                      <span class="flaticon-heart"></span>
+                        <span>
+                            <form action="" method="post" style="text-align: center;">
+                                <input type="hidden" name="id" id="id" value="<?php echo 7; ?>">
+                                <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Salvar Fuego'; ?>">
+                                <input type="hidden" name="precio" id="precio" value="<?php echo 60; ?>">
+                                <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                                <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/salvarfuego.jpg" ?>">
+                                <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                    Agregar al Carrito
+                                </button>
+                            </form>
+                        </span>
                     </div>
                   </div>
                   <div class="popular-caption">
@@ -81,10 +97,18 @@ include 'carrito.php';
                   <div class="popular-img">
                     <img src="Recursos/img/teoria.jpg" alt="">
                     <div class="img-cap">
-                      <span>Add to cart</span>
-                    </div>
-                    <div class="favorit-items">
-                      <span class="flaticon-heart"></span>
+                       <span>
+                           <form action="" method="post" style="text-align: center;">
+                               <input type="hidden" name="id" id="id" value="<?php echo 1; ?>">
+                               <input type="hidden" name="nombre" id="nombre" value="<?php echo 'La Teoría del Todo'; ?>">
+                               <input type="hidden" name="precio" id="precio" value="<?php echo 25; ?>">
+                               <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                               <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/teoria.jpg" ?>">
+                               <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                                   Agregar al Carrito
+                               </button>
+                           </form>
+                       </span>
                     </div>
                   </div>
                   <div class="popular-caption">
