@@ -11,45 +11,69 @@ include 'carrito.php';
     <br>
     <br>
     <div class="row" style="width: 100%;">
-      <div class="col-md-4 imagenes">
-        <img class="tamañoImagen" src="https://www.librosdemario.com/covers/01/11/60/cover.jpg" />
+      <div class="col-md-4" style="padding-left: 130px;">
+        <img src="Recursos/img/principito.jpg" style="height: 480px; width:380px; padding-left:10px" />
       </div>
       <div class="col-md-4 tituloLibro">
-        <h2>LA TEORÍA DEL TODO</h2>
-        <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href=""> Stephen Hawking</a>
+        <h2>EL Principito</h2>
+        <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href=""> Antoine de Saint-Exupery</a>
         <br>
-        <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href=""> DEBATE</a>
+        <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href=""> Grijalbo</a>
       </div>
       <div class="col-md-4 ContenedorPrecio">
-        <span class="PriceTag"> Precio: $25 MXN</span>
-          <span>
-              <form action="" method="post" style="text-align: center;">
-                  <input type="hidden" name="id" id="id" value="<?php echo 1; ?>">
-                  <input type="hidden" name="nombre" id="nombre" value="<?php echo 'La Teoría del Todo'; ?>">
-                  <input type="hidden" name="precio" id="precio" value="<?php echo 25; ?>">
-                  <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
-                  <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/teoria.jpg" ?>">
-                  <button class="btn" name="btnAccion" value="Agregar" type="submit">
-                      Agregar al Carrito
-                  </button>
-              </form>
-          </span>
+
+        <div class="add_to_cart">
+          <span class="PriceTag"> Precio: $40 MXN</span>
+          <br />
+          <br>
+          <form action="" method="post">
+            <input type="hidden" name="id" id="id" value="5">
+            <input type="hidden" name="nombre" id="nombre" value="El Principito">
+            <input type="hidden" name="precio" id="precio" value="40">
+            <input type="hidden" name="cantidad" id="cantidad" value="1">
+            <input type="hidden" name="imagen" id="imagen" value="Recursos/img/principito.jpg">
+            <input type="hidden" name="hrefwl" id="href" value="principito.php">     
+            <button class="btn btn-danger" name="btnAccion" value="Agregar" type="submit">
+              Agregar al Carrito
+            </button>
+          </form>
+          <br>
+
+          <div class="favorit-items">
+            <form action="user.php" method="post">
+              <input type="hidden" name="idwl" id="idwl" value="5">
+              <input type="hidden" name="nombrewl" id="nombrewl" value="El Principito">
+              <input type="hidden" name="preciowl" id="preciowl" value="40">
+              <input type="hidden" name="imagenwl" id="imagenwl" value="Recursos/img/principito.jpg">
+              <input type="hidden" name="hrefwl" id="href" value="principito.php">            
+              <input href="wishlist.php" class="wlEstilo" style="border: 0; background-color:white; cursor:pointer" name='AgregarWL' type="submit" value="❤ Agregar a mi lista de deseos"> </input>
+            </form>
+            
+          </div>
+        </div>
       </div>
     </div>
-    <hr class="separador">
+    <br>
+    <hr class="separador" style="margin:auto">
+    <br>
     <div>
       <div>
         <h2 class="headerproductos">Descripción</h2>
-        <p class="descripcion">Una manera clara y amena de acercarse a los misterios del universo.
+        <p class="descripcion">El principito es una narración corta del escritor francés Antoine de Saint-Exupéry, que trata de la historia de un pequeño príncipe que parte de su asteroide a una travesía por el universo, en la cual descubre la extraña forma en que los adultos ven la vida y comprende el valor del amor y la amistad.
 
-          En esta esclarecedora obra, el gran físico británico Stephen Hawking nos ofrece una historia del universo, del big bang a los agujeros negros.
+          El principito es tenido como uno de los mejores libros de todos los tiempos y un clásico contemporáneo de la literatura universal.
 
-          En siete pasos, Hawking logra explicar la historia del universo, desde las primeras teorías del mundo griego y de la epoca medieval hasta las más complejas teorías actuales, siempre con su característico tono didáctico y accesible a todos los públicos. Newton, Einstein, la mecánica cuántica, los agujeros negros y la teoría de la gran unificación desfilan por estas páginas acercando al lector los misterios del universo.
+          Debido a su estilo sencillo y directo se lo ha considerado un libro para niños; no obstante, su profundo carácter reflexivo sobre la vida, la sociedad y el amor, lo convierten en una narración de interés para todos.
+
+          Fue publicado en abril de 1943, en Estados Unidos, puesto que, debido a la segunda guerra mundial, la obra no pudo ser imprimida en Francia.
+
+          El libro ha sido traducido a decenas de lenguas y adaptado a diversos formatos, como el teatro, el cine, la serie animada, el ballet y la ópera.</p>
       </div>
       <br>
-      <hr class="separador">
+      <hr class="separador" style="margin:auto">
 
       <div>
+        <br>
         <h2 class="headerproductos">Detalles del producto</h2>
         <div class="detallesproducto">
           <table class="plain centered">
@@ -61,18 +85,19 @@ include 'carrito.php';
               <tr>
                 <th>Idioma:</th>
                 <td>
-                  <a href="#" tabindex="0"><span itemprop="publisher">Valor del Idioma.</span>
-                  </a></td>
+                  Valor del Idioma.
+                  </td>
               </tr>
               <tr>
                 <th>Año de publicación </th>
                 <td>10/06/2020</td>
               </tr>
               <tr>
-                <th>Edicioón:</th>
+                <th>Edición:</th>
                 <td>
-                  <a href="#" tabindex="0">Practical Magic Series</a></td>
+                 Practical Magic Series</td>
               </tr>
+              
               <tr>
                 <th>Páginas:</th>
                 <td>416</td>
@@ -86,13 +111,20 @@ include 'carrito.php';
         </div>
       </div>
     </div>
-
+    <br>
+    <div class="comentarios">
+      <hr class="separador" style="margin: auto;">
+      <br>
+      <h2 class="headerproductos">Comentarios</h2>
+      <br>
+      
     </div>
-    <!--================End Single Product Area =================-->
-    <!-- subscribe part here -->
-
+    </div>
+    </div>
     <!-- subscribe part end -->
   </main>
+
+
   <footer>
     <!-- Footer Start-->
     <div class="footer-area footer-padding">
