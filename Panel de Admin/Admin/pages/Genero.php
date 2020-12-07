@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="refresh"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Genero</title>
+  <title>Género</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -70,7 +70,7 @@
               <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-ui-radios-grid" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M3.5 15a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm9-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM16 3.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0zm-9 9a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0zm5.5 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm-9-11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 2a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
               </svg>
-              <p>Genero</p>
+              <p>Género</p>
             </a>
           </li>
           <li class="nav-item">
@@ -158,7 +158,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Genero</h1>
+            <h1 class="m-0">Género</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -175,7 +175,7 @@
         <div id="form1" class="shadow-lg p-3 mb-5 bg-white rounded" style="width:50%; margin-left:250px;">
         <form method="post">
   <div class="form-group">
-    <label for="NombreEditorial">Nombre Genero</label>
+    <label for="NombreEditorial">Nombre Género</label>
     <input type="text" class="form-control" name="NombreG" id="NombreG" aria-describedby="emailHelp">
     <small id="sna" class="form-text text-muted">Ingresa nombre de la editorial</small>
   </div>
@@ -188,7 +188,7 @@
         <table class="table table-dark">
             <tr>
                 <td>Id</td>
-                <td>Nombre Genero</td>
+                <td>Nombre Género</td>
             </tr>
 
         <?php

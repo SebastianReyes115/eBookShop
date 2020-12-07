@@ -70,7 +70,7 @@
               <svg width="1em" height="1em" viewBox="0 0 16 16" class="nav-icon bi bi-ui-radios-grid" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M3.5 15a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm9-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM16 3.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0zm-9 9a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0zm5.5 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm-9-11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 2a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
               </svg>
-              <p>Genero</p>
+              <p>Género</p>
             </a>
           </li>
           <li class="nav-item">
@@ -174,7 +174,7 @@
         <div id="form1" class="shadow-lg p-3 mb-5 bg-white rounded" style="width:50%; margin-left:250px;">
         <form method="post" enctype="multipart/form-data">
   <div class="form-group">
-    <label for="Titulo">Titulo</label>
+    <label for="Titulo">Título</label>
     <input type="text" class="form-control" name="titulo" id="Titulo" aria-describedby="emailHelp">
     <small id="sna" class="form-text text-muted">Ingresa el nombre del libro</small>
   </div>
@@ -184,7 +184,7 @@
     <small id="sn" class="form-text text-muted">Ingresa el nombre del autor</small>
   </div>
   <div class="form-group">
-    <label for="genero">Genero</label>
+    <label for="genero">Género</label>
     <input type="text" class="form-control" name="genero" aria-describedby="emailHelp">
     <small id="sn" class="form-text text-muted">Ingresa el genero del libro</small>
   </div>
@@ -209,7 +209,7 @@
     <small id="sn" class="form-text text-muted">Ingresa el idioma</small>
   </div>
   <div class="form-group">
-    <label for="edicion">Edicion</label>
+    <label for="edicion">Edición</label>
     <input type="text" class="form-control" name="edicion" aria-describedby="emailHelp">
     <small id="sn" class="form-text text-muted">Ingresa la edicion</small>
   </div>
@@ -232,15 +232,15 @@
         <table class="table table-dark">
             <tr>
                 <td>Id</td>
-                <td>Titulo</td>
+                <td>Título</td>
                 <td>Autor</td>
-                <td>Genero</td>
+                <td>Género</td>
                 <td>Editorial</td>
                 <td>No. Pag.</td>
                 <td>Precio</td>
                 <td>isbn</td>
-                <td>idioma</td>
-                <td>Edicion</td>
+                <td>Idioma</td>
+                <td>Edición</td>
                 <td>Año</td>
                 <td>ImagenLibro</td>
             </tr>
@@ -298,7 +298,7 @@ while($fila=$ejecuta->fetch_assoc())
                                                 <td><input type="text" name="ida" id="ida" value='<?php echo  $fila['id_libro'] ;?>'   readonly="readonly"></td>
                                             </tr>
                                             <tr>
-                                              <td><label for="Titulo">Titulo</label></td>
+                                              <td><label for="Titulo">Título</label></td>
                                               <td><input type="text" class="form-control" name="titulo" id="Titulo" value='<?php echo  $fila['Titulo'] ;?>'   aria-describedby="emailHelp"></td>
                                             </tr>
                                             <tr>
@@ -306,7 +306,7 @@ while($fila=$ejecuta->fetch_assoc())
                                               <td><input type="text" class="form-control" name="idautor" value='<?php echo $fila1['NombreAutor']; ?>'  aria-describedby="emailHelp"></td>
                                             </tr>
                                             <tr>
-                                              <td><label for="genero">Genero</label></td>
+                                              <td><label for="genero">Género</label></td>
                                               <td><input type="text" class="form-control" name="genero" value='<?php echo $fila2['Genero']; ?>' aria-describedby="emailHelp"></td>
                                             </tr>
                                             <tr>
@@ -326,7 +326,7 @@ while($fila=$ejecuta->fetch_assoc())
                                               <td><input type="text" class="form-control" name="idioma" value='<?php echo $fila['Idioma']; ?>' aria-describedby="emailHelp"></td>
                                             </tr>
                                             <tr>
-                                              <td><label for="edicion">Edicion</label></td>
+                                              <td><label for="edicion">Edición</label></td>
                                               <td><input type="text" class="form-control" name="edicion" value='<?php echo $fila['Edicion']; ?>' aria-describedby="emailHelp"></td>
                                             </tr>
                                             <tr>
