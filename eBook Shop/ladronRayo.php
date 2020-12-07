@@ -11,37 +11,55 @@ include 'carrito.php';
     <br>
     <br>
     <div class="row" style="width: 100%;">
-      <div class="col-md-4 imagenes">
-        <img class="tamañoImagen" src="https://images-na.ssl-images-amazon.com/images/I/91Orrw6CobL.jpg" />
+      <div class="col-md-4" style="padding-left: 130px;">
+        <img src="Recursos/img/percyjackson.jpg" style="height: 480px; width:380px; padding-left:10px" />
       </div>
       <div class="col-md-4 tituloLibro">
         <h2>EL LADRON DEL RAYO (PERCY JACKSON Y LOS DIOSES DEL OLIMPO 1)</h2>
-        <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href=""> RICK RIORDAN</a>
+        <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href=""> Rick Riordan</a>
         <br>
-        <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href=""> SALAMADRA INFANTIL Y JUVENIL</a>
+        <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href=""> Salamandra Infantil y Juvenil</a>
       </div>
       <div class="col-md-4 ContenedorPrecio">
-        <span class="PriceTag"> Precio: $60 MXN </span>
-          <span>
-              <form action="" method="post" style="text-align: center;">
-                  <input type="hidden" name="id" id="id" value="<?php echo 8; ?>">
-                  <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Percy Jackson Y El Ladron del Rayo'; ?>">
-                  <input type="hidden" name="precio" id="precio" value="<?php echo 60; ?>">
-                  <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
-                  <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/percyjackson.jpg" ?>">
-                  <button class="btn" name="btnAccion" value="Agregar" type="submit">
-                      Agregar al carrito
-                  </button>
-              </form>
-          </span>
+
+        <div class="add_to_cart">
+          <span class="PriceTag"> Precio: $60 MXN</span>
+          <br />
+          <br>
+          <form action="" method="post">
+            <input type="hidden" name="id" id="id" value="8">
+            <input type="hidden" name="nombre" id="nombre" value="Percy Jackson y el Ladrón del Rayo">
+            <input type="hidden" name="precio" id="precio" value="60">
+            <input type="hidden" name="cantidad" id="cantidad" value="1">
+            <input type="hidden" name="imagen" id="imagen" value="Recursos/img/percyjackson.jpg">
+            <input type="hidden" name="href" id="href" value="ladronrayo.php"> 
+            <button class="btn btn-danger" name="btnAccion" value="Agregar" type="submit">
+              Agregar al Carrito
+            </button>
+          </form>
+          <br>
+
+          <div class="favorit-items">
+            <form action="user.php" method="post">
+              <input type="hidden" name="idwl" id="idwl" value="5">
+              <input type="hidden" name="nombrewl" id="nombrewl" value="El Principito">
+              <input type="hidden" name="preciowl" id="preciowl" value="40">
+              <input type="hidden" name="imagenwl" id="imagenwl" value="Recursos/img/principito.jpg">
+              <input type="hidden" name="hrefwl" id="href" value="principito.php">            
+              <input href="wishlist.php" class="wlEstilo" style="border: 0; background-color:white; cursor:pointer" name='AgregarWL' type="submit" value="❤ Agregar a mi lista de deseos"> </input>
+            </form>
+            
+          </div>
+        </div>
       </div>
     </div>
-    <hr class="separador">
+    <br>
+    <hr class="separador" style="margin:auto">
+    <br>
     <div>
       <div>
         <h2 class="headerproductos">Descripción</h2>
-        <p class="descripcion">
-          ¿Qué pasaría si un día descubrieras que, en realidad, eres hijo de un dios griego que
+        <p class="descripcion">¿Qué pasaría si un día descubrieras que, en realidad, eres hijo de un dios griego que
           debe cumplir una misión secreta? Pues eso es lo que le sucede a Percy Jackson, que a
           partir de ese momento se dispone a vivir los acontecimientos más emocionantes de su vida.
           Expulsado de seis colegios, Percy padece dislexia y dificultades para concentrarse,
@@ -50,51 +68,63 @@ include 'carrito.php';
           la verdad: Percy es nada menos que un semidiós, es decir, el hijo de un dios y una mortal.
           Y como tal ha de descubrir quién ha robado el rayo de Zeus y así evitar que estalle una
           guerra entre los dioses. Para cumplir la misión contará con la ayuda de sus amigos Grover,
-          un joven sátiro, y Annabeth, hija de Atenea.</p>
+          un joven sátiro, y Annabeth, hija de Atenea.</div>
+      <br>
+      <hr class="separador" style="margin:auto">
+
+      <div>
         <br>
-        <hr class="separador">
+        <h2 class="headerproductos">Detalles del producto</h2>
+        <div class="detallesproducto">
+          <table class="plain centered">
+            <tbody>
+              <tr>
+                <th>SKU:</th>
+                <td>Valor del SKu</td>
+              </tr>
+              <tr>
+                <th>Idioma:</th>
+                <td>
+                  Valor del Idioma.
+                  </td>
+              </tr>
+              <tr>
+                <th>Año de publicación </th>
+                <td>10/06/2020</td>
+              </tr>
+              <tr>
+                <th>Edición:</th>
+                <td>
+                 Practical Magic Series</td>
+              </tr>
+              
+              <tr>
+                <th>Páginas:</th>
+                <td>416</td>
+              </tr>
 
-        <div>
-          <h2 class="headerproductos">Detalles del producto</h2>
-          <div class="detallesproducto">
-            <table class="plain centered">
-              <tbody>
-                <tr>
-                  <th>SKU:</th>
-                  <td>Valor del SKu</td>
-                </tr>
-                <tr>
-                  <th>Idioma:</th>
-                  <td>
-                    <a href="#" tabindex="0"><span itemprop="publisher">Valor del Idioma.</span>
-                    </a></td>
-                </tr>
-                <tr>
-                  <th>Año de publicación </th>
-                  <td>10/06/2020</td>
-                </tr>
-                <tr>
-                  <th>Edicioón:</th>
-                  <td>
-                    <a href="#" tabindex="0">Practical Magic Series</a></td>
-                </tr>
-                <tr>
-                  <th>Páginas:</th>
-                  <td>416</td>
-                </tr>
+            </tbody>
+            <tbody>
+            </tbody>
+          </table>
 
-              </tbody>
-              <tbody>
-              </tbody>
-            </table>
-
-          </div>
         </div>
       </div>
-
+    </div>
+    <br>
+    <div class="comentarios">
+      <hr class="separador" style="margin: auto;">
+      <br>
+      <h2 class="headerproductos">Comentarios</h2>
+      <br>
+      
+    </div>
+    </div>
     </div>
     <!-- subscribe part end -->
   </main>
+
+
   <footer>
     <!-- Footer Start-->
     <div class="footer-area footer-padding">

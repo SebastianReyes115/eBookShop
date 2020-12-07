@@ -11,85 +11,116 @@ include 'carrito.php';
     <br>
     <br>
     <div class="row" style="width: 100%;">
-      <div class="col-md-4 imagenes">
-        <img class="tamañoImagen" src="Recursos/img/felipe.jpg" />
+      <div class="col-md-4" style="padding-left: 130px;">
+        <img src="Recursos/img/felipe.jpg" style="height: 480px; width:380px; padding-left:10px" />
       </div>
       <div class="col-md-4 tituloLibro">
-        <h2>FELIPE,EL OSCURO</h2>
-        <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href=""> OLGA WORNAT</a>
+        <h2>Felipe,El Oscuro</h2>
+        <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href=""> Olga Wornat</a>
         <br>
-        <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href=""> GEOPLANETA</a>
+        <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href=""> Geoplaneta</a>
       </div>
       <div class="col-md-4 ContenedorPrecio">
-        <span class="PriceTag"> Precio: $50 MXN</span>
-          <span>
-              <form action="" method="post" style="text-align: center;">
-                  <input type="hidden" name="id" id="id" value="<?php echo 2; ?>">
-                  <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Felipe, El Oscuro'; ?>">
-                  <input type="hidden" name="precio" id="precio" value="<?php echo 10; ?>">
-                  <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
-                  <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/felipe.jpg" ?>">
-                  <button class="btn" name="btnAccion" value="Agregar" type="submit">
-                      Agregar al Carrito
-                  </button>
-              </form>
-            </span>
+
+        <div class="add_to_cart">
+          <span class="PriceTag"> Precio: $50 MXN</span>
+          <br />
+          <br>
+          <form action="" method="post">
+            <input type="hidden" name="id" id="id" value="2">
+            <input type="hidden" name="nombre" id="nombre" value="Felipe, El Oscuro">
+            <input type="hidden" name="precio" id="precio" value="50">
+            <input type="hidden" name="cantidad" id="cantidad" value="1">
+            <input type="hidden" name="imagen" id="imagen" value="Recursos/img/felipe.jpg">
+            <input type="hidden" name="href" id="href" value="felipeoscuro.php"> 
+            <button class="btn btn-danger" name="btnAccion" value="Agregar" type="submit">
+              Agregar al Carrito
+            </button>
+          </form>
+          <br>
+
+          <div class="favorit-items">
+            <form action="user.php" method="post">
+              <input type="hidden" name="idwl" id="idwl" value="2">
+              <input type="hidden" name="nombrewl" id="nombrewl" value="Felipe, El Oscuro">
+              <input type="hidden" name="preciowl" id="preciowl" value="50">
+              <input type="hidden" name="imagenwl" id="imagenwl" value="Recursos/img/felipe.jpg">
+              <input type="hidden" name="hrefwl" id="href" value="felipeoscuro.php">            
+              <input href="wishlist.php" class="wlEstilo" style="border: 0; background-color:white; cursor:pointer" name='AgregarWL' type="submit" value="❤ Agregar a mi lista de deseos"> </input>
+            </form>
+            
+          </div>
+        </div>
       </div>
     </div>
-    <hr class="separador">
+    <br>
+    <hr class="separador" style="margin:auto">
+    <br>
     <div>
       <div>
         <h2 class="headerproductos">Descripción</h2>
         <p class="descripcion">La periodista Olga Wornat presenta a detalle la historia de un fracaso: el sexenio negro de Felipe Calderón.
 
-          Calderón es una mezcla de malas maneras y mala suerte. Como no creo en la mala o buena suerte, deposito énfasis en las malas maneras. Llegó en circunstancias muy penosas, en medio de acusaciones razonadas de fraude; ha intentado persuadir, conmover, seducir y no lo ha logrado. —Carlos Monsiváis en La Jornada, 2008.
+Calderón es una mezcla de malas maneras y mala suerte. Como no creo en la mala o buena suerte, deposito énfasis en las malas maneras. Llegó en circunstancias muy penosas, en medio de acusaciones razonadas de fraude; ha intentado persuadir, conmover, seducir y no lo ha logrado. —Carlos Monsiváis en La Jornada, 2008.
 
-          Desde la falta de estrategia como presidente, los peores casos de corrupción, el enriquecimiento ilícito, los favores a sus familiares y amigos, y su protección al Cártel de Sinaloa y a los actos criminales de Genaro García Luna, hasta la intimidad de su frágil relación con Margarita Zavala, sus problemas con el alcohol y el miedo constante a ser el presidente más odiado por los mexicanos. Como nadie lo había logrado, Wornat revela la mejor investigación del calderonato.
+Desde la falta de estrategia como presidente, los peores casos de corrupción, el enriquecimiento ilícito, los favores a sus familiares y amigos, y su protección al Cártel de Sinaloa y a los actos criminales de Genaro García Luna, hasta la intimidad de su frágil relación con Margarita Zavala, sus problemas con el alcohol y el miedo constante a ser el presidente más odiado por los mexicanos. Como nadie lo había logrado, Wornat revela la mejor investigación del calderonato.
+</div>
+      <br>
+      <hr class="separador" style="margin:auto">
 
-        </p>
+      <div>
         <br>
-        <hr class="separador">
+        <h2 class="headerproductos">Detalles del producto</h2>
+        <div class="detallesproducto">
+          <table class="plain centered">
+            <tbody>
+              <tr>
+                <th>SKU:</th>
+                <td>Valor del SKu</td>
+              </tr>
+              <tr>
+                <th>Idioma:</th>
+                <td>
+                  Valor del Idioma.
+                  </td>
+              </tr>
+              <tr>
+                <th>Año de publicación </th>
+                <td>10/06/2020</td>
+              </tr>
+              <tr>
+                <th>Edición:</th>
+                <td>
+                 Practical Magic Series</td>
+              </tr>
+              
+              <tr>
+                <th>Páginas:</th>
+                <td>416</td>
+              </tr>
 
-        <div>
-          <h2 class="headerproductos">Detalles del producto</h2>
-          <div class="detallesproducto">
-            <table class="plain centered">
-              <tbody>
-                <tr>
-                  <th>SKU:</th>
-                  <td>Valor del SKu</td>
-                </tr>
-                <tr>
-                  <th>Idioma:</th>
-                  <td>
-                    <a href="#" tabindex="0"><span itemprop="publisher">Valor del Idioma.</span>
-                    </a></td>
-                </tr>
-                <tr>
-                  <th>Año de publicación </th>
-                  <td>10/06/2020</td>
-                </tr>
-                <tr>
-                  <th>Edicioón:</th>
-                  <td>
-                    <a href="#" tabindex="0">Practical Magic Series</a></td>
-                </tr>
-                <tr>
-                  <th>Páginas:</th>
-                  <td>416</td>
-                </tr>
+            </tbody>
+            <tbody>
+            </tbody>
+          </table>
 
-              </tbody>
-              <tbody>
-              </tbody>
-            </table>
-
-          </div>
         </div>
       </div>
-
     </div>
+    <br>
+    <div class="comentarios">
+      <hr class="separador" style="margin: auto;">
+      <br>
+      <h2 class="headerproductos">Comentarios</h2>
+      <br>
+      
+    </div>
+    </div>
+    </div>
+    <!-- subscribe part end -->
   </main>
+
+
   <footer>
     <!-- Footer Start-->
     <div class="footer-area footer-padding">

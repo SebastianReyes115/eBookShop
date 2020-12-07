@@ -32,6 +32,7 @@ include 'carrito.php';
             <input type="hidden" name="precio" id="precio" value="40">
             <input type="hidden" name="cantidad" id="cantidad" value="1">
             <input type="hidden" name="imagen" id="imagen" value="Recursos/img/principito.jpg">
+            <input type="hidden" name="href" id="href" value="principito.php"> 
             <button class="btn btn-danger" name="btnAccion" value="Agregar" type="submit">
               Agregar al Carrito
             </button>

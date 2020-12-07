@@ -12,27 +12,27 @@ include 'carrito.php';
     <br>
     <div class="row" style="width: 100%;">
       <div class="col-md-4" style="padding-left: 130px;">
-        <img src="Recursos/img/principito.jpg" style="height: 480px; width:380px; padding-left:10px" />
+        <img src="Recursos/img/teoria.jpg" style="height: 480px; width:380px; padding-left:10px" />
       </div>
       <div class="col-md-4 tituloLibro">
-        <h2>EL Principito</h2>
-        <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href=""> Antoine de Saint-Exupery</a>
+        <h2>La teoría del todo</h2>
+        <span class="autorEditorial"> AUTOR: </span><a class="autorEstilo" href=""> Stephen Hawking</a>
         <br>
-        <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href=""> Grijalbo</a>
+        <span class="autorEditorial"> EDITORIAL: </span><a class="autorEstilo" href=""> Debate</a>
       </div>
       <div class="col-md-4 ContenedorPrecio">
 
         <div class="add_to_cart">
-          <span class="PriceTag"> Precio: $40 MXN</span>
+          <span class="PriceTag"> Precio: $25 MXN</span>
           <br />
           <br>
           <form action="" method="post">
-            <input type="hidden" name="id" id="id" value="5">
-            <input type="hidden" name="nombre" id="nombre" value="El Principito">
-            <input type="hidden" name="precio" id="precio" value="40">
+            <input type="hidden" name="id" id="id" value="1">
+            <input type="hidden" name="nombre" id="nombre" value="La teoría del todo">
+            <input type="hidden" name="precio" id="precio" value="25">
             <input type="hidden" name="cantidad" id="cantidad" value="1">
-            <input type="hidden" name="imagen" id="imagen" value="Recursos/img/principito.jpg">
-            <input type="hidden" name="hrefwl" id="href" value="principito.php">     
+            <input type="hidden" name="imagen" id="imagen" value="Recursos/img/teoria.jpg">
+            <input type="hidden" name="hrefwl" id="href" value="teoriadeltodo.php">     
             <button class="btn btn-danger" name="btnAccion" value="Agregar" type="submit">
               Agregar al Carrito
             </button>
