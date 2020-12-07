@@ -1,4 +1,4 @@
-# eboock Shop
+# ebook Shop
 
 _Proyecto de negocios electronicos 1_
 
