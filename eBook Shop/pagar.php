@@ -41,11 +41,6 @@ $ejecuta = mysqli_query($con, $insertVenta);
 
 <body>
     <?php
-<<<<<<< HEAD
-=======
-
-
->>>>>>> afb069ddbae0f9c2d255726be17428ced23b94bb
     $con = mysqli_connect("localhost", "root", "", "ebookshop");
     foreach ($_SESSION['Cart'] as $indice => $fila) {
         $id_libro = $fila['ID'];
