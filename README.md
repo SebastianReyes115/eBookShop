@@ -1,20 +1,16 @@
-Ejecutar desde la carpeta de htdocs de nuestro servidor para que funcione el login
+# eboock Shop
 
-Proyecto de venta de libros electrónicos
+_Proyecto de negocios electronicos 1_
 
-Negocios Electrónicos I
+## Equipo 6 🚀
 
-Equipo 6
+### Instalación 🔧
 
-Contenido:
+_Descargar e instalar en la carpeta htdocs del servidor_
 
-Carpeta con plantilla para la vista del panel del administrador
+## Autores ✒️
 
-Carpeta con plantilla para la vista del sitio web desde el lado del cliente
-
-Script de la base de datos en mysql
-
-
-Para visualisar la vista del admin abrir el archivo index3 de la carpera Panel de Admin
-
-Para visualisar el sitio web abrir el archivo index de la carpeta eBook Shop
+* **Sebastian Reyes** - *Jefe de equipo*
+* **José Luis Castorena** - *Base de datos, boton de pago, wishlist*
+* **Hector De Luna** - *Login, panel de admin, vista de compras*
+* **Tito Gonzalez** - *Productos, incets, base de datos*
