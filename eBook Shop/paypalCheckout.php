@@ -40,8 +40,8 @@
     onAuthorize: function (data, actions) {
       return actions.payment.execute()
         .then(function () {
-          alert(`El Pago fue procesado correctamente, Gracias por su compra`)
-          
+          alert('Compra completada! ' + details.payer.name.given_name + '!');
+                    window.location = "user.php?id=" + details.id;
         })
         .catch(error => {
           console.log(error)
