@@ -64,6 +64,7 @@ include 'carrito.php';
             while($fila=$ejecuta->fetch_assoc())
             {
         ?>
+        
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
             <div class="single-new-pro mb-30 text-center">
               <div class="product-img">
@@ -74,6 +75,7 @@ include 'carrito.php';
                 <span>$<?php echo number_format($fila['Precio'],2);?> MXN</span>
               </div>
               <br>
+              <span>
               <form action="" method="post" style="text-align: center;">
                 <input type="hidden" name="id" id="id" value="<?php echo $fila['id_libro'];?>">
                 <input type="hidden" name="nombre" id="nombre" value="<?php echo $fila['Titulo'];?>">
@@ -85,6 +87,7 @@ include 'carrito.php';
                   Agregar al Carrito
                 </button>
                 </form>
+                </span>
             </div>
           </div>
             <?php }?>
