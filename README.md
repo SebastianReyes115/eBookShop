@@ -4,6 +4,10 @@ _Proyecto de negocios electronicos 1_
 
 ## Equipo 6 🚀
 
+## Proyecto en hosting
+
+https://ebookshop-negocioselectronicos.000webhostapp.com/
+
 ### Instalación 🔧
 
 _Descargar e instalar en la carpeta htdocs del servidor_
