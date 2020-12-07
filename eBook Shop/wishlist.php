@@ -41,6 +41,7 @@ if (isset($_POST['AgregarWL'])) {
                 foreach($exebuscarid as $i => $valor){
                     $id_usuario=$valor['id_usuario'];
                 }
+                
                 $insertWL="INSERT INTO wishlist values('$id','$id_usuario','$nombre',now())";
                 $exeInsertWL=mysqli_query($con,$insertWL);
 

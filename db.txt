@@ -254,6 +254,15 @@ CREATE TABLE IF NOT EXISTS `ebookshop`.`autor_libro` (
    `Nacionalidad` VARCHAR(35) NOT NULL ,
     PRIMARY KEY (`id_nacionalidad`));
 
+    CREATE TABLE `detallesventa` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `id_venta` int(11) NOT NULL,
+ `id_usuario` int(11) NOT NULL,
+ `id_libro` int(11) NOT NULL,
+ `precio` decimal(10,0) NOT NULL,
+ PRIMARY KEY (`id`)
+)
+
 ALTER TABLE masvendidos
 ADD FOREIGN KEY (id_libro) REFERENCES Libros(id_libro);
 ALTER TABLE masvisitados
