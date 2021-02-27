@@ -65,7 +65,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="pages/BaseDatos.php" class="nav-link">
+            <a href="pages/BaseDatos.php" target="_blank" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
                 <p>Base de Datos</p>
             </a>
@@ -75,6 +75,12 @@
             <a href="pages/mailbox/mailbox.html" class="nav-link">
               <i class="nav-icon fas fa-envelope"></i>
                 <p>Inbox</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://ebook-shoop.agilecrm.com/" class="nav-link">
+              <i class="nav-icon fas fa-envelope"></i>
+                <p>CRM</p>
             </a>
           </li>
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
