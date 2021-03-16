@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'cabecera.php';
 include 'carrito.php';
 ?>
@@ -76,12 +77,12 @@ Desde la falta de estrategia como presidente, los peores casos de corrupción, e
             <tbody>
               <tr>
                 <th>SKU:</th>
-                <td>Valor del SKu</td>
+                <td>9788416620524</td>
               </tr>
               <tr>
                 <th>Idioma:</th>
                 <td>
-                  Valor del Idioma.
+                  Español.
                   </td>
               </tr>
               <tr>
@@ -91,7 +92,7 @@ Desde la falta de estrategia como presidente, los peores casos de corrupción, e
               <tr>
                 <th>Edición:</th>
                 <td>
-                 Practical Magic Series</td>
+                 1</td>
               </tr>
               
               <tr>
@@ -120,7 +121,9 @@ Desde la falta de estrategia como presidente, los peores casos de corrupción, e
     <!-- subscribe part end -->
   </main>
 
-
+ <?php
+  include 'recomendaciones.php';
+  ?>
   <footer>
     <!-- Footer Start-->
     <div class="footer-area footer-padding">

@@ -21,17 +21,13 @@ if (isset($_POST['btnAccion'])) {
             if (is_string($_POST['imagen'])) {
                 $imagen = $_POST['imagen'];
             }
-            if (is_string($_POST['href'])) {
-                $href = $_POST['href'];
-            }
             if (!isset($_SESSION['Cart'])) {
                 $fila = array(
                     'ID' => $id,
                     'Nombre' => $nombre,
                     'Precio' => $precio,
                     'Cantidad' => $cantidad,
-                    'Imagen' => $imagen,
-                    'href'=> $href
+                    'Imagen' => $imagen
                 );
                 $_SESSION['Cart'][0] = $fila;
                 $correo=$_SESSION['correo'];
@@ -59,8 +55,7 @@ if (isset($_POST['btnAccion'])) {
                         'Nombre' => $nombre,
                         'Precio' => $precio,
                         'Cantidad' => $cantidad,
-                        'Imagen' => $imagen,
-                        'href'=> $href
+                        'Imagen' => $imagen
                     );
                     $_SESSION['Cart'][$NumeroProductos] = $fila;
                     $correo=$_SESSION['correo'];

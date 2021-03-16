@@ -2,7 +2,7 @@
 <?php
 include 'carrito.php';
 ?>
-<html lang="zxx">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">

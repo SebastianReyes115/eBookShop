@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'cabecera.php';
 include 'carrito.php';
 ?>
@@ -41,7 +42,7 @@ include 'carrito.php';
 
           <div class="favorit-items">
             <form action="user.php" method="post">
-              <input type="hidden" name="idwl" id="idwl" value="5">
+              <input type="hidden" name="idwl" id="idwl" value="9">
               <input type="hidden" name="nombrewl" id="nombrewl" value="El Principito">
               <input type="hidden" name="preciowl" id="preciowl" value="40">
               <input type="hidden" name="imagenwl" id="imagenwl" value="Recursos/img/principito.jpg">
@@ -79,13 +80,13 @@ include 'carrito.php';
           <table class="plain centered">
             <tbody>
               <tr>
-                <th>SKU:</th>
-                <td>Valor del SKu</td>
+                <th>Valor del SKu</th>
+                <td>9788416620524</td>
               </tr>
               <tr>
                 <th>Idioma:</th>
                 <td>
-                  Valor del Idioma.
+                  Español.
                   </td>
               </tr>
               <tr>
@@ -95,7 +96,7 @@ include 'carrito.php';
               <tr>
                 <th>Edición:</th>
                 <td>
-                 Practical Magic Series</td>
+                 2</td>
               </tr>
               
               <tr>
@@ -123,6 +124,9 @@ include 'carrito.php';
     </div>
     <!-- subscribe part end -->
   </main>
+  <?php
+  include 'recomendaciones.php';
+  ?>
 
 
   <footer>

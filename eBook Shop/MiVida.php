@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'cabecera.php';
 include 'carrito.php';
 ?>
@@ -41,11 +42,11 @@ include 'carrito.php';
 
           <div class="favorit-items">
             <form action="user.php" method="post">
-              <input type="hidden" name="idwl" id="idwl" value="5">
-              <input type="hidden" name="nombrewl" id="nombrewl" value="El Principito">
-              <input type="hidden" name="preciowl" id="preciowl" value="40">
-              <input type="hidden" name="imagenwl" id="imagenwl" value="Recursos/img/principito.jpg">
-              <input type="hidden" name="hrefwl" id="href" value="principito.php">            
+              <input type="hidden" name="idwl" id="idwl" value="29">
+              <input type="hidden" name="nombrewl" id="nombrewl" value="Mi vida (no del todo) perfecta">
+              <input type="hidden" name="preciowl" id="preciowl" value="35">
+              <input type="hidden" name="imagenwl" id="imagenwl" value="Recursos/img/MiVida.png">
+              <input type="hidden" name="hrefwl" id="href" value="Mivida.php">            
               <input href="wishlist.php" class="wlEstilo" style="border: 0; background-color:white; cursor:pointer" name='AgregarWL' type="submit" value="❤ Agregar a mi lista de deseos"> </input>
             </form>
             
@@ -117,7 +118,9 @@ Parece que Katie Brenner tiene una vida perfecta: un apartamento en Londres, un 
     </div>
     <!-- subscribe part end -->
   </main>
-
+ <?php
+  include 'recomendaciones.php';
+  ?>
 
   <footer>
     <!-- Footer Start-->

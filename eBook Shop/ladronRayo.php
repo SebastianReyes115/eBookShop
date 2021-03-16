@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'cabecera.php';
 include 'carrito.php';
 ?>
@@ -41,11 +42,11 @@ include 'carrito.php';
 
           <div class="favorit-items">
             <form action="user.php" method="post">
-              <input type="hidden" name="idwl" id="idwl" value="5">
-              <input type="hidden" name="nombrewl" id="nombrewl" value="El Principito">
-              <input type="hidden" name="preciowl" id="preciowl" value="40">
-              <input type="hidden" name="imagenwl" id="imagenwl" value="Recursos/img/principito.jpg">
-              <input type="hidden" name="hrefwl" id="href" value="principito.php">            
+              <input type="hidden" name="idwl" id="idwl" value="8">
+              <input type="hidden" name="nombrewl" id="nombrewl" value="Percy Jackson y el Ladrón del Rayo">
+              <input type="hidden" name="preciowl" id="preciowl" value="60">
+              <input type="hidden" name="imagenwl" id="imagenwl" value="Recursos/img/percyjackson.jpg">
+              <input type="hidden" name="hrefwl" id="href" value="ladronrayo.php">            
               <input href="wishlist.php" class="wlEstilo" style="border: 0; background-color:white; cursor:pointer" name='AgregarWL' type="submit" value="❤ Agregar a mi lista de deseos"> </input>
             </form>
             
@@ -80,12 +81,12 @@ include 'carrito.php';
             <tbody>
               <tr>
                 <th>SKU:</th>
-                <td>Valor del SKu</td>
+                <td>9788416620524</td>
               </tr>
               <tr>
                 <th>Idioma:</th>
                 <td>
-                  Valor del Idioma.
+                  Español
                   </td>
               </tr>
               <tr>
@@ -95,7 +96,7 @@ include 'carrito.php';
               <tr>
                 <th>Edición:</th>
                 <td>
-                 Practical Magic Series</td>
+                 1</td>
               </tr>
               
               <tr>
@@ -122,8 +123,10 @@ include 'carrito.php';
     </div>
     </div>
     <!-- subscribe part end -->
-  </main>
-
+  </main> 
+  <?php
+  include 'recomendaciones.php';
+  ?>
 
   <footer>
     <!-- Footer Start-->

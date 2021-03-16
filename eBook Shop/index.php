@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include 'cabecera.php';
 include 'carrito.php';
 ?>
@@ -57,14 +58,14 @@ include 'carrito.php';
           </div>
         </div>
         <div class="row">
+        
         <?php 
-            $con=mysqli_connect("localhost","root","","ebookshop");
+            $con=mysqli_connect("localhost", "root", "", "ebookshop");
             $obtener="SELECT * FROM libros order by rand()  DESC LIMIT 4";
             $ejecuta=mysqli_query($con,$obtener);
             while($fila=$ejecuta->fetch_assoc())
             {
         ?>
-        
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
             <div class="single-new-pro mb-30 text-center">
               <div class="product-img">
@@ -110,7 +111,7 @@ include 'carrito.php';
         
         <div class="row">
         <?php 
-            $con=mysqli_connect("localhost","root","","ebookshop");
+            $con=mysqli_connect("localhost", "root", "", "ebookshop");
             $obtener="SELECT * FROM libros order by id_libro DESC LIMIT 4";
             $ejecuta=mysqli_query($con,$obtener);
             while($fila=$ejecuta->fetch_assoc())

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'cabecera.php';
 include 'carrito.php';
 ?>
@@ -37,89 +38,51 @@ include 'carrito.php';
           <div class="grid-list-view">
           </div>
         </div>
+        <div class="row">
+        <?php
+        $con = mysqli_connect("localhost", "root", "", "ebookshop");
+        $ofertas = "select  o.id_libro,o.titulo,li.href,li.ImagenLibro,li.Precio from ofertas o inner join libros li on o.id_libro=li.id_libro";
+        $exeOfertas = mysqli_query($con, $ofertas);
+        foreach ($exeOfertas as $ofertas) {
+          $titulo = $ofertas['titulo'];
+          $href = $ofertas['href'];
+          $imagen = $ofertas['ImagenLibro'];
+          $precio = $ofertas['Precio'];
+        ?>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+            <div class="single-popular-items mb-50 text-center">
+              <div class="popular-img">
+                <img src="<?php echo $imagen?>" alt="">
+                <div class="img-cap">
+                  <span>
+                    <form action="" method="post" style="text-align: center;">
+                      <input type="hidden" name="id" id="id" value="<?php echo 9; ?>">
+                      <input type="hidden" name="nombre" id="nombre" value="<?php echo 'El Principito'; ?>">
+                      <input type="hidden" name="precio" id="precio" value="<?php echo 40; ?>">
+                      <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                      <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/principito.jpg" ?>">
+                      <button class="btn" name="btnAccion" value="Agregar" type="submit">
+                        Agregar al Carrito
+                      </button>
+                    </form>
+                  </span>
+                </div>
+              </div>
+              <div class="popular-caption">
+                <h3><a href="<?php echo $href?>"><?php echo $titulo?></a></h3>
+                <span>$ <?php echo number_format($precio,2);?></span>
+              </div>
+            </div>
+          </div>
+        <?php
+        }
+        ?>
+        </div>
         <!-- Nav Card -->
         <div class="tab-content" id="nav-tabContent">
           <!-- card one -->
           <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-            <div class="row">
-              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                <div class="single-popular-items mb-50 text-center">
-                  <div class="popular-img">
-                    <img src="Recursos/img/principito.jpg" alt="">
-                    <div class="img-cap">
-                       <span>
-                           <form action="" method="post" style="text-align: center;">
-                               <input type="hidden" name="id" id="id" value="<?php echo 9; ?>">
-                               <input type="hidden" name="nombre" id="nombre" value="<?php echo 'El Principito'; ?>">
-                               <input type="hidden" name="precio" id="precio" value="<?php echo 40; ?>">
-                               <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
-                               <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/principito.jpg" ?>">
-                               <button class="btn" name="btnAccion" value="Agregar" type="submit">
-                                   Agregar al Carrito
-                               </button>
-                           </form>
-                       </span>
-                    </div>
-                  </div>
-                  <div class="popular-caption">
-                    <h3><a href="principito.php">El Principito</a></h3>
-                    <span>$ 40 MXN</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                <div class="single-popular-items mb-50 text-center">
-                  <div class="popular-img">
-                    <img src="Recursos/img/salvarfuego.jpg" alt="">
-                    <div class="img-cap">
-                        <span>
-                            <form action="" method="post" style="text-align: center;">
-                                <input type="hidden" name="id" id="id" value="<?php echo 7; ?>">
-                                <input type="hidden" name="nombre" id="nombre" value="<?php echo 'Salvar Fuego'; ?>">
-                                <input type="hidden" name="precio" id="precio" value="<?php echo 60; ?>">
-                                <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
-                                <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/salvarfuego.jpg" ?>">
-                                <button class="btn" name="btnAccion" value="Agregar" type="submit">
-                                    Agregar al Carrito
-                                </button>
-                            </form>
-                        </span>
-                    </div>
-                  </div>
-                  <div class="popular-caption">
-                    <h3><a href="salvarFuego.php">Salvar el Fuego</a></h3>
-                    <span>$ 60 MXN</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                <div class="single-popular-items mb-50 text-center">
-                  <div class="popular-img">
-                    <img src="Recursos/img/teoria.jpg" alt="">
-                    <div class="img-cap">
-                       <span>
-                           <form action="" method="post" style="text-align: center;">
-                               <input type="hidden" name="id" id="id" value="<?php echo 1; ?>">
-                               <input type="hidden" name="nombre" id="nombre" value="<?php echo 'La Teoría del Todo'; ?>">
-                               <input type="hidden" name="precio" id="precio" value="<?php echo 25; ?>">
-                               <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
-                               <input type="hidden" name="imagen" id="imagen" value="<?php echo "Recursos/img/teoria.jpg" ?>">
-                               <button class="btn" name="btnAccion" value="Agregar" type="submit">
-                                   Agregar al Carrito
-                               </button>
-                           </form>
-                       </span>
-                    </div>
-                  </div>
-                  <div class="popular-caption">
-                    <h3><a href="teoriaTodo.php">La teoria del todo</a></h3>
-                    <span>$ 25 MXN</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+            
         <!-- End Nav Card -->
       </div>
     </section>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'cabecera.php';
 include 'carrito.php';
 ?>
@@ -41,11 +42,11 @@ include 'carrito.php';
 
           <div class="favorit-items">
             <form action="user.php" method="post">
-              <input type="hidden" name="idwl" id="idwl" value="5">
-              <input type="hidden" name="nombrewl" id="nombrewl" value="El Principito">
-              <input type="hidden" name="preciowl" id="preciowl" value="40">
-              <input type="hidden" name="imagenwl" id="imagenwl" value="Recursos/img/principito.jpg">
-              <input type="hidden" name="hrefwl" id="href" value="principito.php">            
+              <input type="hidden" name="idwl" id="idwl" value="1">
+              <input type="hidden" name="nombrewl" id="nombrewl" value="La Teoría del Todo">
+              <input type="hidden" name="preciowl" id="preciowl" value="25">
+              <input type="hidden" name="imagenwl" id="imagenwl" value="Recursos/img/teoria.jpg">
+              <input type="hidden" name="hrefwl" id="href" value="teoriaTodo.php">            
               <input href="wishlist.php" class="wlEstilo" style="border: 0; background-color:white; cursor:pointer" name='AgregarWL' type="submit" value="❤ Agregar a mi lista de deseos"> </input>
             </form>
             
@@ -123,7 +124,9 @@ include 'carrito.php';
     </div>
     <!-- subscribe part end -->
   </main>
-
+ <?php
+  include 'recomendaciones.php';
+  ?>
 
   <footer>
     <!-- Footer Start-->

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'cabecera.php';
 include 'carrito.php';
 ?>
@@ -44,7 +45,7 @@ include 'carrito.php';
               <input type="hidden" name="idwl" id="idwl" value="17">
               <input type="hidden" name="nombrewl" id="nombrewl" value="Rabia">
               <input type="hidden" name="preciowl" id="preciowl" value="120">
-              <input type="hidden" name="imagenwl" id="imagenwl" value="Recursos/img/rabia.png">
+              <input type="hidden" name="imagenwl" id="imagenwl" value="Recursos/img/Rabia.png">
               <input type="hidden" name="hrefwl" id="href" value="rabia.php">            
               <input href="wishlist.php" class="wlEstilo" style="border: 0; background-color:white; cursor:pointer" name='AgregarWL' type="submit" value="❤ Agregar a mi lista de deseos"> </input>
             </form>

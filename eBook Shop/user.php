@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'cabecera.php';
 include 'carrito.php';
 include 'wishlist.php';
@@ -72,122 +73,120 @@ include 'wishlist.php';
       <input type="submit" value="Modificar" name="change" style="margin-left:305px;" class="btn btn-primary" />
     </form>
   </div>
-  <div>
+  <?php
+  if (isset($_POST['change'])) {
+    $name = $_POST['name'];
+    $apellidos = $_POST['apellidos'];
+    $pais = $_POST['pais'];
+    $ciudad = $_POST['ciudad'];
+    $correo = $_POST['correo'];
+    $contraseña = $_POST['contraseña'];
+    if (!empty($name) && !empty($apellidos) && !empty($pais) && !empty($ciudad) && !empty($correo) && !empty($contraseña)) {
+      $updat = "UPDATE usuarios SET NombreCliente='$name',ApellidosCliente='$apellidos',Pais='$pais',
+                      Ciudad='$ciudad', correo='$correo', contraseña='$contraseña' WHERE id_usuario='$id'";
+      if (mysqli_query($con, $updat)) {
+        $_SESSION['Name'] = $name;
+        $_SESSION['correo'] = $correo;
+        echo "<div class='alert alert-success' role='alert'>ACTUALIZADO</div>";
+        echo "<meta http-equiv=refresh content=0; URL=user.php>";
+      }
+    } else {
+      echo "<div class='alert alert-danger' role='alert'>
+                    Falta algun campo que debes llenar!.
+                  </div>";
+    }
+  } ?>
+  <div class="container">
+    <br>
+    <!--LISTA DE DESEOS-->
+    <h2 style="margin: auto;">Lista de Deseos</h2>
+    <br>
+    <div class="row" style="margin: auto;">
+      <?php
+      $con = mysqli_connect("localhost", "root", "", "ebookshop");
+      $obtener = "SELECT wl.id_libro,li.titulo,imagenlibro,href,precio from wishlist wl inner join libros li on 
+            wl.id_libro=li.id_libro where id_usuario='$id'";
+      $execWL = mysqli_query($con, $obtener);
+      $contador = $execWL->num_rows;
+      if ($contador > 0) {
+        foreach ($execWL as $i => $fila) {
+      ?>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="single-new-pro mb-30 text-center">
+              <div class="product-img">
+                <img src="<?php echo $fila['imagenlibro']; ?>" alt="" />
+              </div>
+              <div class="product-caption">
+                <h3><a class="estilosTitulo" href="<?php echo $fila['href']; ?>"><?php echo $fila['titulo']; ?></a></h3>
+                <span>$<?php echo number_format($fila['precio'], 2); ?> MXN</span>
+              </div>
+              <br>
+              <span>
+                <form action="" method="post" style="text-align: center;">
+                  <input type="hidden" name="id" id="id" value="<?php echo $fila['id_libro']; ?>">
+                  <input type="hidden" name="nombre" id="nombre" value="<?php echo $fila['titulo']; ?>">
+                  <input type="hidden" name="precio" id="precio" value="<?php echo $fila['precio']; ?>">
+                  <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+                  <input type="hidden" name="imagen" id="imagen" value="<?php echo $fila['imagenlibro']; ?>">
+                  <input type="hidden" name="href" id="href" value="<?php echo $fila['href']; ?>">
+                  <button class="btn" name="btnAccion" value="Agregar" type="submit" style="width:100%">
+                    Agregar al Carrito
+                  </button>
+                </form>
+
+              </span>
+              <form method="post" id="form_eliminar_">
+                <input type="hidden" name="id_libro" value="<?php echo $fila['id_libro']; ?>" />
+                <button class="btn" name="eliminarwl" value="Eliminar" type="submit" style="width: 100%;">
+                  Eliminar </button>
+              </form>
+            </div>
+          </div>
+        <?php
+        }
+      } else { ?>
+        <div class="alert alert-success">No hay elementos en tu lista de deseos :(</div>
+      <?php } ?>
+    </div>
+    <br>
     <div class="container">
       <br>
       <!--LISTA DE DESEOS-->
-      <div class="row" style="width: 80%; margin:auto;">
-        <?php
-        $contador = 0;
-        $selectWL = "SELECT wl.id_libro,li.titulo,imagenlibro,href,precio from wishlist wl inner join libros li on 
-                  wl.id_libro=li.id_libro where id_usuario='$id'";
-        $execWL = mysqli_query($con, $selectWL);
-        $contador = $execWL->num_rows;
-        if ($contador > 0) {
-          foreach ($execWL as $i => $fila) {
-        ?>
-            <h2 style="width: 80%; margin:auto; text-align:left;">Lista de Deseos</h2>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-              <div class="single-new-pro mb-30 text-center">
-                <div class="card" value="<?php echo $fila['id_libro']; ?>" style="width: 18rem; float: left;">
-                  <img src="<?php echo ($fila['imagenlibro']); ?>" alt="" style="height: 400px; width:288px">
-                  <div class="card-body">
-                    <p class="card-text">Nombre del libro:</p><a href="<?php echo $fila['href']; ?>" style="color: black;"> <?php echo $fila['titulo']; ?></a>
-                    <p class="card-text">Precio:</p>$ <?php echo number_format($fila['precio'],2); ?>
-
-                  </div>
-                  <form action="" method="post" style="text-align: center;">
-                    <input type="hidden" name="id" id="id" value="<?php echo $fila['id_libro']; ?>">
-                    <input type="hidden" name="nombre" id="nombre" value="<?php echo $fila['titulo']; ?>">
-                    <input type="hidden" name="precio" id="precio" value="<?php echo $fila['precio']; ?>">
-                    <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
-                    <input type="hidden" name="imagen" id="imagen" value="<?php echo $fila['imagenlibro']; ?>">
-                    <input type="hidden" name="href" id="href" value="<?php echo $fila['href']; ?>">
-                    <button class="btn" name="btnAccion" value="Agregar" type="submit" style="width: 100%;">
-                      Agregar al Carrito
-                    </button>
-                  </form>
-                  <form method="post" id="form_eliminar_">
-                    <input type="hidden" name="id_libro" value="<?php echo $fila['id_libro']; ?>" />
-                    <button class="btn" name="eliminarwl" value="Eliminar" type="submit" style="width: 100%;">
-                      Eliminar </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          <?php
-          }
-          ?>
-
-        <?php
-
-
-        } else { ?>
-          <div class="alert alert-success">No hay elementos en tu lista de deseos :(</div>
-        <?php } ?>
-      </div>
+      <h2 style="margin: auto;">Libros Comprados</h2>
       <br>
-
-      <!--PRODUCTOS COMPRADOS!-->
-      <h2 style="width: 80%; margin:auto;">Productos Comprados</h2>
-      <br>
-      <div class="row" style="width:80%; margin:auto;">
+      <div class="row" style="margin: auto;">
         <?php
-        if (isset($_POST['change'])) {
-          $name = $_POST['name'];
-          $apellidos = $_POST['apellidos'];
-          $pais = $_POST['pais'];
-          $ciudad = $_POST['ciudad'];
-          $correo = $_POST['correo'];
-          $contraseña = $_POST['contraseña'];
-          if (!empty($name) && !empty($apellidos) && !empty($pais) && !empty($ciudad) && !empty($correo) && !empty($contraseña)) {
-            $updat = "UPDATE usuarios SET NombreCliente='$name',ApellidosCliente='$apellidos',Pais='$pais',
-                            Ciudad='$ciudad', correo='$correo', contraseña='$contraseña' WHERE id_usuario='$id'";
-            if (mysqli_query($con, $updat)) {
-              $_SESSION['Name'] = $name;
-              $_SESSION['correo'] = $correo;
-              echo "<div class='alert alert-success' role='alert'>ACTUALIZADO</div>";
-              echo "<meta http-equiv=refresh content=0; URL=user.php>";
-            }
-          } else {
-            echo "<div class='alert alert-danger' role='alert'>
-                          Falta algun campo que debes llenar!.
-                        </div>";
-          }
-        }
 
-        $sqlventas = "SELECT *FROM detallesventa WHERE id_usuario='$id'";
-        $ejecutaventas = mysqli_query($con, $sqlventas);
-        foreach ($ejecutaventas as $venta) {
-          $idlibro = $venta['id_libro'];
-          $sqllibro = "SELECT *FROM libros WHERE id_libro='$idlibro'";
-          $ejecutalibro = mysqli_query($con, $sqllibro);
-          $filalibro = mysqli_fetch_array($ejecutalibro);
+        $obtener = "select dv.id_libro,li.Titulo,li.ImagenLibro from detallesventa dv inner join libros li on dv.id_libro=li.id_libro where dv.id_usuario='$id'";
+        $execWL = mysqli_query($con, $obtener);
+        foreach ($execWL as $i => $filalibro) {
+
         ?>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" style="margin: auto;">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
             <div class="single-new-pro mb-30 text-center">
-              <div class="card" value="<?php echo $venta['id_venta']; ?>" style="width: 18rem; float: left;">
-                <img src="<?php echo ($filalibro['ImagenLibro']); ?>" alt="" style="height: 400px; width:288px">
-                <div class="card-body">
-                  <p class="card-text">Nombre del libro:</p>
-                  <?php echo $filalibro['Titulo']; ?>
-                </div>
-                <!--
-                    <form method="post" id="form_eliminar_<?php// echo $venta['id_venta'] ?>">
-                    <input type="hidden" name="abrir" value="<?php// echo $venta['id_venta']; ?>" />
-                    <input type="submit" value="abrir" class="btn btn-danger btn-m" />
-                    </form>-->
-                <a class="btn btn-danger btn-m" href='Recursos/Libros/mentalidadmamba.pdf#toolbar=0"' target='_blank' data="#toolbar=0"> Abrir</a>
+              <div class="product-img">
+                <img src="<?php echo ($filalibro['ImagenLibro']); ?>" alt="" />
+              </div>
+              <div class="product-caption">
+                <h3><a class="estilosTitulo"><?php echo $filalibro['Titulo']; ?></a></h3>
               </div>
               <br>
-
+              <a class="btn btn-danger btn-m" href='Recursos/Libros/mentalidadmamba.pdf#toolbar=0"' target='_blank' data="#toolbar=0"> Abrir</a>
             </div>
           </div>
-
         <?php
         }
+
         ?>
       </div>
+      <br>
+
+      <div class="ProductosComprados">
+        <!--PRODUCTOS COMPRADOS!-->
+
+      </div>
+      <br>
+
       <br />
       <?php
       if (isset($_POST['abrir'])) {

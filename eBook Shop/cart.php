@@ -1,7 +1,7 @@
 <?php
+session_start();
 include 'cabecera.php';
 include 'carrito.php';
-
 ?>
 
 <body>
@@ -52,7 +52,7 @@ include 'carrito.php';
                             <img src="<?php echo $fila['Imagen'] ?>" alt="" />
                           </div>
                           <div class="media-body">
-                            <a href="<?php echo $fila['href'] ?>" style="background-color: white; color:black"><?php echo $fila['Nombre'] ?></a>
+                            <a style="background-color: white; color:black"><?php echo $fila['Nombre'] ?></a>
                           </div>
                         </div>
                       </td>

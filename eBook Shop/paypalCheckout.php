@@ -37,17 +37,14 @@
       });
     },
 
-    onAuthorize: function (data, actions) {
-      return actions.payment.execute()
-        .then(function () {
-          alert('Compra completada! ' + details.payer.name.given_name + '!');
+    onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    console.log(details);
+                    // Show a success message to the buyer
+                    alert('Compra completada! ' + details.payer.name.given_name + '!');
                     window.location = "user.php?id=" + details.id;
-        })
-        .catch(error => {
-          console.log(error)
-          alert('Ocurrió un error al procesar el pago con Paypal')
-        })
-    },
+                });
+            },
 
     onError: function (error) {
       alert ('El pago con PayPal no fue realizado, vuelva a intentarlo.' )
